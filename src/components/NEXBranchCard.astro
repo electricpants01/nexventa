@@ -1,0 +1,39 @@
+---
+ const { badgeTitle, branchImage, branchName, branchDescription, badge } = Astro.props
+---
+
+<a href="/client" class="w-[30rem] rounded-xl border-2 border-b-4 border-gray-200 hover:bg-gray-50">
+	<!-- check if badgeTitle is not null then show -->
+	{badgeTitle && (
+		<div class="flex justify-between items-center px-5 py-2 border-b border-gray-200">
+			<p class="text-sm font-bold text-gray-600">{badgeTitle}</p>
+			<p class="h-fit w-fit rounded-lg bg-sky-100 px-3 py-1 text-sm font-bold text-sky-500">
+				{badgeTitle}
+			</p>
+		</div>
+	)}
+
+	<div class="grid grid-cols-6 gap-y-2 p-5">
+		<!-- Branch Picture -->
+		<div>
+			<img
+				src={branchImage || "https://picsum.photos/seed/2/200/200"}
+				class="max-h-16 max-w-16 rounded-full"
+			/>
+		</div>
+
+		<!-- Branch Description & name -->
+		<div class="col-span-5 ml-4 md:col-span-4">
+			<p class="font-bold text-gray-600">{ branchName}</p>
+			<p class="text-gray-400">{branchDescription}</p>
+		</div>
+
+		<!-- Badge -->
+		{ badge && <div class="col-start-2 ml-4 flex md:col-start-auto md:ml-0 md:justify-end">
+				<p class="h-fit w-fit rounded-lg bg-sky-100 px-3 py-1 text-sm font-bold text-sky-500">
+					{badge}
+				</p>
+			</div>
+		}
+	</div>
+</a>
