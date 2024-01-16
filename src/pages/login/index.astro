@@ -1,0 +1,110 @@
+---
+import BaseLoginLayout from '../../layouts/BaseLoginLayout.astro'
+import NEXButton from '../../components/NEXButton.astro'
+import { config } from '../../config/Config.ts'
+import NEXOutlineBorder from '../../components/NEXOutlineBorder.astro'
+---
+
+<BaseLoginLayout>
+	<NEXOutlineBorder>
+		<div class="flex flex-col items-center space-y-3">
+			<!-- TODO Add company logo here -->
+			<span class="font-semi-bold text-2xl leading-normal">Sign in</span>
+			<p class="leading-normal">Use your { config.projectName } Account</p>
+		</div>
+		<form class="my-8">
+			<div class="relative mb-2">
+				<input
+					id="email"
+					class="input w-full rounded border border-gray-300 px-3 pb-2 pt-5 focus:border-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-700 active:outline-none"
+					type="text"
+					autofocus
+				/>
+				<label
+					id="emailLabel"
+					for="email"
+					class="label leading-tighter absolute ml-3 mt-2 cursor-text text-base text-gray-600"
+				>Email or phone</label
+				>
+			</div>
+			<div class="relative mb-2">
+				<input
+					id="password"
+					class="input w-full rounded border border-gray-300 px-3 pb-2 pt-5 focus:border-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-700 active:outline-none"
+					type="password"
+					autofocus
+				/>
+				<label
+					id="passwordLabel"
+					for="password"
+					class="label leading-tighter absolute ml-3 mt-2 cursor-text text-base text-gray-600"
+				>Password</label
+				>
+			</div>
+			<div class="space-y-9">
+				<div>
+					<a class="text-sm font-bold text-blue-500" href="#">Forgot email?</a>
+				</div>
+				<div class="text-sm">
+					<p>You do not remember your email or password</p>
+					<a class="font-bold text-blue-500" href="#">Learn more</a>
+				</div>
+				<div class="flex items-center justify-between text-sm">
+					<a
+						class="-ml-2 rounded px-2 py-2 font-bold text-blue-500 hover:bg-blue-50 hover:text-blue-700"
+						href="#">Create account</a
+					>
+					<NEXButton text="Login" />
+				</div>
+			</div>
+		</form>
+	</NEXOutlineBorder>
+</BaseLoginLayout>
+<style>
+	.input {
+		transition: border 0.2s ease-in-out;
+		min-width: 280px;
+	}
+
+	.input:focus + .label,
+	.input:active + .label,
+	.input.filled + .label {
+		font-size: 0.75rem;
+		transition: all 0.2s ease-out;
+		top: -0.9rem;
+		background-color: #fff;
+		color: #3c9cf5;
+		padding: 0 5px 0 5px;
+		margin: 0 5px 0 5px;
+	}
+
+	.label {
+		transition: all 0.2s ease-out;
+		top: 0.4rem;
+		left: 0;
+	}
+</style>
+<script>
+	const emailInput = document.getElementById('email')
+	const passwordInput = document.getElementById('password')
+	const emailLabel = document.getElementById('emailLabel')
+	const passwordLabel = document.getElementById('passwordLabel')
+
+	emailInput.addEventListener('input', () => {
+		emailInput.classList.toggle('filled', emailInput.value !== '')
+	})
+
+	passwordInput.addEventListener('input', () => {
+		passwordInput.classList.toggle('filled', passwordInput.value !== '')
+	})
+
+	emailLabel.addEventListener('click', () => {
+		console.log('chris tap emailLabel')
+		emailInput.focus()
+	})
+
+	passwordLabel.addEventListener('click', () => {
+		console.log('chris tap passwordLabel')
+		passwordInput.focus()
+	})
+</script>
