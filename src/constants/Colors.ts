@@ -1,5 +1,7 @@
 
 // define color pallete from the app
 
-const primaryColor = "#FF5C28"
-const primaryDarkColor = "#DA3805"
+export const primaryColor = "#FF5C28"
+export const primaryDarkColor = "#DA3805"
+
+export const primarySideBarBackground = "#F3F3F3"
