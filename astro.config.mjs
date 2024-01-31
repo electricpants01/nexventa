@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
-import analogjsangular from "@analogjs/astro-angular";
-
 import tailwind from "@astrojs/tailwind";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [analogjsangular(), tailwind()]
+  integrations: [tailwind(), react()]
 });
