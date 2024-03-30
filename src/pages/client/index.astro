@@ -2,11 +2,10 @@
 // import NEXNewSidebar from '../../components/react/NEXSidebar'
 // import NEXNavBar from '../../components/react/NEXNavBar'
 import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
-
 ---
 
 <BaseClientLayout>
-		<!-- <NEXNavBar client:visible /> -->
+	<!-- <NEXNavBar client:visible /> -->
 
 	<body id="body-pd">
 		<div class="l-navbar" id="navbar">
@@ -14,44 +13,39 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 				<div>
 					<div class="nav__brand">
 						<!-- <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon> -->
-						<i class='bx bx-menu bx-sm' name="menu-outline" id="nav-toggle"></i>
+						<i class="bx bx-menu bx-sm" name="menu-outline" id="nav-toggle"></i>
 						<a href="#" class="nav__logo">Menu</a>
 					</div>
 					<div class="nav__list">
 						<a href="#" class="nav__link active">
-							<!-- <ion-icon name="home-outline" class="nav__icon"></ion-icon> -->
-							<i class='bx bx-menu bx-sm'></i>
+							<i class="bx bx-menu bx-sm"></i>
 							<span class="nav__name">Dashboard</span>
 						</a>
-						<a href="#" class="nav__link">
-							<!-- <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon> -->
-							<i class='bx bx-menu bx-sm'></i>
-							<span class="nav__name">Messenger</span>
-						</a>
-	  
-						<div  class="nav__link collapse">
-							<ion-icon name="folder-outline" class="nav__icon"></ion-icon>
-							<span class="nav__name">Projects</span>
-	  
+
+
+						<div class="nav__link collapse">
+							<i class="bx bx-menu bx-sm"></i>
+							<span class="nav__name">Proyectos</span>
+
 							<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-	  
+
 							<ul class="collapse__menu">
 								<a href="#" class="collapse__sublink">Data</a>
 								<a href="#" class="collapse__sublink">Group</a>
 								<a href="#" class="collapse__sublink">Members</a>
 							</ul>
 						</div>
-	  
+
 						<a href="#" class="nav__link">
-							<ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
-							<span class="nav__name">Analytics</span>
+							<i class="bx bx-menu bx-sm"></i>
+							<span class="nav__name">Analizar</span>
 						</a>
 						<div class="nav__link collapse">
-							<ion-icon name="people-outline" class="nav__icon"></ion-icon>
+							<i class="bx bx-menu bx-sm"></i>
 							<span class="nav__name">Team</span>
-	  
+
 							<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-	  
+
 							<ul class="collapse__menu">
 								<a href="#" class="collapse__sublink">Data</a>
 								<a href="#" class="collapse__sublink">Group</a>
@@ -59,31 +53,27 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 							</ul>
 						</div>
 						<a href="#" class="nav__link">
-							<ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+							<i class="bx bx-menu bx-sm"></i>
 							<span class="nav__name">Settings</span>
 						</a>
 					</div>
 				</div>
-	  
+
 				<a href="#" class="nav__link">
-					<ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+					<i class="bx bx-menu bx-sm"></i>
 					<span class="nav__name">Log Out</span>
 				</a>
 			</nav>
 		</div>
-	  
-	  
+
 		<!-- ===== IONICONS ===== -->
-		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-		
-		  <div class="overlay" data-overlay>
-	  
-		  </div>
-	  
-		  <!--
+
+		<div class="overlay" data-overlay></div>
+
+		<!--
 		  - MODAL
 		-->
-		  <!-- <div class="modal" data-modal>
+		<!-- <div class="modal" data-modal>
 	  
 			  <div class="modal-close-overlay" data-modal-overlay></div>
 	  
@@ -94,7 +84,7 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 			</button>
 	  
 				  <div class="newsletter-img">
-					  <img src="./assets/images/banner/about-banner-1.png" alt="subscribe newsletter" width="400" height="400">
+					  <img src="./images/banner/about-banner-1.png" alt="subscribe newsletter" width="400" height="400">
 				  </div>
 	  
 				  <div class="newsletter">
@@ -122,2045 +112,1826 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 			  </div>
 	  
 		  </div> -->
-	  
-	  
-		  <!--
+
+		<!--
 		  - NOTIFICATION TOAST
 		-->
-	  
-		  <div class="notification-toast" data-toast>
-	  
-			  <button class="toast-close-btn" data-toast-close>
-			<ion-icon name="close-outline"></ion-icon>
-		  </button>
-	  
-			  <div class="toast-banner">
-				  <img src="./assets/images/food/food-menu-1.png" alt="HAMBURGUESAS" width="80" height="70">
-			  </div>
-	  
-			  <div class="toast-detail">
-	  
-				  <p class="toast-message">
-					  Someone in new just bought
-				  </p>
-	  
-				  <p class="toast-title">
-					  HAMBURGUESAS
-				  </p>
-	  
-				  <p class="toast-meta">
-					  <time datetime="PT2M">2 Minutes</time> ago
-				  </p>
-	  
-			  </div>
-	  
-		  </div>
-	  
-		  <!--
+
+		<div class="notification-toast" data-toast>
+			<button class="toast-close-btn" data-toast-close>
+				<ion-icon name="close-outline"></ion-icon>
+			</button>
+
+			<div class="toast-banner">
+				<img
+					src="./images/food/food-menu-1.png"
+					alt="HAMBURGUESAS"
+					width="80"
+					height="70"
+				/>
+			</div>
+
+			<div class="toast-detail">
+				<p class="toast-message">Someone in new just bought</p>
+
+				<p class="toast-title">HAMBURGUESAS</p>
+
+				<p class="toast-meta">
+					<time datetime="PT2M">2 Minutes</time> ago
+				</p>
+			</div>
+		</div>
+
+		<!--
 		  - HEADER
 		-->
-	  
-		  <header>
-	  
-	  
-			  <div class="header-main">
-	  
-				  <div class="container">
-	  
-					  <a href="#" class="header-logo">
-						  <img src="./assets/images/logo/logo.png" alt="locoto" width="120" height="50">
-					  </a>
-	  
-					  <div class="header-search-container">
-	  
-						  <button class="search-btn2">
-				  <!-- <ion-icon name="search-outline"></ion-icon> -->
-				  <i class='bx bx-search-alt-2 bx-sm'></i>
+
+		<header>
+			<div class="header-main">
+				<div class="container">
+					<a href="#" class="header-logo">
+						<img src="./images/logo/logo.png" alt="locoto" width="120" height="50" />
+					</a>
+
+					<div class="header-search-container">
+						<button class="search-btn2">
+							<!-- <ion-icon name="search-outline"></ion-icon> -->
+							<i class="bx bx-search-alt-2 bx-sm"></i>
+						</button>
+
+						<input
+							type="search"
+							name="search"
+							class="search-field"
+							placeholder="           ¿Qué te gustaría comer?"
+						/>
+
+						<button class="search-btn">
+							<i class="bx bx-menu bx-sm"></i>
+							<!-- <ion-icon name="search-outline"></ion-icon> -->
+						</button>
+					</div>
+
+					<div class="header-user-actions">
+						<button class="action-btn">
+							<!-- <ion-icon name="person-outline"></ion-icon> -->
+							<i class="bx bx-user bx-sm"></i>
+						</button>
+
+						<button class="action-btn">
+							<!-- <ion-icon name="heart-outline"></ion-icon> -->
+							<i class="bx bx-cart bx-sm"></i>
+							<span class="count">0</span>
+						</button>
+
+						<button class="action-btn">
+							<i class="bx bx-heart bx-sm"></i>
+							<!-- <ion-icon name="bag-handle-outline"></ion-icon> -->
+							<span class="count">0</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-bottom-navigation">
+				<button class="action-btn" data-mobile-menu-open-btn>
+					<ion-icon name="menu-outline"></ion-icon>
 				</button>
-	  
-						  <input type="search" name="search" class="search-field" placeholder="           ¿Qué te gustaría comer?">
-	  
-						  <button class="search-btn">
-				  <i class='bx bx-menu bx-sm'></i>
-				  <!-- <ion-icon name="search-outline"></ion-icon> -->
+
+				<button class="action-btn">
+					<ion-icon name="bag-handle-outline"></ion-icon>
+
+					<span class="count">0</span>
 				</button>
-	  
-					  </div>
-	  
-					  <div class="header-user-actions">
-	  
-						  <button class="action-btn">
-				  <!-- <ion-icon name="person-outline"></ion-icon> -->
-				  <i class='bx bx-user bx-sm'></i>
+
+				<button class="action-btn">
+					<ion-icon name="home-outline"></ion-icon>
 				</button>
-	  
-						  <button class="action-btn">
-				  <!-- <ion-icon name="heart-outline"></ion-icon> -->
-				  <i class='bx bx-cart bx-sm'></i>
-				  <span class="count">0</span>
+
+				<button class="action-btn">
+					<ion-icon name="heart-outline"></ion-icon>
+
+					<span class="count">0</span>
 				</button>
-	  
-						  <button class="action-btn">
-				  <i class='bx bx-heart bx-sm'></i>
-				  <!-- <ion-icon name="bag-handle-outline"></ion-icon> -->
-				  <span class="count">0</span>
+
+				<button class="action-btn" data-mobile-menu-open-btn>
+					<ion-icon name="grid-outline"></ion-icon>
 				</button>
-	  
-					  </div>
-	  
-				  </div>
-	  
-			  </div>
-	  
-	  
-			  <div class="mobile-bottom-navigation">
-	  
-				  <button class="action-btn" data-mobile-menu-open-btn>
-			  <ion-icon name="menu-outline"></ion-icon>
-			</button>
-	  
-				  <button class="action-btn">
-			  <ion-icon name="bag-handle-outline"></ion-icon>
-	  
-			  <span class="count">0</span>
-			</button>
-	  
-				  <button class="action-btn">
-			  <ion-icon name="home-outline"></ion-icon>
-			</button>
-	  
-				  <button class="action-btn">
-			  <ion-icon name="heart-outline"></ion-icon>
-	  
-			  <span class="count">0</span>
-			</button>
-	  
-				  <button class="action-btn" data-mobile-menu-open-btn>
-			  <ion-icon name="grid-outline"></ion-icon>
-			</button>
-	  
-			  </div>
-	  
-			  <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
-	  
-				  <div class="menu-top">
-					  <h2 class="menu-title">Menu</h2>
-	  
-					  <button class="menu-close-btn" data-mobile-menu-close-btn>
-				<ion-icon name="close-outline"></ion-icon>
-			  </button>
-				  </div>
-	  
-				  <ul class="mobile-menu-category-list">
-	  
-					  <li class="menu-category">
-						  <a href="#" class="menu-title">Home</a>
-					  </li>
-	  
-					  <li class="menu-category">
-	  
-						  <button class="accordion-menu" data-accordion-btn>
-				  <p class="menu-title">Men's</p>
-	  
-				  <div>
-					<ion-icon name="add-outline" class="add-icon"></ion-icon>
-					<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-				  </div>
-				</button>
-	  
-						  <ul class="submenu-category-list" data-accordion>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Shirt</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Shorts & Jeans</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Safety Shoes</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Wallet</a>
-							  </li>
-	  
-						  </ul>
-	  
-					  </li>
-	  
-					  <li class="menu-category">
-	  
-						  <button class="accordion-menu" data-accordion-btn>
-				  <p class="menu-title">Women's</p>
-	  
-				  <div>
-					<ion-icon name="add-outline" class="add-icon"></ion-icon>
-					<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-				  </div>
-				</button>
-	  
-						  <ul class="submenu-category-list" data-accordion>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Dress & Frock</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Earrings</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Necklace</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Makeup Kit</a>
-							  </li>
-	  
-						  </ul>
-	  
-					  </li>
-	  
-					  <li class="menu-category">
-	  
-						  <button class="accordion-menu" data-accordion-btn>
-				  <p class="menu-title">Jewelry</p>
-	  
-				  <div>
-					<ion-icon name="add-outline" class="add-icon"></ion-icon>
-					<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-				  </div>
-				</button>
-	  
-						  <ul class="submenu-category-list" data-accordion>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Earrings</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Couple Rings</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Necklace</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">Bracelets</a>
-							  </li>
-	  
-						  </ul>
-	  
-					  </li>
-	  
-					  <li class="menu-category">
-	  
-						  <button class="accordion-menu" data-accordion-btn>
-				  <p class="menu-title">Perfume</p>
-	  
-				  <div>
-					<ion-icon name="add-outline" class="add-icon"></ion-icon>
-					<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-				  </div>
-				</button>
-	  
-						  <ul class="submenu-category-list" data-accordion>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">HAMBURGUESAS</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">HAMBURGUESAS</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">HAMBURGUESAS</a>
-							  </li>
-	  
-							  <li class="submenu-category">
-								  <a href="#" class="submenu-title">HAMBURGUESAS</a>
-							  </li>
-	  
-						  </ul>
-	  
-					  </li>
-	  
-					  <li class="menu-category">
-						  <a href="#" class="menu-title">Blog</a>
-					  </li>
-	  
-					  <li class="menu-category">
-						  <a href="#" class="menu-title">Hot Offers</a>
-					  </li>
-	  
-				  </ul>
-	  
-				  <div class="menu-bottom">
-	  
-					  <ul class="menu-category-list">
-	  
-						  <li class="menu-category">
-	  
-							  <button class="accordion-menu" data-accordion-btn>
-					<p class="menu-title">Language</p>
-	  
-					<ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-				  </button>
-	  
-							  <ul class="submenu-category-list" data-accordion>
-	  
-								  <li class="submenu-category">
-									  <a href="#" class="submenu-title">English</a>
-								  </li>
-	  
-								  <li class="submenu-category">
-									  <a href="#" class="submenu-title">Espa&ntilde;ol</a>
-								  </li>
-	  
-								  <li class="submenu-category">
-									  <a href="#" class="submenu-title">Fren&ccedil;h</a>
-								  </li>
-	  
-							  </ul>
-	  
-						  </li>
-	  
-						  <li class="menu-category">
-							  <button class="accordion-menu" data-accordion-btn>
-					<p class="menu-title">Currency</p>
-					<ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-				  </button>
-	  
-							  <ul class="submenu-category-list" data-accordion>
-								  <li class="submenu-category">
-									  <a href="#" class="submenu-title">USD &dollar;</a>
-								  </li>
-	  
-								  <li class="submenu-category">
-									  <a href="#" class="submenu-title">EUR &euro;</a>
-								  </li>
-							  </ul>
-						  </li>
-	  
-					  </ul>
-	  
-					  <ul class="menu-social-container">
-	  
-						  <li>
-							  <a href="#" class="social-link">
-								  <ion-icon name="logo-facebook"></ion-icon>
-							  </a>
-						  </li>
-	  
-						  <li>
-							  <a href="#" class="social-link">
-								  <ion-icon name="logo-twitter"></ion-icon>
-							  </a>
-						  </li>
-	  
-						  <li>
-							  <a href="#" class="social-link">
-								  <ion-icon name="logo-instagram"></ion-icon>
-							  </a>
-						  </li>
-	  
-						  <li>
-							  <a href="#" class="social-link">
-								  <ion-icon name="logo-linkedin"></ion-icon>
-							  </a>
-						  </li>
-	  
-					  </ul>
-	  
-				  </div>
-	  
-			  </nav>
-	  
-		  </header>
-	  
-	  
-		  <!--
+			</div>
+
+			<nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+				<div class="menu-top">
+					<h2 class="menu-title">Menu</h2>
+
+					<button class="menu-close-btn" data-mobile-menu-close-btn>
+						<ion-icon name="close-outline"></ion-icon>
+					</button>
+				</div>
+
+				<ul class="mobile-menu-category-list">
+					<li class="menu-category">
+						<a href="#" class="menu-title">Home</a>
+					</li>
+
+					<li class="menu-category">
+						<button class="accordion-menu" data-accordion-btn>
+							<p class="menu-title">Men's</p>
+
+							<div>
+								<ion-icon name="add-outline" class="add-icon"></ion-icon>
+								<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+							</div>
+						</button>
+
+						<ul class="submenu-category-list" data-accordion>
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Shirt</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Shorts & Jeans</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Safety Shoes</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Wallet</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="menu-category">
+						<button class="accordion-menu" data-accordion-btn>
+							<p class="menu-title">Women's</p>
+
+							<div>
+								<ion-icon name="add-outline" class="add-icon"></ion-icon>
+								<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+							</div>
+						</button>
+
+						<ul class="submenu-category-list" data-accordion>
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Dress & Frock</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Earrings</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Necklace</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Makeup Kit</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="menu-category">
+						<button class="accordion-menu" data-accordion-btn>
+							<p class="menu-title">Jewelry</p>
+
+							<div>
+								<ion-icon name="add-outline" class="add-icon"></ion-icon>
+								<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+							</div>
+						</button>
+
+						<ul class="submenu-category-list" data-accordion>
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Earrings</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Couple Rings</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Necklace</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">Bracelets</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="menu-category">
+						<button class="accordion-menu" data-accordion-btn>
+							<p class="menu-title">Perfume</p>
+
+							<div>
+								<ion-icon name="add-outline" class="add-icon"></ion-icon>
+								<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+							</div>
+						</button>
+
+						<ul class="submenu-category-list" data-accordion>
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">HAMBURGUESAS</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">HAMBURGUESAS</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">HAMBURGUESAS</a>
+							</li>
+
+							<li class="submenu-category">
+								<a href="#" class="submenu-title">HAMBURGUESAS</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="menu-category">
+						<a href="#" class="menu-title">Blog</a>
+					</li>
+
+					<li class="menu-category">
+						<a href="#" class="menu-title">Hot Offers</a>
+					</li>
+				</ul>
+
+				<div class="menu-bottom">
+					<ul class="menu-category-list">
+						<li class="menu-category">
+							<button class="accordion-menu" data-accordion-btn>
+								<p class="menu-title">Language</p>
+
+								<ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+							</button>
+
+							<ul class="submenu-category-list" data-accordion>
+								<li class="submenu-category">
+									<a href="#" class="submenu-title">English</a>
+								</li>
+
+								<li class="submenu-category">
+									<a href="#" class="submenu-title">Espa&ntilde;ol</a>
+								</li>
+
+								<li class="submenu-category">
+									<a href="#" class="submenu-title">Fren&ccedil;h</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-category">
+							<button class="accordion-menu" data-accordion-btn>
+								<p class="menu-title">Currency</p>
+								<ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+							</button>
+
+							<ul class="submenu-category-list" data-accordion>
+								<li class="submenu-category">
+									<a href="#" class="submenu-title">USD &dollar;</a>
+								</li>
+
+								<li class="submenu-category">
+									<a href="#" class="submenu-title">EUR &euro;</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="menu-social-container">
+						<li>
+							<a href="#" class="social-link">
+								<ion-icon name="logo-facebook"></ion-icon>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="social-link">
+								<ion-icon name="logo-twitter"></ion-icon>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="social-link">
+								<ion-icon name="logo-instagram"></ion-icon>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="social-link">
+								<ion-icon name="logo-linkedin"></ion-icon>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<!--
 		  - MAIN
 		-->
-	  
-		  <main>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-			  <!--
+
+		<main>
+			<!--
 			- BANNER
 		  -->
-	  
-	  
-	  
-			  <div class="banner">
-	  
-				  <div class="container">
-	  
-					  <div class="slider-container has-scrollbar" style="width: 78%;">
-	  
-						  <div class="slider-item">
-	  
-							  <img src="./assets/images/banner/banner.jpg" alt="banner" class="banner-img">
-	  
-							  <div class="banner-content">
-								  <div class="banner-content2">
-									  <h2 class="banner-title">30% Off</h2>
-									  <p class="banner-subtitle">Comida de fitness</p>
-									  <!-- <p class="banner-text">
+
+			<div class="banner">
+				<div class="container">
+					<div class="slider-container has-scrollbar" style="width: 78%;">
+						<div class="slider-item">
+							<img src="./images/banner/banner.jpg" alt="banner" class="banner-img" />
+
+							<div class="banner-content">
+								<div class="banner-content2">
+									<h2 class="banner-title">30% Off</h2>
+									<p class="banner-subtitle">Comida de fitness</p>
+									<!-- <p class="banner-text">
 					  starting at &dollar; <b>20</b>.00
 					</p> -->
-	  
-									  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-								  </div>
-							  </div>
-	  
-	  
-						  </div>
-	  
-						  <div class="slider-item">
-	  
-							  <img src="./assets/images/banner/banner.jpg" alt="modern sunglasses" class="banner-img">
-	  
-							  <div class="banner-content">
-	  
-								  <p class="banner-subtitle">Trending accessories</p>
-	  
-								  <h2 class="banner-title">Modern sunglasses</h2>
-	  
-								  <p class="banner-text">
-									  starting at &dollar; <b>15</b>.00
-								  </p>
-	  
-								  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-	  
-							  </div>
-	  
-						  </div>
-	  
-						  <div class="slider-item">
-	  
-							  <img src="./assets/images/banner/banner.jpg" alt="Foods" class="banner-img">
-	  
-							  <div class="banner-content">
-	  
-								  <p class="banner-subtitle">Foods</p>
-	  
-								  <h2 class="banner-title">Foods</h2>
-	  
-								  <p class="banner-text">
-									  starting at &dollar; <b>29</b>.99
-								  </p>
-	  
-								  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-	  
-							  </div>
-	  
-						  </div>
-	  
-					  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-				  </div>
-	  
-	  
-				  <!--
+
+									<a href="#" class="banner-btn">ORDENAR AHORA</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item">
+							<img
+								src="./images/banner/banner.jpg"
+								alt="modern sunglasses"
+								class="banner-img"
+							/>
+
+							<div class="banner-content">
+								<p class="banner-subtitle">Trending accessories</p>
+
+								<h2 class="banner-title">Modern sunglasses</h2>
+
+								<p class="banner-text">
+									starting at &dollar; <b>15</b>.00
+								</p>
+
+								<a href="#" class="banner-btn">ORDENAR AHORA</a>
+							</div>
+						</div>
+
+						<div class="slider-item">
+							<img src="./images/banner/banner.jpg" alt="Foods" class="banner-img" />
+
+							<div class="banner-content">
+								<p class="banner-subtitle">Foods</p>
+
+								<h2 class="banner-title">Foods</h2>
+
+								<p class="banner-text">
+									starting at &dollar; <b>29</b>.99
+								</p>
+
+								<a href="#" class="banner-btn">ORDENAR AHORA</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--
 			- desktop-navigation-menu
 		  -->
-	  
-				  <nav class="desktop-navigation-menu" style="width: 70%;">
-	  
-					  <div class="container">
-	  
-						  <ul class="desktop-menu-category-list">
-	  
-							  <li class="menu-category">
-								  <i class='bx bx-map bx-xs'></i>
-								  <a href="#" class="menu-title">Cerca</a>
-							  </li>
-	  
-							  <li class="menu-category">
-								  <i class='bx bx-chevrons-up'></i>
-								  <a href="#" class="menu-title">Promoción</a>
-							  </li>
-	  
-							  <li class="menu-category">
-								  <i class='bx bx-chevrons-up'></i>
-								  <a href="#" class="menu-title">Recién llegados</a>
-							  </li>
-	  
-							  <li class="menu-category">
-								  <i class='bx bx-chevrons-up'></i>
-								  <a href="#" class="menu-title">Mejor vendedora</a>
-							  </li>
-	  
-							  <li class="menu-category">
-								  <i class='bx bx-chevrons-up'></i>
-								  <a href="#" class="menu-title">Top Rated</a>
-							  </li>
-	  
-							  <li class="menu-category">
-								  <i class='bx bx-chevrons-up'></i>
-								  <a href="#" class="menu-title">TODO</a>
-	  
-								  <ul class="dropdown-list">
-	  
-									  <li class="dropdown-item">
-										  <a href="#">HAMBURGUESAS</a>
-									  </li>
-	  
-									  <li class="dropdown-item">
-										  <a href="#">HAMBURGUESAS</a>
-									  </li>
-	  
-									  <li class="dropdown-item">
-										  <a href="#">HAMBURGUESAS</a>
-									  </li>
-	  
-									  <li class="dropdown-item">
-										  <a href="#">HAMBURGUESAS</a>
-									  </li>
-	  
-								  </ul>
-							  </li>
-	  
-	  
-						  </ul>
-	  
-					  </div>
-	  
-				  </nav>
-	  
-			  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-			  <!--
+
+				<nav class="desktop-navigation-menu" style="width: 70%;">
+					<div class="container">
+						<ul class="desktop-menu-category-list">
+							<li class="menu-category">
+								<i class="bx bx-map bx-xs"></i>
+								<a href="#" class="menu-title">Cerca</a>
+							</li>
+
+							<li class="menu-category">
+								<i class="bx bx-chevrons-up"></i>
+								<a href="#" class="menu-title">Promoción</a>
+							</li>
+
+							<li class="menu-category">
+								<i class="bx bx-chevrons-up"></i>
+								<a href="#" class="menu-title">Recién llegados</a>
+							</li>
+
+							<li class="menu-category">
+								<i class="bx bx-chevrons-up"></i>
+								<a href="#" class="menu-title">Mejor vendedora</a>
+							</li>
+
+							<li class="menu-category">
+								<i class="bx bx-chevrons-up"></i>
+								<a href="#" class="menu-title">Top Rated</a>
+							</li>
+
+							<li class="menu-category">
+								<i class="bx bx-chevrons-up"></i>
+								<a href="#" class="menu-title">TODO</a>
+
+								<ul class="dropdown-list">
+									<li class="dropdown-item">
+										<a href="#">HAMBURGUESAS</a>
+									</li>
+
+									<li class="dropdown-item">
+										<a href="#">HAMBURGUESAS</a>
+									</li>
+
+									<li class="dropdown-item">
+										<a href="#">HAMBURGUESAS</a>
+									</li>
+
+									<li class="dropdown-item">
+										<a href="#">HAMBURGUESAS</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<!--
 			- PRODUCT
 		  -->
-	  
-			  <div class="product-container">
-	  
-				  <div class="container">
-	  
-	  
-	  
-	  
-	  
-	  
-					  <div class="product-box">
-	  
-	  
-	  
-	  
-	  
-						  <!--
+
+			<div class="product-container">
+				<div class="container">
+					<div class="product-box">
+						<!--
 			- BLOG
 		  -->
-	  
-						  <div class="blog">
-	  
-							  <div class="container">
-	  
-								  <div class="blog-container has-scrollbar">
-	  
-									  <div class="blog-card">
-	  
-										  <a href="#">
-											  <img src="./assets/images/food/1.jpg" alt="Clothes Retail KPIs 2021 Guide for Clothes Executives" class="blog-banner">
-										  </a>
-	  
-										  <div class="blog-content">
-	  
-											  <a href="#" class="blog-category">Panera Soup</a>
-	  
-											  <a href="#">
-												  <h3 class="blog-title">Comida rápida .</h3>
-											  </a>
-	  
-											  <p class="blog-meta">
-												  Precio 30$
-											  </p>
-	  
-											  <!-- <p class="blog-meta">
+
+						<div class="blog">
+							<div class="container">
+								<div class="blog-container has-scrollbar">
+									<div class="blog-card">
+										<a href="#">
+											<img
+												src="./images/food/1.jpg"
+												alt="Clothes Retail KPIs 2021 Guide for Clothes Executives"
+												class="blog-banner"
+											/>
+										</a>
+
+										<div class="blog-content">
+											<a href="#" class="blog-category">Panera Soup</a>
+
+											<a href="#">
+												<h3 class="blog-title">Comida rápida .</h3>
+											</a>
+
+											<p class="blog-meta">Precio 30$</p>
+
+											<!-- <p class="blog-meta">
 							By <cite>Mr Admin</cite> / <time datetime="2022-04-06">Apr 06, 2022</time>
 						  </p> -->
-	  
-											  <div>
-												  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-											  </div>
-										  </div>
-	  
-									  </div>
-	  
-									  <div class="blog-card">
-	  
-										  <a href="#">
-											  <img src="./assets/images/food/2.jpg" alt="Foods." class="blog-banner">
-										  </a>
-	  
-										  <div class="blog-content">
-	  
-											  <a href="#" class="blog-category">Panera Soup</a>
-	  
-											  <a href="#">
-												  <h3 class="blog-title">Comida rápida .</h3>
-											  </a>
-	  
-											  <p class="blog-meta">
-												  Precio 30$
-											  </p>
-	  
-											  <div>
-												  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-									  <div class="blog-card">
-	  
-										  <a href="#">
-											  <img src="./assets/images/food/3.jpg" alt="Foods." class="blog-banner">
-										  </a>
-	  
-										  <div class="blog-content">
-	  
-											  <a href="#" class="blog-category">Panera Soup</a>
-	  
-											  <a href="#">
-												  <h3 class="blog-title">Comida rápida .</h3>
-											  </a>
-	  
-											  <p class="blog-meta">
-												  Precio 30$
-											  </p>
-	  
-											  <div>
-												  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-	  
-									  <div class="blog-card">
-	  
-										  <a href="#">
-											  <img src="./assets/images/food/4.jpg" alt="Foods." class="blog-banner">
-										  </a>
-	  
-										  <div class="blog-content">
-	  
-											  <a href="#" class="blog-category">Panera Soup</a>
-	  
-											  <a href="#">
-												  <h3 class="blog-title">Comida rápida .</h3>
-											  </a>
-	  
-											  <p class="blog-meta">
-												  Precio 30$
-											  </p>
-											  <div>
-												  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-	  
-	  
-								  </div>
-	  
-							  </div>
-	  
-							  <div class="container">
-	  
-								  <div class="blog-container has-scrollbar">
-	  
-									  <div class="blog-card">
-	  
-										  <a href="#">
-											  <img src="./assets/images/food/1.jpg" alt="Clothes Retail KPIs 2021 Guide for Clothes Executives" class="blog-banner">
-										  </a>
-	  
-										  <div class="blog-content">
-	  
-											  <a href="#" class="blog-category">Panera Soup</a>
-	  
-											  <a href="#">
-												  <h3 class="blog-title">Comida rápida .</h3>
-											  </a>
-	  
-											  <p class="blog-meta">
-												  Precio 30$
-											  </p>
-											  <div>
-												  <a href="#" class="banner-btn">ORDENAR AHORA</a>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-								  </div>
-	  
-							  </div>
-	  
-						  </div>
-	  
-	  
-	  
-						  <!--
+
+											<div>
+												<a href="#" class="banner-btn">ORDENAR AHORA</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog-card">
+										<a href="#">
+											<img
+												src="./images/food/2.jpg"
+												alt="Foods."
+												class="blog-banner"
+											/>
+										</a>
+
+										<div class="blog-content">
+											<a href="#" class="blog-category">Panera Soup</a>
+
+											<a href="#">
+												<h3 class="blog-title">Comida rápida .</h3>
+											</a>
+
+											<p class="blog-meta">Precio 30$</p>
+
+											<div>
+												<a href="#" class="banner-btn">ORDENAR AHORA</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog-card">
+										<a href="#">
+											<img
+												src="./images/food/3.jpg"
+												alt="Foods."
+												class="blog-banner"
+											/>
+										</a>
+
+										<div class="blog-content">
+											<a href="#" class="blog-category">Panera Soup</a>
+
+											<a href="#">
+												<h3 class="blog-title">Comida rápida .</h3>
+											</a>
+
+											<p class="blog-meta">Precio 30$</p>
+
+											<div>
+												<a href="#" class="banner-btn">ORDENAR AHORA</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog-card">
+										<a href="#">
+											<img
+												src="./images/food/4.jpg"
+												alt="Foods."
+												class="blog-banner"
+											/>
+										</a>
+
+										<div class="blog-content">
+											<a href="#" class="blog-category">Panera Soup</a>
+
+											<a href="#">
+												<h3 class="blog-title">Comida rápida .</h3>
+											</a>
+
+											<p class="blog-meta">Precio 30$</p>
+											<div>
+												<a href="#" class="banner-btn">ORDENAR AHORA</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container">
+								<div class="blog-container has-scrollbar">
+									<div class="blog-card">
+										<a href="#">
+											<img
+												src="./images/food/1.jpg"
+												alt="Clothes Retail KPIs 2021 Guide for Clothes Executives"
+												class="blog-banner"
+											/>
+										</a>
+
+										<div class="blog-content">
+											<a href="#" class="blog-category">Panera Soup</a>
+
+											<a href="#">
+												<h3 class="blog-title">Comida rápida .</h3>
+											</a>
+
+											<p class="blog-meta">Precio 30$</p>
+											<div>
+												<a href="#" class="banner-btn">ORDENAR AHORA</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--
 				  - PRODUCT GRID
 				-->
-	  
-						  <div class="product-main">
-	  
-							  <h2 class="title">Nuestras deliciosas comidas</h2>
-	  
-							  <div class="product-grid">
-	  
-								  <div class="showcase">
-	  
-									  <div class="showcase-banner">
-	  
-										  <img src="./assets/images/food/1.jpg" alt="food dishes" width="300" class="product-img default">
-										  <img src="./assets/images/food/1.jpg" alt="food dishes" width="300" class="product-img hover">
-	  
-										  <p class="showcase-badge">15%</p>
-	  
-										  <div class="showcase-actions">
-	  
-											  <button class="btn-action">
-							<ion-icon name="heart-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="eye-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="repeat-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="bag-add-outline"></ion-icon>
-						  </button>
-	  
-										  </div>
-	  
-									  </div>
-	  
-									  <div class="showcase-content">
-	  
-										  <a href="#" class="showcase-category">HAMBURGUESAS</a>
-	  
-										  <a href="#">
-											  <h3 class="showcase-title">food dishes</h3>
-										  </a>
-	  
-										  <div class="showcase-rating">
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star-outline"></ion-icon>
-											  <ion-icon name="star-outline"></ion-icon>
-										  </div>
-	  
-										  <div class="price-box">
-											  <p class="price">$48.00</p>
-											  <del>$75.00</del>
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-								  <div class="showcase">
-	  
-									  <div class="showcase-banner">
-										  <img src="./assets/images/food/4.jpg" alt="Pure Garment Dyed Cotton Shirt" class="product-img default" width="300">
-										  <img src="./assets/images/food/4.jpg" alt="Pure Garment Dyed Cotton Shirt" class="product-img hover" width="300">
-	  
-										  <p class="showcase-badge angle black">sale</p>
-	  
-										  <div class="showcase-actions">
-											  <button class="btn-action">
-							<ion-icon name="heart-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="eye-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="repeat-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="bag-add-outline"></ion-icon>
-						  </button>
-										  </div>
-									  </div>
-	  
-									  <div class="showcase-content">
-										  <a href="#" class="showcase-category">shirt</a>
-	  
-										  <h3>
-											  <a href="#" class="showcase-title">Pure Garment Dyed Cotton Shirt</a>
-										  </h3>
-	  
-										  <div class="showcase-rating">
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star-outline"></ion-icon>
-											  <ion-icon name="star-outline"></ion-icon>
-										  </div>
-	  
-										  <div class="price-box">
-											  <p class="price">$45.00</p>
-											  <del>$56.00</del>
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-								  <div class="showcase">
-	  
-									  <div class="showcase-banner">
-										  <img src="./assets/images/food/3.jpg" alt="MEN Yarn Fleece Full-Zip Jacket" class="product-img default" width="300">
-										  <img src="./assets/images/food/3.jpg" alt="MEN Yarn Fleece Full-Zip Jacket" class="product-img hover" width="300">
-	  
-										  <div class="showcase-actions">
-											  <button class="btn-action">
-							<ion-icon name="heart-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="eye-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="repeat-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="bag-add-outline"></ion-icon>
-						  </button>
-										  </div>
-									  </div>
-	  
-									  <div class="showcase-content">
-										  <a href="#" class="showcase-category">Jacket</a>
-	  
-										  <h3>
-											  <a href="#" class="showcase-title">MEN Yarn Fleece Full-Zip Jacket</a>
-										  </h3>
-	  
-										  <div class="showcase-rating">
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star-outline"></ion-icon>
-											  <ion-icon name="star-outline"></ion-icon>
-										  </div>
-	  
-										  <div class="price-box">
-											  <p class="price">$58.00</p>
-											  <del>$65.00</del>
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-								  <div class="showcase">
-	  
-									  <div class="showcase-banner">
-										  <img src="./assets/images/food/2.jpg" alt="Black Floral Wrap Midi Skirt" class="product-img default" width="300">
-										  <img src="./assets/images/food/2.jpg" alt="Black Floral Wrap Midi Skirt" class="product-img hover" width="300">
-	  
-										  <p class="showcase-badge angle pink">new</p>
-	  
-										  <div class="showcase-actions">
-											  <button class="btn-action">
-							<ion-icon name="heart-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="eye-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="repeat-outline"></ion-icon>
-						  </button>
-	  
-											  <button class="btn-action">
-							<ion-icon name="bag-add-outline"></ion-icon>
-						  </button>
-										  </div>
-									  </div>
-	  
-									  <div class="showcase-content">
-										  <a href="#" class="showcase-category">skirt</a>
-	  
-										  <h3>
-											  <a href="#" class="showcase-title">Black Floral Wrap Midi Skirt</a>
-										  </h3>
-	  
-										  <div class="showcase-rating">
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-											  <ion-icon name="star"></ion-icon>
-										  </div>
-	  
-										  <div class="price-box">
-											  <p class="price">$25.00</p>
-											  <del>$35.00</del>
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-							  </div>
-	  
-						  </div>
-	  
-		
-	  
-						  <div class="product-featured">
-	  
-							  <h2 class="title">Oferta del día</h2>
-	  
-							  <div class="showcase-wrapper has-scrollbar">
-	  
-								  <div class="showcase-container">
-	  
-									  <div class="showcase">
-	  
-										  <div class="showcase-banner">
-											  <img src="./assets/images/banner/about-banner.png" alt="Comida rápida ." class="showcase-img">
-										  </div>
-	  
-										  <div class="showcase-content">
-	  
-											  <div class="showcase-rating">
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star-outline"></ion-icon>
-												  <ion-icon name="star-outline"></ion-icon>
-											  </div>
-	  
-											  <a href="#">
-												  <h3 class="showcase-title">Caferio, HAMBURGUESAS, and Best Pizzas in Town! .</h3>
-											  </a>
-	  
-											  <p class="showcase-desc">
-												  The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.
-											  </p>
-	  
-											  <div class="price-box">
-												  <p class="price">$150.00</p>
-	  
-												  <del>$200.00</del>
-											  </div>
-	  
-											  <button class="add-cart-btn">ORDENAR AHORA</button>
-	  
-											  <div class="showcase-status">
-												  <div class="wrapper">
-													  <p>
-														  already sold: <b>20</b>
-													  </p>
-	  
-													  <p>
-														  available: <b>40</b>
-													  </p>
-												  </div>
-	  
-												  <div class="showcase-status-bar"></div>
-											  </div>
-	  
-											  <div class="countdown-box">
-	  
-												  <p class="countdown-desc">
-													  Hurry Up! Offer ends in:
-												  </p>
-	  
-												  <div class="countdown">
-	  
-													  <div class="countdown-content">
-	  
-														  <p class="display-number">360</p>
-	  
-														  <p class="display-text">Days</p>
-	  
-													  </div>
-	  
-													  <div class="countdown-content">
-														  <p class="display-number">24</p>
-														  <p class="display-text">Hours</p>
-													  </div>
-	  
-													  <div class="countdown-content">
-														  <p class="display-number">59</p>
-														  <p class="display-text">Min</p>
-													  </div>
-	  
-													  <div class="countdown-content">
-														  <p class="display-number">00</p>
-														  <p class="display-text">Sec</p>
-													  </div>
-	  
-												  </div>
-	  
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-								  <div class="showcase-container">
-	  
-									  <div class="showcase">
-	  
-										  <div class="showcase-banner">
-											  <img src="./assets/images/banner/about-banner.png" alt="Comida rápida ." class="showcase-img">
-										  </div>
-	  
-										  <div class="showcase-content">
-	  
-											  <div class="showcase-rating">
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star-outline"></ion-icon>
-												  <ion-icon name="star-outline"></ion-icon>
-											  </div>
-	  
-											  <a href="#">
-												  <h3 class="showcase-title">Caferio, HAMBURGUESAS, and Best Pizzas in Town! .</h3>
-											  </a>
-	  
-											  <p class="showcase-desc">
-												  The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.
-											  </p>
-	  
-											  <div class="price-box">
-												  <p class="price">$150.00</p>
-	  
-												  <del>$200.00</del>
-											  </div>
-	  
-											  <button class="add-cart-btn">ORDENAR AHORA</button>
-	  
-											  <div class="showcase-status">
-												  <div class="wrapper">
-													  <p>
-														  already sold: <b>20</b>
-													  </p>
-	  
-													  <p>
-														  available: <b>40</b>
-													  </p>
-												  </div>
-	  
-												  <div class="showcase-status-bar"></div>
-											  </div>
-	  
-											  <div class="countdown-box">
-	  
-												  <p class="countdown-desc">
-													  Hurry Up! Offer ends in:
-												  </p>
-	  
-												  <div class="countdown">
-	  
-													  <div class="countdown-content">
-	  
-														  <p class="display-number">360</p>
-	  
-														  <p class="display-text">Days</p>
-	  
-													  </div>
-	  
-													  <div class="countdown-content">
-														  <p class="display-number">24</p>
-														  <p class="display-text">Hours</p>
-													  </div>
-	  
-													  <div class="countdown-content">
-														  <p class="display-number">59</p>
-														  <p class="display-text">Min</p>
-													  </div>
-	  
-													  <div class="countdown-content">
-														  <p class="display-number">00</p>
-														  <p class="display-text">Sec</p>
-													  </div>
-	  
-												  </div>
-	  
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-							  </div>
-	  
-						  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-					  </div>
-	  
-					  <!--
+
+						<div class="product-main">
+							<h2 class="title">Nuestras deliciosas comidas</h2>
+
+							<div class="product-grid">
+								<div class="showcase">
+									<div class="showcase-banner">
+										<img
+											src="./images/food/1.jpg"
+											alt="food dishes"
+											width="300"
+											class="product-img default"
+										/>
+										<img
+											src="./images/food/1.jpg"
+											alt="food dishes"
+											width="300"
+											class="product-img hover"
+										/>
+
+										<p class="showcase-badge">15%</p>
+
+										<div class="showcase-actions">
+											<button class="btn-action">
+												<ion-icon name="heart-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="eye-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="repeat-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="bag-add-outline"></ion-icon>
+											</button>
+										</div>
+									</div>
+
+									<div class="showcase-content">
+										<a href="#" class="showcase-category">HAMBURGUESAS</a>
+
+										<a href="#">
+											<h3 class="showcase-title">food dishes</h3>
+										</a>
+
+										<div class="showcase-rating">
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star-outline"></ion-icon>
+											<ion-icon name="star-outline"></ion-icon>
+										</div>
+
+										<div class="price-box">
+											<p class="price">$48.00</p>
+											<del>$75.00</del>
+										</div>
+									</div>
+								</div>
+
+								<div class="showcase">
+									<div class="showcase-banner">
+										<img
+											src="./images/food/4.jpg"
+											alt="Pure Garment Dyed Cotton Shirt"
+											class="product-img default"
+											width="300"
+										/>
+										<img
+											src="./images/food/4.jpg"
+											alt="Pure Garment Dyed Cotton Shirt"
+											class="product-img hover"
+											width="300"
+										/>
+
+										<p class="showcase-badge angle black">sale</p>
+
+										<div class="showcase-actions">
+											<button class="btn-action">
+												<ion-icon name="heart-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="eye-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="repeat-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="bag-add-outline"></ion-icon>
+											</button>
+										</div>
+									</div>
+
+									<div class="showcase-content">
+										<a href="#" class="showcase-category">shirt</a>
+
+										<h3>
+											<a href="#" class="showcase-title"
+												>Pure Garment Dyed Cotton Shirt</a
+											>
+										</h3>
+
+										<div class="showcase-rating">
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star-outline"></ion-icon>
+											<ion-icon name="star-outline"></ion-icon>
+										</div>
+
+										<div class="price-box">
+											<p class="price">$45.00</p>
+											<del>$56.00</del>
+										</div>
+									</div>
+								</div>
+
+								<div class="showcase">
+									<div class="showcase-banner">
+										<img
+											src="./images/food/3.jpg"
+											alt="MEN Yarn Fleece Full-Zip Jacket"
+											class="product-img default"
+											width="300"
+										/>
+										<img
+											src="./images/food/3.jpg"
+											alt="MEN Yarn Fleece Full-Zip Jacket"
+											class="product-img hover"
+											width="300"
+										/>
+
+										<div class="showcase-actions">
+											<button class="btn-action">
+												<ion-icon name="heart-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="eye-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="repeat-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="bag-add-outline"></ion-icon>
+											</button>
+										</div>
+									</div>
+
+									<div class="showcase-content">
+										<a href="#" class="showcase-category">Jacket</a>
+
+										<h3>
+											<a href="#" class="showcase-title"
+												>MEN Yarn Fleece Full-Zip Jacket</a
+											>
+										</h3>
+
+										<div class="showcase-rating">
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star-outline"></ion-icon>
+											<ion-icon name="star-outline"></ion-icon>
+										</div>
+
+										<div class="price-box">
+											<p class="price">$58.00</p>
+											<del>$65.00</del>
+										</div>
+									</div>
+								</div>
+
+								<div class="showcase">
+									<div class="showcase-banner">
+										<img
+											src="./images/food/2.jpg"
+											alt="Black Floral Wrap Midi Skirt"
+											class="product-img default"
+											width="300"
+										/>
+										<img
+											src="./images/food/2.jpg"
+											alt="Black Floral Wrap Midi Skirt"
+											class="product-img hover"
+											width="300"
+										/>
+
+										<p class="showcase-badge angle pink">new</p>
+
+										<div class="showcase-actions">
+											<button class="btn-action">
+												<ion-icon name="heart-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="eye-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="repeat-outline"></ion-icon>
+											</button>
+
+											<button class="btn-action">
+												<ion-icon name="bag-add-outline"></ion-icon>
+											</button>
+										</div>
+									</div>
+
+									<div class="showcase-content">
+										<a href="#" class="showcase-category">skirt</a>
+
+										<h3>
+											<a href="#" class="showcase-title"
+												>Black Floral Wrap Midi Skirt</a
+											>
+										</h3>
+
+										<div class="showcase-rating">
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+											<ion-icon name="star"></ion-icon>
+										</div>
+
+										<div class="price-box">
+											<p class="price">$25.00</p>
+											<del>$35.00</del>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="product-featured">
+							<h2 class="title">Oferta del día</h2>
+
+							<div class="showcase-wrapper has-scrollbar">
+								<div class="showcase-container">
+									<div class="showcase">
+										<div class="showcase-banner">
+											<img
+												src="./images/banner/about-banner.png"
+												alt="Comida rápida ."
+												class="showcase-img"
+											/>
+										</div>
+
+										<div class="showcase-content">
+											<div class="showcase-rating">
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star-outline"></ion-icon>
+												<ion-icon name="star-outline"></ion-icon>
+											</div>
+
+											<a href="#">
+												<h3 class="showcase-title">
+													Caferio, HAMBURGUESAS, and Best Pizzas in Town!
+													.
+												</h3>
+											</a>
+
+											<p class="showcase-desc">
+												The restaurants in Hangzhou also catered to many
+												northern Chinese who had fled south from Kaifeng
+												during the Jurchen invasion of the 1120s, while it
+												is also known that many restaurants were run by
+												families.
+											</p>
+
+											<div class="price-box">
+												<p class="price">$150.00</p>
+
+												<del>$200.00</del>
+											</div>
+
+											<button class="add-cart-btn">ORDENAR AHORA</button>
+
+											<div class="showcase-status">
+												<div class="wrapper">
+													<p>
+														already sold: <b>20</b>
+													</p>
+
+													<p>
+														available: <b>40</b>
+													</p>
+												</div>
+
+												<div class="showcase-status-bar"></div>
+											</div>
+
+											<div class="countdown-box">
+												<p class="countdown-desc">
+													Hurry Up! Offer ends in:
+												</p>
+
+												<div class="countdown">
+													<div class="countdown-content">
+														<p class="display-number">360</p>
+
+														<p class="display-text">Days</p>
+													</div>
+
+													<div class="countdown-content">
+														<p class="display-number">24</p>
+														<p class="display-text">Hours</p>
+													</div>
+
+													<div class="countdown-content">
+														<p class="display-number">59</p>
+														<p class="display-text">Min</p>
+													</div>
+
+													<div class="countdown-content">
+														<p class="display-number">00</p>
+														<p class="display-text">Sec</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="showcase-container">
+									<div class="showcase">
+										<div class="showcase-banner">
+											<img
+												src="./images/banner/about-banner.png"
+												alt="Comida rápida ."
+												class="showcase-img"
+											/>
+										</div>
+
+										<div class="showcase-content">
+											<div class="showcase-rating">
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star-outline"></ion-icon>
+												<ion-icon name="star-outline"></ion-icon>
+											</div>
+
+											<a href="#">
+												<h3 class="showcase-title">
+													Caferio, HAMBURGUESAS, and Best Pizzas in Town!
+													.
+												</h3>
+											</a>
+
+											<p class="showcase-desc">
+												The restaurants in Hangzhou also catered to many
+												northern Chinese who had fled south from Kaifeng
+												during the Jurchen invasion of the 1120s, while it
+												is also known that many restaurants were run by
+												families.
+											</p>
+
+											<div class="price-box">
+												<p class="price">$150.00</p>
+
+												<del>$200.00</del>
+											</div>
+
+											<button class="add-cart-btn">ORDENAR AHORA</button>
+
+											<div class="showcase-status">
+												<div class="wrapper">
+													<p>
+														already sold: <b>20</b>
+													</p>
+
+													<p>
+														available: <b>40</b>
+													</p>
+												</div>
+
+												<div class="showcase-status-bar"></div>
+											</div>
+
+											<div class="countdown-box">
+												<p class="countdown-desc">
+													Hurry Up! Offer ends in:
+												</p>
+
+												<div class="countdown">
+													<div class="countdown-content">
+														<p class="display-number">360</p>
+
+														<p class="display-text">Days</p>
+													</div>
+
+													<div class="countdown-content">
+														<p class="display-number">24</p>
+														<p class="display-text">Hours</p>
+													</div>
+
+													<div class="countdown-content">
+														<p class="display-number">59</p>
+														<p class="display-text">Min</p>
+													</div>
+
+													<div class="countdown-content">
+														<p class="display-number">00</p>
+														<p class="display-text">Sec</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--
 				- SIDEBAR
 			  -->
-	  
-					  <div class="sidebar has-scrollbar" data-mobile-menu>
-	  
-						  <style>
-							  .sidebar.has-scrollbar[data-mobile-menu] {
-								  position: absolute;
-								  top: -20%;
-								  /* Ajusta según sea necesario */
-								  left: 78%;
-								  /* Ajusta según sea necesario */
-							  }
-							  
-							  @media only screen and (max-width: 768px) {
-								  .sidebar.has-scrollbar[data-mobile-menu] {
-									  position: fixed;
-									  top: 50px;
-									  /* Puedes ajustar este valor según tus necesidades */
-									  right: 0;
-									  bottom: 0;
-									  left: 0;
-									  transform: translateX(0%);
-									  z-index: 999;
-									  /* Puedes ajustar este valor según tus necesidades */
-								  }
-							  }
-						  </style>
-	  
-						  <div class="sidebar-category">
-	  
-							  <div class="sidebar-top">
-								  <h2 class="sidebar-title">My Order</h2>
-	  
-								  Delivery address 1342 Morris Street
-								  <br> 40mins 5km
-	  
-	  
-	  
-								  <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-					  <ion-icon name="close-outline"></ion-icon>
-					</button>
-	  
-							  </div>
-	  
-							  <form>
-	  
-	  
-	  
-								  <div class="category-item">
-	  
-									  <div class="sidebar-img-box">
-										  <img src="./assets/images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50">
-									  </div>
-	  
-	  
-	  
-									  <div class="sidebar-content-box">
-	  
-										  <div class="category-content-flex">
-											  <h3 class="sidebar-item-title">Burger Mozza XL</h3>
-											  <p class="category-item-amount">&39</p>
-										  </div>
-										  <p class="category-item-amount">Extra cheese</p>
-										  <select class="sidebar-select" name="cantidad" id="cantidad">
-						  <option value="1">1</option>
-						  <option value="2">2</option>
-						  <option value="3">3</option>
-						  <!-- Agrega más opciones según sea necesario -->
-						</select>
-	  
-	  
-										  <a href="#" class="category-btn">Show all</a>
-	  
-									  </div>
-	  
-								  </div>
-	  
-								  <ul class="sidebar-menu-category-list">
-	  
-									  <li class="sidebar-menu-category">
-	  
-										  <button class="sidebar-accordion-menu" data-accordion-btn>
-	  
-						  <div class="menu-title-flex">
-							<img src="./assets/images/food/food-menu-1.png" alt="clothes" width="20" height="20"
-							  class="menu-title-img">
-	  
-							<p class="menu-title">Burger Mozza XL</p>
-						  </div>
-	  
-						  <div>
-							<ion-icon name="add-outline" class="add-icon"></ion-icon>
-							<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-						  </div>
-	  
-						</button>
-	  
-										  <ul class="sidebar-submenu-category-list" data-accordion>
-	  
-											  <li class="sidebar-submenu-category">
-												  <a href="#" class="sidebar-submenu-title">
-													  <p class="product-name">Sub Total</p>
-													  <data value="300" class="stock" title="Available Stock">300</data>
-												  </a>
-											  </li>
-	  
-											  <li class="sidebar-submenu-category">
-												  <a href="#" class="sidebar-submenu-title">
-													  <p class="product-name">Delivery Fee</p>
-													  <data value="60" class="stock" title="Available Stock">60</data>
-												  </a>
-											  </li>
-	  
-	  
-											  <li class="sidebar-submenu-category">
-												  <a href="#" class="sidebar-submenu-title">
-													  <p class="product-name">Total</p>
-													  <data value="87" class="stock" title="Available Stock">87</data>
-												  </a>
-											  </li>
-	  
-										  </ul>
-	  
-									  </li>
-	  
-	  
-	  
-	  
-	  
-								  </ul>
-								  <div>
-									  <a href="#" class="banner-btn">Check Out</a>
-								  </div>
-	  
-	  
-	  
-							  </form>
-	  
-	  
-	  
-	  
-						  </div>
-	  
-	  
-						  <!-- <div class="product-showcase">
+
+					<div class="sidebar has-scrollbar" data-mobile-menu>
+						<style>
+							.sidebar.has-scrollbar[data-mobile-menu] {
+								position: absolute;
+								top: -20%;
+								/* Ajusta según sea necesario */
+								left: 78%;
+								/* Ajusta según sea necesario */
+							}
+
+							@media only screen and (max-width: 768px) {
+								.sidebar.has-scrollbar[data-mobile-menu] {
+									position: fixed;
+									top: 50px;
+									/* Puedes ajustar este valor según tus necesidades */
+									right: 0;
+									bottom: 0;
+									left: 0;
+									transform: translateX(0%);
+									z-index: 999;
+									/* Puedes ajustar este valor según tus necesidades */
+								}
+							}
+						</style>
+
+						<div class="sidebar-category">
+							<div class="sidebar-top">
+								<h2 class="sidebar-title">Mi pedido</h2>
+
+								Dirección de entrega 1342 Morris Street
+								<br />
+								40 minutos 5 km
+
+								<button class="sidebar-close-btn" data-mobile-menu-close-btn>
+									<ion-icon name="close-outline"></ion-icon>
+								</button>
+							</div>
+
+							<form>
+								<div class="category-item">
+									<div class="sidebar-img-box">
+										<img
+											src="./images/food/food-menu-1.png"
+											alt="HAMBURGUESAS"
+											width="50"
+										/>
+									</div>
+
+									<div class="sidebar-content-box">
+										<div class="category-content-flex">
+											<h3 class="sidebar-item-title">Burger Mozza XL</h3>
+											<p class="category-item-amount">&39</p>
+										</div>
+										<p class="category-item-amount">Extra cheese</p>
+										<select
+											class="sidebar-select"
+											name="cantidad"
+											id="cantidad"
+										>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<!-- Agrega más opciones según sea necesario -->
+										</select>
+
+										<a href="#" class="category-btn">Show all</a>
+									</div>
+								</div>
+
+								<ul class="sidebar-menu-category-list">
+									<li class="sidebar-menu-category">
+										<button class="sidebar-accordion-menu" data-accordion-btn>
+											<div class="menu-title-flex">
+												<img
+													src="./images/food/food-menu-1.png"
+													alt="clothes"
+													width="20"
+													height="20"
+													class="menu-title-img"
+												/>
+
+												<p class="menu-title">Burger Mozza XL</p>
+											</div>
+
+											<div>
+												<ion-icon name="add-outline" class="add-icon"
+												></ion-icon>
+												<ion-icon name="remove-outline" class="remove-icon"
+												></ion-icon>
+											</div>
+										</button>
+
+										<ul class="sidebar-submenu-category-list" data-accordion>
+											<li class="sidebar-submenu-category">
+												<a href="#" class="sidebar-submenu-title">
+													<p class="product-name">Sub Total</p>
+													<data
+														value="300"
+														class="stock"
+														title="Available Stock">300</data
+													>
+												</a>
+											</li>
+
+											<li class="sidebar-submenu-category">
+												<a href="#" class="sidebar-submenu-title">
+													<p class="product-name">Delivery Fee</p>
+													<data
+														value="60"
+														class="stock"
+														title="Available Stock">60</data
+													>
+												</a>
+											</li>
+
+											<li class="sidebar-submenu-category">
+												<a href="#" class="sidebar-submenu-title">
+													<p class="product-name">Total</p>
+													<data
+														value="87"
+														class="stock"
+														title="Available Stock">87</data
+													>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<div>
+									<a href="#" class="banner-btn">Check Out</a>
+								</div>
+							</form>
+						</div>
+
+						<!-- <div class="product-showcase">
 	  
 				</div> -->
-						  <div class="sidebar-category">
-	  
-							  <h3 class="showcase-heading">The Foodie Have Excellent
-								  <br> Of Quality HAMBURGUESAS!
-							  </h3>
-	  
-							  <div class="showcase-wrapper">
-	  
-								  <div class="showcase-container">
-	  
-									  <div class="showcase">
-	  
-										  <a href="#" class="showcase-img-box">
-											  <img src="./assets/images/food/food-menu-1.png" alt="White Castle Pizzas" width="75" height="75" class="showcase-img">
-										  </a>
-	  
-	  
-	  
-										  <div class="showcase-content">
-	  
-											  <a href="#">
-												  <h4 class="showcase-title">White Castle Pizzas</h4>
-											  </a>
-	  
-											  <div class="showcase-rating">
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-											  </div>
-	  
-											  <div class="price-box">
-												  <del>$5.00</del>
-												  <p class="price">$4.00</p>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-									  <div class="showcase">
-	  
-										  <a href="#" class="showcase-img-box">
-											  <img src="./assets/images/food/food-menu-2.png" alt="Burger King Whopper" class="showcase-img" width="75" height="75">
-										  </a>
-	  
-										  <div class="showcase-content">
-	  
-											  <a href="#">
-												  <h4 class="showcase-title">Burger King Whopper</h4>
-											  </a>
-											  <div class="showcase-rating">
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star-half-outline"></ion-icon>
-											  </div>
-	  
-											  <div class="price-box">
-												  <del>$17.00</del>
-												  <p class="price">$7.00</p>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-									  <div class="showcase">
-	  
-										  <a href="#" class="showcase-img-box">
-											  <img src="./assets/images/food/food-menu-3.png" alt="Fried Chicken Unlimited" class="showcase-img" width="75" height="75">
-										  </a>
-	  
-										  <div class="showcase-content">
-	  
-											  <a href="#">
-												  <h4 class="showcase-title">Fried Chicken Unlimited</h4>
-											  </a>
-											  <div class="showcase-rating">
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star-half-outline"></ion-icon>
-											  </div>
-	  
-											  <div class="price-box">
-												  <del>$5.00</del>
-												  <p class="price">$3.00</p>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-									  <div class="showcase">
-	  
-										  <a href="#" class="showcase-img-box">
-											  <img src="./assets/images/food/food-menu-4.png" alt="Kung Pao Chicken BBQ" class="showcase-img" width="75" height="75">
-										  </a>
-	  
-										  <div class="showcase-content">
-	  
-											  <a href="#">
-												  <h4 class="showcase-title">Kung Pao Chicken BBQ</h4>
-											  </a>
-											  <div class="showcase-rating">
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-												  <ion-icon name="star"></ion-icon>
-											  </div>
-	  
-											  <div class="price-box">
-												  <del>$15.00</del>
-												  <p class="price">$12.00</p>
-											  </div>
-	  
-										  </div>
-	  
-									  </div>
-	  
-								  </div>
-	  
-							  </div>
-	  
-						  </div>
-	  
-					  </div>
-	  
-				  </div>
-				  <!--
+						<div class="sidebar-category">
+							<h3 class="showcase-heading">
+								LOS FOODIE TIENEN EXCELENTE
+								<br />¡DE HAMBURGUESAS DE CALIDAD!
+							</h3>
+
+							<div class="showcase-wrapper">
+								<div class="showcase-container">
+									<div class="showcase">
+										<a href="#" class="showcase-img-box">
+											<img
+												src="./images/food/food-menu-1.png"
+												alt="White Castle Pizzas"
+												width="75"
+												height="75"
+												class="showcase-img"
+											/>
+										</a>
+
+										<div class="showcase-content">
+											<a href="#">
+												<h4 class="showcase-title">White Castle Pizzas</h4>
+											</a>
+
+											<div class="showcase-rating">
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+											</div>
+
+											<div class="price-box">
+												<del>$5.00</del>
+												<p class="price">$4.00</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="showcase">
+										<a href="#" class="showcase-img-box">
+											<img
+												src="./images/food/food-menu-2.png"
+												alt="Burger King Whopper"
+												class="showcase-img"
+												width="75"
+												height="75"
+											/>
+										</a>
+
+										<div class="showcase-content">
+											<a href="#">
+												<h4 class="showcase-title">Burger King Whopper</h4>
+											</a>
+											<div class="showcase-rating">
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star-half-outline"></ion-icon>
+											</div>
+
+											<div class="price-box">
+												<del>$17.00</del>
+												<p class="price">$7.00</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="showcase">
+										<a href="#" class="showcase-img-box">
+											<img
+												src="./images/food/food-menu-3.png"
+												alt="Fried Chicken Unlimited"
+												class="showcase-img"
+												width="75"
+												height="75"
+											/>
+										</a>
+
+										<div class="showcase-content">
+											<a href="#">
+												<h4 class="showcase-title">
+													Fried Chicken Unlimited
+												</h4>
+											</a>
+											<div class="showcase-rating">
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star-half-outline"></ion-icon>
+											</div>
+
+											<div class="price-box">
+												<del>$5.00</del>
+												<p class="price">$3.00</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="showcase">
+										<a href="#" class="showcase-img-box">
+											<img
+												src="./images/food/food-menu-4.png"
+												alt="Kung Pao Chicken BBQ"
+												class="showcase-img"
+												width="75"
+												height="75"
+											/>
+										</a>
+
+										<div class="showcase-content">
+											<a href="#">
+												<h4 class="showcase-title">Kung Pao Chicken BBQ</h4>
+											</a>
+											<div class="showcase-rating">
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+												<ion-icon name="star"></ion-icon>
+											</div>
+
+											<div class="price-box">
+												<del>$15.00</del>
+												<p class="price">$12.00</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
 			- CATEGORY2
 		  -->
-	  
-				  <div class="category">
-	  
-					  <div class="container">
-	  
-						  <div class="category-item-container has-scrollbar">
-	  
-							  <div class="category-item">
-	  
-								  <div class="category-img-box">
-									  <img src="./assets/images/food/food-menu-1.png" alt="HAMBURGUESAS" width="30">
-								  </div>
-	  
-								  <div class="category-content-box">
-	  
-									  <div class="category-content-flex">
-										  <h3 class="category-item-title">HAMBURGUESAS</h3>
-	  
-										  <p class="category-item-amount">(53)</p>
-									  </div>
-	  
-									  <a href="#" class="category-btn">Show all</a>
-	  
-								  </div>
-	  
-							  </div>
-	  
-							  <div class="category-item">
-	  
-								  <div class="category-img-box">
-									  <img src="./assets/images/food/food-menu-2.png" alt="HAMBURGUESAS" width="30">
-								  </div>
-	  
-								  <div class="category-content-box">
-	  
-									  <div class="category-content-flex">
-										  <h3 class="category-item-title">HAMBURGUESAS</h3>
-	  
-										  <p class="category-item-amount">(58)</p>
-									  </div>
-	  
-									  <a href="#" class="category-btn">Show all</a>
-	  
-								  </div>
-	  
-							  </div>
-	  
-							  <div class="category-item">
-	  
-								  <div class="category-img-box">
-									  <img src="./assets/images/food/food-menu-3.png" alt="HAMBURGUESAS" width="30">
-								  </div>
-	  
-								  <div class="category-content-box">
-	  
-									  <div class="category-content-flex">
-										  <h3 class="category-item-title">HAMBURGUESAS</h3>
-	  
-										  <p class="category-item-amount">(68)</p>
-									  </div>
-	  
-									  <a href="#" class="category-btn">Show all</a>
-	  
-								  </div>
-	  
-							  </div>
-	  
-							  <div class="category-item">
-	  
-								  <div class="category-img-box">
-									  <img src="./assets/images/food/food-menu-4.png" alt="HAMBURGUESAS" width="30">
-								  </div>
-	  
-								  <div class="category-content-box">
-	  
-									  <div class="category-content-flex">
-										  <h3 class="category-item-title">HAMBURGUESAS</h3>
-	  
-										  <p class="category-item-amount">(84)</p>
-									  </div>
-	  
-									  <a href="#" class="category-btn">Show all</a>
-	  
-								  </div>
-	  
-							  </div>
-	  
-							  <div class="category-item">
-	  
-								  <div class="category-img-box">
-									  <img src="./assets/images/food/food-menu-4.png" alt="HAMBURGUESAS" width="30">
-								  </div>
-	  
-								  <div class="category-content-box">
-	  
-									  <div class="category-content-flex">
-										  <h3 class="category-item-title">HAMBURGUESAS</h3>
-	  
-										  <p class="category-item-amount">(84)</p>
-									  </div>
-	  
-									  <a href="#" class="category-btn">Show all</a>
-	  
-								  </div>
-	  
-							  </div>
-	  
-							  <div class="category-item">
-	  
-								  <div class="category-img-box">
-									  <img src="./assets/images/food/food-menu-4.png" alt="HAMBURGUESAS" width="30">
-								  </div>
-	  
-								  <div class="category-content-box">
-	  
-									  <div class="category-content-flex">
-										  <h3 class="category-item-title">HAMBURGUESAS</h3>
-	  
-										  <p class="category-item-amount">(84)</p>
-									  </div>
-	  
-									  <a href="#" class="category-btn">Show all</a>
-	  
-								  </div>
-	  
-							  </div>
-	  
-	  
-	  
-						  </div>
-	  
-					  </div>
-	  
-				  </div>
-	  
-			  </div>
-	  
-	  
-	  
-	  
-	  
-			  <!--
+
+				<div class="category">
+					<div class="container">
+						<div class="category-item-container has-scrollbar">
+							<div class="category-item">
+								<div class="category-img-box">
+									<img
+										src="./images/food/food-menu-1.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
+								</div>
+
+								<div class="category-content-box">
+									<div class="category-content-flex">
+										<h3 class="category-item-title">HAMBURGUESAS</h3>
+
+										<p class="category-item-amount">(53)</p>
+									</div>
+
+									<a href="#" class="category-btn">Show all</a>
+								</div>
+							</div>
+
+							<div class="category-item">
+								<div class="category-img-box">
+									<img
+										src="./images/food/food-menu-2.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
+								</div>
+
+								<div class="category-content-box">
+									<div class="category-content-flex">
+										<h3 class="category-item-title">HAMBURGUESAS</h3>
+
+										<p class="category-item-amount">(58)</p>
+									</div>
+
+									<a href="#" class="category-btn">Show all</a>
+								</div>
+							</div>
+
+							<div class="category-item">
+								<div class="category-img-box">
+									<img
+										src="./images/food/food-menu-3.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
+								</div>
+
+								<div class="category-content-box">
+									<div class="category-content-flex">
+										<h3 class="category-item-title">HAMBURGUESAS</h3>
+
+										<p class="category-item-amount">(68)</p>
+									</div>
+
+									<a href="#" class="category-btn">Show all</a>
+								</div>
+							</div>
+
+							<div class="category-item">
+								<div class="category-img-box">
+									<img
+										src="./images/food/food-menu-4.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
+								</div>
+
+								<div class="category-content-box">
+									<div class="category-content-flex">
+										<h3 class="category-item-title">HAMBURGUESAS</h3>
+
+										<p class="category-item-amount">(84)</p>
+									</div>
+
+									<a href="#" class="category-btn">Show all</a>
+								</div>
+							</div>
+
+							<div class="category-item">
+								<div class="category-img-box">
+									<img
+										src="./images/food/food-menu-4.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
+								</div>
+
+								<div class="category-content-box">
+									<div class="category-content-flex">
+										<h3 class="category-item-title">HAMBURGUESAS</h3>
+
+										<p class="category-item-amount">(84)</p>
+									</div>
+
+									<a href="#" class="category-btn">Show all</a>
+								</div>
+							</div>
+
+							<div class="category-item">
+								<div class="category-img-box">
+									<img
+										src="./images/food/food-menu-4.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
+								</div>
+
+								<div class="category-content-box">
+									<div class="category-content-flex">
+										<h3 class="category-item-title">HAMBURGUESAS</h3>
+
+										<p class="category-item-amount">(84)</p>
+									</div>
+
+									<a href="#" class="category-btn">Show all</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
 			- TESTIMONIALS, CTA & SERVICE
 		  -->
-	  
-			  <div>
-	  
-				  <div class="container">
-	  
-					  <div class="testimonials-box">
-	  
-	
-	
-					  </div>
-	  
-				  </div>
-	  
-			  </div>
-	  
-	  
-	  
-		  </main>
-	  
-	  
-		  <!--
+
+			<div>
+				<div class="container">
+					<div class="testimonials-box"></div>
+				</div>
+			</div>
+		</main>
+
+		<!--
 		  - FOOTER
 		-->
-	  
-		  <footer>
-	  
-			  <div class="footer-category">
-	  
-				  <div class="container">
-	  
-					  <h2 class="footer-category-title">Brand directory</h2>
-	  
-					  <div class="footer-category-box">
-	  
-						  <h3 class="category-box-title">Foods :</h3>
-	  
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-	  
-					  </div>
-	  
-					  <div class="footer-category-box">
-						  <h3 class="category-box-title">Foods :</h3>
-	  
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-					  </div>
-	  
-					  <div class="footer-category-box">
-						  <h3 class="category-box-title">Foods :</h3>
-	  
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-					  </div>
-	  
-					  <div class="footer-category-box">
-						  <h3 class="category-box-title">Foods :</h3>
-	  
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-						  <a href="#" class="footer-category-link">HAMBURGUESAS</a>
-					  </div>
-	  
-				  </div>
-	  
-			  </div>
-	  
-			  <div class="footer-nav">
-	  
-				  <div class="container">
-	  
-					  <ul class="footer-nav-list">
-	  
-						  <li class="footer-nav-item">
-							  <h2 class="nav-title">Popular Categories</h2>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Foods</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Foods</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Foods</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Foods</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Foods</a>
-						  </li>
-	  
-					  </ul>
-	  
-					  <ul class="footer-nav-list">
-	  
-						  <li class="footer-nav-item">
-							  <h2 class="nav-title">Products</h2>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Prices drop</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Nuestras deliciosas comidas</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Best sales</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Contact us</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Sitemap</a>
-						  </li>
-	  
-					  </ul>
-	  
-					  <ul class="footer-nav-list">
-	  
-						  <li class="footer-nav-item">
-							  <h2 class="nav-title">Our Company</h2>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Delivery</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Legal Notice</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Terms and conditions</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">About us</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Secure payment</a>
-						  </li>
-	  
-					  </ul>
-	  
-					  <ul class="footer-nav-list">
-	  
-						  <li class="footer-nav-item">
-							  <h2 class="nav-title">Services</h2>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Prices drop</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">New products</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Best sales</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Contact us</a>
-						  </li>
-	  
-						  <li class="footer-nav-item">
-							  <a href="#" class="footer-nav-link">Sitemap</a>
-						  </li>
-	  
-					  </ul>
-	  
-					  <ul class="footer-nav-list">
-	  
-						  <li class="footer-nav-item">
-							  <h2 class="nav-title">Contact</h2>
-						  </li>
-	  
-						  <li class="footer-nav-item flex">
-							  <div class="icon-box">
-								  <ion-icon name="location-outline"></ion-icon>
-							  </div>
-	  
-							  <address class="content">
-					419 State 414 Rte
-					Beaver Dams, New York(NY), 14812, USA
-				  </address>
-						  </li>
-	  
-						  <li class="footer-nav-item flex">
-							  <div class="icon-box">
-								  <ion-icon name="call-outline"></ion-icon>
-							  </div>
-	  
-							  <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
-						  </li>
-	  
-						  <li class="footer-nav-item flex">
-							  <div class="icon-box">
-								  <ion-icon name="mail-outline"></ion-icon>
-							  </div>
-	  
-							  <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
-						  </li>
-	  
-					  </ul>
-	  
-					  <ul class="footer-nav-list">
-	  
-						  <li class="footer-nav-item">
-							  <h2 class="nav-title">Follow Us</h2>
-						  </li>
-	  
-						  <li>
-							  <ul class="social-link">
-	  
-								  <li class="footer-nav-item">
-									  <a href="#" class="footer-nav-link">
-										  <ion-icon name="logo-facebook"></ion-icon>
-									  </a>
-								  </li>
-	  
-								  <li class="footer-nav-item">
-									  <a href="#" class="footer-nav-link">
-										  <ion-icon name="logo-twitter"></ion-icon>
-									  </a>
-								  </li>
-	  
-								  <li class="footer-nav-item">
-									  <a href="#" class="footer-nav-link">
-										  <ion-icon name="logo-linkedin"></ion-icon>
-									  </a>
-								  </li>
-	  
-								  <li class="footer-nav-item">
-									  <a href="#" class="footer-nav-link">
-										  <ion-icon name="logo-instagram"></ion-icon>
-									  </a>
-								  </li>
-	  
-							  </ul>
-						  </li>
-	  
-					  </ul>
-	  
-				  </div>
-	  
-			  </div>
-	  
-			  <div class="footer-bottom">
-	  
-				  <div class="container">
-	  
-					  <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
-	  
-					  <p class="copyright">
-						  Copyright &copy; <a href="#">Luishiño</a> all rights reserved.
-					  </p>
-	  
-				  </div>
-	  
-			  </div>
-	  
-		  </footer>
-	  
-	  
-	  
-	  
-	  
-	  
-		  <!--
+
+		<footer>
+			<div class="footer-category">
+				<div class="container">
+					<h2 class="footer-category-title">Brand directory</h2>
+
+					<div class="footer-category-box">
+						<h3 class="category-box-title">Foods :</h3>
+
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+					</div>
+
+					<div class="footer-category-box">
+						<h3 class="category-box-title">Foods :</h3>
+
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+					</div>
+
+					<div class="footer-category-box">
+						<h3 class="category-box-title">Foods :</h3>
+
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+					</div>
+
+					<div class="footer-category-box">
+						<h3 class="category-box-title">Foods :</h3>
+
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+						<a href="#" class="footer-category-link">HAMBURGUESAS</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-nav">
+				<div class="container">
+					<ul class="footer-nav-list">
+						<li class="footer-nav-item">
+							<h2 class="nav-title">Popular Categories</h2>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Foods</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Foods</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Foods</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Foods</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Foods</a>
+						</li>
+					</ul>
+
+					<ul class="footer-nav-list">
+						<li class="footer-nav-item">
+							<h2 class="nav-title">Products</h2>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Prices drop</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Nuestras deliciosas comidas</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Best sales</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Contact us</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Sitemap</a>
+						</li>
+					</ul>
+
+					<ul class="footer-nav-list">
+						<li class="footer-nav-item">
+							<h2 class="nav-title">Our Company</h2>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Delivery</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Legal Notice</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Terms and conditions</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">About us</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Secure payment</a>
+						</li>
+					</ul>
+
+					<ul class="footer-nav-list">
+						<li class="footer-nav-item">
+							<h2 class="nav-title">Services</h2>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Prices drop</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">New products</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Best sales</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Contact us</a>
+						</li>
+
+						<li class="footer-nav-item">
+							<a href="#" class="footer-nav-link">Sitemap</a>
+						</li>
+					</ul>
+
+					<ul class="footer-nav-list">
+						<li class="footer-nav-item">
+							<h2 class="nav-title">Contact</h2>
+						</li>
+
+						<li class="footer-nav-item flex">
+							<div class="icon-box">
+								<ion-icon name="location-outline"></ion-icon>
+							</div>
+
+							<address class="content">
+								419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
+							</address>
+						</li>
+
+						<li class="footer-nav-item flex">
+							<div class="icon-box">
+								<ion-icon name="call-outline"></ion-icon>
+							</div>
+
+							<a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+						</li>
+
+						<li class="footer-nav-item flex">
+							<div class="icon-box">
+								<ion-icon name="mail-outline"></ion-icon>
+							</div>
+
+							<a href="mailto:example@gmail.com" class="footer-nav-link"
+								>example@gmail.com</a
+							>
+						</li>
+					</ul>
+
+					<ul class="footer-nav-list">
+						<li class="footer-nav-item">
+							<h2 class="nav-title">Follow Us</h2>
+						</li>
+
+						<li>
+							<ul class="social-link">
+								<li class="footer-nav-item">
+									<a href="#" class="footer-nav-link">
+										<ion-icon name="logo-facebook"></ion-icon>
+									</a>
+								</li>
+
+								<li class="footer-nav-item">
+									<a href="#" class="footer-nav-link">
+										<ion-icon name="logo-twitter"></ion-icon>
+									</a>
+								</li>
+
+								<li class="footer-nav-item">
+									<a href="#" class="footer-nav-link">
+										<ion-icon name="logo-linkedin"></ion-icon>
+									</a>
+								</li>
+
+								<li class="footer-nav-item">
+									<a href="#" class="footer-nav-link">
+										<ion-icon name="logo-instagram"></ion-icon>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="container">
+					<img src="./images/payment.png" alt="payment method" class="payment-img" />
+
+					<p class="copyright">
+						Copyright &copy; <a href="#">Luishiño</a> all rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!--
 		  - custom js link
 		-->
-		  <!-- <script src="./assets/js/script.js"></script> -->
-	  
-		  <!--
+		<!-- <script src="./js/script.js"></script> -->
+
+		<!--
 		  - ionicon link
 		-->
-		  <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	   -->
-	  </body>
-
-
+	</body>
 
 	<!-- <NEXNewSidebar client:visible /> -->
 
-    <!--
+	<!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
-  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-  <!--
+	<link rel="shortcut icon" href="./images/logo/favicon.ico" type="image/x-icon" />
+	<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+	<!--
   - custom css link
 -->
 
-  <!--
+	<!--
   - google font link
 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet"
+	/>
 </BaseClientLayout>
 
-
 <script>
+	/*===== EXPANDER MENU  =====*/
+	const showMenu = (toggleId, navbarId, bodyId) => {
+		const toggle = document.getElementById(toggleId),
+			navbar = document.getElementById(navbarId),
+			bodypadding = document.getElementById(bodyId)
 
-/*===== EXPANDER MENU  =====*/ 
-const showMenu = (toggleId, navbarId, bodyId)=>{
-  const toggle = document.getElementById(toggleId),
-  navbar = document.getElementById(navbarId),
-  bodypadding = document.getElementById(bodyId)
+		if (toggle && navbar) {
+			toggle.addEventListener('click', () => {
+				navbar.classList.toggle('expander')
 
-  if(toggle && navbar){
-    toggle.addEventListener('click', ()=>{
-      navbar.classList.toggle('expander')
+				bodypadding.classList.toggle('body-pd')
+			})
+		}
+	}
+	showMenu('nav-toggle', 'navbar', 'body-pd')
 
-      bodypadding.classList.toggle('body-pd')
-    })
-  }
-}
-showMenu('nav-toggle','navbar','body-pd')
+	/*===== LINK ACTIVE  =====*/
+	const linkColor = document.querySelectorAll('.nav__link')
+	function colorLink() {
+		linkColor.forEach((l) => l.classList.remove('active'))
+		this.classList.add('active')
+	}
+	linkColor.forEach((l) => l.addEventListener('click', colorLink))
 
-/*===== LINK ACTIVE  =====*/ 
-const linkColor = document.querySelectorAll('.nav__link')
-function colorLink(){
-  linkColor.forEach(l=> l.classList.remove('active'))
-  this.classList.add('active')
-}
-linkColor.forEach(l=> l.addEventListener('click', colorLink))
+	/*===== COLLAPSE MENU  =====*/
+	const linkCollapse = document.getElementsByClassName('collapse__link')
+	var i
 
+	for (i = 0; i < linkCollapse.length; i++) {
+		linkCollapse[i].addEventListener('click', function () {
+			const collapseMenu = this.nextElementSibling
+			collapseMenu.classList.toggle('showCollapse')
 
-/*===== COLLAPSE MENU  =====*/ 
-const linkCollapse = document.getElementsByClassName('collapse__link')
-var i
-
-for(i=0;i<linkCollapse.length;i++){
-  linkCollapse[i].addEventListener('click', function(){
-    const collapseMenu = this.nextElementSibling
-    collapseMenu.classList.toggle('showCollapse')
-
-    const rotate = collapseMenu.previousElementSibling
-    rotate.classList.toggle('rotate')
-  })
-}
-
-
-
+			const rotate = collapseMenu.previousElementSibling
+			rotate.classList.toggle('rotate')
+		})
+	}
 </script>
 
-
 <script>
-	'use strict';
+	'use strict'
 
-// modal variables
-const modal = document.querySelector('[data-modal]');
-const modalCloseBtn = document.querySelector('[data-modal-close]');
-const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
+	// modal variables
+	const modal = document.querySelector('[data-modal]')
+	const modalCloseBtn = document.querySelector('[data-modal-close]')
+	const modalCloseOverlay = document.querySelector('[data-modal-overlay]')
 
-// modal function
-const modalCloseFunc = function () { modal.classList.add('closed') }
+	// modal function
+	const modalCloseFunc = function () {
+		modal.classList.add('closed')
+	}
 
-// modal eventListener
-modalCloseOverlay.addEventListener('click', modalCloseFunc);
-modalCloseBtn.addEventListener('click', modalCloseFunc);
+	// modal eventListener
+	modalCloseOverlay.addEventListener('click', modalCloseFunc)
+	modalCloseBtn.addEventListener('click', modalCloseFunc)
 
+	// notification toast variables
+	const notificationToast = document.querySelector('[data-toast]')
+	const toastCloseBtn = document.querySelector('[data-toast-close]')
 
+	// notification toast eventListener
+	toastCloseBtn.addEventListener('click', function () {
+		notificationToast.classList.add('closed')
+	})
 
+	// mobile menu variables
+	const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]')
+	const mobileMenu = document.querySelectorAll('[data-mobile-menu]')
+	const mobileMenuCloseBtn = document.querySelectorAll('[data-mobile-menu-close-btn]')
+	const overlay = document.querySelector('[data-overlay]')
 
+	for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
+		// mobile menu function
+		const mobileMenuCloseFunc = function () {
+			mobileMenu[i].classList.remove('active')
+			overlay.classList.remove('active')
+		}
 
-// notification toast variables
-const notificationToast = document.querySelector('[data-toast]');
-const toastCloseBtn = document.querySelector('[data-toast-close]');
+		mobileMenuOpenBtn[i].addEventListener('click', function () {
+			mobileMenu[i].classList.add('active')
+			overlay.classList.add('active')
+		})
 
-// notification toast eventListener
-toastCloseBtn.addEventListener('click', function () {
-  notificationToast.classList.add('closed');
-});
+		mobileMenuCloseBtn[i].addEventListener('click', mobileMenuCloseFunc)
+		overlay.addEventListener('click', mobileMenuCloseFunc)
+	}
 
+	// accordion variables
+	const accordionBtn = document.querySelectorAll('[data-accordion-btn]')
+	const accordion = document.querySelectorAll('[data-accordion]')
 
+	for (let i = 0; i < accordionBtn.length; i++) {
+		accordionBtn[i].addEventListener('click', function () {
+			const clickedBtn = this.nextElementSibling.classList.contains('active')
 
+			for (let i = 0; i < accordion.length; i++) {
+				if (clickedBtn) break
 
+				if (accordion[i].classList.contains('active')) {
+					accordion[i].classList.remove('active')
+					accordionBtn[i].classList.remove('active')
+				}
+			}
 
-// mobile menu variables
-const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
-const mobileMenu = document.querySelectorAll('[data-mobile-menu]');
-const mobileMenuCloseBtn = document.querySelectorAll('[data-mobile-menu-close-btn]');
-const overlay = document.querySelector('[data-overlay]');
-
-for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
-
-  // mobile menu function
-  const mobileMenuCloseFunc = function () {
-    mobileMenu[i].classList.remove('active');
-    overlay.classList.remove('active');
-  }
-
-  mobileMenuOpenBtn[i].addEventListener('click', function () {
-    mobileMenu[i].classList.add('active');
-    overlay.classList.add('active');
-  });
-
-  mobileMenuCloseBtn[i].addEventListener('click', mobileMenuCloseFunc);
-  overlay.addEventListener('click', mobileMenuCloseFunc);
-
-}
-
-
-
-
-
-// accordion variables
-const accordionBtn = document.querySelectorAll('[data-accordion-btn]');
-const accordion = document.querySelectorAll('[data-accordion]');
-
-for (let i = 0; i < accordionBtn.length; i++) {
-
-  accordionBtn[i].addEventListener('click', function () {
-
-    const clickedBtn = this.nextElementSibling.classList.contains('active');
-
-    for (let i = 0; i < accordion.length; i++) {
-
-      if (clickedBtn) break;
-
-      if (accordion[i].classList.contains('active')) {
-
-        accordion[i].classList.remove('active');
-        accordionBtn[i].classList.remove('active');
-
-      }
-
-    }
-
-    this.nextElementSibling.classList.toggle('active');
-    this.classList.toggle('active');
-
-  });
-
-}
+			this.nextElementSibling.classList.toggle('active')
+			this.classList.toggle('active')
+		})
+	}
 </script>
