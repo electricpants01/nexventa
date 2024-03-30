@@ -2,9 +2,14 @@
 // import NEXNewSidebar from '../../components/react/NEXSidebar'
 // import NEXNavBar from '../../components/react/NEXNavBar'
 import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
+import BaseNavLayout from '../../layouts/BaseNavLayout.astro'
 ---
 
 <BaseClientLayout>
+	<BaseNavLayout>
+	
+	
+
 	<!-- <NEXNavBar client:visible /> -->
 
 	<body id="body-pd">
@@ -73,18 +78,18 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 		<!--
 		  - MODAL
 		-->
-		<!-- <div class="modal" data-modal>
+		<div class="modal" data-modal>
 	  
 			  <div class="modal-close-overlay" data-modal-overlay></div>
 	  
 			  <div class="modal-content">
 	  
-				  <button class="modal-close-btn" data-modal-close>
+				  <!-- <button class="modal-close-btn" data-modal-close>
 			  <ion-icon name="close-outline"></ion-icon>
-			</button>
+			</button> -->
 	  
 				  <div class="newsletter-img">
-					  <img src="./images/banner/about-banner-1.png" alt="subscribe newsletter" width="400" height="400">
+					  <img src="./images/caja/caja.png" alt="subscribe newsletter" width="400" height="400">
 				  </div>
 	  
 				  <div class="newsletter">
@@ -93,25 +98,24 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 	  
 						  <div class="newsletter-header">
 	  
-							  <h3 class="newsletter-title">Login.</h3>
+							  <h3 class="newsletter-title">Caja Iniciar.</h3>
 	  
 							  <p class="newsletter-desc">
-								  Subscribe the <b>Locoto</b> to get latest products and discount update.
+								  Iniciar caja <b>Locoto</b>apertuar.
 							  </p>
 	  
 						  </div>
 	  
-						  <input type="email" name="email" class="email-field" placeholder="Email Address" required>
-	  
-						  <button type="submit" class="btn-newsletter">Subscribe</button>
-	  
+			
+						  <button type="submit" class="btn-newsletter">Apertuar Caja</button>
+						  <button type="submit" class="btn-newsletter">Registrar Caja</button>
 					  </form>
 	  
 				  </div>
 	  
 			  </div>
 	  
-		  </div> -->
+		  </div> 
 
 		<!--
 		  - NOTIFICATION TOAST
@@ -440,7 +444,7 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 
 			<div class="banner">
 				<div class="container">
-					<div class="slider-container has-scrollbar" style="width: 78%;">
+					<div class="slider-container has-scrollbar" style="width: 73%;">
 						<div class="slider-item">
 							<img src="./images/banner/banner.jpg" alt="banner" class="banner-img" />
 
@@ -1136,7 +1140,7 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 								position: absolute;
 								top: -20%;
 								/* Ajusta según sea necesario */
-								left: 78%;
+								left: 74%;
 								/* Ajusta según sea necesario */
 							}
 
@@ -1789,40 +1793,11 @@ import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 				</div>
 			</div>
 		</footer>
-
-		<!--
-		  - custom js link
-		-->
-		<!-- <script src="./js/script.js"></script> -->
-
-		<!--
-		  - ionicon link
-		-->
-		<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	   -->
 	</body>
 
 	<!-- <NEXNewSidebar client:visible /> -->
 
-	<!--
-    - favicon
-  -->
-	<link rel="shortcut icon" href="./images/logo/favicon.ico" type="image/x-icon" />
-	<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-	<!--
-  - custom css link
--->
-
-	<!--
-  - google font link
--->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet"
-	/>
+</BaseNavLayout>
 </BaseClientLayout>
 
 <script>
