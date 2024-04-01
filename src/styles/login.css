@@ -81,10 +81,12 @@ form.sign-in-form {
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 35px;
   color: var(--title-color);
   margin-bottom: 10px;
+  font-weight: bold;
 }
+
 
 .input-field {
   max-width: 380px;
@@ -139,8 +141,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-
-  /* background-color: var(--button-bgcolor); */
+  background-color: var(--button-bgcolor);
   border: none;
   outline: none;
   height: 49px;
@@ -241,27 +242,22 @@ form.sign-in-form {
 .panel h3 {
   font-weight: 600;
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 35px;
 }
 
 .panel p {
-  font-size: 0.95rem;
+  font-size: 18px;
   padding: 0.7rem 0;
 }
 
-/* .btn.transparent {
-  margin: 0;
-  background: none;
-  border: 2px solid var(--panel-button-border-color);
-  width: 130px;
-  height: 41px;
-  font-weight: 600;
-  font-size: 0.8rem;
-} */
 
 .right-panel .image,
 .right-panel .content {
   transform: translateX(800px);
+  -webkit-transform: translateX(800px);
+  -moz-transform: translateX(800px);
+  -ms-transform: translateX(800px);
+  -o-transform: translateX(800px);
 }
 
 /* ANIMATION */

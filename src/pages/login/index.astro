@@ -1,93 +1,43 @@
 ---
 import BaseLoginLayout from '../../layouts/BaseLoginLayout.astro'
-// import NEXButton from '../../components/NEXButton.astro'
-// import { config } from '../../config/Config.ts'
-// import NEXOutlineBorder from '../../components/NEXOutlineBorder.astro'
 ---
 
 <BaseLoginLayout>
-	<!-- <NEXOutlineBorder> -->
-		<!-- <div class="flex flex-col items-center space-y-3">
-
-			<span class="font-semi-bold text-2xl leading-normal">Sign in</span>
-			<p class="leading-normal">Use your { config.projectName } Account</p>
-		</div> -->
-  <!--container start-->
   <div class="container">
-    <!--form container start-->
     <div class="forms-container">
       <div class="signin-signup">
         <div class="loader"></div>
         <form method="POST" class="sign-in-form" action="/client/select-branch">
           <h2 class="title">Iniciar Seccion</h2>
-          <!--input for username-->
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input id="email" type="email" name="email" required autocomplete="email" autofocus placeholder="Correo" />
           </div>
-          <!--input for password-->
           <div class="input-field">
             <i class="fas fa-lock"></i>
             <input id="password" type="password" name="password" required autocomplete="current-password"
               placeholder="Contraseña" />
           </div>
-
-      
-          <button type="submit" value="Ingresar" class="btn solid" >Ingresar</button>
+          <button type="submit" value="Ingresar" style="background-color: #FF5C28;" class="btn2 solid"
+           >Ingresar</button>
         </form>
-        <!--Registrate form end-->
       </div>
     </div>
-    <!--form container end-->
-    <!--panel container start-->
     <div class="panels-container">
-      <!--left panel for Iniciar Seccion form start-->
       <div class="panel left-panel">
         <div class="content">
           <h3>Locoto</h3>
           <p>
             "Tu nuevo sistema de venta de comida. Ordena fácil, disfruta más."
           </p>
-          <!--Registrate button-->
-          <!-- <button class="btn transparent" id="sign-up-btn">
-              Registrate
-            </button> -->
-          <!--image tag for svg file-->
           <img src="https://firebasestorage.googleapis.com/v0/b/imagenes-972f4.appspot.com/o/Producto%2Fabout-banner.png?alt=media&token=2a2173df-b85a-41ed-bea0-a528bf088384" class="image" alt="" width="100" height="400" />
         </div>
       </div>
-      <!--left panel for Iniciar Seccion form start-->
-
-
-      <!--right panel for Registrate form end-->
     </div>
-    <!--panel container end-->
+
   </div>
-  <!--container end-->
-	<!-- </NEXOutlineBorder> -->
+
+
 </BaseLoginLayout>
 
-<!-- <script>
-	const emailInput = document.getElementById('email')
-	const passwordInput = document.getElementById('password')
-	const emailLabel = document.getElementById('emailLabel')
-	const passwordLabel = document.getElementById('passwordLabel')
 
-	emailInput.addEventListener('input', () => {
-		emailInput.classList.toggle('filled', emailInput.value !== '')
-	})
-
-	passwordInput.addEventListener('input', () => {
-		passwordInput.classList.toggle('filled', passwordInput.value !== '')
-	})
-
-	emailLabel.addEventListener('click', () => {
-		console.log('chris tap emailLabel')
-		emailInput.focus()
-	})
-
-	passwordLabel.addEventListener('click', () => {
-		console.log('chris tap passwordLabel')
-		passwordInput.focus()
-	})
-</script> -->

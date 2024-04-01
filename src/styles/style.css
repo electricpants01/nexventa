@@ -173,7 +173,8 @@ body::-webkit-scrollbar-thumb:hover {
 \*-----------------------------------*/
 
 .container {
-  padding: 0 15px;
+  padding: 0 10px;
+  top: 0;
 
 }
 

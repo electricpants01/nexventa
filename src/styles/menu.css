@@ -3,7 +3,7 @@
 
 /*===== VARIABLES CSS =====*/
 :root{
-  --nav-width: 89px;
+  --nav-width: 80px;
 
   /*===== Colores =====*/
   --first-color: #FF5C28;
@@ -51,7 +51,7 @@ a{
   left: 0;
   width: var(--nav-width);
   height: 100vh;
-  background-color: var(--bg-color); 
+  background-color: var(--bg-color);
   color: var(--white-color);
   padding: 1.5rem 1.5rem 2rem;
   transition: .5s;
@@ -88,7 +88,7 @@ a{
   grid-template-columns: max-content max-content;
   align-items: center;
   column-gap: .75rem;
-  padding: .75rem;
+  padding: .40rem;
   color: var(--white-color);
   border-radius: .5rem;
   margin-bottom: 1rem;
