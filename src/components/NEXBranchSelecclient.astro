@@ -1,0 +1,339 @@
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<div class="container">
+    
+      <div class="signin-signup">
+        <form method="POST" class="sign-in-form" action="/client">
+            <div class="container2">
+                <div class="card-container">
+                    <br><br><br><br><br><br>
+                    <a href="/client" class="card">
+                      <img src="https://logowik.com/content/uploads/images/kfc2930.jpg" alt="Sucursal 4">
+                      <h3>KFC</h3>
+                      <p>Sucursal 4to anillo, av 4to anillo, 3 pasos al frente</p>
+                      <i class='bx bx-chevron-right bx-sm'></i>
+                    </a>
+                  <a href="/client" class="card">
+                    <img src="https://logowik.com/content/uploads/images/kfc2930.jpg" alt="Sucursal 4">
+                    <h3>KFC</h3>
+                    <p>Sucursal 4to anillo, av 4to anillo, 3 pasos al frente</p>
+                    <i class='bx bx-chevron-right bx-sm'></i>
+                  </a>
+                  <!-- Repite esto para las demás sucursales -->
+                  <a href="/client" class="card">
+                    <img src="https://logowik.com/content/uploads/images/kfc2930.jpg" alt="Sucursal 4">
+                    <h3>KFC</h3>
+                    <p>Sucursal 4to anillo, av 4to anillo, 3 pasos al frente</p>
+                    <i class='bx bx-chevron-right bx-sm'></i>
+                  </a>
+                  <a href="/client" class="card">
+                    <img src="https://logowik.com/content/uploads/images/kfc2930.jpg" alt="Sucursal 4">
+                    <h3>KFC</h3>
+                    <p>Sucursal 4to anillo, av 4to anillo, 3 pasos al frente</p>
+                    <i class='bx bx-chevron-right bx-sm'></i>
+                  </a>
+
+                  <a href="/client" class="card">
+                    <img src="https://logowik.com/content/uploads/images/kfc2930.jpg" alt="Sucursal 4">
+                    <h3>KFC</h3>
+                    <p>Sucursal 4to anillo, av 4to anillo, 3 pasos al frente</p>
+                    <i class='bx bx-chevron-right bx-sm'></i>
+                  </a>
+
+
+                  <a href="/client" class="card">
+                    <img src="https://logowik.com/content/uploads/images/kfc2930.jpg" alt="Sucursal 4">
+                    <h3>KFC</h3>
+                    <p>Sucursal 4to anillo, av 4to anillo, 3 pasos al frente</p>
+         
+                    <i class='bx bx-chevron-right bx-sm'></i>
+                  </a>
+                </div>
+              </div>
+              
+
+
+        </form>
+      </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Locoto</h3>
+          <p>
+            "Seleccione una sucursal "
+          </p>
+          <img src="https://e7.pngegg.com/pngimages/555/220/png-clipart-kfc-fried-chicken-logo-fast-food-restaurant-fried-chicken-text-fast-food-restaurant.png" class="image" alt="" width="300" height="300" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+ 
+
+  <style>
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+
+:root {
+  --container-bgcolor: #fff;
+  --title-color: #444;
+  --input-field-bgcolor: #f0f0f0;
+  --input-field-icon-color: #acacac;
+  --input-field-font-color: #333;
+  --input-field-placeholder-font-color: #aaa;
+  --button-bgcolor: #FF5C28;
+  --button-font-color: #fff;
+  --button-bgcolor-hover: hsl(29, 90%, 65%);
+  --container-gradient-color1: #FF5C28;
+  --container-gradient-color2: hsl(29, 90%, 65%);
+  --panel-font-color: #fff;
+  --panel-button-border-color: #fff;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: var(--container-bgcolor);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+
+.signin-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  left: 75%;
+  width:80%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+  -webkit-transition: 1s 0.7s ease-in-out;
+  -moz-transition: 1s 0.7s ease-in-out;
+  -ms-transition: 1s 0.7s ease-in-out;
+  -o-transition: 1s 0.7s ease-in-out;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+
+
+
+
+
+.panels-container {
+  
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+/* estilo */
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -80%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, var(--container-gradient-color1) 0%, var(--container-gradient-color2) 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-40%);
+  -o-transform: translateY(-20%);
+}
+
+.image {
+  width: 100%;
+  transition: transform 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+.left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+  color: var(--panel-font-color);
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.6s;
+}
+
+.panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 35px;
+}
+
+.panel p {
+  font-size: 18px;
+  padding: 0.7rem 0;
+}
+
+
+/**
+ * scrollbar style
+ */
+
+.container2::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container2::-webkit-scrollbar-track {
+  background: #FF5C28;
+  /* border-left: 1px solid var(--cultured); */
+}
+
+.container2::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 80%);
+  border: 1px solid #FF5C28;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.container2::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 70%);
+}
+
+
+
+        
+    .container2 {
+      background-color:#F3F3F3;
+      margin:200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+      max-height: 400px; /* Altura máxima del contenedor */
+      overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
+      padding: 10px; /* Espaciado alrededor del contenido */
+      border-radius: 10px; /* Borde redondeado */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+    
+    .search-bar {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .search-bar input[type="text"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .search-bar button {
+      padding: 5px 10px;
+      background-color: #F3F3F3;;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .card-container {
+      background-color:#F3F3F3;;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+    }
+
+    .card {
+      display: flex;
+      align-items: center; /* Alinear los elementos verticalmente */
+      text-decoration: none;
+      padding: 15px;
+      background-color: #ffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      text-decoration: none; /* Eliminar subrayado del enlace */
+    }
+
+    .card h3{
+      font-size:16px;
+      text-decoration: none; /* Eliminar subrayado del enlace */
+    
+    }
+
+    .card p{
+      font-size:14px;
+      text-decoration: none; /* Eliminar subrayado del enlace */
+    }
+
+    .card i{
+      color:#FF5C28;
+      font-size:10px;
+      text-decoration: none; /* Eliminar subrayado del enlace */
+    }
+    
+    .card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover img {
+      transform: scale(1.1);
+      background-color:red;
+    }
+    
+  
+  </style>
+  
+     
+        
