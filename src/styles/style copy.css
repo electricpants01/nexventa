@@ -22,7 +22,6 @@
   --davys-gray: hsl(0, 0%, 33%);
   --cultured: hsl(0, 0%, 93%);
   --white: hsl(0, 100%, 100%);
-  --white-color: #ffffff;
   --onyx: hsl(0, 0%, 27%);
 
   /**
@@ -139,7 +138,6 @@ input::placeholder {
 
 body {
   background: var(--white);
-
 }
 
 /**
@@ -242,8 +240,6 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
 }
 
 .overlay.active {
@@ -333,15 +329,9 @@ body::-webkit-scrollbar-thumb:hover {
   display: none;
 }
 
-.newsletter-img img{
-  width: 300px;
-  height: 300px;
-}
-
-
 .modal-content {
   position: relative;
-  max-width: 400px;
+  max-width: 350px;
   margin: 20px;
   background: var(--white);
   -webkit-border-radius: var(--border-radius-md);
@@ -411,11 +401,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 .newsletter-title {
   color: var(--onyx);
-  font-size: var(--fs-3);
+  font-size: var(--fs-2);
   font-weight: var(--weight-600);
-  position: absolute;
-  top: 15px;
-  right: 200px;
+  margin-bottom: 10px;
 }
 
 .newsletter-desc {
@@ -427,10 +415,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 .btn-newsletter {
- background-color: #DA3805;
+  background: var(--eerie-black);
   color: var(--white);
   font-size: var(--fs-7);
   font-weight: var(--weight-600);
+  text-transform: uppercase;
   padding: 10px 15px;
   -webkit-border-radius: var(--border-radius-sm);
   border-radius: var(--border-radius-sm);
@@ -442,27 +431,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn-newsletter:hover {
   background: var(--salmon-pink);
-
 }
 
-/**
- * CAJA CHICA 
- */
-.monto {
-  width: 100%;
-  height: 20px;
-  background: #F3F3F3;
-  color: var(--black);
-  font-size: var(--fs-7);
-  font-weight: var(--weight-600);
-  padding: 15px 15px;
-  -webkit-border-radius: var(--border-radius-sm);
-  border-radius: var(--border-radius-sm);
-  -webkit-transition: var(--transition-timing);
-  -o-transition: var(--transition-timing);
-  transition: var(--transition-timing);
-  
-}
 
 
 /**
@@ -1057,11 +1027,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 .category {
   margin-bottom: 30px;
-
 }
 
 .category-item-container {
-  
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1079,8 +1047,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .category-item {
-  background-color: #ffffff;
-  
+  background-color: #FFFFFF;
   min-width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1181,8 +1148,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 
-
-
 /* Estilo base del select */
 .sidebar-select {
   padding: 10px;
@@ -1234,7 +1199,6 @@ body::-webkit-scrollbar-thumb:hover {
   border-bottom: 1px solid var(--cultured);
 }
 
-  
 .sidebar-top {
   display: -webkit-box;
   display: -webkit-flex;

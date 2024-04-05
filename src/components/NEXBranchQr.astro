@@ -7,32 +7,27 @@
 <div class="modal" id="cajaModal" data-modal>
     <div class="modal-close-overlay" data-modal-overlay></div>
     <div class="modal-content">
-        <button class="modal-close-btn" data-modal-close>
+        <button id="aperturarBtn" class="modal-close-btn" data-modal-close>
+           
             <i class="bx bx-x"></i>
         </button>
-        <div class="newsletter-img">
-            <h3 class="newsletter-title">Caja Iniciar.</h3>
-            <img src="./images/caja/caja.png" alt="iniciar caja" width="400" height="400" />
-        </div>
+
         <div class="newsletter">
+            <div class="newsletter-img">
+                <h3 class="newsletter-title">QR.</h3>
+                <img src="./images/caja/qr.jpg" alt="Pago qr" width="100" height="100" />
+            </div>
             <form id="cajaForm">
                 <div class="newsletter-header">
                     <p class="newsletter-desc">
-                        <b>Monto Bs.: 
+                        <b>Monto: 200.00 Bs.</b>
                     </p>
-
-                    <input class="monto" type="number" id="monto" name="monto" min="0.01" step="0.01" value="0.00" required>
-                    </b>
-                    
                 </div>
-                <button id="aperturarBtn" type="submit" style="background-color: #FF5C28;" class="btn-newsletter">
+                <!-- <button id="aperturarBtn" type="submit" style="background-color: #FF5C28;" class="btn-newsletter">
                     Aperturar Caja
                     <i class="bx bxs-chevron-right"></i>
-                </button>
+                </button> -->
             </form>
-
-
-
         </div>
     </div>
 </div>
