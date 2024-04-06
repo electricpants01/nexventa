@@ -28,9 +28,9 @@ body{
   position: relative; 
   margin: 0;
   padding: 0rem 0 0 4.9rem;
-  /* font-family: var(--body-font);
-  font-size: var(--normal-font-size); */
-  /* transition: .5s; */
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s; 
 }
 h1{
   margin: 0;
@@ -110,10 +110,6 @@ a{
   width: calc(var(--nav-width) + 9.25rem);
 }
 
-/*Add padding body*/
-.body-pd{
-  padding: 2rem 0 0 16rem;
-}
 
 /*Active links menu*/
 .active{
