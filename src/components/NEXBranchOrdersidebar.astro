@@ -1,420 +1,617 @@
 <div class="product-container">
-    <div class="container">
-        <div class="product-box">
-            <div class="blog">
-                <div class="container">
-                    <div class="blog-container has-scrollbar">
-                        <div class="blog-card">
-                            <a href="#">
-                                <img src="./images/food/1.jpg"
-                                    alt="Clothes Retail KPIs 2021 Guide for Clothes Executives" class="blog-banner" />
-                            </a>
+	<div class="container">
+		<div class="product-box">
+			<div class="blog">
+				<div class="container">
+					<div class="blog-container has-scrollbar">
+						<div class="blog-card">
+							<a href="#">
+								<img src="./images/food/1.jpg" alt="Comida" class="blog-banner" />
+							</a>
 
-                            <div class="blog-content">
-                                <a href="#" class="blog-category">Panera Soup</a>
-                                <a href="#">
-                                    <h3 class="blog-title">Comida rápida .</h3>
-                                </a>
-                                <p class="blog-meta">Precio 30$</p>
-                                <div>
-                                    <a href="#" class="banner-btn">Ordenar</a>
-                                </div>
+							<div class="blog-content">
+								<a href="#" class="blog-category">Panera Soup</a>
+								<a href="#">
+									<h3 class="blog-title">Comida rápida .</h3>
+								</a>
+								<p class="blog-meta">Precio 30$</p>
+								<div>
+									<a href="#" class="banner-btn">Ordenar</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<a href="#">
+								<img src="./images/food/2.jpg" alt="Foods." class="blog-banner" />
+							</a>
+
+							<div class="blog-content">
+								<a href="#" class="blog-category">Panera Soup</a>
+
+								<a href="#">
+									<h3 class="blog-title">Comida rápida .</h3>
+								</a>
+
+								<p class="blog-meta">Precio 30$</p>
+
+								<div>
+									<a href="#" class="banner-btn">Ordenar</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<a href="#">
+								<img src="./images/food/3.jpg" alt="Foods." class="blog-banner" />
+							</a>
+
+							<div class="blog-content">
+								<a href="#" class="blog-category">Panera Soup</a>
+
+								<a href="#">
+									<h3 class="blog-title">Comida rápida .</h3>
+								</a>
+
+								<p class="blog-meta">Precio 30$</p>
+
+								<div>
+									<a href="#" class="banner-btn">Ordenar</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog-card">
+							<a href="#">
+								<img src="./images/food/4.jpg" alt="Foods." class="blog-banner" />
+							</a>
+
+							<div class="blog-content">
+								<a href="#" class="blog-category">Panera Soup</a>
+
+								<a href="#">
+									<h3 class="blog-title">Comida rápida .</h3>
+								</a>
+
+								<p class="blog-meta">Precio 30$</p>
+								<div>
+									<a href="#" class="banner-btn">Ordenar</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="blog-container has-scrollbar">
+						<div class="blog-card">
+							<a href="#">
+								<img src="./images/food/1.jpg" alt="Comida" class="blog-banner" />
+							</a>
+
+							<div class="blog-content">
+								<a href="#" class="blog-category">Panera Soup</a>
+
+								<a href="#">
+									<h3 class="blog-title">Comida rápida .</h3>
+								</a>
+
+								<p class="blog-meta">Precio 30$</p>
+								<div>
+									<a href="#" class="banner-btn">Ordenar</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--
+                  - SIDEBAR
+                -->
+
+		<div class="sidebar has-scrollbar" data-mobile-menu>
+			<style>
+				.sidebar.has-scrollbar[data-mobile-menu] {
+					position: absolute;
+					top: -60%;
+					/* Ajusta según sea necesario */
+					left: 74%;
+					/* Ajusta según sea necesario */
+				}
+
+				@media only screen and (max-width: 768px) {
+					.sidebar.has-scrollbar[data-mobile-menu] {
+						position: fixed;
+						top: 50px;
+						/* Puedes ajustar este valor según tus necesidades */
+						right: 0;
+						bottom: 0;
+						left: 0;
+						transform: translateX(0%);
+						z-index: 999;
+						/* Puedes ajustar este valor según tus necesidades */
+					}
+				}
+			</style>
+
+			<div class="sidebar-category">
+				<h2 class="sidebar-title">Pedido del Cliente</h2>
+				<!-- <div class="sidebar-top">
+                                  <p>Cliente
+                                      <i class='bx bx-chevron-down'></i>
+  
+                                  </p>
+                      
+                                  <p>
+                                      Dirección
+                                      <i class='bx bx-chevron-right'></i>
+                                 </p>
+                  
+                                  40 minutos 5 km
+                                  <i class='bx bx-chevron-right'></i>
+  
+                                  <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                                      <i class='bx bx-chevron-down'></i>
+                                  </button>
+                              </div> -->
+
+				<!-- <form> -->
+				<div class="category-item">
+					<div class="sidebar-img-box">
+						<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
+					</div>
+
+					<div class="sidebar-content-box">
+						<div class="category-content-flex">
+							<h3 class="sidebar-item-title">Burger Mozza XL</h3>
+							<p class="category-item-amount">&39</p>
+						</div>
+
+						<p class="category-item-amount">Extra cheese</p>
+						<select class="sidebar-select" name="cantidad" id="cantidad">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<!-- Agrega más opciones según sea necesario -->
+						</select>
+
+						<a href="#" class="category-btn">Show all</a>
+					</div>
+				</div>
+
+				<div class="category-item">
+					<div class="sidebar-img-box">
+						<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
+					</div>
+
+					<div class="sidebar-content-box">
+						<div class="category-content-flex">
+							<h3 class="sidebar-item-title">Burger Mozza XL</h3>
+							<p class="category-item-amount">&39</p>
+						</div>
+
+						<p class="category-item-amount">Extra cheese</p>
+						<select class="sidebar-select" name="cantidad" id="cantidad">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<!-- Agrega más opciones según sea necesario -->
+						</select>
+
+						<a href="#" class="category-btn">Show all</a>
+					</div>
+				</div>
+
+				<ul class="sidebar-menu-category-list">
+					<li class="sidebar-menu-category">
+						<button class="sidebar-accordion-menu" data-accordion-btn>
+							<div class="menu-title-flex">
+								<img
+									src="./images/food/food-menu-1.png"
+									alt="clothes"
+									width="20"
+									height="20"
+									class="menu-title-img"
+								/>
+
+								<p class="menu-title">Burger Mozza XL</p>
+							</div>
+
+							<div>
+								<ion-icon name="add-outline" class="add-icon"></ion-icon>
+								<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+							</div>
+						</button>
+
+						<ul class="sidebar-submenu-category-list" data-accordion>
+							<li class="sidebar-submenu-category">
+								<a href="#" class="sidebar-submenu-title">
+									<p class="product-name">Sub Total</p>
+									<data value="300" class="stock" title="Available Stock"
+										>300</data
+									>
+								</a>
+							</li>
+
+							<li class="sidebar-submenu-category">
+								<a href="#" class="sidebar-submenu-title">
+									<p class="product-name">Delivery Fee</p>
+									<data value="60" class="stock" title="Available Stock">60</data>
+								</a>
+							</li>
+
+							<li class="sidebar-submenu-category">
+								<a href="#" class="sidebar-submenu-title">
+									<p class="product-name">Total</p>
+									<data value="87" class="stock" title="Available Stock">87</data>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+                
+				<div class="sidebar-top">
+					<p>
+						Cajero
+						<i class="bx bx-chevron-down"></i>
+					</p>
+					<!-- <p id="modal-qr2" class="banner-btn2">
+                           -->
+					<p >
+						pedro
+						<i class="bx bx-chevron-right"></i>
+					</p>
+				</div>
+
+
+				<div class="sidebar-top">
+					<p >
+						Cliente
+						<i class="bx bx-chevron-down"></i>
+					</p>
+					<!-- <p id="modal-qr2" class="banner-btn2">
+                           -->
+					<p id="openModalBtn2" class="banner-btn2">
+						Seleccionar
+						<i class="bx bx-chevron-right"></i>
+					</p>
+				</div>
+
+
+
+
+
+                <div class="sidebar-top">
+                    
+                    <div class="category-item">
+                        <!-- <div class="sidebar-img-box">
+                            <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
+                        </div> -->
+    
+                        <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
+                            <div class="category-content-flex">
+                                <h3 class="sidebar-item-title">Burger Mozza XL</h3>
+                                <p class="category-item-amount">&39</p>
                             </div>
-                        </div>
-
-                        <div class="blog-card">
-                            <a href="#">
-                                <img src="./images/food/2.jpg" alt="Foods." class="blog-banner" />
-                            </a>
-
-                            <div class="blog-content">
-                                <a href="#" class="blog-category">Panera Soup</a>
-
-                                <a href="#">
-                                    <h3 class="blog-title">Comida rápida .</h3>
-                                </a>
-
-                                <p class="blog-meta">Precio 30$</p>
-
-                                <div>
-                                    <a href="#" class="banner-btn">Ordenar</a>
-                                </div>
+    
+                            <p class="category-item-amount">Extra cheese</p>
+                            <div class="category-content-flex">
+                                <p class="category-item-amount">&39</p>
                             </div>
-                        </div>
-
-                        <div class="blog-card">
-                            <a href="#">
-                                <img src="./images/food/3.jpg" alt="Foods." class="blog-banner" />
-                            </a>
-
-                            <div class="blog-content">
-                                <a href="#" class="blog-category">Panera Soup</a>
-
-                                <a href="#">
-                                    <h3 class="blog-title">Comida rápida .</h3>
-                                </a>
-
-                                <p class="blog-meta">Precio 30$</p>
-
-                                <div>
-                                    <a href="#" class="banner-btn">Ordenar</a>
-                                </div>
+        
+                            <div class="category-content-flex">
+                                <p class="category-item-amount">Eliminar</p>
                             </div>
-                        </div>
-
-                        <div class="blog-card">
-                            <a href="#">
-                                <img src="./images/food/4.jpg" alt="Foods." class="blog-banner" />
-                            </a>
-
-                            <div class="blog-content">
-                                <a href="#" class="blog-category">Panera Soup</a>
-
-                                <a href="#">
-                                    <h3 class="blog-title">Comida rápida .</h3>
-                                </a>
-
-                                <p class="blog-meta">Precio 30$</p>
-                                <div>
-                                    <a href="#" class="banner-btn">Ordenar</a>
-                                </div>
+                  
+                            <div class="category-content-flex">
+                                <p class="category-item-amount">Editar</p>
                             </div>
-                        </div>
+
+            
+                     
                     </div>
-                </div>
 
-                <div class="container">
-                    <div class="blog-container has-scrollbar">
-                        <div class="blog-card">
-                            <a href="#">
-                                <img src="./images/food/1.jpg"
-                                    alt="Clothes Retail KPIs 2021 Guide for Clothes Executives" class="blog-banner" />
-                            </a>
 
-                            <div class="blog-content">
-                                <a href="#" class="blog-category">Panera Soup</a>
 
-                                <a href="#">
-                                    <h3 class="blog-title">Comida rápida .</h3>
-                                </a>
 
-                                <p class="blog-meta">Precio 30$</p>
-                                <div>
-                                    <a href="#" class="banner-btn">Ordenar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
+				</div>
 
-        <!--
-				- SIDEBAR
-			  -->
 
-        <div class="sidebar has-scrollbar" data-mobile-menu>
-            <style>
-                .sidebar.has-scrollbar[data-mobile-menu] {
-                    position: absolute;
-                    top: -60%;
-                    /* Ajusta según sea necesario */
-                    left: 74%;
-                    /* Ajusta según sea necesario */
-                }
+				<!-- Modal de registro de usuarios -->
+				<div id="userModal" class="userModal">
+					<div class="modal-content">
+						<button
+							id="closeModalBtn"
+							class="modal-close-btn"
+							onclick="closeModal()"
+							data-modal-close
+						>
+							<i class="bx bx-x"></i>
+						</button>
+						<div class="newsletter">
+							<div class="newsletter-img">
+								<h3 class="newsletter-title">Registro de Usuarios</h3>
+								<!-- Aquí puedes agregar campos de registro de usuario -->
+								<form id="registroForm">
+									<div class="form-group">
+										<label for="nombre">Nombre:</label>
+										<input type="text" id="nombre" name="nombre" required />
+									</div>
+									<div class="form-group">
+										<label for="apellido">Apellido:</label>
+										<input type="text" id="apellido" name="apellido" required />
+									</div>
+									<div class="form-group">
+										<label for="ci">CI:</label>
+										<input type="text" id="ci" name="ci" required />
+									</div>
+									<div class="form-group">
+										<label for="nit">NIT:</label>
+										<input type="text" id="nit" name="nit" required />
+									</div>
+									<button type="submit">Registrar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                @media only screen and (max-width: 768px) {
-                    .sidebar.has-scrollbar[data-mobile-menu] {
-                        position: fixed;
-                        top: 50px;
-                        /* Puedes ajustar este valor según tus necesidades */
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        transform: translateX(0%);
-                        z-index: 999;
-                        /* Puedes ajustar este valor según tus necesidades */
-                    }
-                }
-            </style>
+				<style>
+					/* Estilos generales del modal */
+					.userModal {
+						display: none;
+						position: fixed;
+						z-index: 1;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						overflow: auto;
+						background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
+					}
 
-            <div class="sidebar-category">
-                <h2 class="sidebar-title">Pedido del Cliente</h2>
-                <!-- <div class="sidebar-top">
-								<p>Cliente
-									<i class='bx bx-chevron-down'></i>
+					/* Estilos del contenido del modal */
+					.modal-content {
+						background-color: #fefefe;
+						margin: 10% auto;
+						padding: 20px;
+						border: 1px solid #888;
+						width: 80%;
+						max-width: 400px;
+						border-radius: 5px;
+					}
 
-								</p>
-					
-								<p>
-									Dirección
-									<i class='bx bx-chevron-right'></i>
-							   </p>
+					/* Estilos para el botón de cierre del modal */
+					.close {
+						color: #aaa;
+						float: right;
+						font-size: 28px;
+						font-weight: bold;
+					}
+
+					.close:hover,
+					.close:focus {
+						color: black;
+						text-decoration: none;
+						cursor: pointer;
+					}
+
+					/* Estilos para los campos de entrada */
+					input[type='text'] {
+						width: 100%;
+						padding: 10px;
+						margin-top: 10px;
+						margin-bottom: 20px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+						font-size: 16px;
+						transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
+					}
+
+					/* Estilos adicionales para resaltar los campos de entrada validados */
+					input:valid {
+						border-color: #e0480c; /* Color verde para los campos válidos */
+					}
+
+					input:invalid {
+						border-color: #dc3545; /* Color rojo para los campos inválidos */
+					}
+
+					/* Estilos para el botón de envío del formulario */
+					button[type='submit'] {
+						background-color: #ff9100;
+						color: white;
+						padding: 10px 20px;
+						border: none;
+						border-radius: 5px;
+						cursor: pointer;
+						transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+					}
+
+					button[type='submit']:hover {
+						background-color: #ffdd19; /* Color más oscuro al pasar el ratón por encima */
+					}
+				</style>
+
+				<script>
+					// Obtener elementos del DOM
+					var modal = document.getElementById('userModal')
+					var openModalBtn2 = document.getElementById('openModalBtn2')
+					var closeModalBtn = document.getElementById('closeModalBtn')
+
+					// Función para abrir el modal
+					function openModal() {
+						modal.style.display = 'block'
+					}
+
+					// Función para cerrar el modal
+					function closeModal() {
+						modal.style.display = 'none'
+					}
+
+					// Event listener para abrir el modal cuando se hace clic en el botón
+					openModalBtn2.addEventListener('click', openModal)
+
+					// Event listener para cerrar el modal cuando se hace clic en el botón de cierre
+					closeModalBtn.addEventListener('click', closeModal)
+
+					// Cerrar el modal al hacer clic fuera de él
+					window.addEventListener('click', function (event) {
+						if (event.target === modal) {
+							closeModal()
+						}
+					})
+
+					// Enviar el formulario de registro
+					document
+						.getElementById('registroForm')
+						.addEventListener('submit', function (event) {
+							event.preventDefault()
+							// Aquí puedes agregar la lógica para enviar el formulario de registro a la API
+							console.log('Formulario de registro enviado')
+							closeModal() // Cierra el modal después de enviar el formulario
+						})
+				</script>
+
+				<div class="sidebar-top">
+					<p>Ci:</p>
+					<p class="banner-btn2">
+						Seleccionar
+						<i class="bx bx-chevron-right"></i>
+						<!-- <button id="modal-qr"  class="banner-btn">Gerenerar Qr</button> -->
+					</p>
+
+				</div>
+
 				
-								40 minutos 5 km
-								<i class='bx bx-chevron-right'></i>
 
-								<button class="sidebar-close-btn" data-mobile-menu-close-btn>
-									<i class='bx bx-chevron-down'></i>
-								</button>
-							</div> -->
+                  
 
-                <!-- <form> -->
-                <div class="category-item">
-                    <div class="sidebar-img-box">
-                        <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
-                    </div>
+				<div class="sidebar-top">
+					<p>Pasarela de pagos:</p>
+					<p>Efectivo QR Tarjeta</p>
+				</div>
 
-                    <div class="sidebar-content-box">
-                        <div class="category-content-flex">
-                            <h3 class="sidebar-item-title">Burger Mozza XL</h3>
-                            <p class="category-item-amount">&39</p>
-                        </div>
+				<div class="sidebar-top">
+					<p>Sub Total</p>
+					<p>10 Bs</p>
+				</div>
 
-                        <p class="category-item-amount">Extra cheese</p>
-                        <select class="sidebar-select" name="cantidad" id="cantidad">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
+				<div class="sidebar-top">
+					<p>Delivery Fee</p>
+					<p>10 Bs</p>
+				</div>
 
-                        <a href="#" class="category-btn">Show all</a>
-                    </div>
-                </div>
+				<div class="sidebar-top">
+					<p>Total</p>
+					<p>10 Bs</p>
+				</div>
 
-                <div class="category-item">
-                    <div class="sidebar-img-box">
-                        <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
-                    </div>
+				<div>
+					<!-- <a href="#" class="banner-btn">Verificar</a> -->
+					<button class="banner-btn">Verificar</button>
+				</div>
+				<!-- </form> -->
 
-                    <div class="sidebar-content-box">
-                        <div class="category-content-flex">
-                            <h3 class="sidebar-item-title">Burger Mozza XL</h3>
-                            <p class="category-item-amount">&39</p>
-                        </div>
+				<button id="openModalBtn" class="banner-btn">Gerenerar Qr</button>
 
-                        <p class="category-item-amount">Extra cheese</p>
-                        <select class="sidebar-select" name="cantidad" id="cantidad">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
+				<style>
+					.qrmodal {
+						display: none;
+						position: fixed;
+						z-index: 1;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						overflow: auto;
+						background-color: rgba(0, 0, 0, 0.4);
+					}
+					.modal-content {
+						background-color: #fefefe;
+						margin: 10% auto;
+						padding: 20px;
+						border: 1px solid #888;
+						width: 80%;
+						max-width: 400px;
+					}
+					.close {
+						color: #aaa;
+						float: right;
+						font-size: 28px;
+						font-weight: bold;
+					}
+					.close:hover,
+					.close:focus {
+						color: black;
+						text-decoration: none;
+						cursor: pointer;
+					}
+				</style>
 
-                        <a href="#" class="category-btn">Show all</a>
-                    </div>
-                </div>
+				<div id="qrModal" class="qrmodal">
+					<div class="modal-content">
+						<button
+							id="aperturarBtn"
+							class="modal-close-btn"
+							onclick="closeModal()"
+							data-modal-close
+						>
+							<i class="bx bx-x"></i>
+						</button>
+						<div class="newsletter">
+							<div class="newsletter-img">
+								<h3 class="newsletter-title">QR.</h3>
+								<img
+									src="./images/caja/qr.jpg"
+									alt="Pago qr"
+									width="100"
+									height="100"
+								/>
+							</div>
+							<form id="cajaForm">
+								<div class="newsletter-header">
+									<p class="newsletter-desc">
+										<b>Monto: 200.00 Bs.</b>
+									</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 
-                <ul class="sidebar-menu-category-list">
-                    <li class="sidebar-menu-category">
-                        <button class="sidebar-accordion-menu" data-accordion-btn>
-                            <div class="menu-title-flex">
-                                <img src="./images/food/food-menu-1.png" alt="clothes" width="20" height="20"
-                                    class="menu-title-img" />
+				<script>
+					// Obtener elementos del DOM
+					var modal = document.getElementById('qrModal')
+					var openModalBtn = document.getElementById('openModalBtn')
+					var closeBtn = document.getElementsByClassName('modal-close-btn')[0]
 
-                                <p class="menu-title">Burger Mozza XL</p>
-                            </div>
+					// Función para abrir el modal
+					function openModal() {
+						modal.style.display = 'block'
+					}
 
-                            <div>
-                                <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                            </div>
-                        </button>
+					// Función para cerrar el modal
+					function closeModal() {
+						modal.style.display = 'none'
+					}
 
-                        <ul class="sidebar-submenu-category-list" data-accordion>
-                            <li class="sidebar-submenu-category">
-                                <a href="#" class="sidebar-submenu-title">
-                                    <p class="product-name">Sub Total</p>
-                                    <data value="300" class="stock" title="Available Stock">300</data>
-                                </a>
-                            </li>
+					// Event listeners para abrir y cerrar el modal
+					openModalBtn.addEventListener('click', openModal)
+					closeBtn.addEventListener('click', closeModal)
 
-                            <li class="sidebar-submenu-category">
-                                <a href="#" class="sidebar-submenu-title">
-                                    <p class="product-name">Delivery Fee</p>
-                                    <data value="60" class="stock" title="Available Stock">60</data>
-                                </a>
-                            </li>
-
-                            <li class="sidebar-submenu-category">
-                                <a href="#" class="sidebar-submenu-title">
-                                    <p class="product-name">Total</p>
-                                    <data value="87" class="stock" title="Available Stock">87</data>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-
-
-                <div class="sidebar-top">
-                    <p>
-                        Usuario
-                        <i class="bx bx-chevron-down"></i>
-                    </p>
-                    <p id="modal-qr2" class="banner-btn2">
-                        Seleccionar
-                        <i class="bx bx-chevron-right"></i>
-                        <!-- <button id="modal-qr"  class="banner-btn">Gerenerar Qr</button> -->
-                    </p>
-                </div>
-
-                <div class="sidebar-top">
-                    <p>Ci:</p>
-                    <p id="modal-qr" class="banner-btn2">
-                        Seleccionar
-                        <i class="bx bx-chevron-right"></i>
-                        <!-- <button id="modal-qr"  class="banner-btn">Gerenerar Qr</button> -->
-                    </p>
-                </div>
-
-                <!-- <div class="sidebar-top">
-						<p>Pasarela de pagos:</p>
-						<p>
-							<select>
-								<option value="Efectivo"><i class="bx bx-chevron-down"></i>Efectivo</option>
-								<option value="QR"><i class="bx bx-chevron-down"></i>QR</option>
-								<option value="Tarjeta"><i class="bx bx-chevron-down"></i>Tarjeta</option>
-							</select>
-						</p>
-					</div> -->
-
-
-                <div class="sidebar-top">
-                    <p>Pasarela de pagos:</p>
-                    <p>
-
-                        Efectivo
-                        QR
-                        Tarjeta
-
-                    </p>
-                </div>
-
-
-
-                <div class="sidebar-top">
-                    <p>Sub Total</p>
-                    <p>10 Bs</p>
-                </div>
-
-                <div class="sidebar-top">
-                    <p>Delivery Fee</p>
-                    <p>10 Bs</p>
-                </div>
-
-                <div class="sidebar-top">
-                    <p>Total</p>
-                    <p>10 Bs</p>
-                </div>
-
-                <div>
-                    <!-- <a href="#" class="banner-btn">Verificar</a> -->
-                    <button class="banner-btn">Verificar</button>
-
-                </div>
-                <!-- </form> -->
-
-
-                <button id="openModalBtn" class="banner-btn">Gerenerar Qr</button>
-
-
-                <style>
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-  }
-  .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-  }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-                </style>
-
-
-
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-
-                        <button id="aperturarBtn" class="modal-close-btn" onclick="closeModal()" data-modal-close>
-
-                            <i class="bx bx-x"></i>
-                        </button>
-
-
-                        <div class="newsletter">
-                            <div class="newsletter-img">
-                                <h3 class="newsletter-title">QR.</h3>
-                                <img src="./images/caja/qr.jpg" alt="Pago qr" width="100" height="100" />
-                            </div>
-                            <form id="cajaForm">
-                                <div class="newsletter-header">
-                                    <p class="newsletter-desc">
-                                        <b>Monto: 200.00 Bs.</b>
-                                    </p>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-
-                <script>
-                    // Obtener elementos del DOM
-                    var modal = document.getElementById("myModal");
-                    var openModalBtn = document.getElementById("openModalBtn");
-                    var bannerbtn2 = document.getElementById("banner-btn2");
-                    
-                    var closeBtn = document.getElementsByClassName("modal-close-btn")[0];
-                    
-                    // Función para abrir el modal
-                    function openModal() {
-                      modal.style.display = "block";
-                    }
-                    
-                    // Función para cerrar el modal
-                    function closeModal() {
-                      modal.style.display = "none";
-                    }
-                    
-                    // Event listeners para abrir y cerrar el modal
-                    openModalBtn.addEventListener("click", openModal);
-                    closeBtn.addEventListener("click", closeModal);
-                    
-                    // Cerrar el modal al hacer clic fuera de él
-                    window.addEventListener("click", function(event) {
-                      if (event.target == modal) {
-                        closeModal();
-                      }
-                    });
-                    </script>
-
-
-            </div>
-        </div>
-    </div>
+					// Cerrar el modal al hacer clic fuera de él
+					window.addEventListener('click', function (event) {
+						if (event.target == modal) {
+							closeModal()
+						}
+					})
+				</script>
+			</div>
+		</div>
+	</div>
 </div>
