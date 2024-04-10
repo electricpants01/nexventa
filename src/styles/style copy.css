@@ -1171,6 +1171,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-transform: uppercase;
 }
 
+
 /* Estilo cuando se selecciona una opción */
 .sidebar-select:focus {
   outline: none;

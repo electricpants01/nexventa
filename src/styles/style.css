@@ -1083,6 +1083,37 @@ body::-webkit-scrollbar-thumb:hover {
 
 }
 
+
+
+/* Estilo base del select */
+.category-sidebar-select  {
+  padding: 5px;
+  width: 50px;
+  border: 1px solid #f5b70c;
+  border-radius: 5px;
+  font-size: var(--fs-11);
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+.category-item-amount-btn {
+  color: var(--white);
+  font-size: var(--fs-14);
+  padding: 5px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: var(--bittersweet);
+
+}
+
+
 .category-item-container {
   
   display: -webkit-box;
@@ -1102,7 +1133,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .category-item {
-  background-color: #ffffff;
+  background-color: var(--white);
   
   min-width: 100%;
   display: -webkit-box;
@@ -1113,9 +1144,9 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 10px;
-  padding: 15px;
-  border: 1px solid var(--cultured);
+  gap: 5px;
+  padding: 10px;
+  border: 3px solid var(--cultured);
   -webkit-border-radius: var(--border-radius-md);
   border-radius: var(--border-radius-md);
   scroll-snap-align: start;
@@ -1161,6 +1192,11 @@ body::-webkit-scrollbar-thumb:hover {
 .category-item-amount {
   color: var(--sonic-silver);
   font-size: var(--fs-11);
+}
+
+.category-item-amount-i{
+  color: var(--sonic-silver);
+  font-size: var(--fs-16);
 }
 
 .category-btn {
@@ -1222,12 +1258,53 @@ body::-webkit-scrollbar-thumb:hover {
   background-size: 16px;
 }
 
+
+.sidebar-btn {
+  background: var(--salmon-pink);
+  color: var(--white);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: var(--fs-11);
+  font-weight: var(--weight-600);
+  /*text-transform: uppercase;
+  */padding: 8px 15px;
+  -webkit-border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-sm);
+  -webkit-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+  transition: var(--transition-timing);
+  -moz-border-radius: var(--border-radius-sm);
+  -ms-border-radius: var(--border-radius-sm);
+  -o-border-radius: var(--border-radius-sm);
+}
+
+.sidebar-btn:hover {
+  background: var(--eerie-black);
+}
+
+
+
 .sidebar-item-title {
   color: var(--eerie-black);
   font-size: var(--fs-11);
   font-weight: var(--weight-400);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
+
+.sidebar-item-title-h3 {
+  color: var(--eerie-black);
+  font-size: var(--fs-11);
+}
+
+.sidebar-item-title-top {
+  text-align: center;
+  color: var(--eerie-black);
+  font-size: var(--fs-11);
+  font-weight: var(--weight-400);
+  /* text-transform: uppercase; */
+}
+
 
 /* Estilo cuando se selecciona una opción */
 .sidebar-select:focus {
@@ -1236,17 +1313,17 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sidebar-img-box {
-  background-color: #FFFFFF;
-  /* background: var(--cultured); */
-  border: 1px solid hsl(0, 0%, 80%);
+  background: var(--white);
+  border: 1px solid var(--cultured);
   padding: 10px;
-  width: 50%;
+  width: 100px;
   -webkit-border-radius: var(--border-radius-sm);
   border-radius: var(--border-radius-sm);
 }
 
 .sidebar-content-box {
   width: 100%;
+
 }
 
 
@@ -1277,9 +1354,10 @@ body::-webkit-scrollbar-thumb:hover {
 .sidebar-title {
   color: var(--onyx);
   font-size: var(--fs-5);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.8px;
   font-weight: var(--weight-600);
+  text-align: center;
 }
 
 .sidebar-close-btn {
@@ -2225,9 +2303,22 @@ body::-webkit-scrollbar-thumb:hover {
   scroll-snap-type: inline mandatory;
 }
 
+
+
+.blog-card:hover {
+  background: var(--bittersweet);
+  color: var(--white);
+}
+
+
+
 .blog-card {
+  background-color:var(--white);
+  width: auto;
   min-width: 100%;
   scroll-snap-align: start;
+  text-align: center;
+  border-radius: var(--border-radius-md);
 
 }
 
@@ -3735,6 +3826,12 @@ footer {
     min-width: calc(25% - 22.5px);
   }
 
+  .blog-card-btn {
+  text-align: center;
+  background-color: var(--white);
+  }
+
+  
 
 
   /**
