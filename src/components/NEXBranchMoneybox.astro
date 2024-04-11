@@ -7,7 +7,7 @@
 <div class="modal" id="modal-oneybox" data-modal>
     <div class="modal-close-overlay" data-modal-overlay></div>
     <div class="modal-content">
-        <button class="modal-close-btn" id="aperturarBtn" data-modal-close onclick="closeModal()" >
+        <button class="modal-close-btn" data-modal-close onclick="closeModal()" >
             <i class="bx bx-x"></i>
         </button>
         <div class="newsletter-img">
@@ -18,28 +18,22 @@
             <form id="cajaForm">
                 <h4 class="">Monto de efectivo en caja.</h4>
                 <div class="newsletter-header">
-                    <p class="newsletter-desc">
-                        <b><i class='bx bx-money' ></i>
-                            Monto Bs.: 
-                    </p>
-
-                    <input class="monto" type="number" id="monto" name="monto" min="0.01" step="0.01" value="" required>
-                    </b>
-                    <p class="newsletter-desc">
-                        <b><i class='bx bx-note'></i>
-                           Nota: 
-                    </p>
-                    <input class="monto" type="type" id="nota" name="nota"  value="" required>
-                    
+                    <div class="input-container">
+                        <i class="bx bx-money"></i>
+                        <input class="monto" type="number" id="monto" name="monto" min="0.01" step="0.01" placeholder="Monto Bs." required>
+                    </div>
+                    <div class="input-container">
+                        <i class="bx bx-note"></i>
+                        <input class="monto" type="text" id="nota" name="nota" placeholder="Nota" required>
+                    </div>
                 </div>
+                <br>
+                
                 <button id="aperturarBtn" type="submit" style="background-color: #FF5C28;" class="btn-newsletter">
                     Aperturar Caja
                     <i class="bx bxs-chevron-right"></i>
                 </button>
             </form>
-
-
-
         </div>
     </div>
 </div>

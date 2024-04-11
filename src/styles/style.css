@@ -405,9 +405,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: center;
 }
 
-.newsletter-header {
-  margin-bottom: 20px;
-}
+
 
 .newsletter-title {
   color: var(--onyx);
@@ -418,12 +416,35 @@ body::-webkit-scrollbar-thumb:hover {
   right: 200px;
 }
 
-.newsletter-desc {
-  color: var(--sonic-silver);
-  font-size: var(--fs-7);
-  line-height: 1.6;
+.newsletter-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  padding: 20px 10px 10px 20px;
+  /*Ajustaelpaddingsegúntuspreferencias*/border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.input-container i {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  color: var(--sonic-silver);
+  font-size: 25px; /* Ajusta el tamaño del icono según tus preferencias */
+}
 
 
 .btn-newsletter {
