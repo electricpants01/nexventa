@@ -1,0 +1,208 @@
+<!-- Modal de registro de usuarios -->
+<div id="userModal" class="userModal">
+    <div class="modal-content">
+        <button id="closeModalBtn" class="modal-close-btn" onclick="closeModal()" data-modal-close>
+            <i class="bx bx-x"></i>
+        </button>
+        <div class="newsletter">
+            <div class="newsletter-img">
+                <h3 class="newsletter-title">Registrar cliente</h3>
+                <!-- Aquí puedes agregar campos de registro de usuario -->
+                <form id="registroForm">
+
+
+
+                    <div class="form-group">
+                        <label for="nombre">
+                            <i class="bx bx-user"></i>Nit o Carnet de identidad:
+                            <input type="text" id="nombre" name="nombre" required placeholder="Carnet
+                            " />
+                        </label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="nombre">
+                            <i class="bx bx-user"></i>Nombre o razon social:
+                            <input type="text" id="nombre" name="nombre" required placeholder="Razon Social" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">
+                            <i class="bx bx-user"></i>Apellido Paterno:
+                            <input type="text" id="apellido" name="apellido" required placeholder="Paterno" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ci">
+                            <i class="bx bx-id-card"></i>Apellido Materno:
+                            <input type="text" id="ci" name="ci" required placeholder="Materno" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ci">
+                            <i class="bx bx-id-card"></i>Empresa:
+                            <input type="text" id="ci" name="ci" required placeholder="Empresa" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nit">
+                            <i class="bx bx-id-card"></i>Correo :
+                            <input type="text" id="nit" name="nit" required placeholder="correo" />
+                        </label>
+                    </div>
+
+                    <p>+ Opciones Avanzadas</p>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos generales del modal */
+    .userModal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Fondo oscuro semi-transparente */
+    }
+
+    /* Estilos del contenido del modal */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 5px;
+    }
+
+    /* Estilos para el botón de cierre del modal */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Estilos para los campos de entrada y etiquetas */
+    .form-group {
+        position: relative;
+        /* Contenedor relativo para el campo de entrada y el ícono */
+        margin-bottom: 20px;
+        /* Espacio entre los grupos de campos */
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        /* Espacio entre la etiqueta y el campo de entrada */
+        font-weight: bold;
+        /* Hace que la etiqueta sea más visible */
+    }
+
+    .input-with-icon {
+        position: relative;
+        /* Contenedor relativo para el campo de entrada y el ícono */
+    }
+
+    .input-with-icon input[type='text'] {
+        width: calc(100% - 40px);
+        /* Ajusta el ancho del campo de entrada para dejar espacio para el ícono */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    /* Estilos para el ícono dentro del campo de entrada */
+    .input-with-icon i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        /* Color de los íconos */
+    }
+
+    /* Estilos para el botón de envío */
+    #registroForm button[type='submit'] {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #ff9100;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #registroForm button[type='submit']:hover {
+        background-color: #ffad3d;
+        /* Color de fondo más claro al pasar el ratón por encima */
+    }
+</style>
+<script type="module">
+    // Obtener elementos del DOM
+    var modal = document.getElementById('userModal')
+    var openModalBtn2 = document.getElementById('openModalBtn2')
+    var closeModalBtn = document.getElementById('closeModalBtn')
+
+    // Función para abrir el modal
+    function openModal() {
+        modal.style.display = 'block'
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        modal.style.display = 'none'
+    }
+
+    // Event listener para abrir el modal cuando se hace clic en el botón
+    openModalBtn2.addEventListener('click', openModal)
+
+    // Event listener para cerrar el modal cuando se hace clic en el botón de cierre
+    closeModalBtn.addEventListener('click', closeModal)
+
+    // Cerrar el modal al hacer clic fuera de él
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            closeModal()
+        }
+    })
+
+    // Enviar el formulario de registro
+    document
+        .getElementById('registroForm')
+        .addEventListener('submit', function (event) {
+            event.preventDefault()
+            // Aquí puedes agregar la lógica para enviar el formulario de registro a la API
+            console.log('Formulario de registro enviado')
+            closeModal() // Cierra el modal después de enviar el formulario
+        })
+</script>
+

@@ -407,6 +407,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
+
 .newsletter-title {
   color: var(--onyx);
   font-size: var(--fs-3);
@@ -415,6 +416,8 @@ body::-webkit-scrollbar-thumb:hover {
   top: 15px;
   right: 200px;
 }
+
+
 
 .newsletter-header {
   display: flex;
@@ -1311,6 +1314,12 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: var(--fs-11);
   font-weight: var(--weight-400);
   /* text-transform: uppercase; */
+}
+
+.sidebar-item-title-box {
+  color: var(--eerie-black);
+  /* font-size: var(--fs-12); */
+  font-size: 14px;
 }
 
 .sidebar-item-title-h3 {
@@ -2326,33 +2335,37 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
-.blog-card:hover {
-  background: var(--bittersweet);
+/* .blog-card:hover {
+  background: var(  --sandy-brown);
   color: var(--white);
-}
+} */
 
 
 
 .blog-card {
-  background-color:var(--white);
-  width: auto;
+  background-color: var(--white);
+  width: auto; /* Ajusta el ancho de la tarjeta */
   min-width: 100%;
   scroll-snap-align: start;
   text-align: center;
   border-radius: var(--border-radius-md);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 
 }
 
 .blog-banner {
-  width: 200px;
-  height: 100px;
+  width: 190px;
+  height: 150px;
   object-fit: cover;
   /* Para que la imagen se ajuste al contenedor sin distorsionarse */
   margin-bottom: 10px;
   text-align: center;
   -webkit-border-radius: var(--border-radius-md);
   border-radius: var(--border-radius-md);
+  margin-bottom: 10px;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .blog-banner {
@@ -2365,6 +2378,14 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+
+.blog-content
+{
+ 
+text-align: center;
+}
+
+
 .blog-category {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -2372,6 +2393,8 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--salmon-pink);
   font-size: var(--fs-8);
 }
+
+
 
 .blog-title {
   color: var(--eerie-black);
@@ -2385,13 +2408,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .blog-title:hover {
-  color: var(--salmon-pink);
+  color: var(--bittersweet);
 }
 
+/* Estilos para el precio */
 .blog-meta {
-  color: var(--sonic-silver);
-  font-size: var(--fs-7);
+  font-size: 16px;
+  color: var(--dark-gray);
+  margin-bottom: 10px; /* Espacio inferior */
 }
+
 
 .blog-meta cite {
   font-style: normal;
@@ -2399,6 +2425,108 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 
+/*-----------------------------------*\
+  #REGISTER USER
+\*-----------------------------------*/
+
+    /* Estilos generales del modal */
+    .userModal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Estilos del contenido del modal */
+  .modal-content-user {
+      background-color: var(--white);
+      margin: 10% auto;
+      padding: 20px;
+      border: 20px solid var(--white);
+      max-width:600px;
+      border-radius: 10px;
+  }
+
+  .newsletter-user {
+    padding: 50px 30px;
+  
+  }
+
+ 
+
+
+  .newsletter-title-user {
+    color: var(--onyx);
+    font-size: var(--fs-3);
+    font-weight: var(--weight-600);
+    text-align: center;
+  }
+
+  .blog-category-user
+  {
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      color: var(--salmon-pink);
+      font-size: var(--fs-20);
+      text-align: center;
+
+  }
+
+  /* Estilos para el botón de cierre del modal */
+  .close {
+      color: var(--white);
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  /* Estilos para los campos de entrada y etiquetas */
+  .form-group-user {
+  
+      position: relative;
+      /* Contenedor relativo para el campo de entrada y el ícono */
+      margin-bottom: 20px;
+      border-radius: 10%;
+      /* Espacio entre los grupos de campos */
+  }
+
+  .form-group-user label {
+      display: block;
+      margin-bottom: 5px;
+      /* Espacio entre la etiqueta y el campo de entrada */
+      font-weight: bold;
+      font-size: 16px;
+      /* Hace que la etiqueta sea más visible */
+  }
+
+  .form-group-user input {
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    /* Hace que la etiqueta sea más visible */
+    transition: border-color 0.3s ease;
+}
+
+
+ 
+
+
+
+
+ 
 
 
 
