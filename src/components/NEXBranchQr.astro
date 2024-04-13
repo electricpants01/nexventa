@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import qr from "../../public/images/caja/qr.jpg";  // La imagen de producto
+
+
+---
 
 <astro-doc>
     <div class="overlay" data-overlay></div>
@@ -17,7 +23,8 @@
             <div class="newsletter">
                 <div class="newsletter-img">
                     <h3 class="newsletter-title">QR.</h3>
-                    <img src="./images/caja/qr.jpg" alt="Pago qr" width="100" height="100" />
+                    <Image src={qr} alt="Pago qr" width="100" height="100"/>
+                   
                 </div>
                 <form id="cajaForm">
                     <div class="newsletter-header">
