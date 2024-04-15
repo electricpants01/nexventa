@@ -352,6 +352,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 
+
 .modal-content {
   position: relative;
   max-width: 400px;
@@ -435,6 +436,10 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-border-radius: var(--border-radius-md);
   border-radius: var(--border-radius-md);
 }
+
+
+
+
 
 @-webkit-keyframes scaleUp {
 
@@ -697,47 +702,49 @@ input:checked + .slider:before {
 
 
 .custom-select {
+  position: relative;
   font-size: var(--fs-11);
   font-weight: var(--weight-600);
   background: var(--salmon-pink);
+  display: inline-block;
 }
 
 .select-wrapper {
   /* background-color: var(--bittersweet); */
   position: relative;
-
+  width: 100%;
+  height: auto;
+  width: var(--white);
 
 }
 
+
+
 .select-wrapper select {
   color: var(--white);
-  padding: 2px;
-  border: 1px solid var(--bittersweet-2);
+  padding: 5px;
+  border: 0px solid var(--bittersweet-2);
   background-color: transparent;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 100%;
+  width: auto;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
-.select-wrapper i {
-  text-align: center;
-  /* color: var(--white); */
-  position: absolute;
-  top: 5%;
-  right: 18px;
-  transform: translateY(-50%);
-}
 
 .select-wrapper select option {
 
   background-color: var(--bittersweet);
   color: var(--white);
-  padding-left: 5px; /* ajusta según el ancho del icono */
+  padding-left: 50px; /* ajusta según el ancho del icono */
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 20px; /* ajusta según el tamaño del icono */
 }
+
 
 .select-wrapper select option[data-icon]:before {
 
@@ -755,6 +762,16 @@ input:checked + .slider:before {
   line-height: 2px; /* ajusta según el tamaño del icono */
 }
 
+
+/* Estilo para la opción seleccionada */
+option:checked {
+  font-weight: bold;
+}
+
+/* Efecto al pasar el cursor */
+select:hover {
+  cursor: pointer;
+}
 /**
  * NOTIFICATION TOAST 
  */
@@ -1338,7 +1355,7 @@ input:checked + .slider:before {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: var(--fs-12);
+ font-size: var(--fs-12);
   font-weight: var(--weight-500);
   padding: 4px 10px;
   -webkit-border-radius: var(--border-radius-sm);
@@ -1359,7 +1376,6 @@ input:checked + .slider:before {
   width: max-content;
   font-size: var(--fs-11);
   font-weight: var(--weight-600);
-  /* text-transform: uppercase; */
   padding: 4px 10px;
   -webkit-border-radius: var(--border-radius-sm);
   border-radius: var(--border-radius-sm);
@@ -1373,6 +1389,12 @@ input:checked + .slider:before {
 }
 
 
+.center-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px; /* Espacio superior */
+}
 
 
 
@@ -1390,12 +1412,10 @@ input:checked + .slider:before {
 /* Estilo base del select */
 .category-sidebar-select  {
   padding: 5px;
-  width: 50%;
-  border-radius: 5px;
-  font-size: var(--fs-10);
+  width: 100%;
+  border-radius: 1px;
   appearance: none;
   background-repeat: no-repeat;
-  /* background-position: right 10px center; */
   background-size: 16px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1409,7 +1429,7 @@ input:checked + .slider:before {
   font-size: var(--fs-20);
   padding: 10px;
   margin: 5px;
-  width: 30%;
+  width: 50%;
   border-radius: 5px;
   background-color: var(--bittersweet);
 
@@ -1482,7 +1502,7 @@ input:checked + .slider:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .category-item-title {
