@@ -1,22 +1,32 @@
 ---
+
 import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 ---
 
 <BaseClientLayout>
+
+
 	<NEXOutlineNav />
 
 	<body id="body-pd">
+
+
 		<div class="overlay" data-overlay></div>
 
 		<!--
-		- MODAL
-	-->
+		  - MODAL
+		-->
 		<div class="modal" data-modal>
 			<div class="modal-close-overlay" data-modal-overlay></div>
 			<div class="modal-content">
 				<div class="newsletter-img">
-					<img src="./images/caja/caja.png" alt="subscribe newsletter" width="400" height="400" />
+					<img
+						src="./images/caja/caja.png"
+						alt="subscribe newsletter"
+						width="400"
+						height="400"
+					/>
 				</div>
 				<div class="newsletter">
 					<form action="#">
@@ -26,17 +36,16 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 								Iniciar caja <b>Locoto</b>apertuar.
 							</p>
 						</div>
-						<button type="submit" style="background-color: #FF5C28;" class="btn-newsletter"
-							>Apertuar Caja</button
-						>
+						<button type="submit" style="background-color: #FF5C28;"  class="btn-newsletter">Apertuar Caja</button>
+						
 					</form>
 				</div>
 			</div>
 		</div>
 
 		<!--
-		- HEADER
-	-->
+		  - HEADER
+		-->
 
 		<header>
 			<div class="header-main">
@@ -59,22 +68,25 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 						<button class="search-btn">
 							<i class="bx bx-menu bx-sm"></i>
+							
 						</button>
 					</div>
 
 					<div class="header-user-actions">
 						<button class="action-btn">
+						
 							<i class="bx bx-user bx-sm"></i>
 						</button>
 
 						<button class="action-btn">
+							
 							<i class="bx bx-cart bx-sm"></i>
 							<span class="count">0</span>
 						</button>
 
 						<button class="action-btn">
 							<i class="bx bx-heart bx-sm"></i>
-
+						
 							<span class="count">0</span>
 						</button>
 					</div>
@@ -318,13 +330,13 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 		</header>
 
 		<!--
-		- MAIN
-	-->
+		  - MAIN
+		-->
 
 		<main>
 			<!--
-		- BANNER
-		-->
+			- BANNER
+		  -->
 
 			<div class="banner">
 				<div class="container">
@@ -343,7 +355,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 						</div>
 
 						<div class="slider-item">
-							<img src="./images/banner/banner.jpg" alt="modern sunglasses" class="banner-img" />
+							<img
+								src="./images/banner/banner.jpg"
+								alt="modern sunglasses"
+								class="banner-img"
+							/>
 
 							<div class="banner-content">
 								<p class="banner-subtitle">Trending accessories</p>
@@ -377,8 +393,8 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 				</div>
 
 				<!--
-		- desktop-navigation-menu
-		-->
+			- desktop-navigation-menu
+		  -->
 
 				<nav class="desktop-navigation-menu" style="width: 70%;">
 					<div class="container">
@@ -436,15 +452,15 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 			</div>
 
 			<!--
-		- PRODUCT
-		-->
+			- PRODUCT
+		  -->
 
 			<div class="product-container">
 				<div class="container">
 					<div class="product-box">
 						<!--
-		- BLOG
-		-->
+			- BLOG
+		  -->
 						<div class="blog">
 							<div class="container">
 								<div class="blog-container has-scrollbar">
@@ -471,7 +487,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 									<div class="blog-card">
 										<a href="#">
-											<img src="./images/food/2.jpg" alt="Foods." class="blog-banner" />
+											<img
+												src="./images/food/2.jpg"
+												alt="Foods."
+												class="blog-banner"
+											/>
 										</a>
 
 										<div class="blog-content">
@@ -491,7 +511,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 									<div class="blog-card">
 										<a href="#">
-											<img src="./images/food/3.jpg" alt="Foods." class="blog-banner" />
+											<img
+												src="./images/food/3.jpg"
+												alt="Foods."
+												class="blog-banner"
+											/>
 										</a>
 
 										<div class="blog-content">
@@ -511,7 +535,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 									<div class="blog-card">
 										<a href="#">
-											<img src="./images/food/4.jpg" alt="Foods." class="blog-banner" />
+											<img
+												src="./images/food/4.jpg"
+												alt="Foods."
+												class="blog-banner"
+											/>
 										</a>
 
 										<div class="blog-content">
@@ -560,8 +588,8 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 					</div>
 
 					<!--
-			- SIDEBAR
-			-->
+				- SIDEBAR
+			  -->
 
 					<div class="sidebar has-scrollbar" data-mobile-menu>
 						<style>
@@ -592,8 +620,10 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 							<div class="sidebar-top">
 								<h2 class="sidebar-title">Mi pedido</h2>
 								<br />
-								<p>Dirección de entrega 1342 Morris Street</p>
-
+								<p>
+									Dirección de entrega 1342 Morris Street
+							   </p>
+								
 								<br />
 								40 minutos 5 km
 
@@ -605,7 +635,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 							<form>
 								<div class="category-item">
 									<div class="sidebar-img-box">
-										<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
+										<img
+											src="./images/food/food-menu-1.png"
+											alt="HAMBURGUESAS"
+											width="50"
+										/>
 									</div>
 
 									<div class="sidebar-content-box">
@@ -614,7 +648,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 											<p class="category-item-amount">&39</p>
 										</div>
 										<p class="category-item-amount">Extra cheese</p>
-										<select class="sidebar-select" name="cantidad" id="cantidad">
+										<select
+											class="sidebar-select"
+											name="cantidad"
+											id="cantidad"
+										>
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option value="3">3</option>
@@ -641,8 +679,10 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 											</div>
 
 											<div>
-												<ion-icon name="add-outline" class="add-icon"></ion-icon>
-												<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+												<ion-icon name="add-outline" class="add-icon"
+												></ion-icon>
+												<ion-icon name="remove-outline" class="remove-icon"
+												></ion-icon>
 											</div>
 										</button>
 
@@ -650,21 +690,33 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 											<li class="sidebar-submenu-category">
 												<a href="#" class="sidebar-submenu-title">
 													<p class="product-name">Sub Total</p>
-													<data value="300" class="stock" title="Available Stock">300</data>
+													<data
+														value="300"
+														class="stock"
+														title="Available Stock">300</data
+													>
 												</a>
 											</li>
 
 											<li class="sidebar-submenu-category">
 												<a href="#" class="sidebar-submenu-title">
 													<p class="product-name">Delivery Fee</p>
-													<data value="60" class="stock" title="Available Stock">60</data>
+													<data
+														value="60"
+														class="stock"
+														title="Available Stock">60</data
+													>
 												</a>
 											</li>
 
 											<li class="sidebar-submenu-category">
 												<a href="#" class="sidebar-submenu-title">
 													<p class="product-name">Total</p>
-													<data value="87" class="stock" title="Available Stock">87</data>
+													<data
+														value="87"
+														class="stock"
+														title="Available Stock">87</data
+													>
 												</a>
 											</li>
 										</ul>
@@ -675,18 +727,24 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 								</div>
 							</form>
 						</div>
+
+
 					</div>
 				</div>
 				<!--
-		- CATEGORY2
-		-->
+			- CATEGORY2
+		  -->
 
 				<div class="category">
 					<div class="container">
 						<div class="category-item-container has-scrollbar">
 							<div class="category-item">
 								<div class="category-img-box">
-									<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="30" />
+									<img
+										src="./images/food/food-menu-1.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
 								</div>
 
 								<div class="category-content-box">
@@ -702,7 +760,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 							<div class="category-item">
 								<div class="category-img-box">
-									<img src="./images/food/food-menu-2.png" alt="HAMBURGUESAS" width="30" />
+									<img
+										src="./images/food/food-menu-2.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
 								</div>
 
 								<div class="category-content-box">
@@ -718,7 +780,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 							<div class="category-item">
 								<div class="category-img-box">
-									<img src="./images/food/food-menu-3.png" alt="HAMBURGUESAS" width="30" />
+									<img
+										src="./images/food/food-menu-3.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
 								</div>
 
 								<div class="category-content-box">
@@ -734,7 +800,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 							<div class="category-item">
 								<div class="category-img-box">
-									<img src="./images/food/food-menu-4.png" alt="HAMBURGUESAS" width="30" />
+									<img
+										src="./images/food/food-menu-4.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
 								</div>
 
 								<div class="category-content-box">
@@ -750,7 +820,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 							<div class="category-item">
 								<div class="category-img-box">
-									<img src="./images/food/food-menu-4.png" alt="HAMBURGUESAS" width="30" />
+									<img
+										src="./images/food/food-menu-4.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
 								</div>
 
 								<div class="category-content-box">
@@ -766,7 +840,11 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 							<div class="category-item">
 								<div class="category-img-box">
-									<img src="./images/food/food-menu-4.png" alt="HAMBURGUESAS" width="30" />
+									<img
+										src="./images/food/food-menu-4.png"
+										alt="HAMBURGUESAS"
+										width="30"
+									/>
 								</div>
 
 								<div class="category-content-box">
@@ -783,11 +861,13 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 					</div>
 				</div>
 			</div>
+
+
 		</main>
 
 		<!--
-		- FOOTER
-	-->
+		  - FOOTER
+		-->
 
 		<footer>
 			<div class="footer-bottom">
@@ -826,12 +906,10 @@ import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 
 	/*===== LINK ACTIVE  =====*/
 	const linkColor = document.querySelectorAll('.nav__link')
-
 	function colorLink() {
 		linkColor.forEach((l) => l.classList.remove('active'))
 		this.classList.add('active')
 	}
-
 	linkColor.forEach((l) => l.addEventListener('click', colorLink))
 
 	/*===== COLLAPSE MENU  =====*/

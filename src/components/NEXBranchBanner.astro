@@ -1,12 +1,15 @@
 ---
-import { Image } from 'astro:assets'
-import banner from '../../public/images/banner/banner.jpg' // La imagen de producto
+import { Image } from "astro:assets";
+import banner from "../../public/images/banner/banner.jpg";  // La imagen de producto
+
+
+
 ---
 
 <div class="container">
 	<div class="slider-container has-scrollbar" style="width: 73%;">
 		<div class="slider-item">
-			<Image src={banner} alt="banner" class="banner-img" />
+			<Image src={banner}  alt="banner" class="banner-img" />
 
 			<div class="banner-content">
 				<div class="banner-content2">
@@ -17,7 +20,7 @@ import banner from '../../public/images/banner/banner.jpg' // La imagen de produ
 			</div>
 		</div>
 		<div class="slider-item">
-			<Image src={banner} alt="banner" class="banner-img" />
+			<Image src={banner}  alt="banner" class="banner-img" />
 			<div class="banner-content">
 				<p class="banner-subtitle">Trending accessories</p>
 				<h2 class="banner-title">Modern sunglasses</h2>
@@ -28,7 +31,7 @@ import banner from '../../public/images/banner/banner.jpg' // La imagen de produ
 			</div>
 		</div>
 		<div class="slider-item">
-			<Image src={banner} alt="banner" class="banner-img" />
+			<Image src={banner}  alt="banner" class="banner-img" />
 			<div class="banner-content">
 				<p class="banner-subtitle">Foods</p>
 				<h2 class="banner-title">Foods</h2>
