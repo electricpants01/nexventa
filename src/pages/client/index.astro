@@ -12,30 +12,22 @@ import NEXBranchCategory from '../../components/NEXBranchCategory.astro'
 import NEXBranchBanner from '../../components/NEXBranchBanner.astro'
 import NEXBranchOrdersidebar from '../../components/NEXBranchOrdersidebar.astro'
 import NEXBranchRegisteruser from '../../components/NEXBranchRegisteruser.astro'
-
 ---
 
-
 <Layout>
+	<NEXBranchRegisteruser />
+	<NEXBranchHeadermain />
 
-	<NEXBranchRegisteruser/>
-	<NEXBranchHeadermain/>
+	<NEXBranchBanner />
 
-	<NEXBranchBanner/>
-	
-	<NEXBranchNavigationmenu/>
-	<NEXBranchOrdersidebar/>
+	<NEXBranchNavigationmenu />
+	<NEXBranchOrdersidebar />
 
+	<NEXBranchCategory />
 
-	<NEXBranchCategory/>
+	<NEXOutlineNav />
 
-	<NEXOutlineNav />	
-	
 	<!-- <NEXBranchQr/> -->
 	<!-- <NEXBranchMoneybox/> -->
 	<NEXBranchFooter />
-
-
-	
 </Layout>
-

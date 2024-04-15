@@ -3,41 +3,57 @@ import BaseLoginLayout from '../../layouts/BaseLoginLayout.astro'
 ---
 
 <BaseLoginLayout>
-  <div class="container">
-    <div class="forms-container">
-      <div class="signin-signup">
-        <div class="loader"></div>
-        <form method="GET" class="sign-in-form" action="/client/select-branch">
-          <h2 class="title">Iniciar Seccion</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input id="email" type="email" name="email" required autocomplete="email" autofocus placeholder="Correo" />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input id="password" type="password" name="password" required autocomplete="current-password"
-              placeholder="Contraseña" />
-          </div>
-          <button type="submit" value="Ingresar" style="background-color: #FF5C28;" class="btn2 solid"
-           >Ingresar</button>
-        </form>
-      </div>
-    </div>
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <div class="content">
-          <h3>Locoto</h3>
-          <p>
-            "Tu nuevo sistema de venta de comida. Ordena fácil, disfruta más."
-          </p>
-          <img src="https://firebasestorage.googleapis.com/v0/b/imagenes-972f4.appspot.com/o/Producto%2Fabout-banner.png?alt=media&token=2a2173df-b85a-41ed-bea0-a528bf088384" class="image" alt="" />
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
+	<div class="container">
+		<div class="forms-container">
+			<div class="signin-signup">
+				<div class="loader"></div>
+				<form method="GET" class="sign-in-form" action="/client/select-branch">
+					<h2 class="title">Iniciar Seccion</h2>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input
+							id="email"
+							type="email"
+							name="email"
+							required
+							autocomplete="email"
+							autofocus
+							placeholder="Correo"
+						/>
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input
+							id="password"
+							type="password"
+							name="password"
+							required
+							autocomplete="current-password"
+							placeholder="Contraseña"
+						/>
+					</div>
+					<button
+						type="submit"
+						value="Ingresar"
+						style="background-color: #FF5C28;"
+						class="btn2 solid"
+						>Ingresar
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="panels-container">
+			<div class="panel left-panel">
+				<div class="content">
+					<h3>Locoto</h3>
+					<p>"Tu nuevo sistema de venta de comida. Ordena fácil, disfruta más."</p>
+					<img
+						src="https://firebasestorage.googleapis.com/v0/b/imagenes-972f4.appspot.com/o/Producto%2Fabout-banner.png?alt=media&token=2a2173df-b85a-41ed-bea0-a528bf088384"
+						class="image"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
 </BaseLoginLayout>
-
-

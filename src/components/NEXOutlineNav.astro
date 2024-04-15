@@ -1,75 +1,72 @@
-
 <astro-doc>
-    <div class="l-navbar" id="navbar">
-        <nav class="nav">
-            <div>
-                <div class="nav__brand">
-                    <!-- <i class="bx bx-menu" name="menu-outline" id="nav-toggle"></i> -->
-                    <i class="bx bx-menu" id="nav-toggle"></i>
-                    <a href="#" class="nav__logo"></a>
-                </div>
-                <div class="nav__list">
-                    <a href="/client/" class="nav__link active">
-                        <i class="bx bxs-dashboard"></i>
-                        <span class="nav__name">Dashboard</span>
-                    </a>
-                    <a href="/client/billing" class="nav__link">
-                        <i class="bx bxs-report"></i>
-                        <span class="nav__name">Facturacion</span>
-                    </a>
-    
-                    <a href="/client/nobilling" class="nav__link">
-                        <i class="bx bx-task"></i>
-                        <span class="nav__name">Facturacion no hechas</span>
-                    </a>
-    
-                    <a href="#" class="nav__link">
-                        <i class="bx bx-user-check"></i>
-                        <span class="nav__name">clientes</span>
-                    </a>
-    
-                    <a href="#" class="nav__link">
-                        <i class="bx bx-box"></i>
-                        <span class="nav__name">abrir caja</span>
-                    </a>
-    
-                    <a href="#" class="nav__link">
-                        <i class="bx bx-money"></i>
-                        <span class="nav__name">cerrar caja</span>
-                    </a>
-    
-                    <a href="#" class="nav__link">
-                        <i class="bx bxs-cog"></i>
-                        <span class="nav__name">Ajustes</span>
-                    </a>
-                </div>
-            </div>
-    
-            <a href="#" class="nav__link">
-                <img src="./images/caja/usuario.jpg" alt="user" width="20" height="20" />
-    
-                <span class="nav__name"><i class="bx bx-log-out"></i>Cerrar sesión</span>
-            </a>
-        </nav>
-    </div>
-    
-    <script type="module">
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggle = document.getElementById('nav-toggle')
-            const navbar = document.getElementById('navbar')
-    
-            toggle.addEventListener('click', function () {
-                navbar.classList.toggle('expander')
-            })
-    
-            // Ocultar el menú cuando haces clic fuera de él
-            window.addEventListener('click', function (event) {
-                if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
-                    navbar.classList.remove('expander')
-                }
-            })
-        })
-    </script>
-    
+	<div class="l-navbar" id="navbar">
+		<nav class="nav">
+			<div>
+				<div class="nav__brand">
+					<!-- <i class="bx bx-menu" name="menu-outline" id="nav-toggle"></i> -->
+					<i class="bx bx-menu" id="nav-toggle"></i>
+					<a href="#" class="nav__logo"></a>
+				</div>
+				<div class="nav__list">
+					<a href="/client/" class="nav__link active">
+						<i class="bx bxs-dashboard"></i>
+						<span class="nav__name">Dashboard</span>
+					</a>
+					<a href="/client/billing" class="nav__link">
+						<i class="bx bxs-report"></i>
+						<span class="nav__name">Facturacion</span>
+					</a>
 
+					<a href="/client/nobilling" class="nav__link">
+						<i class="bx bx-task"></i>
+						<span class="nav__name">Facturacion no hechas</span>
+					</a>
+
+					<a href="#" class="nav__link">
+						<i class="bx bx-user-check"></i>
+						<span class="nav__name">clientes</span>
+					</a>
+
+					<a href="#" class="nav__link">
+						<i class="bx bx-box"></i>
+						<span class="nav__name">abrir caja</span>
+					</a>
+
+					<a href="#" class="nav__link">
+						<i class="bx bx-money"></i>
+						<span class="nav__name">cerrar caja</span>
+					</a>
+
+					<a href="#" class="nav__link">
+						<i class="bx bxs-cog"></i>
+						<span class="nav__name">Ajustes</span>
+					</a>
+				</div>
+			</div>
+
+			<a href="#" class="nav__link">
+				<img src="./images/caja/usuario.jpg" alt="user" width="20" height="20" />
+
+				<span class="nav__name"><i class="bx bx-log-out"></i>Cerrar sesión</span>
+			</a>
+		</nav>
+	</div>
+
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', function () {
+			const toggle = document.getElementById('nav-toggle')
+			const navbar = document.getElementById('navbar')
+
+			toggle.addEventListener('click', function () {
+				navbar.classList.toggle('expander')
+			})
+
+			// Ocultar el menú cuando haces clic fuera de él
+			window.addEventListener('click', function (event) {
+				if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
+					navbar.classList.remove('expander')
+				}
+			})
+		})
+	</script>
 </astro-doc>

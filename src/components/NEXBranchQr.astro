@@ -1,55 +1,48 @@
 ---
-import { Image } from "astro:assets";
-import qr from "../../public/images/caja/qr.jpg";  // La imagen de producto
-
-
+import { Image } from 'astro:assets'
+import qr from '../../public/images/caja/qr.jpg' // La imagen de producto
 ---
 
 <astro-doc>
-    <div class="overlay" data-overlay></div>
+	<div class="overlay" data-overlay></div>
 
-    <!--
-      - MODAL
-    -->
-    
-    <div class="modal" id="cajaModal" data-modal>
-        <div class="modal-close-overlay" data-modal-overlay></div>
-        <div class="modal-content">
-            <button id="aperturarBtn" class="modal-close-btn" data-modal-close>
-               
-                <i class="bx bx-x"></i>
-            </button>
-    
-            <div class="newsletter">
-                <div class="newsletter-img">
-                    <h3 class="newsletter-title">QR.</h3>
-                    <Image src={qr} alt="Pago qr" width="100" height="100"/>
-                   
-                </div>
-                <form id="cajaForm">
-                    <div class="newsletter-header">
-                        <p class="newsletter-desc">
-                            <b>Monto: 200.00 Bs.</b>
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <script type="module">
-    
-         document.getElementById('aperturarBtn').addEventListener('click', function(event) {
-             event.preventDefault();
-             alert('¡La caja ha sido iniciada!');
-             var modal = document.getElementById('cajaModal');
-             modal.style.display = 'none';
-        });
-    
-        document.querySelector('.modal-content').addEventListener('click', function(event) {
-            event.stopPropagation(); 
-        });
-    </script>
-    
+	<!--
+		- MODAL
+	-->
 
+	<div class="modal" id="cajaModal" data-modal>
+		<div class="modal-close-overlay" data-modal-overlay></div>
+		<div class="modal-content">
+			<button id="aperturarBtn" class="modal-close-btn" data-modal-close>
+				<i class="bx bx-x"></i>
+			</button>
+
+			<div class="newsletter">
+				<div class="newsletter-img">
+					<h3 class="newsletter-title">QR.</h3>
+					<Image src={qr} alt="Pago qr" width="100" height="100" />
+				</div>
+				<form id="cajaForm">
+					<div class="newsletter-header">
+						<p class="newsletter-desc">
+							<b>Monto: 200.00 Bs.</b>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="module">
+		document.getElementById('aperturarBtn').addEventListener('click', function (event) {
+			event.preventDefault()
+			alert('¡La caja ha sido iniciada!')
+			var modal = document.getElementById('cajaModal')
+			modal.style.display = 'none'
+		})
+
+		document.querySelector('.modal-content').addEventListener('click', function (event) {
+			event.stopPropagation()
+		})
+	</script>
 </astro-doc>
