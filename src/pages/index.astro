@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import LayoutWelcome from '../layouts/LayoutWelcome.astro'
 // import BaseClientLayout from '../layouts/BaseClientLayout.astro'
 import NEXBranchFooter from '../components/NEXBranchFooter.astro'
 import NEXOutlineNav from '../components/NEXOutlineNav.astro'
@@ -10,28 +10,8 @@ import NEXBranchProductcontainer from '../components/NEXBranchProductcontainer.a
 import NEXBranchCategory from '../components/NEXBranchCategory.astro'
 import NEXBranchBanner from '../components/NEXBranchBanner.astro'
 
-import NEXBranchOrdersidebar from '../components/NEXBranchOrdersidebar.astro'
+import NEXBranchWelcome from '../components/NEXBranchWelcome.astro'
 ---
 
-
-<Layout>
-
-
-	<NEXBranchHeadermain/>
-
-	<NEXBranchNavigationmenu/>
-	<NEXBranchBanner/>
-	<NEXBranchOrdersidebar/>
-	<!-- <NEXBranchProductcontainer/> -->
-
-	<NEXBranchCategory/>
-	
-	<NEXOutlineNav />
-	<!-- <NEXBranchMoneybox/> -->
-	<NEXBranchFooter />
-
-
-	
-</Layout>
-
-
+<NEXBranchWelcome />
+<LayoutWelcome />

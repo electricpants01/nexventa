@@ -1,64 +1,43 @@
+---
+import { Image } from "astro:assets";
+import food1 from "../../public/images/food/11.jpg";  // La imagen de producto
+import food2 from "../../public/images/food/9.jpg";  // La imagen de producto
+import food3 from "../../public/images/food/10.jpg";  // La imagen de producto
+import food4 from "../../public/images/food/2.jpg";  // La imagen de producto
+import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
+
+---
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <astro-doc>
     <div class="product-container">
         <div class="container">
             <div class="product-box">
                 <div class="blog">
-                    <div class="container">
-                        <div class="blog-container has-scrollbar">
-
+                    <div class="container-0">
+                        <div class="blog-container-0 has-scrollbar">
                             <div class="blog-card">
-                                <img src="./images/food/11.jpg" alt="Foods." class="blog-banner" />
+                                <Image src={food1} alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
                                     <h3 class="blog-title">Pollo</h3>
-                                    <p class="blog-meta">Precio: 27Bs</p>
-                                    <div class="blog-btn">
-                                        <button class="add-to-cart-btn" data-name="Pollo" data-price="27"><i
-                                                class='bx bxs-cart-add'></i> Añadir</button>
-                                        <button id="openModalBtn-ver" class="blog-btn ver-btn">Ver <i
-                                                class='bx bxs-show'></i></button>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 27 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Milaneza" data-price="20"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <style>
-                                .vermodal {
-                                    display: none;
-                                    position: fixed;
-                                    z-index: 1;
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    overflow: auto;
-                                    background-color: rgba(0, 0, 0, 0.4);
-                                }
-
-                                .modal-content {
-                                    background-color: #fefefe;
-                                    margin: 10% auto;
-                                    padding: 20px;
-                                    border: 1px solid #888;
-                                    /* width: 80%; */
-                                    max-width: 400px;
-                                }
-
-                                .close {
-                                    color: #aaa;
-                                    float: right;
-                                    font-size: 28px;
-                                    font-weight: bold;
-                                }
-
-                                .close:hover,
-                                .close:focus {
-                                    color: black;
-                                    text-decoration: none;
-                                    cursor: pointer;
-                                }
-                            </style>
-
+                            
 
 
                             <div id="verModal" class="vermodal">
@@ -69,8 +48,9 @@
 
                                     <div class="newsletter-img">
                                         <h3 class="newsletter-title">Detalle del producto.</h3>
-                                        <img src="./images/food/11.jpg" width="20" height="20" alt="Foods."
-                                            class="modal-content-show-img" />
+                
+                                            <Image src={food1} alt="Foods." alt="Foods."
+                                            class="modal-content-show-img"/>
                                     </div>
 
                                     <div class="newsletter">
@@ -99,97 +79,68 @@
                                 </div>
                             </div>
 
-                            <script type="module">
-                                // Obtener elementos del DOM
-                                var modal = document.getElementById('verModal')
-                                var openModalBtn = document.getElementById('openModalBtn-ver')
-                                var closeBtn = document.getElementsByClassName('modal-close-btn-show')[0]
+  
 
-                                // Función para abrir el modal
-                                function openModal() {
-                                    modal.style.display = 'block'
-                                }
 
-                                // Función para cerrar el modal
-                                function closeModal() {
-                                    modal.style.display = 'none'
-                                }
-
-                                // Event listeners para abrir y cerrar el modal
-                                openModalBtn.addEventListener('click', openModal)
-                                closeBtn.addEventListener('click', closeModal)
-
-                                // Cerrar el modal al hacer clic fuera de él
-                                window.addEventListener('click', function (event) {
-                                    if (event.target == modal) {
-                                        closeModal()
-                                    }
-                                })
-                            </script>
 
                             <div class="blog-card">
-
-                                <img src="./images/food/9.jpg" alt="Foods." class="blog-banner" />
-
+                                <Image src={food2} alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <!-- <a href="#" class="blog-category">Panera Soup</a> -->
-                                    <a href="#">
-                                        <h3 class="blog-title">Hamburguesa .</h3>
-                                    </a>
-                                    <p class="blog-meta">Precio 10Bs</p>
-                                    <div class="banner-btn">
-                                        <!-- </button> <i class='bx bxs-cart-add'></i> Añadir </button> -->
-
-                                        <button class="add-to-cart-btn" data-name="Hamburguesa" data-price="10"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Hamburguesa</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Hamburguesa" data-price="10"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
 
 
-
                             <div class="blog-card">
-
-                                <img src="./images/food/10.jpg" alt="Foods." class="blog-banner" />
-
+                                <Image src={food3}   alt="Foods." class="blog-banner"/>
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <!-- <a href="#" class="blog-category">Panera Soup</a> -->
-                                    <a href="#">
-                                        <h3 class="blog-title">Pizza .</h3>
-                                    </a>
-                                    <p class="blog-meta">Precio 50Bs</p>
-                                    <div class="banner-btn">
-                                        <!-- </button> <i class='bx bxs-cart-add'></i> Añadir </button> -->
-
-                                        <button class="add-to-cart-btn" data-name="Pizza" data-price="50"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Pizza</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Pizza" data-price="50"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
-
-
+                            
 
                             <div class="blog-card">
-
-                                <img src="./images/food/2.jpg" alt="Foods." class="blog-banner" />
-
+                                <Image src={food4}   alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <!-- <a href="#" class="blog-category">Panera Soup</a> -->
-
-                                    <h3 class="blog-title">Fideo .</h3>
-
-                                    <p class="blog-meta">Precio 20Bs</p>
-                                    <div class="banner-btn">
-                                        <!-- </button> <i class='bx bxs-cart-add'></i> Añadir </button> -->
-
-                                        <button class="add-to-cart-btn" data-name="Milaneza" data-price="20"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Fideo</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Pizza" data-price="50"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
@@ -200,24 +151,22 @@
 
                     <div class="container">
                         <div class="blog-container has-scrollbar">
-
                             <div class="blog-card">
-
-                                <img src="./images/food/3.jpg" alt="Foods." class="blog-banner" />
-
+                                <Image src={food4}   alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <!-- <a href="#" class="blog-category">Panera Soup</a> -->
-
-                                    <a href="#">
-                                        <h3 class="blog-title">Pollo .</h3>
-                                    </a>
-
-                                    <p class="blog-meta">Precio 30$</p>
-
-                                    <div class="banner-btn">
-
-                                        <a href="#"><i class='bx bxs-cart-add'></i> Añadir </a>
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Fideo</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Pizza" data-price="50"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
@@ -226,9 +175,9 @@
                 </div>
             </div>
 
-            <!--
-					  - SIDEBAR
-					-->
+
+            
+            <!--- SIDEBAR	-->
             <style>
                 .sidebar.has-scrollbar[data-mobile-menu] {
                     position: absolute;
@@ -259,98 +208,56 @@
                     <h2 class="sidebar-title">Nueva Orden</h2>
                     <div class="sidebar-top">
                         <p class="sidebar-item-title-box">
-                            <b>Cajero :</b>
+                            <b><i class='bx bxs-user-detail'></i> Cajero :</b>
 
 
                         </p>
                         <p class="sidebar-item-title-box">
-                            pedro
-
+                            Pedro Perez
                         </p>
 
                         <p class="sidebar-item-title-box">
-                            perez
                             <i class="bx bx-chevron-right"></i>
                         </p>
                     </div>
-                    <!-- <div class="sidebar-top">
-									  <p>Cliente
-										  <i class='bx bx-chevron-down'></i>
-	  
-									  </p>
-						  
-									  <p>
-										  Dirección
-										  <i class='bx bx-chevron-right'></i>
-									 </p>
-					  
-									  40 minutos 5 km
-									  <i class='bx bx-chevron-right'></i>
-	  
-									  <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-										  <i class='bx bx-chevron-down'></i>
-									  </button>
-								  </div> -->
+
 
                     <!-- <form> -->
 
-
-
-
-
-
-                    <!-- <div class="sidebar-top">
-							<div class="category-item">
-								<div class="sidebar-img-box">
-									<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
-								</div>
-									<div class="category-content-flex">
-										<h3 class="sidebar-item-title">Burger Mozza XL</h3>
-										<p class="category-item-amount">&39</p>
-									</div>
-									<p class="category-item-amount">Extra cheese</p>
-									<div class="category-content-flex">
-										<p class="category-item-amount">&39</p>
-									</div>
-									<div class="category-content-flex">
-										<p class="category-item-amount">Eliminar</p>
-									</div>
-									<div class="category-content-flex">
-										<p class="category-item-amount">Editar</p>
-									</div>
-							</div>
-						</div> -->
-
-
                     <div id="cart-items">
-
 
                         <div class="category-item">
                             <div class="sidebar-img-box">
-                                <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
+    
+                                <Image src={food2} alt="HAMBURGUESAS" class="sidebar-img-box-img"/>
                             </div>
 
                             <div class="sidebar-content-box">
                                 <div class="category-content-flex">
-                                    <h3 class="sidebar-item-title-h3">Burger Mozza XL</h3>
-                                    <p class="category-item-amount-1" id="openModalBtn-edit"><i
-                                            class='bx bx-edit-alt'></i></p>
-                                    <p class="category-item-amount-1"><i class="bx bx-x"></i></p>
+                                    <a href="#" class="category-btn">
+                                        <h3 class="">Burger Mozza XL</h3>
+                                    </a>
+                                    
+                                    <button class="category-item-amount-1" id="openModalBtn-edit"><i
+                                                class='bx bx-edit-alt'></i></button>
+                                    
+                                    <button class="category-item-amount-1">
+                                        <i class="bx bx-x"></i></button>
                                 </div>
-                                <p class="category-item-amount">Cantidad</p>
+                                <p class="sidebar-item-title-p">Detalle: </p>
                                 <div class="category-content-flex">
                                     <button class="category-item-amount-btn">-</button>
-                                    <input class="category-sidebar-select" type="number" name="cantidad" id="cantidad">
+                                    <input class="category-sidebar-select" type="number" maxlength="2" minlength="2" name="cantidad" id="cantidad">
                                     <button class="category-item-amount-btn">+</button>
                                 </div>
 
                                 <div class="category-content-flex">
-                                    <h3 class="sidebar-item-title">Precio:</h3>
+                                    <h3 class="sidebar-item-title-p">Precio:</h3>
                                     <p class="category-item-amount">10.00 Bs</i></p>
                                     <p class="category-item-amount">Bs</i></p>
                                 </div>
 
-                                <a href="#" class="category-btn">Mas...</a>
+                                <!-- <a href="#" class="category-btn">Mas...</a> -->
                             </div>
                         </div>
                     </div>
@@ -369,7 +276,7 @@
                             background-color: rgba(0, 0, 0, 0.4);
                         }
 
-                        .modal-content {
+                        .modal-content-edit {
                             background-color: #fefefe;
                             margin: 10% auto;
                             padding: 20px;
@@ -393,32 +300,47 @@
                         }
                     </style>
 
+
+
+
+
+
                     <div id="editModal" class="editmodal">
-                        <div class="modal-content">
-                            <button id="aperturarBtn" class="modal-close-btn" onclick="closeModal()" data-modal-close>
+                        <div class="modal-content-show">
+                            <button class="modal-close-btn-show" onclick="closeModal()" data-modal-close>
                                 <i class="bx bx-x"></i>
                             </button>
+                            <div class="newsletter-img-edit">
+                                <h3 class="newsletter-title">Editar producto</h3>
+                                    <Image src={food1} alt="Foods." alt="Foods."
+                                   width={400}/>
+                            </div>
                             <div class="newsletter">
-                                <div class="newsletter-img">
-                                    <h3 class="newsletter-title">Editar producto.</h3>
-                                </div>
-                                <form id="cajaForm">
-                                    <div class="newsletter-header">
-                                        <p class="newsletter-desc">
-                                            <b>Precio:</b>
-                                            <input type="text">
-                                        </p>
-
-                                        <p class="newsletter-desc">
-                                            <b>Cantidad:</b>
-
-                                            <input type="text">
-                                        </p>
+                                <form id="cajaForm" class="edit-form">
+                                    <div class="form-group">
+                                        <label for="codigo">Código:</label>
+                                        <p id="codigo">0000</p>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="precio">Precio:</label>
+                                        <input type="text" class="form-control" id="precio" placeholder="Ingrese el precio">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="detalle">Detalle:</label>
+                                        <input type="text" class="form-control" id="detalle" placeholder="Ingrese el detalle">
+                                    </div>
+                                    <br>
+                                    
+                                        <button class="banner-btn"> Guardar Cambios</button>
+                                
                                 </form>
+                                
+
+
                             </div>
                         </div>
                     </div>
+
 
                     <script type="module">
                         // Obtener elementos del DOM
@@ -459,12 +381,17 @@
                             cartItem.classList.add('category-item');
                             cartItem.innerHTML = `
         <div class="sidebar-img-box">
-          <img src="./images/food/food-menu-1.png" alt="./images/food/food-menu-1.png" width="50" />
+            <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS"/>
+            <Image src={food2} alt="HAMBURGUESAS" class="sidebar-img-box-img"/>
         </div>
+
+
 		<div class="sidebar-content-box">
 							<div class="category-content-flex">
-								<h3 class="sidebar-item-title-h3">${productName}</h3>
-								<p id="editModal" class="category-item-amount-1"><i class='bx bx-edit-alt'></i></p>
+                                <a href="#" class="category-btn">
+								<h3 class="">${productName}</h3>
+                                </a>
+								<button id="editModal" class="category-item-amount-1"><i class='bx bx-edit-alt'></i></button>
 								<button class="remove-from-cart-btn"><i class="bx bx-x"></i></button>
 							</div>
         <div class="sidebar-content-box">
@@ -478,13 +405,13 @@
   
           </div>
           <div class="category-content-flex">
-            <h3 class="sidebar-item-title">Precio:</h3>
-            <p class="category-item-amount">${price.toFixed(2)} Bs</p>
+            <h3 class="sidebar-item-title-p">Precio:</h3>
+            <p class="category-item-amount">${price.toFixed(2)}</p>
+            <p class="category-item-amount">Bs</i></p>
           </div>
         </div>
-
-		<a href="#" class="category-btn">Mas...</a>
 						</div>
+
       `;
 
                             // Evento para eliminar el producto del carrito al hacer clic en el botón de eliminar
@@ -525,15 +452,13 @@
                         }
 
                         // Evento para añadir un producto al carrito cuando se hace clic en el botón "Añadir"
-                        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                        document.querySelectorAll('.add-to-cart-btn-add').forEach(button => {
                             button.addEventListener('click', () => {
                                 const productName = button.dataset.name;
                                 const price = parseFloat(button.dataset.price);
                                 addToCart(productName, price);
                             });
                         });
-
-
                     </script>
 
 
@@ -565,143 +490,36 @@
 
 
 
-
-                    <!-- 
-					<div class="category-item">
-						<div class="sidebar-img-box">
-							<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
-						</div>
-	
-						<div class="sidebar-content-box">
-							<div class="category-content-flex">
-								<h3 class="sidebar-item-title">Burger Mozza XL</h3>
-								<p class="category-item-amount">&39</p>
-							</div>
-	
-							<p class="category-item-amount">Extra cheese</p>
-							<select class="sidebar-select" name="cantidad" id="cantidad">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-							</select>
-	
-							<a href="#" class="category-btn">Show all</a>
-						</div>
-					</div> -->
-
-
-
                     <div class="category-item">
                         <ul class="sidebar-menu-category-list">
-                            <li class="sidebar-menu-category">
-                                <button class="sidebar-accordion-menu" data-accordion-btn>
                                     <div class="menu-title-flex">
-                                        <img src="./images/food/food-menu-1.png" alt="clothes" width="20" height="20"
-                                            class="menu-title-img" />
-
-                                        <p class="menu-title">Burger Mozza XL</p>
+                                            <Image src={food2} alt="clothes" class="menu-title-img"/>
+                                        <p class="menu-title">Detalle</p>
+                                        <p class="menu-title">Detalle</p>
+                                        <p class="menu-title">Detalle</p>
                                     </div>
 
                                     <div>
                                         <ion-icon name="add-outline" class="add-icon"></ion-icon>
                                         <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
                                     </div>
-                                </button>
-
-                                <ul class="sidebar-submenu-category-list" data-accordion>
-                                    <li class="sidebar-submenu-category">
-                                        <a href="#" class="sidebar-submenu-title">
-                                            <p class="product-name">Sub Total</p>
-                                            <data value="300" class="stock" title="Available Stock">300</data>
-                                        </a>
-                                    </li>
-
-                                    <li class="sidebar-submenu-category">
-                                        <a href="#" class="sidebar-submenu-title">
-                                            <p class="product-name">Delivery Fee</p>
-                                            <data value="60" class="stock" title="Available Stock">60</data>
-                                        </a>
-                                    </li>
-
-                                    <li class="sidebar-submenu-category">
-                                        <a href="#" class="sidebar-submenu-title">
-                                            <p class="product-name">Total</p>
-                                            <data value="87" class="stock" title="Available Stock">87</data>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
-
-
-
-
                     </div>
-
-
-                    <h2 class="sidebar-title">Datos del cliente</h2>
+                     <h2 class="sidebar-title">Datos del cliente</h2>
+                     <br>
+                     
                     <div class="sidebar-top">
                         <p class="sidebar-item-title">
-                            Orden de compra
-                            <i class="bx bx-chevron-down"></i>
-                        </p>
-
-                        <p class="sidebar-item-title">
-                            N.- 22
-                            <i class="bx bx-chevron-right"></i>
-                        </p>
-                    </div>
-
-
-                    <div class="sidebar-top">
-                        <p class="sidebar-item-title">
+                            <i class='bx bx-user-plus'></i>
                             Cliente
-                            <i class="bx bx-chevron-down"></i>
                         </p>
-                        <!-- <p id="modal-qr2" class="banner-btn2">
-							   -->
+               
                         <p id="openModalBtn2" class="banner-btn2">
                             Seleccionar
                             <i class="bx bx-chevron-right"></i>
                         </p>
                     </div>
 
-
-
-
-
-                    <!-- <div class="sidebar-top">
-						
-						<div class="category-item">
-	
-							<img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS" width="50" />
-								<div class="category-content-flex">
-									<h3 class="sidebar-item-title">Burger Mozza XL</h3>
-									<p class="category-item-amount">&39</p>
-								</div>
-		
-								<p class="category-item-amount">Extra cheese</p>
-								<div class="category-content-flex">
-									<p class="category-item-amount">&39</p>
-								</div>
-			
-								<div class="category-content-flex">
-									<p class="category-item-amount">Eliminar</p>
-								</div>
-					  
-								<div class="category-content-flex">
-									<p class="category-item-amount">Editar</p>
-								</div>
-	
-				
-						 
-						</div>
-	
-	
-	
-	
-		   
-					</div> -->
 
 
                     <!-- Modal de registro de usuarios -->
@@ -817,7 +635,9 @@
 
 
                     <div class="sidebar-top">
-                        <p class="sidebar-item-title">Ci:</p>
+                        <p class="sidebar-item-title">
+                            <i class='bx bx-news'></i>
+                            Ci:</p>
                         <p class="banner-btn2">
                             Seleccionar
                             <i class="bx bx-chevron-right"></i>
@@ -827,89 +647,86 @@
                     </div>
 
                     <div class="sidebar-top">
-                        <p class="sidebar-item-title">Es para :</p>
+                        <p class="sidebar-item-title">
+                            <i class='bx bxs-calculator'></i>
+                            Es para :</p>
                         <p class="sidebar-top">
-                        <div class="custom-select">
-                            <div class="select-wrapper">
-                                <select id="tipo-pago" onchange="showSelectedIcon()">
-                                    <option value="Efectivo" data-icon="fas fa-money-bill-wave">Mesa</option>
-                                    <option value="Tarjeta" data-icon="fas fa-credit-card">Llevar</option>
-                                    <option value="QR" data-icon="fas fa-qrcode">otro</option>
-                                </select>
-
+                          
+                            <div class="custom-select">
+                                <div class="select-wrapper">
+                                    <select id="mesallevar" onchange="showSelectedIcon()">
+                                        <option value="Mesa" data-icon="fas fa-money-bill-wave">Mesa</option>
+                                        <option value="LLevar" data-icon="fas fa-credit-card">LLevar</option>
+                                        <option value="Otro" data-icon="fas fa-qrcode">Otro</option>
+                                    </select>
+                                    <i class="selected-icon-1 fas fa-money-bill-wave"></i>
+                                </div>
                             </div>
-                        </div>
+                            
+                        </p>
+
+
+                    </div>
+                    
+                    <div class="sidebar-top">
+                        <p class="sidebar-item-title">
+                            <i class='bx bx-money-withdraw'></i>
+                            Forma de pago:</p>
+                        <p class="sidebar-top">
+                            <div class="custom-select">
+                                <div class="select-wrapper">
+                                    <select id="tipopagos">    
+                                        <option value="Efectivo" data-icon="fas fa-money-bill-wave">Efectivo</option>
+                                        <option value="Qr" data-icon="fas fa-qrcode">Qr</option>
+                                        <option value="Tarjeta" data-icon="fas fa-credit-card">Tarjeta</option>
+                                    </select>
+                                    <i class="selected-icon fas fa-money-bill-wave"></i>
+                                </div>
+                           
+                            </div>
                         </p>
                     </div>
+                 
+                                <script type="module">
+                                // Obtener referencia al select y al botón
+                                var mesallevarSelect = document.getElementById("tipopagos");
+                                var openModalBtnQR = document.getElementById("openModalBtnQR");
 
-                    <!-- <div class="sidebar-top">
-                        <p class="sidebar-item-title">Es para :</p>
+                                // Función para manejar el cambio en el select
+                                function handleSelectChange() {
+                                    // Obtener la opción seleccionada
+                                    var selectedOption = mesallevarSelect.options[mesallevarSelect.selectedIndex];
+                                    
+                                    // Mostrar el icono seleccionado
+                                    var selectedIconClass = selectedOption.getAttribute("data-icon");
+                                    var selectedIconElement = document.querySelector(".selected-icon");
+                                    selectedIconElement.className = "selected-icon " + selectedIconClass;
+                                    
+                                    // Habilitar o deshabilitar el botón según la opción seleccionada
+                                    openModalBtnQR.disabled = (selectedOption.value !== "Qr");
+                                    
+                                    // Cambiar el color del botón según su estado
+                                    if (openModalBtnQR.disabled) {
+                                        openModalBtnQR.style.backgroundColor = "#B1B1B1"; // Botón deshabilitado: verde
+                                    } else {
+                                        openModalBtnQR.style.backgroundColor = "#0F0F0E"; // Botón habilitado: rojo
+                                    }
+                                }
 
-                        <p class="sidebar-item-title-top">
-                            <button class="sidebar-btn"><i class='bx bx-money'></i></button>
-                            Mesa
-                        </p>
-                        <p class="sidebar-item-title-top">
-                            <button class="sidebar-btn"><i class='bx bx-qr'></i></i></button>
-                            Llevar
-                        </p>
-                        <p class="sidebar-item-title-top">
-                            <button class="sidebar-btn"><i class='bx bx-credit-card-front'></i></i></button>
-                            Reservado
+                                // Agregar evento onchange al select
+                                mesallevarSelect.addEventListener("change", handleSelectChange);
 
-                        </p>
-                    </div> -->
-
-
-
-                    <!-- 
-                    <div class="sidebar-top">
-                        <p class="sidebar-item-title">Forma de pago:</p>
-
-                        <p class="sidebar-item-title-top">
-                            <button class="sidebar-btn"><i class='bx bx-money'></i></button>
-                            efectivo
-                        </p>
-                        <p class="sidebar-item-title-top">
-                            <button class="sidebar-btn"><i class='bx bx-qr'></i></i></button>
-                            qr
-                        </p>
-                        <p class="sidebar-item-title-top">
-                            <button class="sidebar-btn"><i class='bx bx-credit-card-front'></i></i></button>
-                            tarjeta
-                        </p>
-                    </div> -->
-
-
-                    <div class="sidebar-top">
-                        <p class="sidebar-item-title">Forma de pago:</p>
-                        <p class="sidebar-top">
-                        <div class="custom-select">
-                            <div class="select-wrapper">
-                                <select id="tipo-pago" onchange="showSelectedIcon()">
-                                    <option value="Efectivo" data-icon="fas fa-money-bill-wave">Efectivo</option>
-                                    <option value="Tarjeta" data-icon="fas fa-credit-card">Tarjeta</option>
-                                    <option value="QR" data-icon="fas fa-qrcode">QR</option>
-                                </select>
-
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-
-                    <script type="module">
-
-                        function showSelectedIcon() {
-                            var selectElement = document.getElementById("tipo-pago");
-                            var selectedOption = selectElement.options[selectElement.selectedIndex];
-                            var iconClass = selectedOption.getAttribute("data-icon");
-                            var selectWrapper = document.querySelector(".select-wrapper i");
-                            selectWrapper.className = iconClass;
-                        }
-
+                                // Llamar a la función handleSelectChange() al cargar la página para inicializar el estado
+                                handleSelectChange();
 
 
                     </script>
+
+   
+
+
+
+
 
 
                     <div class="sidebar-top">
@@ -920,58 +737,54 @@
 
                     <div class="sidebar-top">
                         <p class="sidebar-item-title">Total</p>
-                        <!-- <p class="sidebar-item-title">10 Bs</p> -->
                         <p class="sidebar-item-title" id="cart-total">Total: $0</p>
-
-                        <!-- <div class="cart">
-                            <p class="sidebar-item-title" id="cart-items"></p>
-                            <p class="sidebar-item-title" id="cart-total">Total: $0</p>
-                        </div> -->
-
                     </div>
 
                     <div>
-                        <!-- <div class="sidebar-top">
-                            <p class="sidebar-item-title">¿Con factura?:</p>
-                            <div class="switch-container">
-                               <p class="sidebar-item-title"> Sin Factura </p>
-                                <label class="switch">
-                                    <input type="checkbox" id="factura">
-                                    <span class="slider"></span>  
-                                </label>  
-                                <p class="sidebar-item-title"> Facturar </p>
-                            </div>
-
-
-                        </div> -->
+                  
 
                         <div class="sidebar-top">
-                            <p class="sidebar-item-title">¿Con factura?:</p>
+                            <p class="sidebar-item-title-f">
+                                <i class='bx bx-badge-check'></i>
+                                ¿Con factura?: </p>
 
+                       
                             <p class="sidebar-item-title-top">
-                            <p class="sidebar-item-title"> Sin Factura </p>
-                            </p>
-                            <p class="sidebar-item-title-top">
+                                <p class="sidebar-item-title-p"> Sin Factura </p>
                                 <label class="switch">
                                     <input type="checkbox" id="factura">
                                     <span class="slider"></span>
                                 </label>
+                                <p class="sidebar-item-title-p"> Sin Factura </p>
                             </p>
-                            <p class="sidebar-item-title-top">
-                            <p class="sidebar-item-title"> Sin Factura </p>
-
-                            </p>
+                
                         </div>
+                        <div class="center-div">
+                            <button class="banner-btn"><i class="fas fa-shopping-cart"></i> Realizar Pedido</button>
+                            <!-- <button id="openModalBtnQR" class="banner-btn-qr"><i class="fas fa-qrcode"></i> Generar QR</button> -->
+                            <button id="openModalBtnQR" class="banner-btn-qr" disabled><i class="fas fa-qrcode"></i> Generar QR</button>
 
 
-
-                        <!-- <a href="#" class="banner-btn">Verificar</a> -->
-                        <button class="banner-btn">Realizar Pedido</button>
+                        </div>
                     </div>
                     <!-- </form> -->
+ 
 
-                    <button id="openModalBtnQR" class="banner-btn">Gerenerar Qr</button>
-
+           
+                    <script type="module">
+                        document.getElementById("mesallevar").addEventListener("change", function() {
+                            var selectedValue = this.value;
+                            var btnQR = document.getElementById("openModalBtnQR");
+                            if (selectedValue === "Qr") {
+                                btnQR.classList.add("selected");
+                                btnQR.removeAttribute("disabled");
+                            } else {
+                                btnQR.classList.remove("selected");
+                                btnQR.setAttribute("disabled", true);
+                            }
+                        });
+                    </script>
+               
 
                     <style>
                         .qrmodal {
@@ -1011,18 +824,22 @@
                     </style>
 
                     <div id="qrModal" class="qrmodal">
-                        <div class="modal-content">
+                        <div class="modal-content-qr">
                             <button id="aperturarBtn" class="modal-close-btnQr" onclick="closeModal()" data-modal-close>
                                 <i class="bx bx-x"></i>
                             </button>
                             <div class="newsletter">
                                 <div class="newsletter-img">
-                                    <h3 class="newsletter-title">QR.</h3>
-                                    <img src="./images/caja/qr.jpg" alt="Pago qr" width="100" height="100" />
+                                    <h3 class="newsletter-title-qr">Generar Qr</h3>
+                                  
+                                    <Image src={qr}  alt="Pago qr"/>
+
                                 </div>
                                 <form id="cajaForm">
                                     <div class="newsletter-header">
                                         <p class="newsletter-desc-qr">
+                                            <b>Cliente: Juan Pedro</b>
+                                            <br>
                                             <b>Monto: 200.00 Bs.</b>
                                         </p>
                                     </div>
@@ -1064,4 +881,6 @@
     </div>
 
 
+
+    
 </astro-doc>

@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-// import BaseClientLayout from '../../layouts/BaseClientLayout.astro'
 import NEXBranchFooter from '../../components/NEXBranchFooter.astro'
 import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 import NEXBranchMoneybox from '../../components/NEXBranchMoneybox.astro'
@@ -13,29 +12,26 @@ import NEXBranchBanner from '../../components/NEXBranchBanner.astro'
 import NEXBranchOrdersidebar from '../../components/NEXBranchOrdersidebar.astro'
 import NEXBranchRegisteruser from '../../components/NEXBranchRegisteruser.astro'
 
+import Products from '../../components/product/Products.astro'
+
+const title = 'Locoto'
+const headers = Astro.request.headers
 ---
 
-
 <Layout>
+	<NEXBranchRegisteruser />
+	<NEXBranchHeadermain />
 
-	<NEXBranchRegisteruser/>
-	<NEXBranchHeadermain/>
+	<NEXBranchBanner />
 
-	<NEXBranchBanner/>
-	
-	<NEXBranchNavigationmenu/>
-	<NEXBranchOrdersidebar/>
+	<NEXBranchNavigationmenu />
+	<NEXBranchOrdersidebar />
 
+	<NEXBranchCategory />
 
-	<NEXBranchCategory/>
+	<NEXOutlineNav />
 
-	<NEXOutlineNav />	
-	
-	<!-- <NEXBranchQr/> -->
-	<!-- <NEXBranchMoneybox/> -->
+	<!-- <NEXBranchQr /> -->
+	<!-- <NEXBranchMoneybox /> -->
 	<NEXBranchFooter />
-
-
-	
 </Layout>
-

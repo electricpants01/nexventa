@@ -14,62 +14,30 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
         <div class="container">
             <div class="product-box">
                 <div class="blog">
-                    <div class="container">
-                        <div class="blog-container has-scrollbar">
-
+                    <div class="container-0">
+                        <div class="blog-container-0 has-scrollbar">
                             <div class="blog-card">
                                 <Image src={food1} alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
                                     <h3 class="blog-title">Pollo</h3>
-                                    <p class="blog-meta">Precio: 27Bs</p>
-
-                                    <div class="banner-btn">
-                                        <button class="add-to-cart-btn" data-name="Pizza" data-price="50"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 27 Bs</p>
+                                        <del>30.00 Bs</del>
                                     </div>
-                                    
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Milaneza" data-price="20"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
+                                    </div>
                                 </div>
                             </div>
 
 
-                            <style>
-                                .vermodal {
-                                    display: none;
-                                    position: fixed;
-                                    z-index: 1;
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    overflow: auto;
-                                    background-color: rgba(0, 0, 0, 0.4);
-                                }
-
-                                .modal-content {
-                                    background-color: #fefefe;
-                                    margin: 10% auto;
-                                    padding: 20px;
-                                    border: 1px solid #888;
-                                    /* width: 80%; */
-                                    max-width: 400px;
-                                }
-
-                                .close {
-                                    color: #aaa;
-                                    float: right;
-                                    font-size: 28px;
-                                    font-weight: bold;
-                                }
-
-                                .close:hover,
-                                .close:focus {
-                                    color: black;
-                                    text-decoration: none;
-                                    cursor: pointer;
-                                }
-                            </style>
-
+                            
 
 
                             <div id="verModal" class="vermodal">
@@ -80,7 +48,6 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
 
                                     <div class="newsletter-img">
                                         <h3 class="newsletter-title">Detalle del producto.</h3>
-                                      
                 
                                             <Image src={food1} alt="Foods." alt="Foods."
                                             class="modal-content-show-img"/>
@@ -112,107 +79,94 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                                 </div>
                             </div>
 
-                            <script type="module">
-                                // Obtener elementos del DOM
-                                var modal = document.getElementById('verModal')
-                                var openModalBtn = document.getElementById('openModalBtn-ver')
-                                var closeBtn = document.getElementsByClassName('modal-close-btn-show')[0]
+  
 
-                                // Función para abrir el modal
-                                function openModal() {
-                                    modal.style.display = 'block'
-                                }
 
-                                // Función para cerrar el modal
-                                function closeModal() {
-                                    modal.style.display = 'none'
-                                }
-
-                                // Event listeners para abrir y cerrar el modal
-                                openModalBtn.addEventListener('click', openModal)
-                                closeBtn.addEventListener('click', closeModal)
-
-                                // Cerrar el modal al hacer clic fuera de él
-                                window.addEventListener('click', function (event) {
-                                    if (event.target == modal) {
-                                        closeModal()
-                                    }
-                                })
-                            </script>
 
                             <div class="blog-card">
                                 <Image src={food2} alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <a href="#">
-                                        <h3 class="blog-title">Hamburguesa .</h3>
-                                    </a>
-                                    <p class="blog-meta">Precio 10Bs</p>
-                                    <div class="banner-btn">
-                                        <button class="add-to-cart-btn" data-name="Hamburguesa" data-price="10"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Hamburguesa</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Hamburguesa" data-price="10"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
-
-
 
 
                             <div class="blog-card">
-
-                                <Image src={food3} alt=""  alt="Foods." class="blog-banner"/>
-
+                                <Image src={food3}   alt="Foods." class="blog-banner"/>
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <a href="#">
-                                        <h3 class="blog-title">Pizza .</h3>
-                                    </a>
-                                    <p class="blog-meta">Precio 50Bs</p>
-                                    <div class="banner-btn">
-                                        <button class="add-to-cart-btn" data-name="Pizza" data-price="50"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Pizza</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Pizza" data-price="50"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
-
-
+                            
 
                             <div class="blog-card">
-
-                                <Image src={food4} alt=""  alt="Foods." class="blog-banner" />
-
+                                <Image src={food4}   alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    
-
-                                    <h3 class="blog-title">Fideo .</h3>
-
-                                    <p class="blog-meta">Precio 20Bs</p>
-                                    <div class="banner-btn">
-                                        
-
-                                        <button class="add-to-cart-btn" data-name="Milaneza" data-price="20"><i
-                                                class='bx bxs-cart-add'></i> Añadir </button>
-
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Fideo</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Pizza" data-price="50"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
 
                     <div class="container">
                         <div class="blog-container has-scrollbar">
                             <div class="blog-card">
-                                <Image src={food1} alt=""  alt="Foods." class="blog-banner" />
+                                <Image src={food4}   alt="Foods." class="blog-banner" />
+                                <p class="showcase-badge angle">stop</p>
                                 <div class="blog-content">
-                                    <a href="#">
-                                        <h3 class="blog-title">Pollo .</h3>
-                                    </a>
-                                    <p class="blog-meta">Precio 30$</p>
-                                    <div class="banner-btn">
-                                        <a href="#"><i class='bx bxs-cart-add'></i> Añadir </a>
-                                        <a href="#"><i class='bx bxs-show'></i> Ver</a>
+                                    <h3 class="blog-title">Fideo</h3>
+                                    <div class="price-box">
+                                        <p class="price">Precio: 10 Bs</p>
+                                        <del>30.00 Bs</del>
+                                    </div>
+                                    <a href="#" class="showcase-title">
+                                        Pollo al horno</a>
+                                    <div class="banner-btn-product">
+                                        <button class="add-to-cart-btn-add" data-name="Pizza" data-price="50"><i class='bx bxs-cart-add'></i>
+                                            Añadir </button>
+                                        <button id="openModalBtn-ver" class="add-to-cart-btn-show">
+                                            <i class='bx bxs-show'></i> Ver</button>
                                     </div>
                                 </div>
                             </div>
@@ -223,9 +177,7 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
 
 
             
-            <!--
-					  - SIDEBAR
-					-->
+            <!--- SIDEBAR	-->
             <style>
                 .sidebar.has-scrollbar[data-mobile-menu] {
                     position: absolute;
@@ -268,7 +220,7 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                             <i class="bx bx-chevron-right"></i>
                         </p>
                     </div>
- 
+
 
                     <!-- <form> -->
 
@@ -500,7 +452,7 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                         }
 
                         // Evento para añadir un producto al carrito cuando se hace clic en el botón "Añadir"
-                        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                        document.querySelectorAll('.add-to-cart-btn-add').forEach(button => {
                             button.addEventListener('click', () => {
                                 const productName = button.dataset.name;
                                 const price = parseFloat(button.dataset.price);
@@ -707,7 +659,7 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                                         <option value="LLevar" data-icon="fas fa-credit-card">LLevar</option>
                                         <option value="Otro" data-icon="fas fa-qrcode">Otro</option>
                                     </select>
-                                    <i class="selected-icon fas fa-money-bill-wave"></i>
+                                    <i class="selected-icon-1 fas fa-money-bill-wave"></i>
                                 </div>
                             </div>
                             
@@ -716,11 +668,6 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
 
                     </div>
                     
-  
-                    
-
-
-
                     <div class="sidebar-top">
                         <p class="sidebar-item-title">
                             <i class='bx bx-money-withdraw'></i>
@@ -728,17 +675,54 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                         <p class="sidebar-top">
                             <div class="custom-select">
                                 <div class="select-wrapper">
-                                    <select id="mesallevar" onchange="showSelectedIcon()">
+                                    <select id="tipopagos">    
                                         <option value="Efectivo" data-icon="fas fa-money-bill-wave">Efectivo</option>
-                                        <option value="Qr" data-icon="fas fa-credit-card">Qr</option>
-                                        <option value="Tarjeta" data-icon="fas fa-qrcode">Tarjeta</option>
+                                        <option value="Qr" data-icon="fas fa-qrcode">Qr</option>
+                                        <option value="Tarjeta" data-icon="fas fa-credit-card">Tarjeta</option>
                                     </select>
                                     <i class="selected-icon fas fa-money-bill-wave"></i>
                                 </div>
+                           
                             </div>
                         </p>
                     </div>
+                 
+                                <script type="module">
+                                // Obtener referencia al select y al botón
+                                var mesallevarSelect = document.getElementById("tipopagos");
+                                var openModalBtnQR = document.getElementById("openModalBtnQR");
 
+                                // Función para manejar el cambio en el select
+                                function handleSelectChange() {
+                                    // Obtener la opción seleccionada
+                                    var selectedOption = mesallevarSelect.options[mesallevarSelect.selectedIndex];
+                                    
+                                    // Mostrar el icono seleccionado
+                                    var selectedIconClass = selectedOption.getAttribute("data-icon");
+                                    var selectedIconElement = document.querySelector(".selected-icon");
+                                    selectedIconElement.className = "selected-icon " + selectedIconClass;
+                                    
+                                    // Habilitar o deshabilitar el botón según la opción seleccionada
+                                    openModalBtnQR.disabled = (selectedOption.value !== "Qr");
+                                    
+                                    // Cambiar el color del botón según su estado
+                                    if (openModalBtnQR.disabled) {
+                                        openModalBtnQR.style.backgroundColor = "#B1B1B1"; // Botón deshabilitado: verde
+                                    } else {
+                                        openModalBtnQR.style.backgroundColor = "#0F0F0E"; // Botón habilitado: rojo
+                                    }
+                                }
+
+                                // Agregar evento onchange al select
+                                mesallevarSelect.addEventListener("change", handleSelectChange);
+
+                                // Llamar a la función handleSelectChange() al cargar la página para inicializar el estado
+                                handleSelectChange();
+
+
+                    </script>
+
+   
 
 
 
@@ -777,7 +761,10 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                         </div>
                         <div class="center-div">
                             <button class="banner-btn"><i class="fas fa-shopping-cart"></i> Realizar Pedido</button>
-                            <button id="openModalBtnQR" class="banner-btn-qr"><i class="fas fa-qrcode"></i> Generar QR</button>
+                            <!-- <button id="openModalBtnQR" class="banner-btn-qr"><i class="fas fa-qrcode"></i> Generar QR</button> -->
+                            <button id="openModalBtnQR" class="banner-btn-qr" disabled><i class="fas fa-qrcode"></i> Generar QR</button>
+
+
                         </div>
                     </div>
                     <!-- </form> -->
@@ -845,7 +832,7 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
                                 <div class="newsletter-img">
                                     <h3 class="newsletter-title-qr">Generar Qr</h3>
                                   
-                                    <Image src={qr} alt="" alt="Pago qr"/>
+                                    <Image src={qr}  alt="Pago qr"/>
 
                                 </div>
                                 <form id="cajaForm">
@@ -894,4 +881,6 @@ import qr from "../../public/images/caja/qr.jpg";  // La imagen de qr
     </div>
 
 
+
+    
 </astro-doc>
