@@ -1,45 +1,52 @@
 ---
 import { Image } from "astro:assets";
 import banner from "../../public/images/banner/banner.jpg";  // La imagen de producto
-
-
-
 ---
-
-<div class="container">
-	<div class="slider-container has-scrollbar" style="width: 73%;">
-		<div class="slider-item">
-			<Image src={banner}  alt="banner" class="banner-img" />
-
-			<div class="banner-content">
-				<div class="banner-content2">
-					<h2 class="banner-title">30% Off</h2>
-					<p class="banner-subtitle">Comida de fitness</p>
-					<a href="#" class="banner-btn">Ordenar</a>
-				</div>
-			</div>
-		</div>
-		<div class="slider-item">
-			<Image src={banner}  alt="banner" class="banner-img" />
-			<div class="banner-content">
-				<p class="banner-subtitle">Trending accessories</p>
-				<h2 class="banner-title">Modern sunglasses</h2>
-				<p class="banner-text">
-					starting at &dollar; <b>15</b>.00
-				</p>
-				<a href="#" class="banner-btn">Ordenar</a>
-			</div>
-		</div>
-		<div class="slider-item">
-			<Image src={banner}  alt="banner" class="banner-img" />
-			<div class="banner-content">
-				<p class="banner-subtitle">Foods</p>
-				<h2 class="banner-title">Foods</h2>
-				<p class="banner-text">
-					starting at &dollar; <b>29</b>.99
-				</p>
-				<a href="#" class="banner-btn">Ordenar</a>
-			</div>
-		</div>
-	</div>
+<astro-doc>
+<div class="banner">
+    <div class="container">
+        <div class="slider-container has-scrollbar">
+            <div class="slider-item">
+                <Image src={banner} alt="banner" class="banner-img" />
+                <div class="banner-content">
+                    <div class="banner-content2">
+                        <h2 class="banner-title">30% Off</h2>
+                        <p class="banner-subtitle">Comida de fitness</p>
+                        <a href="#" class="banner-btn-orden">Ordenar</a>
+						<p class="banner-text">
+							starting at &dollar; <b>29</b>.99
+						</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <Image src={banner} alt="banner" class="banner-img" />
+                <div class="banner-content">
+                    <div class="banner-content2">
+                        <h2 class="banner-title">30% Off</h2>
+                        <p class="banner-subtitle">Comida de fitness</p>
+                        <a href="#" class="banner-btn-orden">Ordenar</a>
+						<p class="banner-text">
+							starting at &dollar; <b>29</b>.99
+						</p>
+                    </div>
+                </div>
+            </div>
+			<div class="slider-item">
+                <Image src={banner} alt="banner" class="banner-img" />
+                <div class="banner-content">
+                    <div class="banner-content2">
+                        <h2 class="banner-title">30% Off</h2>
+                        <p class="banner-subtitle">Comida de fitness</p>
+                        <a href="#" class="banner-btn-orden">Ordenar</a>
+						<p class="banner-text">
+							starting at &dollar; <b>29</b>.99
+						</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+</astro-doc>
+
