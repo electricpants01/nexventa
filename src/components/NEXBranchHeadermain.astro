@@ -1,229 +1,227 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../../public/images/logo/logo.png";  // La imagen de producto
-
-
+import { Image } from 'astro:assets'
+import logo from '../../public/images/logo/logo.png' // La imagen de producto
 ---
 
-
 <astro-doc>
-    <header>
-        <div class="header-main">
-            <div class="container">
-                <a href="#" class="header-logo">
-                    <Image src={logo} alt="locoto" width="120" height="50" />
-                </a>
-                <div class="header-search-container">
-                    <input type="search" name="search" class="search-field" placeholder="¿Qué te gustaría comer?..">
-                    <button class="search-btn">
-                        <i class="bx bx-search-alt-2 bx-sm"></i>
-                    </button>
-                </div>
+	<header>
+		<div class="header-main">
+			<div class="container">
+				<a href="#" class="header-logo">
+					<Image src={logo} alt="locoto" width="120" height="50" />
+				</a>
+				<div class="header-search-container">
+					<input
+						type="search"
+						name="search"
+						class="search-field"
+						placeholder="¿Qué te gustaría comer?.."
+					/>
+					<button class="search-btn">
+						<i class="bx bx-search-alt-2 bx-sm"></i>
+					</button>
+				</div>
 
-                <div class="header-user-actions">
-                    <button class="action-btn">
-                        <i class="bx bx-user bx-sm"></i>
-                    </button>
-                    <button class="action-btn">
-                        <i class="bx bx-cart bx-sm"></i>
-                        <span class="count">0</span>
-                    </button>
-                    <button class="action-btn">
-                        <i class="bx bx-bell bx-sm"></i>
-                        <span class="count">0</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    
-    
-    
-        <div class="mobile-bottom-navigation">
-    
-            <button class="action-btn" data-mobile-menu-open-btn>
-                <i class="bx bx-search-alt-2 bx-sm"></i>
-            </button>
-    
-            <button class="action-btn">
-                <i class="bx bx-search-alt-2 bx-sm"></i>
-    
-                <span class="count">0</span>
-            </button>
-    
-            <button class="action-btn">
-                <i class="bx bx-search-alt-2 bx-sm"></i>
-            </button>
-    
-            <button class="action-btn">
-                <i class="bx bx-search-alt-2 bx-sm"></i>
-    
-                <span class="count">0</span>
-            </button>
-    
-            <button class="action-btn" data-mobile-menu-open-btn>
-                <i class="bx bx-search-alt-2 bx-sm"></i>
-            </button>
-    
-        </div>
-    
-        <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
-    
-            <div class="menu-top">
-                <h2 class="menu-title">Menu</h2>
-    
-                <button class="menu-close-btn" data-mobile-menu-close-btn>
-                    <i class="bx bx-search-alt-2 bx-sm"></i>
-                </button>
-            </div>
-    
-            <ul class="mobile-menu-category-list">
-    
-                <li class="menu-category">
-                    <a href="#" class="menu-title">hamburguesa</a>
-                </li>
-    
-                <li class="menu-category">
-    
-                    <button class="accordion-menu" data-accordion-btn>
-                        <p class="menu-title">hamburguesa</p>
-    
-                        <div>
-                            <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                        </div>
-                    </button>
-    
-                    <ul class="submenu-category-list" data-accordion>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                    </ul>
-    
-                </li>
-    
-                <li class="menu-category">
-    
-                    <button class="accordion-menu" data-accordion-btn>
-                        <p class="menu-title">hamburguesa</p>
-    
-                        <div>
-                            <i class="bx bx-search-alt-2 bx-sm"></i>
-                            <i class="bx bx-search-alt-2 bx-sm"></i>
-                        </div>
-                    </button>
-    
-                    <ul class="submenu-category-list" data-accordion>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                    </ul>
-    
-                </li>
-    
-                <li class="menu-category">
-    
-                    <button class="accordion-menu" data-accordion-btn>
-                        <p class="menu-title">hamburguesa</p>
-    
-                        <div>
-                            <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                        </div>
-                    </button>
-    
-                    <ul class="submenu-category-list" data-accordion>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                    </ul>
-    
-                </li>
-    
-                <li class="menu-category">
-    
-                    <button class="accordion-menu" data-accordion-btn>
-                        <p class="menu-title">hamburguesa</p>
-    
-                        <div>
-                            <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                        </div>
-                    </button>
-    
-                    <ul class="submenu-category-list" data-accordion>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                        <li class="submenu-category">
-                            <a href="#" class="submenu-title">hamburguesa</a>
-                        </li>
-    
-                    </ul>
-    
-                </li>
-    
-                <li class="menu-category">
-                    <a href="#" class="menu-title">hamburguesa</a>
-                </li>
-    
-                <li class="menu-category">
-                    <a href="#" class="menu-title">hamburguesa</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+				<div class="header-user-actions">
+					<button class="action-btn">
+						<i class="bx bx-cart bx-sm"></i>
+						<span class="count">0</span>
+					</button>
+					<button class="action-btn">
+						<i class="bx bx-bell bx-sm"></i>
+						<span class="count">0</span>
+					</button>
+
+					<li class="action-btn-head dropdown">
+						<button
+							class="action-btn dropdown-toggle"
+							type="button"
+							id="dropdownMenuButton"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							<i class="bx bx-user bx-sm"></i>
+						</button>
+
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<li class="dropdown-item">
+								<a href="#">Configuración</a>
+							</li>
+
+							<li class="dropdown-item">
+								<a href="#">Cerrar sesión</a>
+							</li>
+						</ul>
+					</li>
+				</div>
+			</div>
+		</div>
+
+		<div class="mobile-bottom-navigation">
+			<button class="action-btn" data-mobile-menu-open-btn>
+				<i class="bx bx-search-alt-2 bx-sm"></i>
+			</button>
+
+			<button class="action-btn">
+				<i class="bx bx-search-alt-2 bx-sm"></i>
+
+				<span class="count">0</span>
+			</button>
+
+			<button class="action-btn">
+				<i class="bx bx-search-alt-2 bx-sm"></i>
+			</button>
+
+			<button class="action-btn">
+				<i class="bx bx-search-alt-2 bx-sm"></i>
+
+				<span class="count">0</span>
+			</button>
+
+			<button class="action-btn" data-mobile-menu-open-btn>
+				<i class="bx bx-search-alt-2 bx-sm"></i>
+			</button>
+		</div>
+
+		<nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+			<div class="menu-top">
+				<h2 class="menu-title">Menu</h2>
+
+				<button class="menu-close-btn" data-mobile-menu-close-btn>
+					<i class="bx bx-search-alt-2 bx-sm"></i>
+				</button>
+			</div>
+
+			<ul class="mobile-menu-category-list">
+				<li class="menu-category">
+					<a href="#" class="menu-title">hamburguesa</a>
+				</li>
+
+				<li class="menu-category">
+					<button class="accordion-menu" data-accordion-btn>
+						<p class="menu-title">hamburguesa</p>
+
+						<div>
+							<ion-icon name="add-outline" class="add-icon"></ion-icon>
+							<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+						</div>
+					</button>
+
+					<ul class="submenu-category-list" data-accordion>
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="menu-category">
+					<button class="accordion-menu" data-accordion-btn>
+						<p class="menu-title">hamburguesa</p>
+
+						<div>
+							<i class="bx bx-search-alt-2 bx-sm"></i>
+							<i class="bx bx-search-alt-2 bx-sm"></i>
+						</div>
+					</button>
+
+					<ul class="submenu-category-list" data-accordion>
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="menu-category">
+					<button class="accordion-menu" data-accordion-btn>
+						<p class="menu-title">hamburguesa</p>
+
+						<div>
+							<ion-icon name="add-outline" class="add-icon"></ion-icon>
+							<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+						</div>
+					</button>
+
+					<ul class="submenu-category-list" data-accordion>
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="menu-category">
+					<button class="accordion-menu" data-accordion-btn>
+						<p class="menu-title">hamburguesa</p>
+
+						<div>
+							<ion-icon name="add-outline" class="add-icon"></ion-icon>
+							<ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+						</div>
+					</button>
+
+					<ul class="submenu-category-list" data-accordion>
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+
+						<li class="submenu-category">
+							<a href="#" class="submenu-title">hamburguesa</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="menu-category">
+					<a href="#" class="menu-title">hamburguesa</a>
+				</li>
+
+				<li class="menu-category">
+					<a href="#" class="menu-title">hamburguesa</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 </astro-doc>
-
-

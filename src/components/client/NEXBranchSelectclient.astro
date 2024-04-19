@@ -1,8 +1,6 @@
 ---
-import { Image } from 'astro:assets'
-import cliente from '../../../public/images/cliente/Logo-KFC.png' // La imagen de producto
-import cliente2 from '../../../public/images/cliente/KFC.png' // La imagen de producto
 import NEXBranchSelecclientform from './NEXBranchSelectclientform.astro'
+import NEXBranchSelecclientlogo from './NEXBranchSelectclientlogo.astro'
 ---
 
 <astro-doc>
@@ -12,14 +10,7 @@ import NEXBranchSelecclientform from './NEXBranchSelectclientform.astro'
 		</div>
 		<div class="panels-container">
 			<div class="panel left-panel">
-				<div class="content">
-					<h3>
-						<button class="back-btn"><i class="bx bx-arrow-back"></i> Volver</button>
-						Locoto
-					</h3>
-					<p>"Puntos de ventas"</p>
-					<Image src={cliente2} class="image" alt="Logo-cliente" width="600" height="500" />
-				</div>
+				<NEXBranchSelecclientlogo />
 			</div>
 		</div>
 	</div>
