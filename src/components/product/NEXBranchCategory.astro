@@ -11,120 +11,120 @@ import ProductCard from './Products.astro'
 
 const ProductsResult = z.array(ProductResult)
 export interface Props {
-	products: z.infer<typeof ProductsResult>
+  products: z.infer<typeof ProductsResult>
 }
 const { products } = Astro.props as Props
 ---
 
 <astro-doc>
-	<section>
-		<div class="container py-16 sm:py-20">
-			<h2 class="sr-only">Products</h2>
+  <section>
+    <div class="container py-16 sm:py-20">
+      <h2 class="sr-only">Products</h2>
 
-			<div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-				{products.map((product) => <ProductCard product={product} />)}
-			</div>
-		</div>
-	</section>
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+        {products.map((product) => <ProductCard product={product} />)}
+      </div>
+    </div>
+  </section>
 
-	<div class="category">
-		<div class="container">
-			<div class="category-item-container has-scrollbar">
-				<div class="category-item">
-					<div class="category-img-box">
-						<Image src={food1} alt="HAMBURGUESAS" width="30" />
-					</div>
+  <div class="category">
+    <div class="container">
+      <div class="category-item-container has-scrollbar">
+        <div class="category-item">
+          <div class="category-img-box">
+            <Image src={food1} alt="HAMBURGUESAS" width="30" />
+          </div>
 
-					<div class="category-content-box">
-						<div class="category-content-flex">
-							<h3 class="category-item-title">HAMBURGUESAS</h3>
+          <div class="category-content-box">
+            <div class="category-content-flex">
+              <h3 class="category-item-title">HAMBURGUESAS</h3>
 
-							<p class="category-item-amount">(53)</p>
-						</div>
+              <p class="category-item-amount">(53)</p>
+            </div>
 
-						<a href="#" class="category-btn">Ver mas</a>
-					</div>
-				</div>
+            <a href="#" class="category-btn">Ver mas</a>
+          </div>
+        </div>
 
-				<div class="category-item">
-					<div class="category-img-box">
-						<Image src={food2} alt="HAMBURGUESAS" width="30" />
-					</div>
+        <div class="category-item">
+          <div class="category-img-box">
+            <Image src={food2} alt="HAMBURGUESAS" width="30" />
+          </div>
 
-					<div class="category-content-box">
-						<div class="category-content-flex">
-							<h3 class="category-item-title">HAMBURGUESAS</h3>
+          <div class="category-content-box">
+            <div class="category-content-flex">
+              <h3 class="category-item-title">HAMBURGUESAS</h3>
 
-							<p class="category-item-amount">(58)</p>
-						</div>
+              <p class="category-item-amount">(58)</p>
+            </div>
 
-						<a href="#" class="category-btn">Ver mas</a>
-					</div>
-				</div>
+            <a href="#" class="category-btn">Ver mas</a>
+          </div>
+        </div>
 
-				<div class="category-item">
-					<div class="category-img-box">
-						<Image src={food3} alt="HAMBURGUESAS" width="30" />
-					</div>
+        <div class="category-item">
+          <div class="category-img-box">
+            <Image src={food3} alt="HAMBURGUESAS" width="30" />
+          </div>
 
-					<div class="category-content-box">
-						<div class="category-content-flex">
-							<h3 class="category-item-title">HAMBURGUESAS</h3>
+          <div class="category-content-box">
+            <div class="category-content-flex">
+              <h3 class="category-item-title">HAMBURGUESAS</h3>
 
-							<p class="category-item-amount">(68)</p>
-						</div>
+              <p class="category-item-amount">(68)</p>
+            </div>
 
-						<a href="#" class="category-btn">Ver mas</a>
-					</div>
-				</div>
+            <a href="#" class="category-btn">Ver mas</a>
+          </div>
+        </div>
 
-				<div class="category-item">
-					<div class="category-img-box">
-						<Image src={food4} alt="HAMBURGUESAS" width="30" />
-					</div>
+        <div class="category-item">
+          <div class="category-img-box">
+            <Image src={food4} alt="HAMBURGUESAS" width="30" />
+          </div>
 
-					<div class="category-content-box">
-						<div class="category-content-flex">
-							<h3 class="category-item-title">HAMBURGUESAS</h3>
+          <div class="category-content-box">
+            <div class="category-content-flex">
+              <h3 class="category-item-title">HAMBURGUESAS</h3>
 
-							<p class="category-item-amount">(84)</p>
-						</div>
+              <p class="category-item-amount">(84)</p>
+            </div>
 
-						<a href="#" class="category-btn">Ver mas</a>
-					</div>
-				</div>
+            <a href="#" class="category-btn">Ver mas</a>
+          </div>
+        </div>
 
-				<div class="category-item">
-					<div class="category-img-box">
-						<Image src={food4} alt="HAMBURGUESAS" width="30" />
-					</div>
+        <div class="category-item">
+          <div class="category-img-box">
+            <Image src={food4} alt="HAMBURGUESAS" width="30" />
+          </div>
 
-					<div class="category-content-box">
-						<div class="category-content-flex">
-							<h3 class="category-item-title">HAMBURGUESAS</h3>
+          <div class="category-content-box">
+            <div class="category-content-flex">
+              <h3 class="category-item-title">HAMBURGUESAS</h3>
 
-							<p class="category-item-amount">(84)</p>
-						</div>
+              <p class="category-item-amount">(84)</p>
+            </div>
 
-						<a href="#" class="category-btn">Ver mas</a>
-					</div>
-				</div>
+            <a href="#" class="category-btn">Ver mas</a>
+          </div>
+        </div>
 
-				<div class="category-item">
-					<div class="category-img-box">
-						<Image src={food4} alt="HAMBURGUESAS" width="30" />
-					</div>
+        <div class="category-item">
+          <div class="category-img-box">
+            <Image src={food4} alt="HAMBURGUESAS" width="30" />
+          </div>
 
-					<div class="category-content-box">
-						<div class="category-content-flex">
-							<h3 class="category-item-title">HAMBURGUESAS</h3>
+          <div class="category-content-box">
+            <div class="category-content-flex">
+              <h3 class="category-item-title">HAMBURGUESAS</h3>
 
-							<p class="category-item-amount">(84)</p>
-						</div>
-						<a href="#" class="category-btn">Ver mas</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+              <p class="category-item-amount">(84)</p>
+            </div>
+            <a href="#" class="category-btn">Ver mas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </astro-doc>
