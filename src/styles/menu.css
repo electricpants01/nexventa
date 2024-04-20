@@ -3,20 +3,19 @@
   --nav-width: 80px;
   --nav-width-1: 75px;
   /*===== Colores =====*/
-  --first-color: #FF5C28;
-  --sub-color: #DA3805;
+  --first-color: #ff5c28;
+  --sub-color: #da3805;
   --white-color: #000000;
-  --bg-color: #F3F3F3;
-  --bg-color-1: #FFFF;
+  --bg-color: #f3f3f3;
+  --bg-color-1: #ffff;
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: 1rem;
-  --small-font-size: .875rem;
+  --small-font-size: 0.875rem;
 
   /*===== z index =====*/
   --z-fixed: 100;
 }
-
 
 /*===== BASE =====*/
 *,
@@ -28,11 +27,8 @@
 body {
   position: relative;
   margin: 0;
-  padding: 0rem 0 0 4.9rem;
-  /* font-family: var(--body-font); */
-  /* font-size: var(--normal-font-size); */
-  transition: .5s;
-
+  /* padding: 0rem 0 0 4.9rem;*/
+  transition: 0.5s;
 }
 
 /*===== l NAV =====*/
@@ -44,13 +40,9 @@ body {
   background-color: var(--bg-color);
   padding: 1rem 1.3rem 1rem;
   width: var(--nav-width-1);
-  transition: .5s;
+  transition: 0.5s;
   z-index: var(--z-fixed);
 }
-
-
-
-
 
 /*===== NAV =====*/
 .nav {
@@ -60,7 +52,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-
 }
 
 .nav__brand {
@@ -70,35 +61,29 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-
 }
 
-
-
 .nav__toggle {
-
   font-size: 1.25rem;
-  padding: .75rem;
+  padding: 0.75rem;
   cursor: pointer;
 }
 
 .nav__logo {
   color: var(--white-color);
   font-weight: 600;
-
 }
 
 .nav__link {
-
   display: grid;
   grid-template-columns: max-content max-content;
   align-items: center;
-  column-gap: .75rem;
-  padding: .40rem;
+  column-gap: 0.75rem;
+  padding: 0.4rem;
   color: var(--white-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -108,7 +93,6 @@ body {
 }
 
 .nav__icon {
-
   font-size: 1.25rem;
 }
 
@@ -118,10 +102,8 @@ body {
 
 /*Expander menu*/
 .expander {
-
   width: calc(var(--nav-width) + 9.25rem);
 }
-
 
 /*Active links menu*/
 .active {
@@ -135,12 +117,12 @@ body {
 
 .collapse__link {
   justify-self: flex-end;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .collapse__menu {
   display: none;
-  padding: .75rem 2.25rem;
+  padding: 0.75rem 2.25rem;
 }
 
 .collapse__sublink {
@@ -150,13 +132,11 @@ body {
 
 .collapse__sublink:hover {
   color: var(--white-color);
-
 }
 
 /*Show collapse*/
 .showCollapse {
   display: block;
-
 }
 
 /*Rotate icon*/

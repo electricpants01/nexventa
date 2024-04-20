@@ -7,7 +7,6 @@ const logo = {
 	height: 500
 };
 
-
 const NEXlogo = () => {
 	return (
 		<div>

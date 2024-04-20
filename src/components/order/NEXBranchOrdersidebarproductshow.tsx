@@ -19,13 +19,10 @@ const NEXproductshow = () => {
         <button className="modal-close-btn-show" data-modal-close>
           <i className="bx bx-x"></i>
         </button>
-
         <div className="newsletter-img">
           <h3 className="newsletter-title">Detalle del producto.</h3>
-
           <img src={productshow.img} alt={productshow.name} className="modal-content-show-img" />
         </div>
-
         <div className="newsletter">
           <form id="registrationForm">
             <h4 className="">{productshow.subtitle2}</h4>
