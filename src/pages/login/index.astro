@@ -1,6 +1,7 @@
 ---
 import BaseLoginLayout from '../../layouts/BaseLoginLayout.astro'
 import LoginForm from '../../components/login/NEXBranchLoginForm.astro'
+import LoginFormname from '../../components/login/NEXBranchLoginForm.tsx'
 ---
 
 <astrodoc>
@@ -13,14 +14,7 @@ import LoginForm from '../../components/login/NEXBranchLoginForm.astro'
 				</div>
 				<div class="panels-container">
 					<div class="panel left-panel">
-						<div class="content">
-							<h3>Locoto</h3>
-							<p>"Tu nuevo sistema de venta de comida. Ordena fácil, disfruta más."</p>
-							<img
-								src="https://firebasestorage.googleapis.com/v0/b/imagenes-972f4.appspot.com/o/Producto%2Fabout-banner.png?alt=media&token=2a2173df-b85a-41ed-bea0-a528bf088384"
-								class="image"
-							/>
-						</div>
+						<LoginFormname />
 					</div>
 				</div>
 			</div>
