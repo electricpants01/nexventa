@@ -2,11 +2,12 @@
 import { Image } from 'astro:assets'
 import food1 from '../../../public/images/food/11.jpg'
 import food2 from '../../../public/images/food/9.jpg'
-import qr from '../../../public/images/caja/qr.jpg'
-
 import NEXBranchOrdersidebarproduct from './NEXBranchOrdersidebarproduct.tsx'
 import NEXBranchOrdersidebarproductshow from './NEXBranchOrdersidebarproductshow.tsx'
 import NEXBranchOrdersidebarproductedit from './NEXBranchOrdersidebarproductedit.tsx'
+import NEXBranchOrdersidebarqr from './NEXBranchOrdersidebarqr.tsx'
+import NEXBranchOrdersidebarqraccept from './NEXBranchOrdersidebarqraccept.tsx'
+import NEXBranchOrdersidebarqrfaul from './NEXBranchOrdersidebarqrfault.tsx'
 ---
 
 <astro-doc>
@@ -457,7 +458,6 @@ import NEXBranchOrdersidebarproductedit from './NEXBranchOrdersidebarproductedit
             <p class="banner-btn2">
               Seleccionar
               <i class="bx bx-chevron-right"></i>
-              <!-- <button id="modal-qr"  class="banner-btn">Gerenerar Qr</button> -->
             </p>
           </div>
 
@@ -541,141 +541,36 @@ import NEXBranchOrdersidebarproductedit from './NEXBranchOrdersidebarproductedit
             <p class="sidebar-item-title">Total</p>
             <p class="sidebar-item-title" id="cart-total">Total: $0</p>
           </div>
-        </div>
+          <div>
+            <div class="sidebar-top">
+              <p class="sidebar-item-title-f">
+                <i class="bx bx-badge-check"></i>
+                ¿Con factura?:
+              </p>
 
-        <div>
-          <div class="sidebar-top">
-            <p class="sidebar-item-title-f">
-              <i class="bx bx-badge-check"></i>
-              ¿Con factura?:
-            </p>
-
-            <p class="sidebar-item-title-top">
-              <p class="sidebar-item-title-p">Sin Factura</p>
-              <label class="switch">
-                <input type="checkbox" id="factura" />
-                <span class="slider"></span>
-              </label>
-              <p class="sidebar-item-title-p">Sin Factura</p>
-            </p>
-          </div>
-          <div class="center-div">
-            <button class="banner-btn"><i class="fas fa-shopping-cart"></i> Realizar Pedido</button>
-            <!-- <button id="openModalBtnQR" class="banner-btn-qr"><i class="fas fa-qrcode"></i> Generar QR</button> -->
-            <button id="openModalBtnQR" class="banner-btn-qr" disabled
-              ><i class="fas fa-qrcode"></i> Generar QR</button
-            >
-          </div>
-        </div>
-      </div>
-
-      <script type="module">
-        document.getElementById('mesallevar').addEventListener('change', function () {
-          var selectedValue = this.value
-          var btnQR = document.getElementById('openModalBtnQR')
-          if (selectedValue === 'Qr') {
-            btnQR.classList.add('selected')
-            btnQR.removeAttribute('disabled')
-          } else {
-            btnQR.classList.remove('selected')
-            btnQR.setAttribute('disabled', true)
-          }
-        })
-      </script>
-
-      <style>
-        .qrmodal {
-          display: none;
-          position: fixed;
-          z-index: 1;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .modal-content {
-          background-color: #fefefe;
-          margin: 10% auto;
-          padding: 20px;
-          border: 1px solid #888;
-          width: 80%;
-          max-width: 400px;
-        }
-
-        .close {
-          color: #aaa;
-          float: right;
-          font-size: 28px;
-          font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-          color: black;
-          text-decoration: none;
-          cursor: pointer;
-        }
-      </style>
-
-      <div id="qrModal" class="qrmodal">
-        <div class="modal-content-qr">
-          <button
-            id="aperturarBtn"
-            class="modal-close-btnQr"
-            onclick="closeModal()"
-            data-modal-close
-          >
-            <i class="bx bx-x"></i>
-          </button>
-          <div class="newsletter">
-            <div class="newsletter-img">
-              <h3 class="newsletter-title-qr">Generar Qr</h3>
-
-              <Image src={qr} alt="Pago qr" />
+              <p class="sidebar-item-title-top">
+                <p class="sidebar-item-title-p">Sin Factura</p>
+                <label class="switch">
+                  <input type="checkbox" id="factura" />
+                  <span class="slider"></span>
+                </label>
+                <p class="sidebar-item-title-p">Sin Factura</p>
+              </p>
             </div>
-            <form id="cajaForm">
-              <div class="newsletter-header">
-                <p class="newsletter-desc-qr">
-                  <b>Cliente: Juan Pedro</b>
-                  <br />
-                  <b>Monto: 200.00 Bs.</b>
-                </p>
-              </div>
-            </form>
+            <div class="center-div">
+              <button class="banner-btn"
+                ><i class="fas fa-shopping-cart"></i> Realizar Pedido</button
+              >
+              <button id="openModalBtnQR" class="banner-btn-qr" disabled
+                ><i class="fas fa-qrcode"></i> Generar QR</button
+              >
+            </div>
           </div>
         </div>
       </div>
-
-      <script type="module">
-        // Obtener elementos del DOM
-        var modal = document.getElementById('qrModal')
-        var openModalBtnQR = document.getElementById('openModalBtnQR')
-        var closeBtn = document.getElementsByClassName('modal-close-btnQr')[0]
-
-        // Función para abrir el modal
-        function openModal() {
-          modal.style.display = 'block'
-        }
-
-        // Función para cerrar el modal
-        function closeModal() {
-          modal.style.display = 'none'
-        }
-
-        // Event listeners para abrir y cerrar el modal
-        openModalBtnQR.addEventListener('click', openModal)
-        closeBtn.addEventListener('click', closeModal)
-
-        // Cerrar el modal al hacer clic fuera de él
-        window.addEventListener('click', function (event) {
-          if (event.target == modal) {
-            closeModal()
-          }
-        })
-      </script>
+      <NEXBranchOrdersidebarqrfaul />
+      <NEXBranchOrdersidebarqraccept />
+      <NEXBranchOrdersidebarqr />
     </div>
   </div>
 </astro-doc>
