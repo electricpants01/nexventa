@@ -426,14 +426,9 @@ body::-webkit-scrollbar-thumb:hover {
   -ms-flex-align: center;
   align-items: center;
   margin: 10px;
-  /* height: 10px;
-  
-  max-width:100%;
-  width: 100%; */
   -webkit-border-radius: var(--border-radius-md);
   border-radius: var(--border-radius-md);
 }
-
 
 
 
@@ -1609,6 +1604,30 @@ select:hover {
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
+
+
+
+.sidebar.has-scrollbar[data-mobile-menu] {
+  position: absolute;
+  top: -105%; 
+  left: 74%;
+  /* width:80%; */
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar.has-scrollbar[data-mobile-menu] {
+    position: fixed;
+    top: 50px;
+    /* Puedes ajustar este valor según tus necesidades */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0%);
+    z-index: 999;
+    /* Puedes ajustar este valor según tus necesidades */
+  }
+}
+
 
 .sidebar {
 
@@ -4625,7 +4644,7 @@ footer {
 
 
 
-  
+
 
 
   /**

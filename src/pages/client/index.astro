@@ -4,34 +4,29 @@ import NEXBranchFooter from '../../components/NEXBranchFooter.astro'
 import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
 import NEXBranchMoneybox from '../../components/NEXBranchMoneybox.astro'
 import NEXBranchQr from '../../components/NEXBranchQr.astro'
-import NEXBranchHeadermain from '../../components/NEXBranchHeadermain.astro'
+import NEXBranchHeadermain from '../../components/header/NEXBranchHeadermain.astro'
 import NEXBranchNavigationmenu from '../../components/NEXBranchNavigationmenu.astro'
 import NEXBranchProductcontainer from '../../components/NEXBranchProductcontainer.astro'
 import NEXBranchCategory from '../../components/NEXBranchCategory.astro'
-import NEXBranchBanner from '../../components/NEXBranchBanner.astro'
-import NEXBranchOrdersidebar from '../../components/NEXBranchOrdersidebar.astro'
+import NEXBranchOrdersidebar2 from '../../components/NEXBranchOrdersidebar.astro'
 import NEXBranchRegisteruser from '../../components/NEXBranchRegisteruser.astro'
-
-import Products from '../../components/product/Products.astro'
-
-const title = 'Locoto'
-const headers = Astro.request.headers
+import NEXBranchOrdersidebar from '../../components/order/NEXBranchOrdersidebar.astro'
+import NEXBranchBanner from '../../components/order/NEXBranchBanner.astro'
 ---
 
 <Layout>
-	<NEXBranchRegisteruser />
-	<NEXBranchHeadermain />
+  <NEXBranchRegisteruser />
+  <NEXBranchHeadermain />
 
-	<NEXBranchBanner />
+  <NEXBranchBanner />
 
-	<NEXBranchNavigationmenu />
-	<NEXBranchOrdersidebar />
+  <NEXBranchNavigationmenu />
+  <NEXBranchOrdersidebar />
 
-	<NEXBranchCategory />
+  <NEXBranchCategory />
 
-	<NEXOutlineNav />
+  <NEXOutlineNav />
 
-	<!-- <NEXBranchQr /> -->
-	<!-- <NEXBranchMoneybox /> -->
-	<NEXBranchFooter />
+  <!-- <NEXBranchMoneybox /> -->
+  <NEXBranchFooter />
 </Layout>

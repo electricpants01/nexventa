@@ -1,0 +1,690 @@
+---
+import { Image } from 'astro:assets'
+import food1 from '../../../public/images/food/11.jpg'
+import food2 from '../../../public/images/food/9.jpg'
+import qr from '../../../public/images/caja/qr.jpg'
+
+import NEXBranchOrdersidebarproduct from './NEXBranchOrdersidebarproduct.tsx'
+import NEXBranchOrdersidebarproductshow from './NEXBranchOrdersidebarproductshow.tsx'
+import NEXBranchOrdersidebarproductedit from './NEXBranchOrdersidebarproductedit.tsx'
+---
+
+<astro-doc>
+  <div class="product-container">
+    <div class="container">
+      <div class="product-box">
+        <div class="blog-error">
+          <div class="container-0">
+            <div class="blog-container-0 has-scrollbar">
+              <NEXBranchOrdersidebarproduct />
+              <NEXBranchOrdersidebarproduct />
+              <NEXBranchOrdersidebarproduct />
+              <NEXBranchOrdersidebarproduct />
+
+              <NEXBranchOrdersidebarproductshow />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar has-scrollbar" data-mobile-menu>
+        <div class="sidebar-category">
+          <h2 class="sidebar-title">Nueva Orden</h2>
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title-box">
+              <b><i class="bx bxs-user-detail"></i> Cajero :</b>
+            </p>
+            <p class="sidebar-item-title-box">Pedro Perez</p>
+
+            <p class="sidebar-item-title-box">
+              <i class="bx bx-chevron-right"></i>
+            </p>
+          </div>
+
+          <form>
+            <div id="cart-items">
+              <div class="category-item">
+                <div class="sidebar-img-box">
+                  <Image src={food2} alt="HAMBURGUESAS" class="sidebar-img-box-img" />
+                </div>
+
+                <div class="sidebar-content-box">
+                  <div class="category-content-flex">
+                    <a href="#" class="category-btn">
+                      <h3 class="">Burger Mozza XL</h3>
+                    </a>
+
+                    <button class="category-item-amount-1" id="openModalBtn-edit"
+                      ><i class="bx bx-edit-alt"></i></button
+                    >
+
+                    <button class="category-item-amount-1"> <i class="bx bx-x"></i></button>
+                  </div>
+                  <p class="sidebar-item-title-p">Detalle:</p>
+                  <div class="category-content-flex">
+                    <button class="category-item-amount-btn">-</button>
+                    <input
+                      class="category-sidebar-select"
+                      type="number"
+                      maxlength="2"
+                      minlength="2"
+                      name="cantidad"
+                      id="cantidad"
+                    />
+                    <button class="category-item-amount-btn">+</button>
+                  </div>
+
+                  <div class="category-content-flex">
+                    <h3 class="sidebar-item-title-p">Precio:</h3>
+                    <p class="category-item-amount">10.00 Bs</p>
+                  </div>
+                  <p class="category-item-amount">Bs</p>
+                </div>
+              </div>
+
+              <!-- <a href="#" class="category-btn">Mas...</a> -->
+            </div>
+          </form>
+
+          <style>
+            .editmodal {
+              display: none;
+              position: fixed;
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content-edit {
+              background-color: #fefefe;
+              margin: 10% auto;
+              padding: 20px;
+              border: 1px solid #888;
+              /* width: 80%; */
+              max-width: 600px;
+            }
+
+            .close {
+              color: #aaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: black;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          </style>
+
+          <div id="editModal" class="editmodal">
+            <div class="modal-content-show">
+              <button class="modal-close-btn-show" onclick="closeModal()" data-modal-close>
+                <i class="bx bx-x"></i>
+              </button>
+              <div class="newsletter-img-edit">
+                <h3 class="newsletter-title">Editar producto</h3>
+                <Image src={food1} alt="Foods." alt="Foods." width={400} />
+              </div>
+              <div class="newsletter">
+                <form id="cajaForm" class="edit-form">
+                  <div class="form-group">
+                    <label for="codigo">Código:</label>
+                    <p id="codigo">0000</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="precio">Precio:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="precio"
+                      placeholder="Ingrese el precio"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="detalle">Detalle:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="detalle"
+                      placeholder="Ingrese el detalle"
+                    />
+                  </div>
+                  <br />
+
+                  <button class="banner-btn"> Guardar Cambios</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <script type="module">
+            // Obtener elementos del DOM
+            var modal = document.getElementById('editModal')
+            var openModalBtn = document.getElementById('openModalBtn-edit')
+            var closeBtn = document.getElementsByClassName('modal-close-btn')[0]
+
+            // Función para abrir el modal
+            function openModal() {
+              modal.style.display = 'block'
+            }
+
+            // Función para cerrar el modal
+            function closeModal() {
+              modal.style.display = 'none'
+            }
+
+            // Event listeners para abrir y cerrar el modal
+            openModalBtn.addEventListener('click', openModal)
+            closeBtn.addEventListener('click', closeModal)
+
+            // Cerrar el modal al hacer clic fuera de él
+            window.addEventListener('click', function (event) {
+              if (event.target == modal) {
+                closeModal()
+              }
+            })
+          </script>
+
+          <script type="module">
+            // Función para crear un nuevo elemento de producto en el carrito
+            function createCartItemElement(productName, price) {
+              const cartItem = document.createElement('div')
+              cartItem.classList.add('category-item')
+              cartItem.innerHTML = `
+        <div class="sidebar-img-box">
+            <img src="./images/food/food-menu-1.png" alt="HAMBURGUESAS"/>
+            <Image src={food2} alt="HAMBURGUESAS" class="sidebar-img-box-img"/>
+        </div>
+
+
+		<div class="sidebar-content-box">
+							<div class="category-content-flex">
+                                <a href="#" class="category-btn">
+								<h3 class="">${productName}</h3>
+                                </a>
+								<button id="editModal" class="category-item-amount-1"><i class='bx bx-edit-alt'></i></button>
+								<button class="remove-from-cart-btn"><i class="bx bx-x"></i></button>
+							</div>
+        <div class="sidebar-content-box">
+          <h3 class="sidebar-item-title-h3">${productName}</h3>
+		  <div class="category-content-flex">
+								<button class="category-item-amount-btn">-</button>
+								<input  class="category-sidebar-select" type="number" name="cantidad" id="cantidad">
+								<button class="category-item-amount-btn">+</button>
+							</div>
+          <div class="category-content-flex">
+  
+          </div>
+          <div class="category-content-flex">
+            <h3 class="sidebar-item-title-p">Precio:</h3>
+            <p class="category-item-amount">${price.toFixed(2)}</p>
+            <p class="category-item-amount">Bs</i></p>
+          </div>
+        </div>
+						</div>
+
+      `
+
+              // Evento para eliminar el producto del carrito al hacer clic en el botón de eliminar
+              cartItem.querySelector('.remove-from-cart-btn').addEventListener('click', () => {
+                cartItem.remove()
+                updateCartTotal(-price)
+              })
+
+              return cartItem
+            }
+
+            // Función para agregar un producto al carrito
+            function addToCart(productName, price) {
+              // Crear un nuevo elemento de producto
+              const cartItem = createCartItemElement(productName, price)
+
+              // Agregar el elemento al carrito
+              const cartItemsElement = document.getElementById('cart-items')
+              cartItemsElement.appendChild(cartItem)
+
+              // Actualizar el total del carrito
+              updateCartTotal(price)
+            }
+
+            // Función para actualizar el total del carrito
+            function updateCartTotal(price) {
+              // Obtener el elemento del total del carrito
+              const cartTotalElement = document.getElementById('cart-total')
+
+              // Obtener el valor actual del total del carrito
+              let currentTotal = parseFloat(cartTotalElement.textContent.replace('Total: $', ''))
+
+              // Sumar o restar el precio del producto al total actual
+              currentTotal += price
+
+              // Actualizar el elemento del total del carrito
+              cartTotalElement.textContent = `${currentTotal.toFixed(2)} Bs`
+            }
+
+            // Evento para añadir un producto al carrito cuando se hace clic en el botón "Añadir"
+            document.querySelectorAll('.add-to-cart-btn-add').forEach((button) => {
+              button.addEventListener('click', () => {
+                const productName = button.dataset.name
+                const price = parseFloat(button.dataset.price)
+                addToCart(productName, price)
+              })
+            })
+          </script>
+
+          <script type="module">
+            // Obtener referencia al input de cantidad
+            const cantidadInput = document.getElementById('cantidad')
+
+            // Obtener referencias a los botones de incremento y decremento
+            const decrementBtn = document.querySelector('.category-item-amount-btn:first-child')
+            const incrementBtn = document.querySelector('.category-item-amount-btn:last-child')
+
+            // Manejar el evento de clic en el botón de decremento
+            decrementBtn.addEventListener('click', () => {
+              if (cantidadInput.value > 1) {
+                cantidadInput.value--
+              }
+            })
+
+            // Manejar el evento de clic en el botón de incremento
+            incrementBtn.addEventListener('click', () => {
+              cantidadInput.value++
+            })
+          </script>
+
+          <div class="category-item">
+            <ul class="sidebar-menu-category-list">
+              <div class="menu-title-flex">
+                <Image src={food2} alt="clothes" class="menu-title-img" />
+                <p class="menu-title">Detalle</p>
+                <p class="menu-title">Detalle</p>
+                <p class="menu-title">Detalle</p>
+              </div>
+
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </ul>
+          </div>
+
+          <h2 class="sidebar-title">Datos del cliente</h2>
+          <br />
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title">
+              <i class="bx bx-user-plus"></i>
+              Cliente
+            </p>
+
+            <p id="openModalBtn2" class="banner-btn2">
+              Seleccionar
+              <i class="bx bx-chevron-right"></i>
+            </p>
+          </div>
+
+          <!-- Modal de registro de usuarios -->
+          <div id="userModal" class="userModal">
+            <div class="modal-content-user">
+              <button
+                id="closeModalBtn"
+                class="modal-close-btn"
+                onclick="closeModal()"
+                data-modal-close
+              >
+                <i class="bx bx-x"></i>
+              </button>
+              <div class="newsletter-user">
+                <div class="newsletter-img-user">
+                  <h3 class="newsletter-title-user">Registrar cliente</h3>
+                  <!-- Aquí puedes agregar campos de registro de usuario -->
+                  <form id="registroForm-user">
+                    <div class="form-group-user">
+                      <label for="nombre">
+                        <i class="bx bx-user"></i>Nit o Carnet de identidad:
+                        <input
+                          type="text"
+                          id="nombre"
+                          name="nombre"
+                          required
+                          placeholder="Carnet
+                            "
+                        />
+                      </label>
+                    </div>
+
+                    <div class="form-group-user">
+                      <label for="nombre">
+                        <i class="bx bx-user"></i>Nombre / razon social:
+                        <input
+                          type="text"
+                          id="nombre"
+                          name="nombre"
+                          required
+                          placeholder="Razon Social"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="form-group-user">
+                      <label for="apellido">
+                        <i class="bx bx-user"></i>Apellido Paterno:
+                        <input
+                          type="text"
+                          id="apellido"
+                          name="apellido"
+                          required
+                          placeholder="Paterno"
+                        />
+                      </label>
+                    </div>
+
+                    <div class="form-group-user">
+                      <label for="ci">
+                        <i class="bx bx-id-card"></i>Apellido Materno:
+                        <input type="text" id="ci" name="ci" required placeholder="Materno" />
+                      </label>
+                    </div>
+
+                    <div class="form-group-user">
+                      <label for="ci">
+                        <i class="bx bx-id-card"></i>Empresa:
+                        <input type="text" id="ci" name="ci" required placeholder="Empresa" />
+                      </label>
+                    </div>
+
+                    <div class="form-group-user">
+                      <label for="nit">
+                        <i class="bx bx-id-card"></i>Correo :
+                        <input type="text" id="nit" name="nit" required placeholder="correo" />
+                      </label>
+                    </div>
+
+                    <button class="blog-category-user"
+                      ><i class="bx bx-plus-medical"></i> Opciones Avanzadas</button
+                    >
+
+                    <button class="btn-user"> Registrar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script type="module">
+            // Obtener elementos del DOM
+            var modal = document.getElementById('userModal')
+            var openModalBtn2 = document.getElementById('openModalBtn2')
+            var closeModalBtn = document.getElementById('closeModalBtn')
+
+            // Función para abrir el modal
+            function openModal() {
+              modal.style.display = 'block'
+            }
+
+            // Función para cerrar el modal
+            function closeModal() {
+              modal.style.display = 'none'
+            }
+
+            // Event listener para abrir el modal cuando se hace clic en el botón
+            openModalBtn2.addEventListener('click', openModal)
+
+            // Event listener para cerrar el modal cuando se hace clic en el botón de cierre
+            closeModalBtn.addEventListener('click', closeModal)
+
+            // Cerrar el modal al hacer clic fuera de él
+            window.addEventListener('click', function (event) {
+              if (event.target === modal) {
+                closeModal()
+              }
+            })
+
+            // Enviar el formulario de registro
+            document.getElementById('registroForm').addEventListener('submit', function (event) {
+              event.preventDefault()
+              // Aquí puedes agregar la lógica para enviar el formulario de registro a la API
+              console.log('Formulario de registro enviado')
+              closeModal() // Cierra el modal después de enviar el formulario
+            })
+          </script>
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title">
+              <i class="bx bx-news"></i>
+              Ci:
+            </p>
+            <p class="banner-btn2">
+              Seleccionar
+              <i class="bx bx-chevron-right"></i>
+              <!-- <button id="modal-qr"  class="banner-btn">Gerenerar Qr</button> -->
+            </p>
+          </div>
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title">
+              <i class="bx bxs-calculator"></i>
+              Es para :
+            </p>
+            <p class="sidebar-top">
+              <div class="custom-select">
+                <div class="select-wrapper">
+                  <select id="mesallevar" onchange="showSelectedIcon()">
+                    <option value="Mesa" data-icon="fas fa-money-bill-wave">Mesa</option>
+                    <option value="LLevar" data-icon="fas fa-credit-card">LLevar</option>
+                    <option value="Otro" data-icon="fas fa-qrcode">Otro</option>
+                  </select>
+                  <i class="selected-icon-1 fas fa-money-bill-wave"></i>
+                </div>
+              </div>
+            </p>
+          </div>
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title">
+              <i class="bx bx-money-withdraw"></i>
+              Forma de pago:
+            </p>
+            <p class="sidebar-top">
+              <div class="custom-select">
+                <div class="select-wrapper">
+                  <select id="tipopagos">
+                    <option value="Efectivo" data-icon="fas fa-money-bill-wave">Efectivo</option>
+                    <option value="Qr" data-icon="fas fa-qrcode">Qr</option>
+                    <option value="Tarjeta" data-icon="fas fa-credit-card">Tarjeta</option>
+                  </select>
+                  <i class="selected-icon fas fa-money-bill-wave"></i>
+                </div>
+              </div>
+            </p>
+          </div>
+
+          <script type="module">
+            // Obtener referencia al select y al botón
+            var mesallevarSelect = document.getElementById('tipopagos')
+            var openModalBtnQR = document.getElementById('openModalBtnQR')
+
+            // Función para manejar el cambio en el select
+            function handleSelectChange() {
+              // Obtener la opción seleccionada
+              var selectedOption = mesallevarSelect.options[mesallevarSelect.selectedIndex]
+
+              // Mostrar el icono seleccionado
+              var selectedIconClass = selectedOption.getAttribute('data-icon')
+              var selectedIconElement = document.querySelector('.selected-icon')
+              selectedIconElement.className = 'selected-icon ' + selectedIconClass
+
+              // Habilitar o deshabilitar el botón según la opción seleccionada
+              openModalBtnQR.disabled = selectedOption.value !== 'Qr'
+
+              // Cambiar el color del botón según su estado
+              if (openModalBtnQR.disabled) {
+                openModalBtnQR.style.backgroundColor = '#B1B1B1' // Botón deshabilitado: verde
+              } else {
+                openModalBtnQR.style.backgroundColor = '#0F0F0E' // Botón habilitado: rojo
+              }
+            }
+
+            // Agregar evento onchange al select
+            mesallevarSelect.addEventListener('change', handleSelectChange)
+
+            // Llamar a la función handleSelectChange() al cargar la página para inicializar el estado
+            handleSelectChange()
+          </script>
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title">Sub Total</p>
+            <p class="sidebar-item-title">10 Bs</p>
+          </div>
+
+          <div class="sidebar-top">
+            <p class="sidebar-item-title">Total</p>
+            <p class="sidebar-item-title" id="cart-total">Total: $0</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-top">
+            <p class="sidebar-item-title-f">
+              <i class="bx bx-badge-check"></i>
+              ¿Con factura?:
+            </p>
+
+            <p class="sidebar-item-title-top">
+              <p class="sidebar-item-title-p">Sin Factura</p>
+              <label class="switch">
+                <input type="checkbox" id="factura" />
+                <span class="slider"></span>
+              </label>
+              <p class="sidebar-item-title-p">Sin Factura</p>
+            </p>
+          </div>
+          <div class="center-div">
+            <button class="banner-btn"><i class="fas fa-shopping-cart"></i> Realizar Pedido</button>
+            <!-- <button id="openModalBtnQR" class="banner-btn-qr"><i class="fas fa-qrcode"></i> Generar QR</button> -->
+            <button id="openModalBtnQR" class="banner-btn-qr" disabled
+              ><i class="fas fa-qrcode"></i> Generar QR</button
+            >
+          </div>
+        </div>
+      </div>
+
+      <script type="module">
+        document.getElementById('mesallevar').addEventListener('change', function () {
+          var selectedValue = this.value
+          var btnQR = document.getElementById('openModalBtnQR')
+          if (selectedValue === 'Qr') {
+            btnQR.classList.add('selected')
+            btnQR.removeAttribute('disabled')
+          } else {
+            btnQR.classList.remove('selected')
+            btnQR.setAttribute('disabled', true)
+          }
+        })
+      </script>
+
+      <style>
+        .qrmodal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+          background-color: #fefefe;
+          margin: 10% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          max-width: 400px;
+        }
+
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      </style>
+
+      <div id="qrModal" class="qrmodal">
+        <div class="modal-content-qr">
+          <button
+            id="aperturarBtn"
+            class="modal-close-btnQr"
+            onclick="closeModal()"
+            data-modal-close
+          >
+            <i class="bx bx-x"></i>
+          </button>
+          <div class="newsletter">
+            <div class="newsletter-img">
+              <h3 class="newsletter-title-qr">Generar Qr</h3>
+
+              <Image src={qr} alt="Pago qr" />
+            </div>
+            <form id="cajaForm">
+              <div class="newsletter-header">
+                <p class="newsletter-desc-qr">
+                  <b>Cliente: Juan Pedro</b>
+                  <br />
+                  <b>Monto: 200.00 Bs.</b>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script type="module">
+        // Obtener elementos del DOM
+        var modal = document.getElementById('qrModal')
+        var openModalBtnQR = document.getElementById('openModalBtnQR')
+        var closeBtn = document.getElementsByClassName('modal-close-btnQr')[0]
+
+        // Función para abrir el modal
+        function openModal() {
+          modal.style.display = 'block'
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+          modal.style.display = 'none'
+        }
+
+        // Event listeners para abrir y cerrar el modal
+        openModalBtnQR.addEventListener('click', openModal)
+        closeBtn.addEventListener('click', closeModal)
+
+        // Cerrar el modal al hacer clic fuera de él
+        window.addEventListener('click', function (event) {
+          if (event.target == modal) {
+            closeModal()
+          }
+        })
+      </script>
+    </div>
+  </div>
+</astro-doc>
