@@ -2,6 +2,7 @@ const logo = {
   name: 'KFC',
   img: '../../../public/images/cliente/Logo-KFC.png'
 }
+
 const NEXlogo = () => {
   return (
     <a href="#" className="header-logo">

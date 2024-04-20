@@ -4,7 +4,6 @@ const productsedit = {
   img1: '../../../public/img/food/9.jpg',
   img2: '../../../public/img/food/10.jpg',
   img3: '../../../public/img/food/2.jpg',
-
   title: '30% Off',
   subtitle: 'Cuarto de pollo .',
   subtitle2: 'a partir de',

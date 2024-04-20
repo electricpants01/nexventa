@@ -4,7 +4,6 @@ const product = {
   img1: '../../../public/images/food/9.jpg',
   img2: '../../../public/images/food/10.jpg',
   img3: '../../../public/images/food/2.jpg',
-
   title: '30% Off',
   subtitle: 'Comida de fitness',
   subtitle2: 'a partir de',

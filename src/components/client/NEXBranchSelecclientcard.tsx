@@ -5,7 +5,6 @@ const client = {
 	branch: 'Sucursal 4to anillo, av 4to anillo, 3 pasos al frente',
 };
 
-
 const NEXCliet = () => {
 	return (
 		<a href="/client" className="card-link">

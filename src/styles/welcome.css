@@ -2,12 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
@@ -80,10 +74,6 @@
   --clip-path-2: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
 
 }
-
-
-
-
 
 /*-----------------------------------*\
 #RESET
@@ -191,10 +181,6 @@ body.active {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--tangerine);
 }
-
-
-
-
 
 /*-----------------------------------*\
 #REUSED STYLE
@@ -380,10 +366,6 @@ body.active {
   color: var(--deep-saffron);
 }
 
-
-
-
-
 /*-----------------------------------*\
 #HEADER
 \*-----------------------------------*/
@@ -535,9 +517,6 @@ body.active {
   color: var(--dark-orange);
 }
 
-
-
-
 /*-----------------------------------*\
 #SEARCH BOX
 \*-----------------------------------*/
@@ -607,10 +586,6 @@ body.active {
   cursor: url("../images/close.png"), auto;
 }
 
-
-
-
-
 /*-----------------------------------*\
 #HERO
 \*-----------------------------------*/
@@ -656,10 +631,6 @@ body.active {
   background-color: var(--white);
   color: var(--black);
 }
-
-
-
-
 
 /*-----------------------------------*\
 #PROMO
@@ -723,10 +694,6 @@ body.active {
   min-width: 100%;
   scroll-snap-align: start;
 }
-
-
-
-
 
 /*-----------------------------------*\
 #ABOUT
@@ -931,10 +898,6 @@ body.active {
   color: var(--gray-x-11-gray);
 }
 
-
-
-
-
 /*-----------------------------------*\
 #CTA
 \*-----------------------------------*/
@@ -985,10 +948,6 @@ body.active {
   left: 10px;
 }
 
-
-
-
-
 /*-----------------------------------*\
 #DELIVERY
 \*-----------------------------------*/
@@ -1019,10 +978,6 @@ body.active {
   transform: translateX(-80px);
   transition: var(--transition-2);
 }
-
-
-
-
 
 /*-----------------------------------*\
 #TESTIMONIALS
@@ -1078,10 +1033,6 @@ body.active {
   min-width: 100%;
   scroll-snap-align: start;
 }
-
-
-
-
 
 /*-----------------------------------*\
 #BANNER
@@ -1177,10 +1128,6 @@ body.active {
 .banner-card .btn:is(:hover, :focus) {
   background-color: var(--rich-black-fogra-29);
 }
-
-
-
-
 
 /*-----------------------------------*\
 #BLOG
@@ -1293,10 +1240,6 @@ body.active {
   color: var(--deep-saffron);
   gap: 10px;
 }
-
-
-
-
 
 /*-----------------------------------*\
 #FOOTER
@@ -1456,10 +1399,6 @@ textarea.input-field {
   text-decoration: underline;
 }
 
-
-
-
-
 /*-----------------------------------*\
 #BACK TO TOP
 \*-----------------------------------*/
@@ -1538,30 +1477,19 @@ textarea.input-field {
     min-width: calc(50% - 5px);
   }
 
-
-
-  /**
- * HERO
- */
+  /** * HERO */
 
   .hero-title {
     --fs-1: 4.2rem;
   }
 
-
-
-  /**
- * FOOTER
- */
+  /** * FOOTER*/
 
   .footer-top .container {
     grid-template-columns: 1fr 1fr;
   }
 
 }
-
-
-
 
 
 /**
@@ -1577,8 +1505,6 @@ textarea.input-field {
   .container {
     max-width: 720px;
   }
-
-
 
   /**
  * HERO
@@ -1625,8 +1551,6 @@ textarea.input-field {
     z-index: -1;
   }
 
-
-
   /**
  * ABOUT
  */
@@ -1653,8 +1577,6 @@ textarea.input-field {
     justify-content: flex-start;
   }
 
-
-
   /**
  * FOOD MENU
  */
@@ -1670,8 +1592,6 @@ textarea.input-field {
   .food-menu-card .card-title {
     text-align: left;
   }
-
-
 
   /**
  * CTA
@@ -1696,8 +1616,6 @@ textarea.input-field {
     transform: scale(1.3) translate(90px, 20px);
   }
 
-
-
   /**
  * DELIVERY
  */
@@ -1708,8 +1626,6 @@ textarea.input-field {
     align-items: center;
     gap: 50px;
   }
-
-
 
   /**
  * BANNER
@@ -1744,8 +1660,6 @@ textarea.input-field {
     height: 100%;
   }
 
-
-
   /**
  * FOOTER
  */
@@ -1755,10 +1669,6 @@ textarea.input-field {
   }
 
 }
-
-
-
-
 
 /**
 * responsive for larger than 992px screen
@@ -1780,8 +1690,6 @@ textarea.input-field {
 
   }
 
-
-
   /**
  * REUSED STYLE
  */
@@ -1797,8 +1705,6 @@ textarea.input-field {
   .h2 {
     --fs-1: 4.2rem;
   }
-
-
 
   /**
  * HEADER
@@ -1834,8 +1740,6 @@ textarea.input-field {
     letter-spacing: -0.5px;
   }
 
-
-
   /**
  * HERO
  */
@@ -1870,8 +1774,6 @@ textarea.input-field {
     transform: scale(1.4) translate(20px, -20px);
   }
 
-
-
   /**
  * FOOD MENU
  */
@@ -1883,8 +1785,6 @@ textarea.input-field {
   .food-menu-card {
     height: 100%;
   }
-
-
 
   /**
  * CTA
@@ -1902,8 +1802,6 @@ textarea.input-field {
     line-height: 1.2;
   }
 
-
-
   /**
  * BANNER
  */
@@ -1918,8 +1816,6 @@ textarea.input-field {
     --fs-2: 3.2rem;
   }
 
-
-
   /**
  * TESTIMONIALS
  */
@@ -1927,8 +1823,6 @@ textarea.input-field {
   .testi-list {
     padding-block-end: 0;
   }
-
-
 
   /**
  * BLOG
@@ -1941,8 +1835,6 @@ textarea.input-field {
   .blog-card .card-title {
     --fs-3: 2.2rem;
   }
-
-
 
   /**
  * FOOTER
@@ -1969,10 +1861,6 @@ textarea.input-field {
 
 }
 
-
-
-
-
 /**
 * responsive for larger than 1200px screen
 */
@@ -1986,8 +1874,6 @@ textarea.input-field {
   .container {
     max-width: 1200px;
   }
-
-
 
   /**
  * HERO
@@ -2007,8 +1893,6 @@ textarea.input-field {
     min-width: calc(25% - 7.5px);
   }
 
-
-
   /**
  * ABOUT
  */
@@ -2016,8 +1900,6 @@ textarea.input-field {
   .about .container {
     gap: 60px;
   }
-
-
 
   /**
  * CTA
@@ -2031,8 +1913,6 @@ textarea.input-field {
     max-width: 18ch;
   }
 
-
-
   /**
  * BANNER
  */
@@ -2040,8 +1920,6 @@ textarea.input-field {
   .banner-md .banner-item-content {
     left: 55%;
   }
-
-
 
   /**
  * FOOTER

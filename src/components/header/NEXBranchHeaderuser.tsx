@@ -26,7 +26,6 @@ const NEXuser = () => {
 							<i className="bx bxs-cog"></i> Configuración
 						</a>
 					</li>
-
 					<li className="dropdown-item">
 						<a href="#">
 							<i className="bx bx-log-out"></i> Cerrar sesión
