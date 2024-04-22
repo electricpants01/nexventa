@@ -4,32 +4,32 @@ function createCartItemElement(productName, price) {
   cartItem.classList.add('category-item')
   cartItem.innerHTML = `
         <div class="sidebar-img-box">
-            <img src="./public/images/food/1.jpg" alt=${productName} />
+        <img src="./public/images/food/1.jpg" alt=${productName} />
         </div>
-	<div class="sidebar-content-box">
+	      <div class="sidebar-content-box">
 				<div class="category-content-flex">
         <a href="#" class="category-btn">
-					<h3 class="">${productName}</h3>
+				<h3 class="">${productName}</h3>
         </a>
-					<button id="editModal" class="category-item-amount-1"><i class='bx bx-edit-alt'></i></button>
-					<button class="remove-from-cart-btn"><i class="bx bx-x"></i></button>
+				<button id="editModal" class="category-item-amount-1"><i class='bx bx-edit-alt'></i></button>
+				<button class="remove-from-cart-btn"><i class="bx bx-x"></i></button>
 				</div>
         <div class="sidebar-content-box">
-          <h3 class="sidebar-item-title-h3">${productName}</h3>
-          <div class="category-content-flex">
-								<button class="category-item-amount-btn">-</button>
-								<input  class="category-sidebar-select" type="number" name="cantidad" id="cantidad">
-								<button class="category-item-amount-btn">+</button>
-							</div>
-          <div class="category-content-flex">
-          </div>
-          <div class="category-content-flex">
-            <h3 class="sidebar-item-title-p">Precio:</h3>
-            <p class="category-item-amount">${price.toFixed(2)}</p>
-            <p class="category-item-amount">Bs</i></p>
-          </div>
+        <h3 class="sidebar-item-title-h3">${productName}</h3>
+        <div class="category-content-flex">
+				<button class="category-item-amount-btn">-</button>
+				<input  class="category-sidebar-select" type="number" name="cantidad" id="cantidad">
+				<button class="category-item-amount-btn">+</button>
+				</div>
+        <div class="category-content-flex">
         </div>
-			</div>
+        <div class="category-content-flex">
+        <h3 class="sidebar-item-title-p">Precio:</h3>
+        <p class="category-item-amount">${price.toFixed(2)}</p>
+        <p class="category-item-amount">Bs</i></p>
+        </div>
+        </div>
+			  </div>
       `
   // Evento para eliminar el producto del carrito al hacer clic en el botón de eliminar
   cartItem.querySelector('.remove-from-cart-btn').addEventListener('click', () => {
