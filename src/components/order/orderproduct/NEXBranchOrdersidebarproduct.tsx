@@ -15,7 +15,7 @@ const NEXproduct = () => {
   return (
     <div className="blog-card">
       <img src={product.img} alt={product.name} className="blog-banner" />
-      <p className="showcase-badge angle">stop</p>
+      {/* <p className="showcase-badge angle">stop</p> */}
       <div className="blog-content">
         <h3 className="blog-title">Pollo</h3>
         <div className="price-box">
