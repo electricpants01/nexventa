@@ -12,7 +12,6 @@ const NEXbanner = () => {
   return (
     <div className="slider-item">
       <img src={banner.img} alt={banner.name} className="banner-img" />
-
       <div className="banner-content">
         <div className="banner-content2">
           <h2 className="banner-subtitle">{banner.subtitle}</h2>
