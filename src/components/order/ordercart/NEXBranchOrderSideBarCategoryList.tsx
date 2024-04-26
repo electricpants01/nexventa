@@ -7,8 +7,7 @@ const category = {
   subtitle3: '20.00',
   subtitle4: 'Bs'
 }
-
-const NEXcategory= () => {
+const NEXBranchOrderSideBarCategoryList= () => {
   return (
     <div className="category-item">
       <ul className="sidebar-menu-category-list">
@@ -23,4 +22,4 @@ const NEXcategory= () => {
   )
 }
 
-export default NEXcategory
+export default NEXBranchOrderSideBarCategoryList

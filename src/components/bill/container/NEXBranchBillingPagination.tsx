@@ -1,4 +1,4 @@
-const NEXpagination = () => {
+const NEXBranchBillingPagination = () => {
   return (
     <div className="pagination-billing">
       <button className="pagination-billing-btn">&laquo; Anterior</button>
@@ -10,4 +10,4 @@ const NEXpagination = () => {
   )
 }
 
-export default NEXpagination
+export default NEXBranchBillingPagination

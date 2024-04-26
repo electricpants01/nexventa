@@ -1,4 +1,4 @@
-const NEXsearch = () => {
+const NEXBranchHeaderSearch = () => {
   return (
     <div className="header-search-container">
       <input
@@ -14,4 +14,4 @@ const NEXsearch = () => {
   )
 }
 
-export default NEXsearch
+export default NEXBranchHeaderSearch

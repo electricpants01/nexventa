@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import NEXBranchOrderSideBarQrGenerate from './NEXBranchOrderSideBarQrGenerate'
+import NEXBranchOrderSideBarQrAccept from './NEXBranchOrderSideBarQrAccept'
+import NEXBranchOrderSideBarQrFault from './NEXBranchOrderSideBarQrFault'
+import NEXBranchOrderSideBarQRData from './NEXBranchOrderSideBarQRData'
 
-const productqr = {
-  name: 'qr',
-  img: '../../../public/images/caja/qr.jpg',
-  client: 'Juan Pedro',
-  amount: 200.0,
-  currency: 'Bs'
-}
-
-const NEXproductqr = () => {
+const NEXBranchOrderSideBarQR: React.FC = () => {
+  const [step, setStep] = useState(1)
+  const handleNextStep = () => {
+    setStep((prevStep) => {
+      if (prevStep < 3) {
+        return prevStep + 1
+      }
+      return prevStep
+    })
+  }
   return (
     <div id="qrModal" className="qrmodal">
       <div className="modal-content-qr">
@@ -17,25 +22,15 @@ const NEXproductqr = () => {
         </button>
         <div className="newsletter">
           <div className="newsletter-img">
-            <h3 className="newsletter-title-qr">Generar Qr</h3>
-            <img src={productqr.img} alt={productqr.name} className="banner-img" />
+            {step === 1 && <NEXBranchOrderSideBarQrGenerate />}
+            {step === 2 && <NEXBranchOrderSideBarQrAccept />}
+            {step === 3 && <NEXBranchOrderSideBarQrFault />}
           </div>
-          <form id="cajaForm">
-            <div className="newsletter-header">
-              <p className="newsletter-desc-qr">
-                <b>Cliente: {productqr.client}</b>
-                <br />
-                <b>
-                  Monto:{productqr.amount}
-                  {productqr.currency}{' '}
-                </b>
-              </p>
-            </div>
-          </form>
+          {(step === 1 || step === 2) && <NEXBranchOrderSideBarQRData />}
         </div>
       </div>
     </div>
   )
 }
 
-export default NEXproductqr
+export default NEXBranchOrderSideBarQR

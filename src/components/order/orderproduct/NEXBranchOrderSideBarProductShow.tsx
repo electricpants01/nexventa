@@ -1,18 +1,13 @@
 const productshow = {
   name: 'Pollo',
   img: '../../../public/images/food/11.jpg',
-  img1: '../../../public/img/food/9.jpg',
-  img2: '../../../public/img/food/10.jpg',
-  img3: '../../../public/img/food/2.jpg',
-
   title: '30% Off',
   subtitle: 'Cuarto de pollo .',
   subtitle2: 'a partir de',
   subtitle3: '20.00',
   subtitle4: 'Bs'
 }
-
-const NEXproductshow = () => {
+const NEXBranchOrderSideBarProductShow = () => {
   return (
     <div id="verModal" className="vermodal">
       <div className="modal-content-show">
@@ -48,4 +43,4 @@ const NEXproductshow = () => {
   )
 }
 
-export default NEXproductshow
+export default NEXBranchOrderSideBarProductShow

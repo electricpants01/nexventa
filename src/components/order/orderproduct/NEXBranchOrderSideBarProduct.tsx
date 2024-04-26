@@ -1,30 +1,24 @@
 const product = {
   name: 'Pollo',
   img: '../../../public/images/food/11.jpg',
-  img1: '../../../public/images/food/9.jpg',
-  img2: '../../../public/images/food/10.jpg',
-  img3: '../../../public/images/food/2.jpg',
-  title: '30% Off',
-  subtitle: 'Comida de fitness',
-  subtitle2: 'a partir de',
-  subtitle3: '20.00',
-  subtitle4: 'Bs'
+  precio: '27 Bs',
+  descuento: '30.00 Bs',
+  detalle: ' Pollo al horno',
 }
-
-const NEXproduct = () => {
+const NEXBranchOrderSideBarProduct = () => {
   return (
     <div className="blog-card">
       <img src={product.img} alt={product.name} className="blog-banner" />
       {/* <p className="showcase-badge angle">stop</p> */}
       <div className="blog-content">
-        <h3 className="blog-title">Pollo</h3>
+        <h3 className="blog-title">{product.name}</h3>
         <div className="price-box">
-          <p className="price">Precio: 27 Bs</p>
-          <del>30.00 Bs</del>
+          <p className="price">Precio: {product.precio}</p>
+          <del>{product.descuento}</del>
         </div>
         <a href="#" className="showcase-title">
           {' '}
-          Pollo al horno
+          {product.detalle}
         </a>
         <div className="banner-btn-product">
           <button className="add-to-cart-btn-add" data-name="Milaneza" data-price="20">
@@ -40,4 +34,4 @@ const NEXproduct = () => {
   )
 }
 
-export default NEXproduct
+export default NEXBranchOrderSideBarProduct

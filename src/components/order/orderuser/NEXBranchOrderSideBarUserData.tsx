@@ -7,8 +7,7 @@ const usercreate = {
   subtitle3: '20.00',
   subtitle4: 'Bs'
 }
-
-const NEXusercreate = () => {
+const NEXBranchOrderSideBarUserData = () => {
   return (
     <div>
       <h2 className="sidebar-title">Datos del cliente</h2>
@@ -119,4 +118,4 @@ const NEXusercreate = () => {
   )
 }
 
-export default NEXusercreate
+export default NEXBranchOrderSideBarUserData
