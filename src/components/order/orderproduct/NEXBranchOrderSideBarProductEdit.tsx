@@ -1,20 +1,12 @@
 const productedit = {
   name: 'Pollo',
   img: '../../../public/images/food/11.jpg',
-  img1: '../../../public/img/food/9.jpg',
-  img2: '../../../public/img/food/10.jpg',
-  img3: '../../../public/img/food/2.jpg',
-
-  title: '30% Off',
-  subtitle: 'Cuarto de pollo .',
-  subtitle2: 'a partir de',
-  subtitle3: '20.00',
-  subtitle4: 'Bs'
+  precio: '27 Bs',
+  descuento: '30.00 Bs',
+  detalle: ' Pollo al horno',
 }
-
-const NEXproductedit = () => {
+const NEXBranchOrderSideBarProductEdit = () => {
   return (
-    // <div id="editModal" class="editmodal"></div>
     <div id="editModal" className="vermodal">
       <div className="modal-content-show">
         <button className="modal-close-btn-show" data-modal-close>
@@ -49,4 +41,4 @@ const NEXproductedit = () => {
   )
 }
 
-export default NEXproductedit 
+export default NEXBranchOrderSideBarProductEdit 

@@ -7,8 +7,7 @@ const banner = {
   subtitle3: '20.00',
   subtitle4: 'Bs'
 }
-
-const NEXbanner = () => {
+const NEXBranchBanner = () => {
   return (
     <div className="slider-item">
       <img src={banner.img} alt={banner.name} className="banner-img" />
@@ -28,4 +27,4 @@ const NEXbanner = () => {
   )
 }
 
-export default NEXbanner
+export default NEXBranchBanner

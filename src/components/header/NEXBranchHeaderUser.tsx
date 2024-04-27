@@ -1,16 +1,16 @@
-const NEXuser = () => {
+const NEXBranchHeaderUser = () => {
   return (
     <div className="header-user-actions">
-      <button className="action-btn">
+      <button className="action-btn" data-mobile-menu-open-btn>
         <i className="bx bx-bell bx-sm"></i>
         <span className="count">0</span>
       </button>
-      <button className="action-btn">
+      <button className="action-btn" data-mobile-menu-open-btn>
         <i className="bx bx-cart bx-sm"></i>
         <span className="count">0</span>
       </button>
       <li className="action-btn-head dropdown">
-        <button
+        <button data-mobile-menu-open-btn
           className="action-btn dropdown-toggle"
           type="button"
           id="dropdownMenuButton"
@@ -37,4 +37,4 @@ const NEXuser = () => {
   )
 }
 
-export default NEXuser
+export default NEXBranchHeaderUser

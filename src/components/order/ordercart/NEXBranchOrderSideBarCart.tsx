@@ -1,19 +1,18 @@
 const cart  = {
   name: 'cart ',
-  img: '../../../public/images/banner/banner.jpg',
+  img: '../../../public/images/food/1.jpg',
   title: '30% Off',
   subtitle: 'Comida de fitness',
   subtitle2: 'a partir de',
   subtitle3: '20.00',
   subtitle4: 'Bs'
 }
-
-const NEXcart = () => {
+const NEXBranchOrderSideBarCart = () => {
   return (
     <div id="cart-items">
     <div className="category-item">
       <div className="sidebar-img-box">
-        <img src={cart .img} alt={cart .name} className="sidebar-img-box-img" />
+        <img src={cart.img} alt={cart.name} className="sidebar-img-box-img" />
       </div>
       <div className="sidebar-content-box">
         <div className="category-content-flex">
@@ -40,13 +39,12 @@ const NEXcart = () => {
         </div>
         <div className="category-content-flex">
           <h3 className="sidebar-item-title-p">Precio:</h3>
-          <p className="category-item-amount">10.00 Bs</p>
+          <p className="category-item-amount">10.00 </p>
         </div>
-        <p className="category-item-amount">Bs</p>
       </div>
     </div>
     </div>
   )
 }
 
-export default NEXcart 
+export default NEXBranchOrderSideBarCart 

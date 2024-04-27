@@ -4,8 +4,7 @@ const client = {
 	img: '../../../public/images/cliente/Logo-KFC.png',
 	branch: 'Sucursal 4to anillo, av 4to anillo, 3 pasos al frente',
 };
-
-const NEXCliet = () => {
+const NEXBranchSelectClientCard = () => {
 	return (
 		<a href="/client" className="card-link">
 			<div className="card">
@@ -22,4 +21,4 @@ const NEXCliet = () => {
 	);
 }
 
-export default NEXCliet;
+export default NEXBranchSelectClientCard;

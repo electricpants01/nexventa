@@ -3,8 +3,7 @@ const login = {
   img: '../../../public/images/cliente/Logo-KFC.png',
   branch: 'Tu nuevo sistema de venta de comida. Ordena fácil, disfruta más.'
 }
-
-const NEXlogin = () => {
+const NEXBranchLoginForm = () => {
   return (
     <div className="content">
       <h3>{login.name}</h3>
@@ -14,4 +13,4 @@ const NEXlogin = () => {
   )
 }
 
-export default NEXlogin
+export default NEXBranchLoginForm
