@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets'
+import perfil from '../../../public/images/caja/usuario.jpg' // La imagen de producto
+---
+
+<astro-doc>
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+      <div>
+        <div class="nav__brand">
+          <i class="bx bx-menu" id="nav-toggle"></i>
+          <a href="#" class="nav__logo"></a>
+        </div>
+        <div class="nav__list">
+          <a href="/client/" class="nav__link active">
+            <i class="bx bxs-dashboard"></i>
+            <span class="nav__name">Dashboard</span>
+          </a>
+          <a href="/client/billing" class="nav__link">
+            <i class="bx bxs-report"></i>
+            <span class="nav__name">Facturacion</span>
+          </a>
+          <a href="/client/nobilling" class="nav__link">
+            <i class="bx bx-task"></i>
+            <span class="nav__name">Facturacion no hechas</span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="bx bx-user-check"></i>
+            <span class="nav__name">clientes</span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="bx bx-box"></i>
+            <span class="nav__name">abrir caja</span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="bx bx-group"></i>
+            <span class="nav__name">Grupo</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav__brand-1">
+        <a href="#" class="nav__link">
+          <i class="bx bx-help-circle"></i>
+          <span class="nav__name">Ayuda</span>
+        </a>
+        <a href="#" class="nav__link">
+          <i class="bx bxs-cog"></i>
+          <span class="nav__name">Configuración</span>
+        </a>
+        <a href="#" class="nav__link">
+          <Image src={perfil} alt="user" width="20" height="20" />
+          <span class="nav__name"><i class="bx bx-exit"></i> Cerrar sesión</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</astro-doc>
