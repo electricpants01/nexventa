@@ -17,20 +17,30 @@ const NEXBranchOrderSideBarUserData = () => {
           <i className="bx bx-user-plus"></i>
           Cliente
         </p>
-        <p id="openModalBtn2" className="banner-btn2">
+        <button
+          data-modal-target="user-modal"
+          data-modal-toggle="user-modal"
+          className="block rounded-lg bg-orange-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
+          type="button"
+        >
           Seleccionar
-          <i className="bx bx-chevron-right"></i>
-        </p>
+        </button>
       </div>
       <div className="sidebar-top">
         <p className="sidebar-item-title">
           <i className="bx bx-news"></i>
           Ci:
         </p>
-        <p className="banner-btn2">
+        {/* <p className="banner-btn2">
           Seleccionar
           <i className="bx bx-chevron-right"></i>
-        </p>
+        </p> */}
+        <button
+          className="block rounded-lg bg-orange-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
+          type="button"
+        >
+          Seleccionar
+        </button>
       </div>
       <div className="sidebar-top">
         <p className="sidebar-item-title">
