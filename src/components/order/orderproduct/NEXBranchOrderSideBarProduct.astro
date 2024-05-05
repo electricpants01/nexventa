@@ -1,0 +1,93 @@
+---
+import Product from '../../../interfaces/Product.ts'
+
+let products: Product[] = []
+let errorLoadingData = false
+let error: string | null = null
+
+try {
+  const response = await fetch('http://localhost:4321/api/product.json')
+  if (response.ok) {
+    const data: Product[] | null = await response.json()
+    if (data) {
+      products = data
+    } else {
+      throw new Error('La respuesta está vacía')
+    }
+  } else if (response.status === 400) {
+    throw new Error('Error: Solicitud incorrecta (400)')
+  } else if (response.status === 404) {
+    throw new Error('Error: Recurso no encontrado (404)')
+  } else if (response.status === 500) {
+    throw new Error('Error: Error interno del servidor (500)')
+  } else {
+    throw new Error(
+      'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
+    )
+  }
+} catch (err: any) {
+  console.error('Error al obtener los datos de la API:', err.message)
+  error = err.message
+  errorLoadingData = true
+}
+
+export { products, errorLoadingData, error }
+---
+
+<astro-doc>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+    {
+      errorLoadingData ? (
+        <div class="blog-card rounded-md bg-orange-500 p-4 text-white">
+          <p class="blog-title">{error}</p>
+        </div>
+      ) : products.length > 0 ? (
+        products.map((product, index) => (
+          <div
+            key={index}
+            class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 hover:shadow-xl dark:border-0 dark:bg-gray-900 dark:text-gray-100"
+          >
+            <span class="absolute right-0 top-0 rounded-bl-md bg-orange-600 px-2 py-1 text-xs text-white md:text-sm">
+              <del>{product.descuento}</del>
+            </span>
+            <div class="overflow-hidden rounded-md">
+              <img src={product.img} alt={product.name} class="blog-banner w-full" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-center text-base font-semibold">{product.name}</h5>
+              <p class="text-center">
+                <span class="text-xl font-semibold text-orange-600 hover:text-black">
+                  {' '}
+                  Precio: {product.precio}
+                </span>
+              </p>
+              <p class="my-2 text-center text-xs">{product.detalle}</p>
+              <div class="mt-4 flex justify-center space-x-4">
+                <button
+                  data-name={product.name}
+                  data-price={product.precio}
+                  class="add-to-cart-btn-add flex items-center rounded border-2 border-black bg-orange-600 px-3 py-1 text-xs text-white transition duration-300 hover:bg-black hover:text-white md:text-sm"
+                >
+                  Añadir
+                  <i class="bx bxs-cart-add ml-1" />
+                </button>
+                <button
+                  data-modal-target="crud-modal"
+                  data-modal-toggle="crud-modal"
+                  class="flex items-center rounded border-2 border-black bg-black px-3 py-1 text-xs text-white transition duration-300 hover:bg-orange-600 hover:text-white md:text-sm"
+                >
+                  Ver
+                  <i class="bx bxs-show ml-1" />
+                </button>
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <div class="blog-card rounded-md bg-orange-500 p-4 text-white">
+          <p class="blog-title">Datos no encontrados</p>
+        </div>
+      )
+    }
+  </div>
+</astro-doc>

@@ -1,5 +1,5 @@
 ---
-import NEXBranchOrdersidebarProduct from './orderproduct/NEXBranchOrderSideBarProduct.tsx'
+import NEXBranchOrdersidebarProduct from './orderproduct/NEXBranchOrderSideBarProduct.astro'
 import NEXBranchOrdersidebarProductShow from './orderproduct/NEXBranchOrderSideBarProductShow.tsx'
 import NEXBranchOrdersidebarProductEdit from './orderproduct/NEXBranchOrderSideBarProductEdit.tsx'
 import NEXBranchOrdersidebarQr from './orderqr/NEXBranchOrderSideBarQR.tsx'
@@ -16,12 +16,10 @@ import NEXBranchOrdersidebarUserSeller from './orderuser/NEXBranchOrderSideBarUs
   <div class="product-container">
     <div class="container">
       <div class="product-box">
-        <!-- <div class="container-02"> -->
         <div class="blog-container has-scrollbar">
           <NEXBranchOrdersidebarProduct />
           <NEXBranchOrdersidebarProductShow />
         </div>
-        <!-- </div> -->
       </div>
       <div class="sidebar has-scrollbar1" data-mobile-menu>
         <NEXBranchOrdersidebarUserSeller />
@@ -32,7 +30,7 @@ import NEXBranchOrdersidebarUserSeller from './orderuser/NEXBranchOrderSideBarUs
       <!-- <NEXBranchOrdersidebarQrFault />
       <NEXBranchOrdersidebarQrAccept /> -->
       <NEXBranchOrdersidebarQr />
-      <NEXBranchOrdersidebarUserCreate />
+      <!-- <NEXBranchOrdersidebarUserCreate /> -->
       <NEXBranchOrdersidebarProductEdit />
     </div>
   </div>

@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Pollo",
+    "img": "../../../public/images/food/11.jpg",
+    "precio": "27 Bs",
+    "descuento": "30.00 Bs",
+    "detalle": "Pollo al horno"
+  },
+  {
+    "name": "Pizza Margarita",
+    "img": "../../../public/images/food/10.jpg",
+    "precio": "35 Bs",
+    "descuento": "25.00 Bs",
+    "detalle": "Pizza con salsa de tomate, mozzarella y albahaca fresca"
+  },
+  {
+    "name": "Hamburguesa con queso",
+    "img": "../../../public/images/food/9.jpg",
+    "precio": "40 Bs",
+    "descuento": "35.00 Bs",
+    "detalle": "Hamburguesa con carne de res, queso cheddar, lechuga y tomate"
+  },
+  {
+    "name": "Ensalada César",
+    "img": "../../../public/images/food/4.jpg",
+    "precio": "20 Bs",
+    "descuento": "15.00 Bs",
+    "detalle": "Ensalada con lechuga, crutones, parmesano y aderezo César"
+  },
+  {
+    "name": "Sushi variado",
+    "img": "../../../public/images/food/5.jpg",
+    "precio": "50 Bs",
+    "descuento": "40.00 Bs",
+    "detalle": "Combinación de sushi variado: nigiri, maki, sashimi"
+  },
+  {
+    "name": "Tacos de carne asada",
+    "img": "../../../public/images/food/6.jpg",
+    "precio": "30 Bs",
+    "descuento": "25.00 Bs",
+    "detalle": "Tacos de carne asada con cebolla, cilantro y salsa"
+  },
+  {
+    "name": "Pasta Alfredo",
+    "img": "../../../public/images/food/7.jpg",
+    "precio": "25 Bs",
+    "descuento": "20.00 Bs",
+    "detalle": "Pasta con salsa Alfredo, pollo, champiñones y parmesano"
+  },
+  {
+    "name": "Sopa de verduras",
+    "img": "../../../public/images/food/8.jpg",
+    "precio": "15 Bs",
+    "descuento": "10.00 Bs",
+    "detalle": "Sopa de verduras frescas con fideos"
+  },
+  {
+    "name": "Burrito de pollo",
+    "img": "../../../public/images/food/9.jpg",
+    "precio": "35 Bs",
+    "descuento": "30.00 Bs",
+    "detalle": "Burrito de pollo con arroz, frijoles, queso y salsa"
+  },
+  {
+    "name": "Tarta de manzana",
+    "img": "../../../public/images/food/4.jpg",
+    "precio": "18 Bs",
+    "descuento": "15.00 Bs",
+    "detalle": "Tarta de manzana casera con helado de vainilla"
+  },
+  {
+    "name": "Papas fritas",
+    "img": "../../../public/images/food/4.jpg",
+    "precio": "10 Bs",
+    "descuento": "8.00 Bs",
+    "detalle": "Papas fritas crujientes"
+  },
+  {
+    "name": "Lasagna de carne",
+    "img": "../../../public/images/food/2.jpg",
+    "precio": "40 Bs",
+    "descuento": "35.00 Bs",
+    "detalle": "Lasagna de carne con salsa de tomate y queso mozzarella"
+  },
+  {
+    "name": "Sándwich de jamón y queso",
+    "img": "../../../public/images/food/2.jpg",
+    "precio": "22 Bs",
+    "descuento": "18.00 Bs",
+    "detalle": "Sándwich de jamón, queso, lechuga, tomate y mayonesa"
+  },
+  {
+    "name": "Pescado a la plancha",
+    "img": "../../../public/images/food/3.jpg",
+    "precio": "45 Bs",
+    "descuento": "40.00 Bs",
+    "detalle": "Filete de pescado a la plancha con limón y perejil"
+  }
+]
