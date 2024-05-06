@@ -1,4 +1,4 @@
-import './assets/css/NEXBranchBillingTable.css'
+import '../../../../assets/css/NEXBranchBillingTable.css'
 const table = {
   id: 'Factura 001',
   fecha: '01/01/2024',

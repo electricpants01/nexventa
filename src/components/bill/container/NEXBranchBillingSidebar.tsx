@@ -1,4 +1,4 @@
-import './assets/css/NEXBranchBillingTable.css'
+import '../../../../assets/css/NEXBranchBillingTable.css'
 const data = {
   id: 'Factura 001',
   cajero: 'Juan Albare',
