@@ -25,8 +25,8 @@ const NEXBranchBanner = () => {
   return (
     <div className="container">
       <div className="slider-container has-scrollbar">
-        {banners.map((banner, index) => (
-          <div className="slider-item" key={index}>
+        {banners.map((banner) => (
+          <div className="slider-item">
             <img src={banner.img} alt={banner.name} className="banner-img" />
             <div className="banner-content">
               <div className="banner-content2">

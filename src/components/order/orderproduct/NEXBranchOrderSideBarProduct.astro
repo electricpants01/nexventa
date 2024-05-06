@@ -42,9 +42,9 @@ export { products, errorLoadingData, error }
           <p class="blog-title">{error}</p>
         </div>
       ) : products.length > 0 ? (
-        products.map((product, index) => (
+        products.map((product) => (
           <div
-            key={index}
+            
             class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 hover:shadow-xl dark:border-0 dark:bg-gray-900 dark:text-gray-100"
           >
             <span class="absolute right-0 top-0 rounded-bl-md bg-orange-600 px-2 py-1 text-xs text-white md:text-sm">
