@@ -1,6 +1,6 @@
 ---
 import NEXBranchOrdersidebarProduct from './orderproduct/NEXBranchOrderSideBarProduct.astro'
-import NEXBranchOrdersidebarProductShow from './orderproduct/NEXBranchOrderSideBarProductShow.tsx'
+import NEXBranchOrdersidebarProductShow from './orderproduct/NEXBranchOrderSideBarProductShow.astro'
 import NEXBranchOrdersidebarProductEdit from './orderproduct/NEXBranchOrderSideBarProductEdit.tsx'
 import NEXBranchOrdersidebarQr from './orderqr/NEXBranchOrderSideBarQR.tsx'
 import NEXBranchOrdersidebarQrAccept from './orderqr/NEXBranchOrderSideBarQrAccept.tsx'
@@ -8,8 +8,9 @@ import NEXBranchOrdersidebarQrFault from './orderqr/NEXBranchOrderSideBarQrFault
 import NEXBranchOrdersidebarCart from './ordercart/NEXBranchOrderSideBarCart.tsx'
 import NEXBranchOrdersidebarCategorylist from './ordercart/NEXBranchOrderSideBarCategoryList.tsx'
 import NEXBranchOrdersidebarUserCreate from './orderuser/NEXBranchOrderSideBarUserCreate.tsx'
-import NEXBranchOrdersidebarUserData from './orderuser/NEXBranchOrderSideBarUserData.tsx'
-import NEXBranchOrdersidebarUserSeller from './orderuser/NEXBranchOrderSideBarUserSeller.tsx'
+import NEXBranchOrderSideBarUserRegister from './orderuser/NEXBranchOrderSideBarUserRegister.astro'
+import NEXBranchOrdersidebarUserData from './orderuser/NEXBranchOrderSideBarUserData.astro'
+import NEXBranchOrdersidebarUserSeller from './orderuser/NEXBranchOrderSideBarUserSeller.astro'
 ---
 
 <astro-doc>
@@ -21,7 +22,7 @@ import NEXBranchOrdersidebarUserSeller from './orderuser/NEXBranchOrderSideBarUs
           <NEXBranchOrdersidebarProductShow />
         </div>
       </div>
-      <div class="sidebar has-scrollbar1" data-mobile-menu>
+      <div class="sidebar has-scrollbar-cart" data-mobile-menu>
         <NEXBranchOrdersidebarUserSeller />
         <NEXBranchOrdersidebarCart />
         <NEXBranchOrdersidebarCategorylist />
@@ -29,9 +30,59 @@ import NEXBranchOrdersidebarUserSeller from './orderuser/NEXBranchOrderSideBarUs
       </div>
       <!-- <NEXBranchOrdersidebarQrFault />
       <NEXBranchOrdersidebarQrAccept /> -->
-      <NEXBranchOrdersidebarQr />
-      <!-- <NEXBranchOrdersidebarUserCreate /> -->
+      <NEXBranchOrderSideBarUserRegister />
       <NEXBranchOrdersidebarProductEdit />
+      <NEXBranchOrdersidebarQr />
     </div>
   </div>
 </astro-doc>
+<style>
+  .sidebar.has-scrollbar-cart[data-mobile-menu] {
+    position: absolute;
+    top: -20%;
+    left: 76%;
+    width: 25%;
+    height: 100%;
+    /* Altura automática */
+    max-height: calc(100vh - 50px);
+    /* Altura máxima */
+  }
+
+  .has-scrollbar-cart {
+    padding-bottom: 2px;
+    overflow-y: auto;
+  }
+
+  .has-scrollbar-cart::-webkit-scrollbar {
+    width: 8px; /* for vertical scroll */
+    height: 8px; /* for horizontal scroll */
+    background-color: var(--salmon-pink);
+  }
+
+  .has-scrollbar-cart::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 3px solid var(--white);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .has-scrollbar-cart:hover::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 90%);
+  }
+
+  .has-scrollbar-cart::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 80%);
+  }
+
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .sidebar.has-scrollbar-cart[data-mobile-menu] {
+      position: relative;
+      width: 100%;
+      left: auto;
+      top: auto;
+      height: auto;
+      max-height: none;
+    }
+  }
+</style>

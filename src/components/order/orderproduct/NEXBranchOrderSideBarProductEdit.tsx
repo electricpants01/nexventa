@@ -8,7 +8,7 @@ const productedit = {
   detail: 'Cuarto de pollo .',
   price: '20.00',
   currency: 'Bs',
-  longDetail: 'Pollo al horno con arroz, papa .......',
+  longDetail: 'Pollo al horno con arroz, papa .............................................................',
   shortDetail: 'Pollo al horno',
   amount: '1',
   gloss: 'Con arroz'

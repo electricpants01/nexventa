@@ -1281,21 +1281,9 @@ select:hover {
   background-color: var(--bittersweet-2);
 }
 
-.banner-subtitle {
-  --fs-7: 1.25rem;
-}
 
-.banner-subtitle {
-  --fs-7: 1.625rem;
-}
 
-.banner-title {
-  color: var(--eerie-black);
-  font-size: var(--fs-1);
-  text-transform: uppercase;
-  line-height: 1;
-  margin-bottom: 30px;
-}
+
 
 .banner-text {
   display: none;
@@ -1322,25 +1310,7 @@ select:hover {
   background: var(--salmon-pink);
 }
 
-.banner-btn-orden {
-  background: var(--eerie-black);
-  color: var(--white);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-size: var(--fs-11);
-  font-weight: var(--weight-600);
-  padding: 10px 20px;
-  -webkit-border-radius: var(--border-radius-sm);
-  border-radius: var(--border-radius-sm);
-  -webkit-transition: var(--transition-timing);
-  -o-transition: var(--transition-timing);
-  transition: var(--transition-timing);
-}
 
-.banner-btn-orden:hover {
-  background: var(--bittersweet);
-}
 
 .banner-btn {
   background: var(--salmon-pink);
@@ -1627,11 +1597,6 @@ select:hover {
   color: var(--bittersweet);
 }
 
-.sidebar-item-title-box {
-  color: var(--eerie-black);
-  font-size: 12px;
-  font-weight: var(--weight-200);
-}
 
 .sidebar-item-title-h3 {
   color: var(--eerie-black);
