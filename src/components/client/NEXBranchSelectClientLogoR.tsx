@@ -6,7 +6,7 @@ const logo = {
 	width: 600,
 	height: 500
 };
-const NEXBranchSelectClientLogo = () => {
+const NEXBranchSelectClientLogoR = () => {
 	return (
 		<div>
 			<h3>
@@ -21,4 +21,4 @@ const NEXBranchSelectClientLogo = () => {
 	);
 }
 
-export default NEXBranchSelectClientLogo;
+export default NEXBranchSelectClientLogoR;
