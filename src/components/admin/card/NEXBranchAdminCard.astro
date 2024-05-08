@@ -1,9 +1,23 @@
 ---
-import NEXBranchAdminCardData from './NEXBranchAdminCardData.tsx'
-import NEXBranchAdminCardAnalytics from './NEXBranchAdminCardAnalytics.tsx'
+import NEXBranchAdminCardData from './NEXBranchAdminCardData.astro'
+import NEXBranchAdminCardExpenses from './NEXBranchAdminCardExpenses.astro'
+import NEXBranchAdminCardTransaction from './NEXBranchAdminCardTransaction.astro'
+import NEXBranchAdminCardInformation from './NEXBranchAdminCardInformation.astro'
 ---
 
 <astro-doc>
-  <NEXBranchAdminCardData />
-  <NEXBranchAdminCardAnalytics />
+  <main class="lg:grid-cols-4">
+    <!-- Content -->
+    <!-- <div class="p-6"> -->
+    <NEXBranchAdminCardData />
+    <div class="mb-3 grid grid-cols-1 gap-1 p-6 lg:grid-cols-2">
+      <NEXBranchAdminCardExpenses />
+    </div>
+    <div class="mb-3 grid grid-cols-1 gap-6 p-6 lg:grid-cols-2">
+      <NEXBranchAdminCardTransaction />
+      <NEXBranchAdminCardInformation />
+    </div>
+    <!-- </div> -->
+    <!-- End Content -->
+  </main>
 </astro-doc>
