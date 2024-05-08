@@ -1,11 +1,7 @@
 const category = {
   name: 'category',
   img: '../../../public/images/banner/banner.jpg',
-  title: '30% Off',
-  subtitle: 'Comida de fitness',
-  subtitle2: 'a partir de',
-  subtitle3: '20.00',
-  subtitle4: 'Bs'
+  title: 'Comida de fitness',
 }
 const NEXBranchOrderSideBarCategoryList= () => {
   return (
@@ -13,9 +9,7 @@ const NEXBranchOrderSideBarCategoryList= () => {
       <ul className="sidebar-menu-category-list">
         <div className="menu-title-flex">
           <img src={category.img} alt={category.name} className="menu-title-img" />
-          <p className="menu-title">Detalle</p>
-          <p className="menu-title">Detalle</p>
-          <p className="menu-title">Detalle</p>
+          <p className="menu-title">{category.title}</p>
         </div>
       </ul>
     </div>

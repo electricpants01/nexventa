@@ -1,0 +1,96 @@
+<astro-doc>
+  <div class="relative start-0 rounded-lg border border-gray-300 bg-white p-4">
+    <h2 class="sidebar-title">Datos del cliente</h2>
+    <br />
+    <div class="sidebar-top">
+      <p class="sidebar-item-title">
+        <i class="bx bx-user-plus"></i>
+        Cliente
+      </p>
+      <button
+        data-modal-target="user-modal"
+        data-modal-toggle="user-modal"
+        class="block rounded-lg bg-orange-600 px-8 py-1 text-center text-sm font-medium text-white hover:bg-black focus:outline-none dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
+        type="button"
+      >
+        Seleccionar
+      </button>
+    </div>
+    <div class="sidebar-top">
+      <p class="sidebar-item-title">
+        <i class="bx bx-news"></i>
+        Ci:
+      </p>
+      <button
+        class="block rounded-lg bg-orange-600 px-8 py-1 text-center text-sm font-medium text-white hover:bg-black focus:outline-none dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
+        type="button"
+      >
+        Seleccionar
+      </button>
+    </div>
+    <div class="sidebar-top">
+      <p class="sidebar-item-title">
+        <i class="bx bxs-calculator"></i>
+        Es para :
+      </p>
+      <div class="custom-select">
+        <div class="select-wrapper">
+          <select id="mesallevar" class="w-full rounded-lg border py-2">
+            <option value="Mesa" data-icon="fas fa-money-bill-wave"> Mesa</option>
+            <option value="LLevar" data-icon="fas fa-credit-card"> LLevar</option>
+            <option value="Otro" data-icon="fas fa-qrcode"> Otro</option>
+          </select>
+          <i class="selected-icon-1 fas fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-top">
+      <p class="sidebar-item-title">
+        <i class="bx bx-money-withdraw"></i>
+        Forma de pago:
+      </p>
+      <div class="custom-select">
+        <div class="select-wrapper">
+          <select id="tipopagos" class="w-full rounded-lg border py-2">
+            <option value="Efectivo" data-icon="fas fa-money-bill-wave"> Efectivo</option>
+            <option value="Qr" data-icon="fas fa-qrcode"> Qr</option>
+            <option value="Tarjeta" data-icon="fas fa-credit-card"> Tarjeta</option>
+          </select>
+          <i class="selected-icon fas fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-top">
+      <p class="sidebar-item-title">Sub Total</p>
+      <p class="sidebar-item-title">10 Bs</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="sidebar-item-title">Total</p>
+      <p class="sidebar-item-title" id="cart-total">Total: $0</p>
+    </div>
+    <div>
+      <div class="sidebar-top">
+        <p class="sidebar-item-title-f">
+          <i class="bx bx-badge-check"></i>
+          ¿Con factura?:
+        </p>
+        <div class="sidebar-item-title-top">
+          <p class="sidebar-item-title-p">Sin Factura</p>
+          <label class="switch">
+            <input type="checkbox" id="factura" />
+            <span class="slider"></span>
+          </label>
+          <p class="sidebar-item-title-p">Sin Factura</p>
+        </div>
+      </div>
+      <div class="center-div">
+        <button class="banner-btn">
+          <i class="fas fa-shopping-cart"></i> Realizar Pedido
+        </button>
+        <button id="openModalBtnQR" class="banner-btn-qr" disabled>
+          <i class="fas fa-qrcode"></i> Generar QR
+        </button>
+      </div>
+    </div>
+  </div>
+</astro-doc>
