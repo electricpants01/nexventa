@@ -1,0 +1,85 @@
+<astro-doc>
+  <div class="rounded-md p-6 shadow-md shadow-black/5" style="background-color: #181B3A;">
+    <div class="mb-4 flex items-start justify-between">
+      <h3 class="text-base font-semibold text-white">Todos los gastos</h3>
+      <div class="dropdown">
+        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600">
+          <button type="button" class="dropdown-toggle text-white hover:text-black">
+            <i class="bx bx-dots-vertical-rounded"></i>
+          </button></button
+        >
+        <ul
+          class="dropdown-menu z-30 hidden w-full max-w-[140px] rounded-md border border-gray-100 bg-white py-1.5 shadow-md shadow-black/5"
+        >
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-1.5 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-1.5 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+              >Settings</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-1.5 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="w-[240px] overflow-hidden">
+      <table class="w-100">
+        <tbody>
+          <canvas class="p-1" id="NEXBranchAdminCardExpenses"></canvas>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</astro-doc>
+
+<script>
+  const dataDoughnut = {
+    labels: ['Investment', 'Food', 'Shopping', 'Others', 'Shopping'],
+    datasets: [
+      {
+        label: 'Datos',
+        data: [20, 20, 20, 20, 20],
+        backgroundColor: ['#5C28B1', '#01D492', '#E87309', '#E53F52', '#FFC107'],
+        hoverOffset: 4
+      }
+    ]
+  }
+  const configDoughnut = {
+    type: 'doughnut',
+    data: dataDoughnut,
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            color: 'white'
+          }
+        },
+        layout: {
+          padding: {
+            left: 50,
+            right: 50,
+            top: 50,
+            bottom: 50
+          }
+        }
+      }
+    }
+  }
+  var chartDoughnut = new Chart(
+    document.getElementById('NEXBranchAdminCardExpenses'),
+    configDoughnut
+  )
+</script>
