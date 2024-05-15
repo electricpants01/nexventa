@@ -9,5 +9,7 @@ import node from "@astrojs/node";
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: "server",
-  adapter: awsAmplify(),
+  adapter: node({
+    mode: "standalone"
+  })
 });
