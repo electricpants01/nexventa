@@ -1,22 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import NEXBranchFooter from '@components/footer/NEXBranchFooter.astro'
-import NEXOutlineNav from '@components/NEXOutlineNav.astro'
-import NEXBranchNavigationmenu from '@components/NEXBranchNavigationmenu.astro'
-import NEXBranchCategory from '@components/NEXBranchCategory.astro'
-// import NEXBranchOrderSideBarUserRegister from '@components/order/orderuser/NEXBranchOrderSideBarUserRegister.astro'
-import NEXBranchOrderSidebar from '@components/order/NEXBranchOrdersidebar.astro'
-import NEXBranchBanner from '@components/order/NEXBranchBanner.astro'
-import NEXBranchHeaderMainSearch from '@components/header/NEXBranchHeaderMainSearch.astro';
+import NEXFooter from '@components/footer/NEXFooter.astro'
+import NEXClientSidebar from '@components/client/sidebar/NEXSidebar.astro'
+import NEXCategory from '@components/client/dashboard/center/NEXCategory.astro'
+// import NEXOrderSideBarUserRegister from '@components/client/dashboard/order/orderuser/NEXOrderSideBarUserRegister.astro'
+import NEXOrderSidebar from '@components/client/dashboard/order/NEXOrdersidebar.astro'
+import NEXBanner from '@components/client/dashboard/center/NEXBanner.astro'
+import NEXHeaderMainSearch from '@components/client/dashboard/headernav/NEXMainSearch.astro';
 ---
-
 <Layout>
-  <!-- <NEXBranchOrderSideBarUserRegister /> -->
-  <NEXBranchHeaderMainSearch />
-  <NEXBranchBanner />
-  <NEXBranchNavigationmenu />
-  <NEXBranchOrderSidebar />
-  <NEXBranchCategory />
-  <NEXOutlineNav />
-  <NEXBranchFooter />
+  <!-- <NEXOrderSideBarUserRegister /> -->
+  <NEXHeaderMainSearch />
+  <NEXBanner />
+  <NEXCategory />
+  <NEXOrderSidebar />
+  <NEXClientSidebar />
+  <NEXFooter />
 </Layout>
