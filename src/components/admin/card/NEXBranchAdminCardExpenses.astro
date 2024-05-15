@@ -46,6 +46,8 @@
 </astro-doc>
 
 <script>
+  import {Chart} from "chart.js";
+
   const dataDoughnut = {
     labels: ['Investment', 'Food', 'Shopping', 'Others', 'Shopping'],
     datasets: [
@@ -78,8 +80,8 @@
       }
     }
   }
-  var chartDoughnut = new Chart(
-    document.getElementById('NEXBranchAdminCardExpenses'),
-    configDoughnut
-  )
+  // var chartDoughnut = new Chart(
+  //   document.getElementById('NEXBranchAdminCardExpenses'),
+  //   configDoughnut
+  // )
 </script>
