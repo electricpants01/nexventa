@@ -41,7 +41,7 @@ const NEXBillingSidebar = () => {
         <div className="sidebar-top">
           <p className="menu-title">
             ID
-            <i className="bx bx-chevron-down"></i>
+            {/* <i className="bx bx-chevron-down"></i> */}
           </p>
           <p className="billing-subtitle">{data.id}</p>
         </div>
