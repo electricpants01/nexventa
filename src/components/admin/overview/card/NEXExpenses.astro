@@ -1,3 +1,7 @@
+---
+import Chart from 'chart.js/auto'
+---
+
 <astro-doc>
   <div class="rounded-md p-6 shadow-md shadow-black/5" style="background-color: #181B3A;">
     <div class="mb-4 flex items-start justify-between">
@@ -35,19 +39,22 @@
         </ul>
       </div>
     </div>
-    <div class="w-[240px] overflow-hidden">
+    <div class="">
       <table class="w-100">
-        <tbody>
-          <canvas class="p-1" id="NEXBranchAdminCardExpenses"></canvas>
-        </tbody>
+        <table class="w-100">
+          <tbody>
+            <!-- <canvas class="p-1" id="NEXBranchAdminCardExpenses"></canvas> -->
+            <canvas id="NEXBranchAdminCardExpenses"></canvas>
+          </tbody>
+        </table>
       </table>
     </div>
   </div>
 </astro-doc>
 
 <script>
-  import {Chart} from "chart.js";
-
+  
+  // Datos del gráfico de tipo doughnut
   const dataDoughnut = {
     labels: ['Investment', 'Food', 'Shopping', 'Others', 'Shopping'],
     datasets: [
@@ -58,7 +65,9 @@
         hoverOffset: 4
       }
     ]
-  }
+  };
+
+  // Configuración del gráfico de tipo doughnut
   const configDoughnut = {
     type: 'doughnut',
     data: dataDoughnut,
@@ -66,22 +75,23 @@
       plugins: {
         legend: {
           labels: {
-            color: 'white'
+            color: 'white' // Color del texto de la leyenda
           }
-        },
-        layout: {
-          padding: {
-            left: 50,
-            right: 50,
-            top: 50,
-            bottom: 50
-          }
+        }
+      },
+      layout: {
+        padding: {
+          left: 50,
+          right: 50,
+          top: 50,
+          bottom: 50
         }
       }
     }
-  }
-  // var chartDoughnut = new Chart(
-  //   document.getElementById('NEXBranchAdminCardExpenses'),
-  //   configDoughnut
-  // )
+  };
+
+  new Chart(
+    document.getElementById('NEXBranchAdminCardExpenses'),
+    configDoughnut
+  );
 </script>

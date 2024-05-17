@@ -77,24 +77,6 @@
   /* Color del icono */
 }
 /* Estilos de la paginación */
-.pagination-billing {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-.pagination-billing-btn {
-  background-color: #ff5c28;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
-}
-.pagination-billing-btn:hover {
-  background-color: #000000;
-}
 .container-billing {
   max-width: 1200px;
   margin: 20px auto;
@@ -110,33 +92,14 @@ h2 {
   overflow-x: auto;
 }
 /* Estilos de la tabla */
-.table-billing {
+/* .table-billing {
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.table-billing th,
-.table-billing td {
-  padding: 10px;
-  border-bottom: 1px solid #dee2e6;
-}
-.table-billing tr:hover {
-  background-color: #ffe082;
-}
-.table-billing th {
-  background-color: #ff5c28;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-.table-billing td {
-  color: #000000;
-  font-size: 12px;
-  text-align: left;
-}
+} */
+
 /* Estilos de botones */
 .btn-process,
 .btn-print {
