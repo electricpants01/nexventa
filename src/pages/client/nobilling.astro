@@ -1,16 +1,16 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import NEXBranchFooter from '../../components/footer/NEXBranchFooter.astro'
-import NEXOutlineNav from '../../components/NEXOutlineNav.astro'
-import NEXBranchHeadermain from '../../components/header/NEXBranchHeaderMain.astro'
-import NEXBranchNavigationmenu from '../../components/NEXBranchNavigationmenu.astro'
-import NEXBranchBillingNo from '../../components/bill/NEXBranchBillingNo.astro'
+import Layout from '@layouts/Layout.astro'
+import NEXFooter from '@components/footer/NEXFooter.astro'
+import NEXClientSidebar from '@components/client/sidebar/NEXSidebar.astro'
+import NEXMainSearch from '@components/client/dashboard/headernav/NEXMainSearch.astro';
+import NEXCategory from '@components/client/dashboard/center/NEXCategory.astro'
+import NEXBillingNo from '@components/client/billing/NEXNoBilling.astro'
 ---
 
 <Layout>
-  <NEXOutlineNav />
-  <NEXBranchHeadermain />
-  <NEXBranchNavigationmenu />
-  <NEXBranchBillingNo />
-  <NEXBranchFooter />
+  <NEXClientSidebar />
+  <NEXMainSearch />
+  <NEXCategory />
+  <NEXBillingNo />
+  <NEXFooter />
 </Layout>

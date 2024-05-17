@@ -1,12 +1,12 @@
 ---
 import BaseAdminLayout from '../../layouts/BaseAdminLayout.astro'
-import NEXOutlineNavAdmin from '../../components/admin/NEXOutlineNavAdmin.astro'
-import NEXBranchCard from '../../components/admin/card/NEXBranchAdminCard.astro'
-import NEXBranchHeaderMainSearch from '../../components/admin/header/NEXBranchHeaderMainSearch.astro'
+import NEXSidebar from '../../components/admin/sidebar/NEXSidebar.astro'
+import NEXCardContainer from '../../components/admin/overview/card/NEXCardContainer.astro'
+import NEXMainSearch from '../../components/admin/headernav/NEXMainSearch.astro'
 ---
 
 <BaseAdminLayout>
-  <NEXOutlineNavAdmin />
-  <NEXBranchHeaderMainSearch />
-  <NEXBranchCard />
+  <NEXSidebar />
+  <NEXMainSearch />
+  <NEXCardContainer />
 </BaseAdminLayout>
