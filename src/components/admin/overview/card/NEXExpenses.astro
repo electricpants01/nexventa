@@ -43,8 +43,8 @@ import Chart from 'chart.js/auto'
       <table class="w-100">
         <table class="w-100">
           <tbody>
-            <!-- <canvas class="p-1" id="NEXBranchAdminCardExpenses"></canvas> -->
-            <canvas id="NEXBranchAdminCardExpenses"></canvas>
+            <canvas id="NEXAdminCardExpenses"></canvas>
+            <div id="errorMessageExpenses" style="color: red;"></div>
           </tbody>
         </table>
       </table>
@@ -53,45 +53,94 @@ import Chart from 'chart.js/auto'
 </astro-doc>
 
 <script>
-  
-  // Datos del gráfico de tipo doughnut
-  const dataDoughnut = {
-    labels: ['Investment', 'Food', 'Shopping', 'Others', 'Shopping'],
-    datasets: [
-      {
-        label: 'Datos',
-        data: [20, 20, 20, 20, 20],
-        backgroundColor: ['#5C28B1', '#01D492', '#E87309', '#E53F52', '#FFC107'],
-        hoverOffset: 4
-      }
-    ]
-  };
+  interface EarningData {
+    labels: string[]
+    datasets: {
+      label: string
+      data: number[]
+      backgroundColor: string[]
+    }[]
+  }
 
-  // Configuración del gráfico de tipo doughnut
-  const configDoughnut = {
-    type: 'doughnut',
-    data: dataDoughnut,
-    options: {
-      plugins: {
-        legend: {
-          labels: {
-            color: 'white' // Color del texto de la leyenda
-          }
+  let errorLoadingData = false
+  let error: string | null = null
+
+  async function fetchDataAndDrawChart() {
+    try {
+      const response = await fetch('http://localhost:4321/api/expenses.json')
+      if (response.ok) {
+        const data: EarningData = await response.json()
+        if (data) {
+          drawChart(data)
+        } else {
+          throw new Error('La respuesta está vacía')
         }
-      },
-      layout: {
-        padding: {
-          left: 50,
-          right: 50,
-          top: 50,
-          bottom: 50
-        }
+      } else if (response.status === 400) {
+        throw new Error('Error: Solicitud incorrecta (400)')
+      } else if (response.status === 404) {
+        throw new Error('Error: Recurso no encontrado (404)')
+      } else if (response.status === 500) {
+        throw new Error('Error: Error interno del servidor (500)')
+      } else {
+        throw new Error(
+          'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
+        )
       }
+    } catch (err: any) {
+      console.error('Error al obtener los datos de la API:', err.message)
+      error = err.message
+      errorLoadingData = true
+      document.getElementById('errorMessageExpenses')!.innerText = err.message
     }
-  };
+  }
 
-  new Chart(
-    document.getElementById('NEXBranchAdminCardExpenses'),
-    configDoughnut
-  );
+  function drawChart(data: EarningData) {
+    const labels = data.labels
+    const datasets = data.datasets
+    const backgroundColors = datasets[0].backgroundColor
+    new Chart('NEXAdminCardExpenses', {
+      type: 'doughnut',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: datasets[0].label,
+            data: datasets[0].data,
+            backgroundColor: backgroundColors,
+            borderWidth: 1 // Ajusta el ancho del borde del gráfico
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        legend: {
+          display: true,
+          position: 'right',
+          borderRadius: 10,
+          labels: {
+            borderRadius: 20
+          }
+        },
+        scales: {
+          xAxes: [
+            {
+              display: false,
+              ticks: {
+                fontColor: '#AEAFBB',
+                fontSize: 14,
+                fontFamily: 'Arial, sans-serif'
+              },
+              gridLines: {
+                display: false,
+                color: '#ECECEC'
+              }
+            }
+          ]
+        }
+      }
+    })
+  }
+
+  fetchDataAndDrawChart()
 </script>

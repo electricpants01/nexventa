@@ -1,20 +1,16 @@
 .sidebar.has-scrollbar-billing[data-mobile-menu] {
-  position: absolute;
-  top: -10%;
-  left: 74%;
+  position: fixed;
+  top: 20%;
+  left: 75%;
   height: auto;
-  /* Altura automática */
-  max-height: calc(100vh - 50px);
-  /* Altura máxima */
+  max-height: calc(100vh - 5px);
 }
 .has-scrollbar-billing {
   padding-bottom: 5px;
 }
 .has-scrollbar-billing::-webkit-scrollbar {
   width: 4px;
-  /* for vertical scroll */
   height: 2px;
-  /* for horizontal scroll */
   background-color:var(--salmon-pink);
 }
 .has-scrollbar-billing::-webkit-scrollbar-thumb {
@@ -74,7 +70,6 @@
 }
 .search-box-billing i {
   color: #aaa;
-  /* Color del icono */
 }
 /* Estilos de la paginación */
 .container-billing {
@@ -91,15 +86,6 @@ h2 {
 .table-container {
   overflow-x: auto;
 }
-/* Estilos de la tabla */
-/* .table-billing {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
 /* Estilos de botones */
 .btn-process,
 .btn-print {

@@ -1,92 +1,11 @@
 ---
-import Chart from 'chart.js/auto';
-
-interface EarningData {
-  xValues: number[];
-  y1Values: number[];
-  y2Values: number[];
-}
-
-let errorLoadingData = false;
-let error: string | null = null;
-
-async function fetchDataAndDrawChart() {
-  try {
-    const response = await fetch('http://localhost:4321/api/earning.json');
-    if (!response.ok) {
-      throw new Error(
-        response.status === 400
-          ? 'Error: Solicitud incorrecta (400)'
-          : response.status === 404
-          ? 'Error: Recurso no encontrado (404)'
-          : response.status === 500
-          ? 'Error: Error interno del servidor (500)'
-          : 'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
-      );
-    }
-    const data: EarningData = await response.json();
-    if (!data) {
-      throw new Error('La respuesta está vacía');
-    }
-    drawChart(data);
-  } catch (err: any) {
-    console.error('Error al obtener los datos de la API:', err.message);
-    error = err.message;
-    errorLoadingData = true;
-    document.getElementById('errorMessage')!.innerText = err.message;
-    document.getElementById('test1')!.style.display = 'none'; // Ocultar el canvas en caso de error
-  }
-}
-
-function drawChart(data: EarningData) {
-  const xValues = data.xValues;
-  const y1Values = data.y1Values;
-  const y2Values = data.y2Values;
-
-  const canvas = document.getElementById('test1') as HTMLCanvasElement;
-  const ctx = canvas.getContext('2d')!;
-  
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: xValues,
-      datasets: [
-        {
-          label: 'Dataset 1',
-          borderColor: '#01D492',
-          backgroundColor: 'rgba(76, 92, 108, 0.3)',
-          data: y1Values,
-        },
-        {
-          label: 'Dataset 2',
-          borderColor: 'rgba(197, 69, 89, 1)',
-          backgroundColor: 'rgba(136, 79, 102, 0.5)',
-          data: y2Values,
-        },
-      ],
-    },
-    options: {
-      plugins: {
-        legend: { display: false },
-      },
-      scales: {
-        y: {
-          ticks: { color: 'white' },
-          grid: { display: false },
-        },
-        x: {
-          ticks: { color: 'white' },
-          grid: { display: false },
-        },
-      },
-    },
-  });
-}
+import Chart from 'chart.js/auto'
 ---
+
 <astro-doc>
   <div class="rounded-md p-6 shadow-md shadow-black/5" style="background-color: #181B3A;">
     <div class="mb-4 flex items-start justify-between">
-      <h3 class="text-base font-semibold text-white">Todos los gastos</h3>
+      <h3 class="text-base font-semibold text-white">Flujo de ganancias</h3>
       <div class="dropdown">
         <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600">
           <button type="button" class="dropdown-toggle text-white hover:text-black">
@@ -123,108 +42,109 @@ function drawChart(data: EarningData) {
     <div class="">
       <table class="w-100">
         <tbody>
-          <canvas id="myChart"></canvas>
+          <canvas id="NEXAdminCardEarning"></canvas>
           <p id="errorMessage" style="color: red;"></p>
         </tbody>
-      </table>
       </table>
     </div>
   </div>
 </astro-doc>
 
 <script>
-    interface EarningData {
-      xValues: number[];
-      y1Values: number[];
-      y2Values: number[];
-    }
+  interface EarningData {
+    xValues: number[]
+    y1Values: number[]
+    y2Values: number[]
+  }
 
-    let errorLoadingData = false;
-    let error: string | null = null;
+  let errorLoadingData = false
+  let error: string | null = null
 
-    async function fetchDataAndDrawChart() {
-      try {
-        const response = await fetch('http://localhost:4321/api/earning.json');
-        if (response.ok) {
-          const data: EarningData = await response.json();
-          if (data) {
-            drawChart(data);
-          } else {
-            throw new Error('La respuesta está vacía');
-          }
-        } else if (response.status === 400) {
-          throw new Error('Error: Solicitud incorrecta (400)');
-        } else if (response.status === 404) {
-          throw new Error('Error: Recurso no encontrado (404)');
-        } else if (response.status === 500) {
-          throw new Error('Error: Error interno del servidor (500)');
+  async function fetchDataAndDrawChart() {
+    try {
+      const response = await fetch('http://localhost:4321/api/earning.json')
+      if (response.ok) {
+        const data: EarningData = await response.json()
+        if (data) {
+          drawChart(data)
         } else {
-          throw new Error(
-            'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
-          );
+          throw new Error('La respuesta está vacía')
         }
-      } catch (err: any) {
-        console.error('Error al obtener los datos de la API:', err.message);
-        error = err.message;
-        errorLoadingData = true;
-        document.getElementById('errorMessage')!.innerText = err.message;
+      } else if (response.status === 400) {
+        throw new Error('Error: Solicitud incorrecta (400)')
+      } else if (response.status === 404) {
+        throw new Error('Error: Recurso no encontrado (404)')
+      } else if (response.status === 500) {
+        throw new Error('Error: Error interno del servidor (500)')
+      } else {
+        throw new Error(
+          'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
+        )
       }
+    } catch (err: any) {
+      console.error('Error al obtener los datos de la API:', err.message)
+      error = err.message
+      errorLoadingData = true
+      document.getElementById('errorMessage')!.innerText = err.message
     }
+  }
 
-    function drawChart(data: EarningData) {
-      const xValues = data.xValues;
-      const y1Values = data.y1Values;
-      const y2Values = data.y2Values;
+  function drawChart(data: EarningData) {
+    const xValues = data.xValues
+    const y1Values = data.y1Values
+    const y2Values = data.y2Values
 
-      new Chart('myChart', {
-        type: 'line',
-        data: {
-          labels: xValues,
-          datasets: [
-            {
-              label: 'Dataset 1',
-              borderColor: '#01D492',
-              backgroundColor: 'rgba(76, 92, 108, 0.2)',
-              borderWidth: 2,
-              data: y1Values,
-            },
-            {
-              label: 'Dataset 2',
-              borderColor: 'rgba(197, 69, 89, 1)',
-              backgroundColor: 'rgba(136, 79, 102, 0.1)',
-              borderWidth: 2,
-              data: y2Values,
-            },
-          ],
-        },
-
-        options: {
-          legend: { display: false },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  fontColor: '#AEAFBB',
-                },
-                gridLines: {
-                  display: false,
-                },
-              },
-            ],
-            xAxes: [
-              {
-                ticks: {
-                  fontColor: '#AEAFBB',
-                },
-                gridLines: {
-                  display: false,
-                },
-              },
-            ],
+    new Chart('NEXAdminCardEarning', {
+      type: 'line',
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            label: 'Dataset 1',
+            borderColor: '#01D492',
+            backgroundColor: 'rgba(76, 92, 108, 0.2)',
+            borderWidth: 2,
+            data: y1Values,
+            pointRadius: 0
           },
-        },
-      });
-    }
+          {
+            label: 'Dataset 2',
+            borderColor: 'rgba(197, 69, 89, 1)',
+            backgroundColor: 'rgba(136, 79, 102, 0.1)',
+            borderWidth: 2,
+            data: y2Values,
+            pointRadius: 0
+          }
+        ]
+      },
 
-    fetchDataAndDrawChart();
+      options: {
+        legend: { display: false },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                fontColor: '#AEAFBB'
+              },
+              gridLines: {
+                display: false
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                fontColor: '#AEAFBB'
+              },
+              gridLines: {
+                display: false
+              }
+            }
+          ]
+        }
+      }
+    })
+  }
+
+  fetchDataAndDrawChart()
 </script>
