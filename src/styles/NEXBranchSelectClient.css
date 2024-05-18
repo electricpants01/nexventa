@@ -170,7 +170,6 @@ form.sign-in-form {
 
 .container2::-webkit-scrollbar-track {
   background: #ff5c28;
-  /* border-left: 1px solid var(--cultured); */
 }
 
 .container2::-webkit-scrollbar-thumb {
@@ -187,7 +186,6 @@ form.sign-in-form {
 .container2 {
   background-color: #f3f3f3;
   margin: 0px;
-  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;

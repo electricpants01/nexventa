@@ -1,6 +1,7 @@
 ---
 import NEXOverviewCardList from './NEXList.astro'
 import NEXOverviewCardExpenses from './NEXExpenses.astro'
+import NEXOverviewCardErning from './NEXEarning.astro'
 import NEXOverviewCardTransaction from './NEXTransaction.astro'
 import NEXOverviewCardInformation from './NEXInformation.astro'
 ---
@@ -12,6 +13,7 @@ import NEXOverviewCardInformation from './NEXInformation.astro'
     <NEXOverviewCardList />
     <div class="mb-3 grid grid-cols-1 gap-1 p-6 lg:grid-cols-2">
       <NEXOverviewCardExpenses />
+      <NEXOverviewCardErning />
     </div>
     <div class="mb-3 grid grid-cols-1 gap-6 p-6 lg:grid-cols-2">
       <NEXOverviewCardTransaction />

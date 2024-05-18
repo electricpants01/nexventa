@@ -8,7 +8,7 @@
   --first-color: #ff5c28;
   --sub-color: #da3805;
   --white-color: #ffff;
-  --bg-color: #181B3A;
+  --bg-color: #181b3a;
   --bg-color-1: #ffff;
 
   /* Fuente y tipografía */
@@ -166,4 +166,107 @@ body {
 /*Rotate icon*/
 .rotate {
   transform: rotate(180deg);
+}
+/*-----------------------------------*\
+  #SIDEBAR
+\*-----------------------------------*/
+
+.sidebar {
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 320px;
+  padding: 30px;
+  overflow-y: scroll;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 20;
+
+}
+
+.sidebar.active {
+  left: 0;
+  visibility: visible;
+}
+
+
+.sidebar-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
+/**
+ * responsive larger than 1024px screen
+ */
+
+@media (min-width: 1024px) {
+
+  /**
+   * #PRODUCT 
+   */
+  .product-container .container {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    color: var(--bg-color-1);
+  }
+
+  .sidebar {
+    --fs-5: 0.941rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    left: 0;
+    padding: 0;
+    min-width: -webkit-calc(25% - 15px);
+    min-width: calc(25% - 15px);
+    margin-bottom: 30px;
+    visibility: visible;
+    overflow-y: auto;
+    -ms-scroll-chaining: chained;
+    overscroll-behavior: auto;
+    z-index: 0;
+    background: transparent;
+  }
+
+  .sidebar-category {
+    background: var(--bg-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--cultured);
+    -webkit-border-radius: var(--border-radius-md);
+    border-radius: var(--border-radius-md);
+  }
+
+  .sidebar-close-btn {
+    display: none;
+  }
+
+  .product-box {
+    padding: 0px;
+    min-width: -webkit-calc(80% - 133px);
+    min-width: calc(78% - 1px);
+  }
 }
