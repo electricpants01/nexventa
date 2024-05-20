@@ -319,17 +319,27 @@ body::-webkit-scrollbar-thumb:hover {
   height: 300px;
 }
 
+/**
+     * #MODAL 
+     */
+
 .modal-content {
   position: relative;
-  max-width: 400px;
-  margin: 20px;
   background: var(--white);
   -webkit-border-radius: var(--border-radius-md);
   border-radius: var(--border-radius-md);
-  overflow: hidden;
-  z-index: 2;
-  -webkit-animation: scaleUp 0.5s ease-in-out 5s forwards;
-  animation: scaleUp 0.5s ease-in-out 5s forwards;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 750px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .modal-content-qr {
@@ -1102,14 +1112,6 @@ select:hover {
   padding: 2px;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  max-width: 400px;
-}
-
 /*-----------------------------------*\
   #CATEGORY
 \*-----------------------------------*/
@@ -1300,7 +1302,6 @@ select:hover {
   color: var(--eerie-black);
   font-size: 12px;
   font-weight: var(--weight-500);
-  color: var(--bittersweet);
 }
 
 .sidebar-item-title-h3 {
@@ -1822,7 +1823,6 @@ select:hover {
   text-align: center;
   -webkit-border-radius: var(--border-radius-md);
   border-radius: var(--border-radius-md);
-  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -2156,13 +2156,8 @@ footer {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     max-width: 320px;
-  }
-
-  .banner-content {
-    position: absolute;
-    bottom: 25px;
+    position: relative;
     left: 25px;
-    right: 25px;
     padding: 20px 25px;
     -webkit-border-radius: var(--border-radius-md);
     border-radius: var(--border-radius-md);
@@ -2367,25 +2362,6 @@ footer {
   .container {
     max-width: 750px;
     margin: auto;
-  }
-
-  /**
-   * #MODAL 
-   */
-
-  .modal-content {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    max-width: 750px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
 
   .newsletter-img {
