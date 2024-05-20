@@ -2148,21 +2148,6 @@ footer {
     max-width: 460px;
   }
 
-  .banner-content {
-    top: 50%;
-    right: auto;
-    bottom: auto;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    max-width: 320px;
-    position: relative;
-    left: 25px;
-    padding: 20px 25px;
-    -webkit-border-radius: var(--border-radius-md);
-    border-radius: var(--border-radius-md);
-  }
-
   .banner-text {
     display: block;
     color: var(--sonic-silver);
