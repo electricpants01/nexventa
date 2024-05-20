@@ -2,18 +2,14 @@
 :root {
   --nav-width: 80px;
   --nav-width-1: 75px;
-  /*===== Colores =====*/
   --first-color: #ff5c28;
   --sub-color: #da3805;
   --white-color: #000000;
   --bg-color: #f3f3f3;
   --bg-color-1: #ffff;
-  /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
-
-  /*===== z index =====*/
   --z-fixed: 100;
 }
 
@@ -27,11 +23,9 @@
 body {
   position: relative;
   margin: 0;
-  /* padding: 0rem 0 0 4.9rem;*/
   transition: 0.5s;
 }
 
-/*===== l NAV =====*/
 .l-navbar {
   position: fixed;
   top: 0;
@@ -44,7 +38,6 @@ body {
   z-index: var(--z-fixed);
 }
 
-/*===== NAV =====*/
 .nav {
   width: auto;
   height: 100%;
@@ -100,17 +93,14 @@ body {
   font-size: var(--small-font-size);
 }
 
-/*Expander menu*/
 .expander {
   width: calc(var(--nav-width) + 9.25rem);
 }
 
-/*Active links menu*/
 .active {
   background-color: var(--first-color);
 }
 
-/*===== COLLAPSE =====*/
 .collapse {
   grid-template-columns: 20px max-content 1fr;
 }
@@ -134,12 +124,10 @@ body {
   color: var(--white-color);
 }
 
-/*Show collapse*/
 .showCollapse {
   display: block;
 }
 
-/*Rotate icon*/
 .rotate {
   transform: rotate(180deg);
 }
