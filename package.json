@@ -3,11 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "sst bind astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sst:deploy": "sst deploy --stage prod",
+    "sst:dev": "sst dev"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
@@ -34,6 +36,10 @@
   "devDependencies": {
     "@typescript-eslint/parser": "^7.8.0",
     "prettier": "^3.2.2",
-    "prettier-plugin-astro": "^0.13.0"
+    "prettier-plugin-astro": "^0.13.0",
+    "sst": "^2.42.0",
+    "aws-cdk-lib": "2.142.1",
+    "constructs": "10.3.0",
+    "astro-sst": "^2.42.0"
   }
 }
