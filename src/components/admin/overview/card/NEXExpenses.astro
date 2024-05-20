@@ -98,48 +98,48 @@ import Chart from 'chart.js/auto'
     const labels = data.labels
     const datasets = data.datasets
     const backgroundColors = datasets[0].backgroundColor
-    new Chart('NEXAdminCardExpenses', {
-      type: 'doughnut',
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: datasets[0].label,
-            data: datasets[0].data,
-            backgroundColor: backgroundColors,
-            borderWidth: 1 // Ajusta el ancho del borde del gráfico
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        legend: {
-          display: true,
-          position: 'right',
-          borderRadius: 10,
-          labels: {
-            borderRadius: 20
-          }
-        },
-        scales: {
-          xAxes: [
-            {
-              display: false,
-              ticks: {
-                fontColor: '#AEAFBB',
-                fontSize: 14,
-                fontFamily: 'Arial, sans-serif'
-              },
-              gridLines: {
-                display: false,
-                color: '#ECECEC'
-              }
-            }
-          ]
-        }
-      }
-    })
+    // new Chart('NEXAdminCardExpenses', {
+    //   type: 'doughnut',
+    //   data: {
+    //     labels: labels,
+    //     datasets: [
+    //       {
+    //         label: datasets[0].label,
+    //         data: datasets[0].data,
+    //         backgroundColor: backgroundColors,
+    //         borderWidth: 1 // Ajusta el ancho del borde del gráfico
+    //       }
+    //     ]
+    //   },
+    //   options: {
+    //     responsive: true,
+    //     maintainAspectRatio: true,
+    //     legend: {
+    //       display: true,
+    //       position: 'right',
+    //       borderRadius: 10,
+    //       labels: {
+    //         borderRadius: 20
+    //       }
+    //     },
+    //     scales: {
+    //       xAxes: [
+    //         {
+    //           display: false,
+    //           ticks: {
+    //             fontColor: '#AEAFBB',
+    //             fontSize: 14,
+    //             fontFamily: 'Arial, sans-serif'
+    //           },
+    //           gridLines: {
+    //             display: false,
+    //             color: '#ECECEC'
+    //           }
+    //         }
+    //       ]
+    //     }
+    //   }
+    // })
   }
 
   fetchDataAndDrawChart()

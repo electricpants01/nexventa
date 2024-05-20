@@ -94,56 +94,56 @@ import Chart from 'chart.js/auto'
     const y1Values = data.y1Values
     const y2Values = data.y2Values
 
-    new Chart('NEXAdminCardEarning', {
-      type: 'line',
-      data: {
-        labels: xValues,
-        datasets: [
-          {
-            label: 'Dataset 1',
-            borderColor: '#01D492',
-            backgroundColor: 'rgba(76, 92, 108, 0.2)',
-            borderWidth: 2,
-            data: y1Values,
-            pointRadius: 0
-          },
-          {
-            label: 'Dataset 2',
-            borderColor: 'rgba(197, 69, 89, 1)',
-            backgroundColor: 'rgba(136, 79, 102, 0.1)',
-            borderWidth: 2,
-            data: y2Values,
-            pointRadius: 0
-          }
-        ]
-      },
-
-      options: {
-        legend: { display: false },
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                fontColor: '#AEAFBB'
-              },
-              gridLines: {
-                display: false
-              }
-            }
-          ],
-          xAxes: [
-            {
-              ticks: {
-                fontColor: '#AEAFBB'
-              },
-              gridLines: {
-                display: false
-              }
-            }
-          ]
-        }
-      }
-    })
+    // new Chart('NEXAdminCardEarning', {
+    //   type: 'line',
+    //   data: {
+    //     labels: xValues,
+    //     datasets: [
+    //       {
+    //         label: 'Dataset 1',
+    //         borderColor: '#01D492',
+    //         backgroundColor: 'rgba(76, 92, 108, 0.2)',
+    //         borderWidth: 2,
+    //         data: y1Values,
+    //         pointRadius: 0
+    //       },
+    //       {
+    //         label: 'Dataset 2',
+    //         borderColor: 'rgba(197, 69, 89, 1)',
+    //         backgroundColor: 'rgba(136, 79, 102, 0.1)',
+    //         borderWidth: 2,
+    //         data: y2Values,
+    //         pointRadius: 0
+    //       }
+    //     ]
+    //   },
+    //
+    //   options: {
+    //     legend: { display: false },
+    //     scales: {
+    //       yAxes: [
+    //         {
+    //           ticks: {
+    //             fontColor: '#AEAFBB'
+    //           },
+    //           gridLines: {
+    //             display: false
+    //           }
+    //         }
+    //       ],
+    //       xAxes: [
+    //         {
+    //           ticks: {
+    //             fontColor: '#AEAFBB'
+    //           },
+    //           gridLines: {
+    //             display: false
+    //           }
+    //         }
+    //       ]
+    //     }
+    //   }
+    // })
   }
 
   fetchDataAndDrawChart()
