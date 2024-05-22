@@ -1,21 +1,15 @@
 ---
 import NEXBillingPagination from './container/NEXPagination.astro'
 import NEXBillingTable from './container/NEXTable.astro'
-import NEXBillingSearch from './container/NEXSearch.tsx'
 ---
-<astro-doc>
-  <div class="product-container">
-    <div class="container">
-      <div class="product-box">
-        <div class="container-billing">
-          <!-- <div class="card-billing"> -->
-            <!-- <NEXBillingSearch /> -->
-            <NEXBillingTable />
-            <NEXBillingPagination />
-          <!-- </div> -->
-        </div>
-        <!-- <NEXBillingSidebar /> -->
+
+<div class="product-container">
+  <div class="container">
+    <div class="product-box">
+      <div class="container-billing">
+        <NEXBillingTable />
+        <NEXBillingPagination />
       </div>
     </div>
   </div>
-</astro-doc>
+</div>
