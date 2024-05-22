@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets'
+import img from '@images/cliente/Logo-KFC.png'
+
+const logo = {
+  name: 'KFC',
+  img: { img }
+}
+---
+
+<a href="#" class="header-logo">
+  <Image src={img} alt={logo.name} width="70" height="50" />
+</a>

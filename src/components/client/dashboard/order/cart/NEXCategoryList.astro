@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets'
+import img from '@images/banner/banner.jpg'
+
+const category = {
+  name: 'category',
+  img: { img },
+  title: 'Comida de fitness'
+}
+---
+
+<div class="category-item">
+  <ul class="sidebar-menu-category-list">
+    <div class="menu-title-flex">
+      <Image src={img} alt={category.name} class="menu-title-img" />
+      <p class="menu-title">{category.title}</p>
+    </div>
+  </ul>
+</div>
