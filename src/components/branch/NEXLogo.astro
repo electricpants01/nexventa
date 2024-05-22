@@ -1,9 +1,8 @@
 ---
 import { Image } from 'astro:assets'
-import img from '@images/cliente/Logo-KFC.png'
+import imgLogo from '@images/cliente/Logo-KFC.png'
 const login = {
   name: 'KFC',
-  img: { img },
   branch: 'Sucursal 4to anillo, av 4to anillo, 3 pasos al frente',
   width: 600,
   height: 500
@@ -15,4 +14,4 @@ const login = {
   <p>{login.name}</p>
 </h3>
 <p>"Puntos de ventas"</p>
-<Image src={img} alt={login.name} class="image" width={login.width} height={login.height} />
+<Image src={imgLogo} alt={login.name} class="image" width={login.width} height={login.height} />

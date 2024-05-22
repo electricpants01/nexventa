@@ -1,11 +1,10 @@
 ---
 import { Image } from 'astro:assets'
-import img from '@images/food/11.jpg'
+import imgProduct from '@images/food/11.jpg'
 
 const cart = {
   id: '1',
   name: 'Pollo al horno',
-  img: { img },
   discount: '30%',
   detail: 'Cuarto de pollo .',
   price: '20.00',
@@ -18,7 +17,7 @@ const cart = {
 <div id="cart-items">
   <div class="category-item">
     <div class="sidebar-img-box">
-      <Image src={img} alt={cart.name} class="sidebar-img-box-img" />
+      <Image src={imgProduct} alt={cart.name} class="sidebar-img-box-img" />
     </div>
     <div class="sidebar-content-box">
       <div class="category-content-flex">

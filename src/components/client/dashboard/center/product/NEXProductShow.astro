@@ -1,11 +1,10 @@
 ---
 import { Image } from 'astro:assets'
-import img from '@images/food/11.jpg'
+import imgProduct from '@images/food/11.jpg'
 
 const productShow = {
   codigo: '1',
   name: 'Pollo al horno',
-  img: img,
   discount: '30%',
   detail: 'Cuarto de pollo .',
   price: '20.00',
@@ -47,7 +46,7 @@ const productShow = {
             <div class="flex items-center">
               <div class="w-1/2">
                 <Image
-                  src={img}
+                  src={imgProduct}
                   alt={productShow.name}
                   class="w-full rounded-md border border-gray-500"
                 />
