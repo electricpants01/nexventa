@@ -1,0 +1,57 @@
+---
+import Branch from '@interfaces/Branch'
+
+let branches: Branch[] = []
+let errorLoadingData = false
+let error: string | null = null
+
+try {
+  const response = await fetch('http://localhost:4322/api/branch/branch_select.json')
+  if (response.ok) {
+    const data: Branch[] | null = await response.json()
+    if (data) {
+      branches = data
+    } else {
+      throw new Error('La respuesta está vacía')
+    }
+  } else if (response.status === 400) {
+    throw new Error('Error: Solicitud incorrecta (400)')
+  } else if (response.status === 404) {
+    throw new Error('Error: Recurso no encontrado (404)')
+  } else if (response.status === 500) {
+    throw new Error('Error: Error interno del servidor (500)')
+  } else {
+    throw new Error(
+      'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
+    )
+  }
+} catch (err: any) {
+  console.error('Error al obtener los datos de la API:', err.message)
+  error = err.message
+  errorLoadingData = true
+}
+---
+
+<div>
+  {
+    errorLoadingData ? (
+      <p>{error}</p>
+    ) : (
+      branches.map((branch, index) => (
+        <a href="/client">
+          <div class="card">
+            <div>
+              <img src={branch.img} alt={branch.name} />
+            </div>
+            <div class="card-content">
+              <h3>{branch.name}</h3>
+              <p>{branch.branch}</p>
+            </div>
+            <i class="bx bx-chevron-right bx-sm icon" />
+          </div>
+        </a>
+      ))
+    )
+  }
+  <br />
+</div>

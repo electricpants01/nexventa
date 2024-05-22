@@ -1,17 +1,15 @@
 ---
-import NEXBranchSelectClientForm from "./NEXForm.astro";
-import NEXBranchSelectClientLogo from "./NEXLogo.astro";
+import NEXForm from './NEXForm.astro'
+import NEXSelect from './NEXSelect.astro'
 ---
 
-<astro-doc>
-  <div class="container">
-    <div class="signin-signup">
-      <NEXBranchSelectClientForm />
-    </div>
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <NEXBranchSelectClientLogo />
-      </div>
+<div class="container">
+  <div class="signin-signup">
+    <NEXForm />
+  </div>
+  <div class="panels-container">
+    <div class="panel left-panel">
+      <NEXSelect />
     </div>
   </div>
-</astro-doc>
+</div>

@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import img from '@images/cliente/Logo-KFC.png';
+const login = {
+  name: 'KFC',
+  img: {img},
+  branch: 'Tu nuevo sistema de venta de comida. Ordena fácil, disfruta más.'
+}
+---
+
+<div class="content">
+  <h3>{login.name}</h3>
+  <p>{login.branch}</p>
+  <Image src={img} alt={login.name} />
+</div>
