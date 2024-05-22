@@ -1,87 +1,96 @@
 ---
+import { Image } from 'astro:assets'
+import img from '@images/food/11.jpg'
+
 const productShow = {
   codigo: '1',
   name: 'Pollo al horno',
-  img: '../../../public/images/food/11.jpg',
+  img: img,
   discount: '30%',
   detail: 'Cuarto de pollo .',
   price: '20.00',
   currency: 'Bs',
-  longDetail: 'Pollo al horno con arroz, papa .....................................................',
-  shortDetail: 'Pollo al horno',
-};
+  longDetail:
+    'Pollo al horno con arroz, papa .....................................................',
+  shortDetail: 'Pollo al horno'
+}
 ---
 
-<astro-doc>
-  <div>
-    {/* Main modal */}
-    <div
-      id="crud-modal"
-      tabindex={-1}
-      aria-hidden="true"
-      class="fixed left-0 right-0 top-0 z-50 hidden h-screen w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
-    >
-      <div class="relative max-h-full w-full max-w-3xl p-4">
-        {/* Modal content */}
-        <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
-          {/* Modal header */}
-          <div
-            class="flex items-center justify-between rounded-t border-b bg-gradient-to-r from-orange-500 to-red-500 p-4 md:p-5 dark:border-gray-600"
+<div>
+  {/* Main modal */}
+  <div
+    id="crud-modal"
+    tabindex={-1}
+    aria-hidden="true"
+    class="fixed left-0 right-0 top-0 z-50 hidden h-screen w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+  >
+    <div class="relative max-h-full w-full max-w-3xl p-4">
+      {/* Modal content */}
+      <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+        {/* Modal header */}
+        <div
+          class="flex items-center justify-between rounded-t border-b bg-gradient-to-r from-orange-500 to-red-500 p-4 md:p-5 dark:border-gray-600"
+        >
+          <h3 class="text-lg font-semibold text-white">Detalle del Producto</h3>
+          <button
+            type="button"
+            class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500 text-sm text-white hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300"
+            data-modal-toggle="crud-modal"
           >
-            <h3 class="text-lg font-semibold text-white">Detalle del Producto</h3>
-            <button
-              type="button"
-              class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500 text-sm text-white hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300"
-              data-modal-toggle="crud-modal"
-            >
-              <i class="bx bx-x"></i>
-              <span class="sr-only">Close</span>
-            </button>
-          </div>
-          {/* Modal body */}
-          <form class="p-4 md:p-5">
-            <div class="mb-4 grid gap-4">
-              <div class="flex items-center">
-                <div class="w-1/2">
-                  <img
-                    src={productShow.img}
-                    alt={productShow.name}
-                    class="w-full rounded-md border border-gray-500"
-                  />
-                </div>
-                <div class="w-1/2 pl-4">
+            <i class="bx bx-x"></i>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        {/* Modal body */}
+        <form class="p-4 md:p-5">
+          <div class="mb-4 grid gap-4">
+            <div class="flex items-center">
+              <div class="w-1/2">
+                <Image
+                  src={img}
+                  alt={productShow.name}
+                  class="w-full rounded-md border border-gray-500"
+                />
+              </div>
+              <div class="w-1/2 pl-4">
+                <p class="block text-sm font-medium text-gray-800 dark:text-white">
+                  <i class="bx bx-id-card text-orange-500"></i>
+                  <b>Código:</b>
+                  {productShow.codigo}
+                </p>
+                <p class="block text-sm font-medium text-gray-800 dark:text-white">
+                  <i class="bx bx-font text-orange-500"></i>
+                  <b>Nombre:</b>
+                  {productShow.name}
+                </p>
+                <p class="block text-sm font-medium text-gray-800 dark:text-white">
+                  <i class="bx bx-dollar text-orange-500"></i>
+                  <b>Precio:</b>
+                  {productShow.price}
+                  {productShow.currency}
+                </p>
+                <p class="block text-sm font-medium text-gray-800 dark:text-white">
+                  <i class="bx bx-discount text-orange-500"></i>
+                  <b>Descuento:</b>
+                  {productShow.discount}
+                </p>
+                <p class="block text-sm font-medium text-gray-800 dark:text-white">
+                  <i class="bx bx-info-circle text-orange-500"></i>
+                  <b>Detalle:</b>
+                  {productShow.shortDetail}
+                </p>
+                <div class="mb-4">
                   <p class="block text-sm font-medium text-gray-800 dark:text-white">
-                    <i class="bx bx-id-card text-orange-500"></i>
-                    <b>Código:</b> {productShow.codigo}
+                    <i class="bx bx-detail text-orange-500"></i>
+                    <b>Descripción:</b>
+                    {productShow.longDetail}
                   </p>
-                  <p class="block text-sm font-medium text-gray-800 dark:text-white">
-                    <i class="bx bx-font text-orange-500"></i>
-                    <b>Nombre:</b> {productShow.name}
-                  </p>
-                  <p class="block text-sm font-medium text-gray-800 dark:text-white">
-                    <i class="bx bx-dollar text-orange-500"></i>
-                    <b>Precio:</b> {productShow.price} {productShow.currency}
-                  </p>
-                  <p class="block text-sm font-medium text-gray-800 dark:text-white">
-                    <i class="bx bx-discount text-orange-500"></i>
-                    <b>Descuento:</b> {productShow.discount}
-                  </p>
-                  <p class="block text-sm font-medium text-gray-800 dark:text-white">
-                    <i class="bx bx-info-circle text-orange-500"></i>
-                    <b>Detalle:</b> {productShow.shortDetail}
-                  </p>
-                  <div class="mb-4">
-                    <p class="block text-sm font-medium text-gray-800 dark:text-white">
-                      <i class="bx bx-detail text-orange-500"></i>
-                      <b>Descripción:</b> {productShow.longDetail}
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-</astro-doc>
+</div>

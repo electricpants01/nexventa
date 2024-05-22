@@ -1,5 +1,8 @@
 ---
 import '@styles/client/NEXBranchBillingTable.css'
+import { Image } from 'astro:assets'
+import img from '@images/cliente/Logo-KFC.png'
+
 const data = {
   id: 'Factura 001',
   cajero: 'Juan Albare',
@@ -16,14 +19,14 @@ const data = {
   correo: 'cliente@example.com',
   telefono: '+1234567890',
   cliente: 'Pedro perez',
-  img: '../../../public/images/cliente/Logo-KFC.png'
+  img: img
 }
 ---
 
 <div class="sidebar has-scrollbar-billing" data-mobile-menu>
   <div class="sidebar-category">
     <div class="category-item">
-      <img src={data.img} alt="" width={30} height={30} />
+      <Image src={img} alt={data.id} width={30} height={30} />
       <p class="menu-title">Factura</p>
       <h2 class="sidebar-title">{data.fecha}</h2>
     </div>
