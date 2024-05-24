@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets'
+import promo1 from '@images/welcome/promo-1.png'
+---
+<section class="section section-divider white promo">
+  <div class="container">
+    <ul class="promo-list has-scrollbar">
+      <li class="promo-item">
+        <div class="promo-card">
+          <h3 class="h3 card-title">Maxican Pizza</h3>
+          <p class="card-text">
+            Food is any substance consumed to provide nutritional support for an organism.
+          </p>
+          <Image
+            src={promo1}
+            width="300"
+            height="300"
+            loading="lazy"
+            alt="Maxican Pizza"
+            class="w-100 card-banner"
+          />
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
