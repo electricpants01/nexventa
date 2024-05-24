@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets'
+import imgProduct from '@images/food/11.jpg'
+
+const cart = {
+  id: '1',
+  name: 'Pollo al horno',
+  discount: '30%',
+  detail: 'Cuarto de pollo .',
+  price: '20.00',
+  currency: 'Bs',
+  longDetail: 'Pollo al horno con arroz, papa .......',
+  shortDetail: 'Pollo al horno'
+}
+---
+
+<div id="cart-items">
+  <div class="category-item">
+    <div class="sidebar-img-box">
+      <Image src={imgProduct} alt={cart.name} class="sidebar-img-box-img" />
+    </div>
+    <div class="sidebar-content-box">
+      <div class="category-content-flex">
+        <a href="#" class="category-btn">
+          <h3 class="">{cart.name}</h3>
+        </a>
+        <button
+          data-modal-target="edit-modal"
+          data-modal-toggle="edit-modal"
+          class="font-mediumtext-black block text-center text-sm hover:text-orange-600 focus:outline-none"
+          type="button"
+        >
+          <i class="bx bx-edit-alt"></i>
+        </button>
+        <button class="category-item-amount-1">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+      <p class="sidebar-item-title-p">Detalle: {cart.detail}</p>
+      <div class="category-content-flex">
+        <button class="category-item-amount-btn">-</button>
+        <input class="category-sidebar-select" type="number" name="cantidad" id="cantidad" />
+        <button class="category-item-amount-btn">+</button>
+      </div>
+      <div class="category-content-flex">
+        <h3 class="sidebar-item-title-p">Precio:</h3>
+        <p class="category-item-amount">{cart.price} {cart.currency}</p>
+      </div>
+    </div>
+  </div>
+</div>
