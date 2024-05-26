@@ -1,0 +1,13 @@
+---
+import Image from 'astro/components/Image.astro'
+import imgQr from '@images/caja/qr.jpg'
+const productqr = {
+  title: 'Generar Qr',
+  name: 'Generar Qr'
+}
+---
+
+<div>
+  <h3 class="newsletter-title-qr">{productqr.title}</h3>
+  <Image src={imgQr} alt={productqr.name} class="banner-img" />
+</div>
