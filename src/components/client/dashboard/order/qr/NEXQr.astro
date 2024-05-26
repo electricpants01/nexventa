@@ -1,0 +1,18 @@
+---
+import NEXOrderSideBarQrGenerate from './NEXQrGenerate.astro'
+import NEXOrderSideBarQRData from './NEXQRData'
+---
+
+<div id="qrModal" class="qrmodal">
+  <div class="modal-content-qr">
+    <button id="aperturarBtn" class="modal-close-btnQr" data-modal-close>
+      <i class="bx bx-x"></i>
+    </button>
+    <div class="newsletter">
+      <div class="newsletter-img">
+        <NEXOrderSideBarQrGenerate />
+      </div>
+      <NEXOrderSideBarQRData />
+    </div>
+  </div>
+</div>
