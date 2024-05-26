@@ -1,3 +1,11 @@
+---
+import { Image } from 'astro:assets'
+import imgLogo from '@images/cliente/Logo-KFC.png'
+const login = {
+  name: 'KFC',
+}
+---
+
 <div
   class="relative mb-4 flex w-full min-w-0 flex-col break-words rounded bg-gray-50 p-6 shadow-lg lg:mb-0 dark:bg-gray-800"
   style="background-color: #181B3A;"
@@ -17,11 +25,7 @@
             >
               <div class="flex items-center">
                 <div class="h-8 w-8 overflow-hidden rounded-full">
-                  <img
-                    class="h-full w-full object-cover"
-                    src="http://localhost:4321/public/images/cliente/Logo-KFC.png"
-                    alt="Logo KFC"
-                  />
+                  <Image src={imgLogo} alt={login.name} class="h-full w-full object-cover"/>
                 </div>
                 <div class="ml-2">
                   <p class="text-white">Rumi Aktar</p>
@@ -29,7 +33,6 @@
                 </div>
               </div>
             </th>
-
             <td>
               <div class="flex items-center">
                 <span class="mr-2 text-xs text-white">100000</span>
