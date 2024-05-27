@@ -42,8 +42,8 @@ const table = {
     </div>
   </div>
   <div class="overflow-x-auto">
-    <table class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
-      <thead class="bg-orange-600 text-xs text-white dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-white">
+      <thead class="bg-orange-600 text-xs text-white  dark:text-white">
         <tr>
           <th scope="col" class="px-16 py-3">
             <span class="sr-only">Image</span>
@@ -56,19 +56,19 @@ const table = {
       </thead>
       <tbody>
         <tr
-          class="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
-        >
+          class="border-b text-white  dark:border-text-white dark:hover:bg-orange-600"
+        style="background-color:#181B3A">
           <td class="p-4">
             <img class="h-10 w-10 rounded-full" src={table.img} alt="Sucursal image" />
           </td>
 
-          <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+          <td class="px-6 py-4 font-semibold text-white dark:text-white">
             {table.cajero}
           </td>
           <td class="px-6 py-4">
             <div class="flex items-center">
               <button
-                class="me-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                class="me-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                 type="button"
               >
                 <span class="sr-only">Quantity button</span>
@@ -84,7 +84,7 @@ const table = {
                 />
               </div>
               <button
-                class="ms-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                class="ms-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                 type="button"
               >
                 <span class="sr-only">Quantity button</span>

@@ -1,7 +1,7 @@
 /*===== VARIABLES CSS =====*/
 :root {
   --nav-width: 80px;
-  --nav-width-1: 70px;
+  --nav-width-1: 75px;
   --first-color: #ff5c28;
   --sub-color: #da3805;
   --white-color: #000000;
@@ -20,80 +20,25 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   position: relative;
   margin: 0;
   transition: 0.5s;
-}
+} */
 
 .l-navbar {
   position: fixed;
   top: 0;
-  left: -10px;
+  left: 0;
   height: 100vh;
   background-color: var(--bg-color);
-  padding: 1rem 1.2rem 1rem;
+  /* padding: 1rem 1.3rem 1rem; */
+    padding: 1rem 1.5rem 1rem;
   width: var(--nav-width-1);
   transition: 0.5s;
   z-index: var(--z-fixed);
 }
 
-
-@media screen and (max-width: 1200px) {
-  .l-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: var(--bg-color);
-    padding: 1rem 1.3rem 1rem;
-    width: var(--nav-width-1);
-    transition: 0.5s;
-    z-index: var(--z-fixed);
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .l-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: var(--bg-color);
-    padding: 1rem 1.1rem 1rem;
-    width: var(--nav-width-1);
-    transition: 0.5s;
-    z-index: var(--z-fixed);
-  }
-}
-
-@media screen and (max-width: 1920px) {
-  .l-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: var(--bg-color);
-    padding: 1rem 1.1rem 1rem;
-    width: var(--nav-width-1);
-    transition: 0.5s;
-    z-index: var(--z-fixed);
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .l-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: var(--bg-color);
-    padding: 1rem 1.1rem 1rem;
-    width: var(--nav-width-1);
-    transition: 0.5s;
-    z-index: var(--z-fixed);
-  }
-}
 .nav {
   width: auto;
   height: 100%;
