@@ -27,11 +27,11 @@
   box-sizing: border-box;
 }
 
-/* body {
+body {
   position: relative;
   margin: 0;
   transition: 0.5s;
-} */
+}
 
 /*===== l NAV =====*/
 .l-navbar {
