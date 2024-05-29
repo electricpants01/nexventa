@@ -24,7 +24,7 @@ const ExpensesChart = () => {
 
   async function fetchDataAndDrawChart() {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/electricpants01/nexventa/develop/public/api/expenses.json');
+      const response = await fetch('/api/expenses.json');
       if (response.ok) {
         const data: EarningData = await response.json();
         if (data) {

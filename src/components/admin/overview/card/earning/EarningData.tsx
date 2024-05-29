@@ -34,7 +34,7 @@ const EarningData: React.FC = () => {
   useEffect(() => {
     async function fetchDataAndDrawChart() {
       try {
-        const response = await fetch('https://raw.githubusercontent.com/electricpants01/nexventa/develop/public/api/earning.json');
+        const response = await fetch('/api/earning.json');
         if (response.ok) {
           const data: EarningData = await response.json();
           if (data) {
