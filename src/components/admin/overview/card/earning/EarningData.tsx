@@ -12,17 +12,8 @@ ChartJS.register(
 );
 
 interface EarningData {
-  labels: number[];
-  datasets: {
-    label: string;
-    borderColor: string;
-    backgroundColor: string;
-    borderWidth: number;
-    data: number[];
-    pointRadius: number;
-    tension: number;
-    fill: boolean;
-  }[];
+  labels: string[];
+  data: { data: number[] }[];
 }
 
 const EarningData: React.FC = () => {
@@ -40,8 +31,12 @@ const EarningData: React.FC = () => {
         const earningData: EarningData = await response.json();
         setData({
           labels: earningData.labels,
-          datasets: earningData.datasets.map(dataset => ({
-            ...dataset,
+          datasets: earningData.data.map((dataset, index) => ({
+            label: `Dataset ${index + 1}`,
+            data: dataset.data,
+            borderColor: index === 0 ? 'rgba(1, 212, 146, 1)' : 'rgba(197, 69, 89, 1)',
+            backgroundColor: 'rgba(255, 255, 255, 0.6)',
+            borderWidth: 2,
             pointRadius: 0,
             tension: 0.4,
             fill: false
@@ -67,14 +62,14 @@ const EarningData: React.FC = () => {
   }
 
   return data ? (
-    <div style={{ width: '100%', maxWidth: '600px', height: '200px' }}>
+    <div style={{ width: '100%', maxWidth: '600px', height: '250px' }}>
       <Line
         data={data}
         options={{
           maintainAspectRatio: false,
           responsive: true,
           plugins: {
-            legend: { display: false }
+            legend: { display: true } // Mostrar la leyenda
           },
           scales: {
             y: {

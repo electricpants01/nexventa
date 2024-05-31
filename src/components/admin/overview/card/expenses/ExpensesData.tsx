@@ -4,7 +4,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-interface EarningData {
+interface ExpensesData {
   labels: string[];
   datasets: {
     label: string;
@@ -16,7 +16,7 @@ interface EarningData {
 const ExpensesChart = () => {
   const [errorLoadingData, setErrorLoadingData] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [chartData, setChartData] = useState<EarningData | null>(null);
+  const [chartData, setChartData] = useState<ExpensesData | null>(null);
 
   useEffect(() => {
     fetchDataAndDrawChart();
@@ -26,9 +26,19 @@ const ExpensesChart = () => {
     try {
       const response = await fetch('/api/expenses.json');
       if (response.ok) {
-        const data: EarningData = await response.json();
+        const data = await response.json();
         if (data) {
-          setChartData(data);
+          const formattedData: ExpensesData = {
+            labels: data.labels,
+            datasets: [
+              {
+                label: 'Expenses',
+                data: data.data,
+                backgroundColor: data.backgroundColor,
+              },
+            ],
+          };
+          setChartData(formattedData);
         } else {
           throw new Error('La respuesta está vacía');
         }
@@ -69,13 +79,13 @@ const ExpensesChart = () => {
                       label: chartData.datasets[0].label,
                       data: chartData.datasets[0].data,
                       backgroundColor: chartData.datasets[0].backgroundColor,
-                      borderWidth: 1
-                    }
-                  ]
+                      borderWidth: 1,
+                    },
+                  ],
                 }}
                 options={{
                   maintainAspectRatio: false,
-                  responsive: true, // Hacer el gráfico responsive
+                  responsive: true,
                   cutout: '70%',
                   plugins: {
                     legend: {
@@ -85,11 +95,11 @@ const ExpensesChart = () => {
                         padding: 20,
                         usePointStyle: true,
                         font: {
-                          size: 10
-                        }
-                      }
-                    }
-                  }
+                          size: 10,
+                        },
+                      },
+                    },
+                  },
                 }}
               />
             </div>
