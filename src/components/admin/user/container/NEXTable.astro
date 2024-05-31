@@ -1,0 +1,160 @@
+---
+import NEXBillingPagination from './NEXPagination.astro'
+import NexCreateUser from './NexCreateUser.astro'
+---
+
+<div class="relative mb-8 w-full overflow-x-auto shadow-md sm:rounded-lg">
+  <div class="rounded pt-4 shadow" style="background-color: #181B3A;">
+    <div class="border-b border-gray-50 px-6 text-white">
+      <div class="mb-4 flex flex-wrap items-center">
+        <div>
+          <h3 class="text-xl font-bold">Modulo de Usuario</h3>
+          <p class="text-sm">Lista de Usuarios : Una lista de todos los usuarios de su cuenta, incluido su nombre, cargo, correo electrónico y función.</p>
+        </div>
+        <div class="ml-auto">
+          <button
+            data-modal-target="create-user-modal"
+            data-modal-toggle="create-user-modal"
+            class="inline-flex items-center rounded-lg border bg-orange-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-orange-600 dark:bg-orange-600 dark:text-white dark:hover:bg-black"
+            type="button"
+          >
+            <i class="bx bx-user-plus"></i>
+            Crear Usuario
+          </button>
+          <button
+            id="dropdownActionButton"
+            data-dropdown-toggle="dropdownAction"
+            class="inline-flex items-center rounded-lg border bg-orange-600 px-3 py-1.5 text-sm
+        font-medium text-white hover:bg-orange-600 dark:bg-orange-600 dark:text-white dark:hover:bg-black"
+            type="button"
+          >
+            <i class="bx bx-filter-alt"></i>
+            Opción
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownAction"
+            class="z-10 hidden w-44 divide-y rounded-lg bg-white shadow dark:bg-white"
+          >
+            <ul
+              class="py-1 text-sm text-black dark:text-black"
+              aria-labelledby="dropdownActionButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-orange-600 dark:hover:text-white"
+                  >Descargar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-orange-600 dark:hover:text-white"
+                  >Exportar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-orange-600 dark:hover:text-white"
+                  >Importar</a
+                >
+              </li>
+            </ul>
+            <div class="py-1">
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-black hover:bg-white dark:text-black dark:hover:bg-orange-600 dark:hover:text-white"
+                >Eliminar usuario</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a
+        class="inline-block border-b-2 border-orange-600 px-4 pb-2 text-sm font-medium text-orange-600"
+        href="#">Activo</a
+      ><a
+        class="inline-block border-b-2 border-transparent px-4 pb-2 text-sm font-medium text-gray-300 hover:border-gray-300"
+        href="#">Inactivo</a
+      >
+    </div>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
+      <thead
+        style="background: linear-gradient(135deg,#e53f52, #f05f22, #e53f52 );"
+        class="items-center text-xs text-white dark:text-white"
+      >
+        <tr>
+          <td class="px-4 py-1">
+            <!-- Modal toggle -->
+            <a
+              href="#"
+              type="button"
+              data-modal-target="creatUserModal"
+              data-modal-show="editUserModal"
+              class="font-medium text-white hover:underline dark:text-orange-600"
+              >Seleccionar
+            </a>
+            <label for="checkbox-all-search" class="sr-only">Seleccionar todo</label>
+          </td>
+          <th scope="col" class="px-6 py-3"> CI </th>
+          <th scope="col" class="px-6 py-3"> Nombre </th>
+          <th scope="col" class="px-6 py-3"> Apellidos </th>
+          <th scope="col" class="px-6 py-3"> Dirección </th>
+          <th scope="col" class="px-6 py-3"> Fecha de Nacimiento </th>
+          <th scope="col" class="px-6 py-3"> Teléfono </th>
+          <th scope="col" class="px-6 py-3"> Sexo </th>
+          <th scope="col" class="px-6 py-3"> Correo </th>
+          <th scope="col" class="px-6 py-3"> Estado </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b hover:bg-white dark:border-white" style="background-color: #181B3A;">
+          <td class="px-9">
+            <div class="flex items-center">
+              <input
+                id="checkbox-table-search-1"
+                type="checkbox"
+                class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600 dark:dark:border-orange-600"
+              />
+              <label for="checkbox-table-search-1" class="sr-only font-medium hover:text-orange-600"
+                >Seleccionar usuario</label
+              >
+            </div>
+          </td>
+          <NexCreateUser />
+          <td scope="row" class="px-6 py-4 text-white dark:text-white"> 123456789 </td>
+          <td class="px-6 py-4 text-white dark:text-white"> Juan </td>
+          <td class="white px-6 py-4 text-white dark:text-white"> López Pérez</td>
+          <td class="white px-6 py-4 text-white dark:text-white"> Calle A #123 </td>
+          <td class="white px-6 py-4 text-white dark:text-white"> 1990-01-01 </td>
+          <td class="white px-6 py-4 text-white dark:text-white"> 123456789 </td>
+          <td class="white px-6 py-4 text-white dark:text-white"> Masculino </td>
+          <td class="white px-6 py-4 text-white dark:text-white">correo@example.com</td>
+          <td class="px-6 py-4">
+            <a href="#" class="font-medium text-green-600 hover:underline dark:text-green-500"
+              >Activo</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="py-4 text-center">
+      <a
+        class="inline-flex items-center text-xs font-medium text-orange-600 hover:text-orange-100"
+        href="#"
+      >
+        <span class="mr-1">
+          <i class="bx bx-down-arrow-alt"></i>
+        </span>
+        <span>Ver mas ..</span>
+      </a>
+    </div>
+  </div>
+  <NEXBillingPagination />
+</div>
