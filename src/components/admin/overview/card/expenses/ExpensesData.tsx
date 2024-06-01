@@ -16,7 +16,7 @@ const ExpensesChart: React.FC = () => {
 
   async function fetchDataAndDrawChart() {
     try {
-      const response = await fetch('/api/expenses.json');
+      const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/expenses.json');
       if (!response.ok) {
         handleErrors(response);
         return;
@@ -24,8 +24,9 @@ const ExpensesChart: React.FC = () => {
       const data = await response.json();
       console.log('Datos recibidos:', data);
 
-      if (!data || !data.labels || !data.data || !data.backgroundColor) {
-        throw new Error('Formato de datos gasto es inválido');
+      // Usar optional chaining para validar la estructura de los datos
+      if (!(data?.labels?.length && data?.data?.length && data?.backgroundColor?.length)) {
+        throw new Error('Formato de datos de gastos es inválido');
       }
 
       const formattedData: ExpensesData = {
@@ -47,19 +48,15 @@ const ExpensesChart: React.FC = () => {
   }
 
   function handleErrors(response: Response) {
-    if (response.status === 400) {
-      throw new Error('Error: Solicitud incorrecta (400)');
-    } else if (response.status === 404) {
-      throw new Error('Error: Recurso no encontrado (404)');
-    } else if (response.status === 500) {
-      throw new Error('Error: Error interno del servidor (500)');
-    } else {
-      throw new Error(
-        'Error al cargar los datos. Estado: ' +
-          response.status +
-          ' ' +
-          response.statusText
-      );
+    switch (response.status) {
+      case 400:
+        throw new Error('Error: Solicitud incorrecta (400)');
+      case 404:
+        throw new Error('Error: Recurso no encontrado (404)');
+      case 500:
+        throw new Error('Error: Error interno del servidor (500)');
+      default:
+        throw new Error(`Error al cargar los datos. Estado: ${response.status} ${response.statusText}`);
     }
   }
 
@@ -72,17 +69,7 @@ const ExpensesChart: React.FC = () => {
           {chartData && (
             <div style={{ width: '100%', maxWidth: '400px', height: '200px' }}>
               <Doughnut
-                data={{
-                  labels: chartData.labels,
-                  datasets: [
-                    {
-                      label: chartData.datasets[0].label,
-                      data: chartData.datasets[0].data,
-                      backgroundColor: chartData.datasets[0].backgroundColor,
-                      borderWidth: 1,
-                    },
-                  ],
-                }}
+                data={chartData}
                 options={{
                   maintainAspectRatio: false,
                   responsive: true,
