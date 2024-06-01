@@ -1,15 +1,48 @@
 ---
 import NEXBillingPagination from './NEXPagination.astro'
 import NexCreateUser from './NexCreateUser.astro'
+
+import User from '@interfaces/User.ts' // Asegúrate de tener una interfaz User.ts
+
+let users: User[] = []
+let errorLoadingData = false
+let error: string | null = null
+
+try {
+  const response = await fetch('http://localhost:4321/api/admin/user/users.json')
+  if (response.ok) {
+    const data: User[] | null = await response.json()
+    if (data) {
+      users = data
+    } else {
+      throw new Error('La respuesta está vacía')
+    }
+  } else if (response.status === 400) {
+    throw new Error('Error: Solicitud incorrecta (400)')
+  } else if (response.status === 404) {
+    throw new Error('Error: Recurso no encontrado (404)')
+  } else if (response.status === 500) {
+    throw new Error('Error: Error interno del servidor (500)')
+  } else {
+    throw new Error(
+      'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
+    )
+  }
+} catch (err: any) {
+  console.error('Error al obtener los datos de la API:', err.message)
+  error = err.message
+  errorLoadingData = true
+}
+
+export { users, errorLoadingData, error }
 ---
 
-<div class="relative mb-8 w-full overflow-x-auto shadow-md sm:rounded-lg">
-  <div class="rounded pt-4 shadow" style="background-color: #181B3A;">
+<div class="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
+  <div class="rounded pt-6 shadow" style="background-color: #181B3A;">
     <div class="border-b border-gray-50 px-6 text-white">
-      <div class="mb-4 flex flex-wrap items-center">
+      <div class="mb-4 flex flex-wrap items-center justify-between">
         <div>
           <h3 class="text-xl font-bold">Modulo de Usuario</h3>
-          <p class="text-sm">Lista de Usuarios : Una lista de todos los usuarios de su cuenta, incluido su nombre, cargo, correo electrónico y función.</p>
         </div>
         <div class="ml-auto">
           <button
@@ -73,18 +106,9 @@ import NexCreateUser from './NexCreateUser.astro'
         </div>
       </div>
     </div>
-    <div>
-      <a
-        class="inline-block border-b-2 border-orange-600 px-4 pb-2 text-sm font-medium text-orange-600"
-        href="#">Activo</a
-      ><a
-        class="inline-block border-b-2 border-transparent px-4 pb-2 text-sm font-medium text-gray-300 hover:border-gray-300"
-        href="#">Inactivo</a
-      >
-    </div>
   </div>
   <div class="overflow-x-auto">
-    <table class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
+    <table class="w-full divide-y divide-gray-200 text-sm text-white">
       <thead
         style="background: linear-gradient(135deg,#e53f52, #f05f22, #e53f52 );"
         class="items-center text-xs text-white dark:text-white"
@@ -96,65 +120,82 @@ import NexCreateUser from './NexCreateUser.astro'
               href="#"
               type="button"
               data-modal-target="creatUserModal"
-              data-modal-show="editUserModal"
+              data-modal-show="creatUserModal"
               class="font-medium text-white hover:underline dark:text-orange-600"
               >Seleccionar
             </a>
             <label for="checkbox-all-search" class="sr-only">Seleccionar todo</label>
           </td>
-          <th scope="col" class="px-6 py-3"> CI </th>
           <th scope="col" class="px-6 py-3"> Nombre </th>
-          <th scope="col" class="px-6 py-3"> Apellidos </th>
+          <th scope="col" class="px-6 py-3"> CI </th>
           <th scope="col" class="px-6 py-3"> Dirección </th>
           <th scope="col" class="px-6 py-3"> Fecha de Nacimiento </th>
           <th scope="col" class="px-6 py-3"> Teléfono </th>
           <th scope="col" class="px-6 py-3"> Sexo </th>
-          <th scope="col" class="px-6 py-3"> Correo </th>
           <th scope="col" class="px-6 py-3"> Estado </th>
         </tr>
       </thead>
-      <tbody>
-        <tr class="border-b hover:bg-white dark:border-white" style="background-color: #181B3A;">
-          <td class="px-9">
-            <div class="flex items-center">
-              <input
-                id="checkbox-table-search-1"
-                type="checkbox"
-                class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600 dark:dark:border-orange-600"
-              />
-              <label for="checkbox-table-search-1" class="sr-only font-medium hover:text-orange-600"
-                >Seleccionar usuario</label
-              >
-            </div>
-          </td>
-          <NexCreateUser />
-          <td scope="row" class="px-6 py-4 text-white dark:text-white"> 123456789 </td>
-          <td class="px-6 py-4 text-white dark:text-white"> Juan </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> López Pérez</td>
-          <td class="white px-6 py-4 text-white dark:text-white"> Calle A #123 </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> 1990-01-01 </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> 123456789 </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> Masculino </td>
-          <td class="white px-6 py-4 text-white dark:text-white">correo@example.com</td>
-          <td class="px-6 py-4">
-            <a href="#" class="font-medium text-green-600 hover:underline dark:text-green-500"
-              >Activo</a
-            >
-          </td>
-        </tr>
+      <tbody class="bg-indigo-900 text-white" style="background-color: #181B3A;">
+        {
+          users.map((user, index) => (
+            <tr class="border-b from-blue-950 from-blue-950 to-blue-900 to-blue-950 hover:bg-gradient-to-r dark:border-white dark:text-black dark:hover:bg-gradient-to-r">
+              <td class="px-9">
+                <div class="flex items-center">
+                  <input
+                    id={`checkbox-table-search-${index}`}
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600 dark:dark:border-orange-600"
+                  />
+                  <label
+                    for={`checkbox-table-search-${index}`}
+                    class="sr-only font-medium hover:text-orange-600"
+                  >
+                    Seleccionar usuario
+                  </label>
+                </div>
+              </td>
+              <NexCreateUser />
+              <td class="p-4">
+                <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+                  <li class="pb-3 sm:pb-4">
+                    <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                      <div class="flex-shrink-0">
+                        <img class="h-8 w-8 rounded-full" src={user.avatar} alt="avatar" />
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <p class="truncate text-sm font-medium text-white dark:text-white">
+                          {user.name}
+                        </p>
+                        <p class="truncate text-sm text-white dark:text-gray-400">{user.email}</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </td>
+              <td scope="row" class="px-6 py-4 text-white dark:text-white">
+                {' '}
+                {user.id}{' '}
+              </td>
+              <td class="white px-6 py-4 text-white dark:text-white"> {user.address} </td>
+              <td class="white px-6 py-4 text-white dark:text-white"> {user.dob} </td>
+              <td class="white px-6 py-4 text-white dark:text-white"> {user.phone} </td>
+              <td class="white px-6 py-4 text-white dark:text-white"> {user.gender} </td>
+              <td class="px-6 py-4">
+                <a
+                  href="#"
+                  class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="me-1 h-2 w-2 rounded-full bg-green-500" />
+                  {user.status}
+                </a>
+              </td>
+            </tr>
+          ))
+        }
       </tbody>
     </table>
-    <div class="py-4 text-center">
-      <a
-        class="inline-flex items-center text-xs font-medium text-orange-600 hover:text-orange-100"
-        href="#"
-      >
-        <span class="mr-1">
-          <i class="bx bx-down-arrow-alt"></i>
-        </span>
-        <span>Ver mas ..</span>
-      </a>
+    <div class="flex h-full items-center justify-center">
+      <NEXBillingPagination />
     </div>
   </div>
-  <NEXBillingPagination />
 </div>

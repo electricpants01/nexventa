@@ -15,6 +15,38 @@ import imgUser from '@images/caja/usuario.jpg'
           <i class="bx bxs-dashboard"></i>
           <span class="nav__name">Overview</span>
         </a>
+        <li class="">
+          <button
+            type="button"
+            class="nav__link active group flex w-full items-center rounded-lg p-1 text-base transition duration-75"
+            aria-controls="dropdown-example"
+            data-collapse-toggle="dropdown-example"
+          >
+            <i class="bx bx-user"></i>
+            <span class="ms-3 flex-1 whitespace-nowrap text-left rtl:text-right">usuario</span>
+          <i class='bx bxs-chevron-down'></i>
+          </button>
+          <ul id="dropdown-example" class="hidden space-y-2 py-2">
+            <li>
+              <a
+                href="/admin/user"
+                class="nav__link group flex w-full items-center rounded-lg p-1 pl-4 transition duration-75"
+              >
+                <i class="bx bxs-user-detail"></i>
+                Mostar Usuarios
+              </a>
+            </li>
+            <li>
+              <a
+                href="/admin/user/create"
+                class="nav__link group flex w-full items-center rounded-lg p- pl-4 transition duration-75"
+              >
+                <i class="bx bx-user-plus"></i>
+                Crear Usuarios
+              </a>
+            </li>
+          </ul>
+        </li>
         <a href="/admin/billing" class="nav__link">
           <i class="bx bxs-report"></i>
           <span class="nav__name">Facturación</span>
@@ -23,18 +55,7 @@ import imgUser from '@images/caja/usuario.jpg'
           <i class="bx bx-task"></i>
           <span class="nav__name">No Facturación</span>
         </a>
-        <a href="#" class="nav__link">
-          <i class="bx bx-user-check"></i>
-          <span class="nav__name">otros datos</span>
-        </a>
-        <a href="#" class="nav__link">
-          <i class="bx bx-box"></i>
-          <span class="nav__name">otros datos</span>
-        </a>
-        <a href="#" class="nav__link">
-          <i class="bx bx-group"></i>
-          <span class="nav__name">otros datos</span>
-        </a>
+
       </div>
     </div>
     <div class="nav__brand-1">

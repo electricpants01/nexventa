@@ -56,6 +56,7 @@ body {
   margin-bottom: 2rem;
 }
 
+
 .nav__toggle {
   font-size: 1.25rem;
   padding: 0.75rem;
@@ -79,6 +80,7 @@ body {
   transition: 0.3s;
   cursor: pointer;
 }
+
 
 .nav__link:hover {
   background-color: var(--first-color);
@@ -131,3 +133,5 @@ body {
 .rotate {
   transform: rotate(180deg);
 }
+
+

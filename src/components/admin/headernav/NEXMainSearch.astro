@@ -1,18 +1,22 @@
 ---
 import NEXHeadernavLogo from './NEXLogo.astro'
 import NEXHeadernavSearch from './NEXSearch.tsx'
-import NEXHeadernavCalendar from './NEXCalendar.tsx'
-import NEXHeadernavUser from './NEXUser.tsx'
+import NEXHeadernavCalendar from './NEXCalendar.astro'
+import NEXHeadernavUser from './NEXUser.astro'
+import NexNotifications from './NexNotifications.astro'
 import NEXHeadernavTheme from './NEXTheme.tsx'
 ---
 
 <header>
-  <div class="header-main">
-    <div class="container">
+  <div class="container mx-auto px-4 py-4 sm:px-6 lg:px-8">
+    <div class="flex flex-grow items-center justify-center space-x-4 sm:justify-start">
       <NEXHeadernavLogo />
+      <!-- <div class="flex flex-grow items-center justify-center sm:justify-start space-x-4"> -->
       <NEXHeadernavSearch />
       <NEXHeadernavCalendar />
       <NEXHeadernavTheme />
+      <!-- </div> -->
+      <NexNotifications />
       <NEXHeadernavUser />
     </div>
   </div>
