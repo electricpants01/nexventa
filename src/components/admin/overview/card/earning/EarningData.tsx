@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import type { EarningData } from '@interfaces/Earning';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, type ChartData } from 'chart.js';
 
@@ -11,12 +12,7 @@ ChartJS.register(
   Tooltip
 );
 
-interface EarningData {
-  labels: string[];
-  data: { data: number[] }[];
-}
-
-const EarningData: React.FC = () => {
+const EarningDataComponent: React.FC = () => {
   const [data, setData] = useState<ChartData<'line'> | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -24,11 +20,15 @@ const EarningData: React.FC = () => {
   useEffect(() => {
     const fetchDataAndDrawChart = async () => {
       try {
-        const response = await fetch('/api/earning.json');
+        const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/earning.json');
         if (!response.ok) {
           throw new Error(`Error al cargar los datos. Estado: ${response.status} ${response.statusText}`);
         }
         const earningData: EarningData = await response.json();
+        console.log('EarningData:', earningData);
+        if (!earningData.data || !Array.isArray(earningData.data)) {
+          throw new Error('El formato de los datos de ganancias es inválido');
+        }
         setData({
           labels: earningData.labels,
           datasets: earningData.data.map((dataset, index) => ({
@@ -69,7 +69,7 @@ const EarningData: React.FC = () => {
           maintainAspectRatio: false,
           responsive: true,
           plugins: {
-            legend: { display: true } // Mostrar la leyenda
+            legend: { display: true }
           },
           scales: {
             y: {
@@ -84,4 +84,4 @@ const EarningData: React.FC = () => {
   ) : null;
 };
 
-export default EarningData;
+export default EarningDataComponent;
