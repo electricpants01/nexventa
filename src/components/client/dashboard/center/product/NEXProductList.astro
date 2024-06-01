@@ -42,7 +42,8 @@ export { products, errorLoadingData, error }
       </div>
     ) : products.length > 0 ? (
       products.map((product) => (
-        <div class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 hover:shadow-xl dark:border-0 dark:bg-gray-900 dark:text-gray-100">
+        <div class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 
+        hover:shadow-xl">
           <span class="absolute right-0 top-0 rounded-bl-md bg-orange-600 px-2 py-1 text-xs text-white md:text-sm">
             <del>{product.descuento}</del>
           </span>
