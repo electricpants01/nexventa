@@ -7,7 +7,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 002",
@@ -17,7 +17,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 003",
@@ -27,7 +27,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 004",
@@ -37,7 +37,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 005",
@@ -47,7 +47,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 006",
@@ -57,7 +57,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 007",
@@ -67,7 +67,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 008",
@@ -77,7 +77,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 009",
@@ -87,7 +87,7 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   },
   {
     "id": "Factura 010",
@@ -97,6 +97,6 @@
     "estado": "Realizado",
     "cajero": "Juan",
     "accion": "01/01/2024",
-    "img": "../../../public/images/cliente/Logo-KFC.png"
+    "img": "../images/cliente/Logo-KFC.png"
   }
 ]

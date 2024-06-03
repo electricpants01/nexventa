@@ -1,7 +1,7 @@
 [
   {
     "name": "banner",
-    "img": "../../../public/images/banner/banner.jpg",
+    "img": "../images/banner/banner.jpg",
     "title": "30% Off",
     "subtitle": "Comida de fitness",
     "subtitle2": "a partir de",
@@ -10,7 +10,7 @@
   },
   {
     "name": "banner",
-    "img": "../../../public/images/banner/banner.jpg",
+    "img": "../images/banner/banner.jpg",
     "title": "40% Off",
     "subtitle": "Comida saludable",
     "subtitle2": "a partir de",
