@@ -1,8 +1,6 @@
 ---
 import NEXBillingPagination from './NEXPagination.astro'
-import NexCreateUser from './NexCreateUser.astro'
-
-import User from '@interfaces/User.ts' // Asegúrate de tener una interfaz User.ts
+import User from '@interfaces/User.ts'
 
 let users: User[] = []
 let errorLoadingData = false
@@ -45,20 +43,19 @@ export { users, errorLoadingData, error }
           <h3 class="text-xl font-bold">Modulo de Usuario</h3>
         </div>
         <div class="ml-auto">
-          <button
-            data-modal-target="create-user-modal"
-            data-modal-toggle="create-user-modal"
-            class="inline-flex items-center rounded-lg border bg-orange-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-orange-600 dark:bg-orange-600 dark:text-white dark:hover:bg-black"
-            type="button"
-          >
-            <i class="bx bx-user-plus"></i>
-            Crear Usuario
-          </button>
+          <a href="/admin/user/create">
+            <button
+              class="inline-flex items-center rounded-lg border bg-orange-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-orange-700 dark:bg-orange-600 dark:text-white dark:hover:bg-blue-950"
+              type="button"
+            >
+              <i class="bx bx-user-plus"></i>
+              Crear Usuario
+            </button>
+          </a>
           <button
             id="dropdownActionButton"
             data-dropdown-toggle="dropdownAction"
-            class="inline-flex items-center rounded-lg border bg-orange-600 px-3 py-1.5 text-sm
-        font-medium text-white hover:bg-orange-600 dark:bg-orange-600 dark:text-white dark:hover:bg-black"
+            class="inline-flex items-center rounded-lg border bg-orange-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-orange-600 dark:bg-orange-600 dark:text-white dark:hover:bg-blue-950"
             type="button"
           >
             <i class="bx bx-filter-alt"></i>
@@ -154,7 +151,7 @@ export { users, errorLoadingData, error }
                   </label>
                 </div>
               </td>
-              <NexCreateUser />
+
               <td class="p-4">
                 <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
                   <li class="pb-3 sm:pb-4">
