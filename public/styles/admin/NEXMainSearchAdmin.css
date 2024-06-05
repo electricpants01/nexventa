@@ -131,28 +131,6 @@ body::-webkit-scrollbar-thumb:hover {
   #BEGIN
 \*-----------------------------------*/
 
-/* Contenedor de búsqueda */
-.header-search-container {
-  position: relative;
-  min-width: 300px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-/* Campo de búsqueda */
-.header-search-container .search-field {
-  background-color: #181b3a;
-  padding: 10px 15px;
-  border: 1px solid var(--cultured);
-  -webkit-border-radius: var(--border-radius-md);
-  border-radius: var(--border-radius-md);
-  width: 400px;
-  left: 200px;
-  position: relative;
-}
-
 .search-field::-webkit-search-cancel-button {
   display: none;
 }
