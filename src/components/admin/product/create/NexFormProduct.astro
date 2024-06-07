@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import avatar from '@images/caja/usuario.jpg'
+import imgProduct from '@images/food/11.jpg'
 ---
 
 <form class="space-y-6 p-1 py-1">
@@ -116,15 +116,11 @@ import avatar from '@images/caja/usuario.jpg'
       </div>
     </div>
     <div class="border-b border-gray-900/10 pb-2">
-      <h2 class="leading-2 text-base font-semibold text-white">Perfil</h2>
-      <p class="text-sm leading-6 text-white">
-        Esta información se mostrará públicamente, así que tenga cuidado con lo que comparte.
-      </p>
       <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
         <div class="col-span-full">
           <label for="photo" class="block text-sm font-medium leading-6 text-white">Foto</label>
           <div class="mt-2 flex items-center gap-x-3">
-            <Image src={avatar} alt="iniciar avatar" class="h-10 w-10 rounded-full" />
+            <Image src={imgProduct} alt="Product" class="h-20 w-20 rounded-full" />
             <button
               type="button"
               class="rounded-md border border-transparent bg-blue-950 px-3 py-2 text-sm text-white transition-colors hover:bg-orange-600"
@@ -160,35 +156,6 @@ import avatar from '@images/caja/usuario.jpg'
             <input id="dropzone-file" type="file" class="hidden" />
           </label>
         </div>
-      </div>
-    </div>
-    <div class="border-b border-white/10 pb-12">
-      <div>
-        <label for="terms" class="text-sm font-medium text-white dark:text-gray-300">
-          Notificaciones <a href="#" class="text-orange-600 hover:underline dark:text-orange-500"
-            >Siempre te informaremos sobre cambios importantes, pero tú eliges qué más quieres
-            escuchar</a
-          ></label
-        >
-      </div>
-      <div class="mt-10 space-y-10">
-        <fieldset class="borde">
-          <div class="flex items-center space-x-2">
-            <input
-              id="terms"
-              type="checkbox"
-              value=""
-              class="h-4 w-4 rounded border-gray-300 text-orange-600 checked:border-orange-600 checked:bg-orange-600 focus:ring-orange-500 dark:border-gray-600 dark:bg-orange-700 dark:focus:ring-orange-600"
-            />
-            <label for="terms" class="text-sm font-medium text-white dark:text-gray-300">
-              Estoy de acuerdo con los <a
-                href="#"
-                class="text-orange-600 hover:underline dark:text-orange-500"
-                >términos y condiciones</a
-              ></label
-            >
-          </div>
-        </fieldset>
       </div>
     </div>
   </div>
