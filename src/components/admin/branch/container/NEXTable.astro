@@ -1,15 +1,16 @@
 ---
-import User from '@interfaces/User.ts'
-let users: User[] = []
+import Branch from '@interfaces/Branch.ts'
+
+let branchs: Branch[] = []
 let errorLoadingData = false
 let error: string | null = null
 
 try {
-  const response = await fetch('http://localhost:4321/api/admin/user/users.json')
+  const response = await fetch('http://localhost:4321/api/branch/branch_select.json')
   if (response.ok) {
-    const data: User[] | null = await response.json()
+    const data: Branch[] | null = await response.json()
     if (data) {
-      users = data
+      branchs = data
     } else {
       throw new Error('La respuesta está vacía')
     }
@@ -30,7 +31,7 @@ try {
   errorLoadingData = true
 }
 
-export { users, errorLoadingData, error }
+export { branchs, errorLoadingData, error }
 ---
 
 <table class="w-full divide-y divide-gray-200 text-sm text-white">
@@ -40,25 +41,20 @@ export { users, errorLoadingData, error }
   >
     <tr>
       <td class="px-4 py-1">
-        <a
-          href="#"
-          type="button"
-          class="font-medium text-white hover:underline"
-          >Seleccionar
-        </a>
+        <a href="#" type="button" class="font-medium text-white hover:underline">Seleccionar </a>
         <label for="checkbox-all-search" class="sr-only">Seleccionar todo</label>
       </td>
       <th scope="col" class="px-6 py-3"> Nombre </th>
-      <th scope="col" class="px-6 py-3"> Telefono </th>
+      <th scope="col" class="px-6 py-3"> Sucursal </th>
+      <th scope="col" class="px-6 py-3"> Descripción </th>
       <th scope="col" class="px-6 py-3"> Dirección </th>
-      <th scope="col" class="px-6 py-3"> Fecha de Nacimiento </th>
-      <th scope="col" class="px-6 py-3"> Sexo </th>
+      <th scope="col" class="px-6 py-3"> Localización </th>
       <th scope="col" class="px-6 py-3"> Estado </th>
     </tr>
   </thead>
   <tbody class="text-white" style="background-color: #181B3A;">
     {
-      users.map((user, index) => (
+      branchs.map((branch, index) => (
         <tr class="border-b from-blue-950 from-blue-950 to-blue-900 to-blue-950 hover:bg-gradient-to-r dark:border-white dark:text-black dark:hover:bg-gradient-to-r">
           <td class="px-9">
             <div class="flex items-center">
@@ -80,14 +76,13 @@ export { users, errorLoadingData, error }
               <li class="pb-1 sm:pb-1">
                 <div class="flex items-center space-x-4 rtl:space-x-reverse">
                   <div class="flex-shrink-0">
-                    <img class="h-10 w-10 rounded-full" src={user.avatar} alt="avatar" />
+                    <img class="h-10 w-10 rounded-full" src={branch.img} alt="avatar" />
                   </div>
-                  <div class="flex-3 min-w-0">
-                    <p class="truncate text-sm font-medium text-white dark:text-white">
-                      {user.name}
+                  <div class="min-w-0 flex-1">
+                    <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                      {branch.name}
                     </p>
-                    <p class="truncate text-sm text-white dark:text-gray-400">{user.email}</p>
-                    <p class="truncate text-sm text-white dark:text-gray-400">CI: {user.ci}</p>
+                    <p class="truncate text-sm text-gray-500 dark:text-gray-400">{branch.phone}</p>
                   </div>
                 </div>
               </li>
@@ -95,19 +90,29 @@ export { users, errorLoadingData, error }
           </td>
           <td scope="row" class="px-6 py-4 text-white dark:text-white">
             {' '}
-            {user.phone}{' '}
+            {branch.branch}{' '}
           </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> {user.address} </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> {user.dob} </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> {user.gender} </td>
+          <td class="white px-6 py-4 text-white dark:text-white"> {branch.description} </td>
+          <td class="white y-4 px-6 text-white dark:text-white"> {branch.address} </td>
+          <td>
+            <div class="min-w-0 flex-1">
+              <p class="truncate text-sm text-gray-500 dark:text-gray-400">
+                latitud: {branch.latitude}
+              </p>
+              <p class="truncate text-sm text-gray-500 dark:text-gray-400">
+                Longitud: {branch.longitude}
+              </p>
+            </div>
+          </td>
           <td class="px-6 py-4">
-            <a
-              href="#"
-              class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300"
+            <span
+              class={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${branch.active ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'}`}
             >
-              <span class="me-1 h-2 w-2 rounded-full bg-green-500" />
-              {user.status}
-            </a>
+              <span
+                class={`mr-1 h-2 w-2 rounded-full ${branch.active ? 'bg-green-500' : 'bg-red-500'}`}
+              />
+              {branch.active ? 'Active' : 'Inactive'}
+            </span>
           </td>
         </tr>
       ))
