@@ -42,8 +42,7 @@ export { products, errorLoadingData, error }
       </div>
     ) : products.length > 0 ? (
       products.map((product) => (
-        <div class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 
-        hover:shadow-xl">
+        <div class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 hover:shadow-xl dark:border-0">
           <span class="absolute right-0 top-0 rounded-bl-md bg-orange-600 px-2 py-1 text-xs text-white md:text-sm">
             <del>{product.descuento}</del>
           </span>
@@ -53,8 +52,7 @@ export { products, errorLoadingData, error }
           <div class="px-2">
             <h5 class="text-center text-base font-semibold">{product.name}</h5>
             <p class="text-center">
-              <span class="text-xl font-semibold text-orange-600 hover:text-black">
-                {' '}
+              <span class="border-b-1 border-orange-600 text-xl font-semibold text-orange-600 hover:border-black hover:text-black">
                 Precio: {product.precio}
               </span>
             </p>
