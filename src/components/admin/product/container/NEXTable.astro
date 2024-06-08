@@ -1,5 +1,5 @@
 ---
-import NEXBillingPagination from './NEXPagination.astro'
+import NexShowProduct from './NexShowProduct.astro'
 import Product from '@interfaces/Product.ts'
 let Products: Product[] = []
 let errorLoadingData = false
@@ -34,8 +34,6 @@ try {
 export { Products, errorLoadingData, error }
 ---
 
-
-
 <table class="w-full divide-y divide-gray-200 text-sm text-white">
   <thead
     style="background: linear-gradient(135deg,#e53f52, #f05f22, #e53f52 );"
@@ -49,8 +47,9 @@ export { Products, errorLoadingData, error }
       <th scope="col" class="px-6 py-3"> Nombre </th>
       <th scope="col" class="px-6 py-3"> Descripción larga</th>
       <th scope="col" class="px-6 py-3"> Descripción corta</th>
-      <th scope="col" class="px-6 py-3"> Stock </th> 
+      <th scope="col" class="px-6 py-3"> Stock </th>
       <th scope="col" class="px-6 py-3"> Estado </th>
+      <th scope="col" class="px-6 py-3"> </th>
     </tr>
   </thead>
   <tbody class="text-white" style="background-color: #181B3A;">
@@ -75,40 +74,56 @@ export { Products, errorLoadingData, error }
           <td class="p-4">
             <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
               <li class="pb-1 sm:pb-1">
-                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <div class="flex items-center space-x-4 text-center rtl:space-x-reverse">
                   <div class="flex-shrink-0">
-                    <img class="h-20 w-20 rounded" src={product.img} alt="avatar" />
+                    <img class="h-14 w-14 rounded" src={product.img} alt="avatar" />
                   </div>
                   <div class="flex-3 min-w-0">
-                    <p class="truncate text-sm font-medium text-white dark:text-white">
-                      {product.name}: 
-                      {product.short_description}
+                    <p class="truncate text-center text-sm font-medium text-white dark:text-white">
+                      {product.name}:{product.short_description}
                     </p>
-                    <p class="truncate text-sm text-white dark:text-gray-400">
+                    <p class="truncate text-center text-sm text-white dark:text-gray-400">
                       Precio : {product.price} Bs
                     </p>
-                    <p class="truncate text-sm text-white dark:text-gray-400">
-                      Descuento: {product.discount} %                      
+                    <p class="truncate text-center text-sm text-white dark:text-gray-400">
+                      Descuento: {product.discount} %
                     </p>
                   </div>
                 </div>
               </li>
             </ul>
           </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> {product.long_description}</td>
-          <td class="white px-6 py-4 text-white dark:text-white"> {product.short_description} </td>
-          <td class="white px-6 py-4 text-white dark:text-white"> {product.stock} </td> 
+          <td class="white px-6 py-4 text-center text-white dark:text-white">
+            {' '}
+            {product.long_description}
+          </td>
+          <td class="white px-6 py-4 text-center text-white dark:text-white">
+            {' '}
+            {product.short_description}{' '}
+          </td>
+          <td class="white px-6 py-4 text-center text-white dark:text-white"> {product.stock} </td>
           <td class="px-6 py-4">
             <a
               href="#"
-              class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300"
+              class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-center text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300"
             >
               <span class="me-1 h-2 w-2 rounded-full bg-green-500" />
               {product.status}
             </a>
+          </td>
+          <td class="items-center px-6 py-4 text-center text-white dark:text-white">
+            <button
+              data-modal-target="showproduct_modal"
+              data-modal-toggle="showproduct_modal"
+              class="block text-xl text-white"
+              type="button"
+            >
+              <i class="bx bx-link-external" />
+            </button>
           </td>
         </tr>
       ))
     }
   </tbody>
 </table>
+<NexShowProduct />
