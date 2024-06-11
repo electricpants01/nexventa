@@ -2,16 +2,34 @@
   {
     "name": "KFC",
     "img": "../images/cliente/Logo-KFC.png",
-    "branch": "Sucursal Equipetrol, av San Martín, esquina av Monseñor Rivero"
+    "branch": "Sucursal Equipetrol",
+    "latitude": -17.773509,
+    "longitude": -63.195625,
+    "description": "dato",
+    "address": "av San Martín",
+    "active": false,
+    "phone": "+591 3 3333333"
   },
   {
     "name": "KFC",
     "img": "../images/cliente/Logo-KFC.png",
-    "branch": "Sucursal Equipetrol, av San Martín, esquina av Monseñor Rivero"
+    "branch": "Sucursal Equipetrol",
+    "latitude": -17.773509,
+    "longitude": -63.195625,
+    "description": "dato",
+    "address": "av San Martín",
+    "active": true,
+    "phone": "+591 3 3333333"
   },
   {
     "name": "KFC",
     "img": "../images/cliente/Logo-KFC.png",
-    "branch": "Sucursal Equipetrol, av San Martín, esquina av Monseñor Rivero"
+    "branch": "Sucursal Equipetrol",
+    "latitude": -17.773509,
+    "longitude": -63.195625,
+    "description": "dato",
+    "address": "av San Martín",
+    "active": true,
+    "phone": "+591 3 3333333"
   }
 ]

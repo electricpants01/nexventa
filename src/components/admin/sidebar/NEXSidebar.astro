@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import imgUser from '@images/caja/usuario.jpg'
+
 ---
 
 <div class="l-navbar" id="navbar">
@@ -27,12 +28,7 @@ import imgUser from '@images/caja/usuario.jpg'
             <span class="ms-3 flex-1 whitespace-nowrap text-left rtl:text-right">Usuario</span>
             <i class="bx bxs-chevron-down"></i>
           </button>
-          <ul
-            id="dropdown-example-1"
-            class="hidden space-y-2 py-2"
-            x-show="open"
-            @click.away="open = false"
-          >
+          <ul id="dropdown-example-1" class="hidden space-y-2 py-2" x-show="open" @click.away="open = false">
             <li>
               <a
                 href="/admin/user"
@@ -63,34 +59,30 @@ import imgUser from '@images/caja/usuario.jpg'
             data-collapse-toggle="dropdown-example-2"
             @click="open = !open"
           >
-            <i class="bx bxl-product-hunt"></i>
-            <span class="ms-3 flex-1 whitespace-nowrap text-left rtl:text-right">Producto</span>
+            <i class="bx bx-store"></i>
+            <span class="ms-3 flex-1 whitespace-nowrap text-left rtl:text-right">Sucursal</span>
             <i class="bx bxs-chevron-down"></i>
           </button>
-          <ul
-            id="dropdown-example-2"
-            class="hidden space-y-2 py-2"
-            x-show="open"
-            @click.away="open = false"
-          >
+          <ul id="dropdown-example-2" class="hidden space-y-2 py-2" x-show="open" @click.away="open = false">
             <li>
               <a
-                href="/admin/product"
-                class="nav__link group flex w-full items-center rounded-lg p-1 pl-4 transition duration-75"
-                :class="{ 'bg-orange-600 text-white': open }"
-              >
-                <i class="bx bxl-product-hunt"></i>
-                Mostrar Producto
-              </a>
-            </li>
-            <li>
-              <a
-                href="/admin/product/create"
+                href="/admin/branch"
                 class="nav__link group flex w-full items-center rounded-lg p-1 pl-4 transition duration-75"
                 :class="{ 'bg-orange-600 text-white': open }"
               >
                 <i class="bx bxs-store"></i>
-                Crear Producto
+                Mostrar Sucursal
+
+              </a>
+            </li>
+            <li>
+              <a
+                href="/admin/branch/create"
+                class="nav__link group flex w-full items-center rounded-lg p-1 pl-4 transition duration-75"
+                :class="{ 'bg-orange-600 text-white': open }"
+              >
+                <i class="bx bxs-store"></i>
+                Crear Sucursal
               </a>
             </li>
           </ul>
