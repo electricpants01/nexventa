@@ -34,10 +34,10 @@ try {
 export { branchs, errorLoadingData, error }
 ---
 
-<table class="w-full divide-y divide-gray-200 text-sm text-white">
+<table class="w-full divide-y divide-gray-200 text-sm">
   <thead
     style="background: linear-gradient(135deg,#e53f52, #f05f22, #e53f52 );"
-    class="items-center text-xs text-white dark:text-white"
+    class="items-center text-xs text-white"
   >
     <tr>
       <td class="px-4 py-1">
@@ -55,13 +55,13 @@ export { branchs, errorLoadingData, error }
   <tbody class="text-white" style="background-color: #181B3A;">
     {
       branchs.map((branch, index) => (
-        <tr class="border-b from-blue-950 from-blue-950 to-blue-900 to-blue-950 hover:bg-gradient-to-r dark:border-white dark:text-black dark:hover:bg-gradient-to-r">
+        <tr class="border-b from-blue-950 from-blue-950 to-blue-900 to-blue-950 hover:bg-gradient-to-r ">
           <td class="px-9">
             <div class="flex items-center">
               <input
                 id={`checkbox-table-search-${index}`}
                 type="checkbox"
-                class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600 dark:dark:border-orange-600"
+                class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600 "
               />
               <label
                 for={`checkbox-table-search-${index}`}
