@@ -1,5 +1,3 @@
-import React from 'react'
-
 const productqr = {
   title: 'Error',
   name: 'Error',
