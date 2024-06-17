@@ -1,12 +1,12 @@
 ---
 import BaseAdminLayout from '@layouts/BaseAdminLayout.astro'
-import NEXClientSidebar from '@components/admin/sidebar/NEXSidebar.astro'
-import NEXBillingNo from '@components/admin/billing/NEXNoBilling.astro'
+import NexCreateProduct from '@components/admin/product/create/NexCreateProduct.astro'
+import NEXSidebar from '@components/admin/sidebar/NEXSidebar.astro'
 import NEXMainSearch from '@components/admin/headernav/NEXMainSearch.astro'
 ---
 
 <BaseAdminLayout>
-  <NEXClientSidebar />
+  <NEXSidebar />
   <NEXMainSearch />
-  <NEXBillingNo />
+  <NexCreateProduct />
 </BaseAdminLayout>
