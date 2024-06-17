@@ -44,7 +44,7 @@ export { products, errorLoadingData, error }
       products.map((product) => (
         <div class="relative mx-auto min-h-80 max-w-[200px] cursor-pointer rounded-md border duration-200 hover:shadow-xl dark:border-0">
           <span class="absolute right-0 top-0 rounded-bl-md bg-orange-600 px-2 py-1 text-xs text-white md:text-sm">
-            <del>{product.discount}</del>
+            <del>{product.descuento}</del>
           </span>
           <div class="overflow-hidden rounded-md">
             <img src={product.img} alt={product.name} class="blog-banner w-full" />
@@ -53,14 +53,14 @@ export { products, errorLoadingData, error }
             <h5 class="text-center text-base font-semibold">{product.name}</h5>
             <p class="text-center">
               <span class="border-b-1 border-orange-600 text-xl font-semibold text-orange-600 hover:border-black hover:text-black">
-                Precio: {product.price}
+                Precio: {product.precio}
               </span>
             </p>
-            <p class="my-2 text-center text-xs">{product.short_description}</p>
+            <p class="my-2 text-center text-xs">{product.detalle}</p>
             <div class="mt-4 flex justify-center space-x-4">
               <button
                 data-name={product.name}
-                data-price={product.price}
+                data-price={product.precio}
                 class="add-to-cart-btn-add flex items-center rounded border-2 border-black bg-orange-600 px-3 py-1 text-xs text-white transition duration-300 hover:bg-black hover:text-white md:text-sm"
               >
                 Añadir

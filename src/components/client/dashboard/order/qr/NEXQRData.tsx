@@ -1,3 +1,5 @@
+import React from 'react'
+
 const productqr = {
   client: 'Juan Pedro',
   amount: 200.0,

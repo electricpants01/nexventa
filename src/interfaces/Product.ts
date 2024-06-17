@@ -1,14 +1,9 @@
 interface Product {
-  name: string;
-  img: string;
-  precio: number;
-  descuento: number;
-  short_description: string;
-  long_description: string;
-  stock: number;
-  price: number;
-  discount: number;
-  status: boolean;
+  name: string
+  img: string
+  precio: number
+  descuento: number
+  detalle: string
 }
 
 const Product: Product = {
@@ -16,12 +11,7 @@ const Product: Product = {
   img: '',
   precio: 0,
   descuento: 0,
-  short_description: '',
-  long_description: '',
-  stock: 0,
-  price: 0,
-  discount: 0,
-  status: true
-};
+  detalle: ''
+}
 
-export default Product;
+export default Product
