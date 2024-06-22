@@ -5,17 +5,15 @@ import NEXClientSidebar from '@components/client/sidebar/NEXSidebar.astro'
 import NEXCategory from '@components/client/dashboard/center/NEXCategory.astro'
 import NEXOrderSidebar from '@components/client/dashboard/order/NEXOrdersidebar.astro'
 import NEXBanner from '@components/client/dashboard/center/NEXBanner.astro'
-import NEXHeaderMainSearch from '@components/client/dashboard/headernav/NEXMainSearch.astro'
+import NexMainSearch from "../../components/client/dashboard/headernav/NexMainSearch";
 
-import NexMainproductCart from '@components/client/dashboard/order/NexMainproductCart.tsx'
 ---
 
 <Layout>
-  <NEXHeaderMainSearch />
+  <NexMainSearch client:load/>
   <NEXBanner />
   <NEXCategory />
   <NEXOrderSidebar />
-  <NexMainproductCart client:only />
   <NEXClientSidebar />
   <NEXFooter />
 </Layout>

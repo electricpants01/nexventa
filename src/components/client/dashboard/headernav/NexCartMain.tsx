@@ -1,9 +1,9 @@
-import ProductList from '@components/client/dashboard/center/product/NexProductList.tsx'
-import Cart from '@components/client/dashboard/headernav/NEXCartProductList'
+import NexProductList from '@components/client/dashboard/center/product/NexProductList.tsx'
+import NEXCartProductList from '@components/client/dashboard/headernav/NEXCartProductList'
 import Header from '@components/client/dashboard/headernav/NexCart'
-import { useCart } from '@hooks/usecart'
+import {useCart} from '@hooks/usecart'
 
-function App() {
+export default function NexCartMain() {
   const {
     data,
     cart,
@@ -18,10 +18,17 @@ function App() {
 
   return (
     <>
-   
-    
+      {/*<Header*/}
+      {/*  cart={cart}*/}
+      {/*  removeFromCart={removeFromCart}*/}
+      {/*  decreaseQuantity={decreaseQuantity}*/}
+      {/*  increaseQuantity={increaseQuantity}*/}
+      {/*  clearCart={clearCart}*/}
+      {/*  isEmpty={isEmpty}*/}
+      {/*  cartTotal={cartTotal}*/}
+      {/*/>*/}
 
-      <Header
+      <NEXCartProductList
         cart={cart}
         removeFromCart={removeFromCart}
         decreaseQuantity={decreaseQuantity}
@@ -31,27 +38,9 @@ function App() {
         cartTotal={cartTotal}
       />
 
-      <Cart
-        cart={cart}
-        removeFromCart={removeFromCart}
-        decreaseQuantity={decreaseQuantity}
-        increaseQuantity={increaseQuantity}
-        clearCart={clearCart}
-        isEmpty={isEmpty}
-        cartTotal={cartTotal}
-      />
-
-          {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4"> */}
-          {data.map((product) => (
-            <ProductList 
-              key={product.id} 
-              product={product} 
-              addCart={addCart} 
-            />
-          ))}
-        {/* </div> */}
+      {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4"> */}
+      <NexProductList products={data} addCart={addCart} />
+      {/* </div> */}
     </>
   )
 }
-
-export default App

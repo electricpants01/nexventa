@@ -1,6 +1,7 @@
 ---
 import NEXHeaderLogo from './NEXLogo.astro'
 import NEXHeaderSearch from './NEXSearch.tsx'
+import NexHeaderCart from "./NexHeaderCart";
 import NEXHeaderUser from './NEXUser.tsx'
 import NEXHeaderCartMain from './NexCartMain.tsx'
 import NEXHeaderMobile from './NEXMobile.tsx'
@@ -11,7 +12,8 @@ import NEXHeaderMobile from './NEXMobile.tsx'
     <div class="container">
       <NEXHeaderLogo />
       <NEXHeaderSearch />
-      <NEXHeaderCartMain client:only />
+        <NexHeaderCart client:load/>
+        <NEXHeaderCartMain client:only />
       <NEXHeaderUser />
     </div>
   </div>
