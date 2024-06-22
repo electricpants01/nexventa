@@ -1,5 +1,5 @@
 ---
-import Product from '@interfaces/Product.ts'
+import Product from '@interfaces/ProductList.ts'
 
 let products: Product[] = []
 let errorLoadingData = false
@@ -67,8 +67,8 @@ export { products, errorLoadingData, error }
                 <i class="bx bxs-cart-add ml-1" />
               </button>
               <button
-                data-modal-target="crud-modal"
-                data-modal-toggle="crud-modal"
+                data-modal-target="modalshowproduct"
+                data-modal-toggle="modalshowproduct"
                 class="flex items-center rounded border-2 border-black bg-black px-3 py-1 text-xs text-white transition duration-300 hover:bg-orange-600 hover:text-white md:text-sm"
               >
                 Ver

@@ -1,100 +1,101 @@
 [
   {
-    "name": "Pollo",
-    "img": "../images/food/11.jpg",
-    "precio": "27 Bs",
-    "descuento": "30.00 Bs",
-    "detalle": "Pollo al horno"
+    "id": 1,
+    "name": "Chicken",
+    "short_description": "Baked chicken",
+    "long_description": "Baked chicken",
+    "stock": 100,
+    "price": 27,
+    "discount": 30.0,
+    "img": "../../images/food/10.jpg",
+    "status": "active"
   },
   {
-    "name": "Pizza Margarita",
-    "img": "../images/food/10.jpg",
-    "precio": "35 Bs",
-    "descuento": "25.00 Bs",
-    "detalle": "Pizza con salsa de tomate, mozzarella y albahaca fresca"
+    "id": 2,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/1.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Hamburguesa con queso",
-    "img": "../images/food/9.jpg",
-    "precio": "40 Bs",
-    "descuento": "35.00 Bs",
-    "detalle": "Hamburguesa con carne de res, queso cheddar, lechuga y tomate"
+    "id": 3,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/2.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Ensalada César",
-    "img": "../images/food/4.jpg",
-    "precio": "20 Bs",
-    "descuento": "15.00 Bs",
-    "detalle": "Ensalada con lechuga, crutones, parmesano y aderezo César"
+    "id": 4,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/3.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Sushi variado",
-    "img": "../images/food/5.jpg",
-    "precio": "50 Bs",
-    "descuento": "40.00 Bs",
-    "detalle": "Combinación de sushi variado: nigiri, maki, sashimi"
+    "id": 5,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/4.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Tacos de carne asada",
-    "img": "../images/food/6.jpg",
-    "precio": "30 Bs",
-    "descuento": "25.00 Bs",
-    "detalle": "Tacos de carne asada con cebolla, cilantro y salsa"
+    "id": 6,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/5.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Pasta Alfredo",
-    "img": "../images/food/7.jpg",
-    "precio": "25 Bs",
-    "descuento": "20.00 Bs",
-    "detalle": "Pasta con salsa Alfredo, pollo, champiñones y parmesano"
+    "id": 7,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/6.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Sopa de verduras",
-    "img": "../images/food/8.jpg",
-    "precio": "15 Bs",
-    "descuento": "10.00 Bs",
-    "detalle": "Sopa de verduras frescas con fideos"
+    "id": 8,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/7.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Burrito de pollo",
-    "img": "../images/food/9.jpg",
-    "precio": "35 Bs",
-    "descuento": "30.00 Bs",
-    "detalle": "Burrito de pollo con arroz, frijoles, queso y salsa"
-  },
-  {
-    "name": "Tarta de manzana",
-    "img": "../images/food/4.jpg",
-    "precio": "18 Bs",
-    "descuento": "15.00 Bs",
-    "detalle": "Tarta de manzana casera con helado de vainilla"
-  },
-  {
-    "name": "Papas fritas",
-    "img": "../images/food/4.jpg",
-    "precio": "10 Bs",
-    "descuento": "8.00 Bs",
-    "detalle": "Papas fritas crujientes"
-  },
-  {
-    "name": "Lasagna de carne",
-    "img": "../images/food/2.jpg",
-    "precio": "40 Bs",
-    "descuento": "35.00 Bs",
-    "detalle": "Lasagna de carne con salsa de tomate y queso mozzarella"
-  },
-  {
-    "name": "Sándwich de jamón y queso",
-    "img": "../images/food/2.jpg",
-    "precio": "22 Bs",
-    "descuento": "18.00 Bs",
-    "detalle": "Sándwich de jamón, queso, lechuga, tomate y mayonesa"
-  },
-  {
-    "name": "Pescado a la plancha",
-    "img": "../images/food/3.jpg",
-    "precio": "45 Bs",
-    "descuento": "40.00 Bs",
-    "detalle": "Filete de pescado a la plancha con limón y perejil"
+    "id": 9,
+    "name": "Margherita Pizza",
+    "short_description": "Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/8.jpg",
+    "status": "inactive"
   }
 ]

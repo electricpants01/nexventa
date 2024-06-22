@@ -1,22 +1,24 @@
 const NEXHeaderUser = () => {
   return (
-    <div className="header-user-actions">
-      <button className="action-btn" data-mobile-menu-open-btn>
+    <div className="relative">
+      <div className="flex items-center space-x-4">
+      <button
+        id="CartButton"
+        data-dropdown-delay="500"
+        data-dropdown-trigger="hover"
+        className="relative rounded-full bg-gray-200 p-2 hover:bg-orange-600"
+        type="button"
+      >
         <i className="bx bx-bell bx-sm"></i>
-        <span className="count">0</span>
-      </button>
-      <button className="action-btn" data-mobile-menu-open-btn>
-        <i className="bx bx-cart bx-sm"></i>
-        <span className="count">0</span>
+        <span className="absolute right-0 top-0 flex h-4 w-4 items-center justify-center rounded-full bg-red-600 text-xs text-white"></span>
       </button>
       <li className="action-btn-head dropdown">
-        <button data-mobile-menu-open-btn
-          className="action-btn dropdown-toggle"
-          type="button"
+        <button
           id="dropdownMenuButton"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
+          data-dropdown-delay="500"
+          data-dropdown-trigger="hover"
+          className="relative rounded-full bg-gray-200 p-2 hover:bg-orange-600"
+          type="button"
         >
           <i className="bx bx-user bx-sm"></i>
         </button>
@@ -33,6 +35,8 @@ const NEXHeaderUser = () => {
           </li>
         </ul>
       </li>
+      </div>
+
     </div>
   )
 }

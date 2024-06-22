@@ -8,71 +8,76 @@ import NEXCategorylist from './cart/NEXCategoryList.astro'
 import NEXUserRegister from './user/NEXUserRegister.astro'
 import NEXUserData from './user/NEXUserData.astro'
 import NEXUserSeller from './user/NEXUserSeller.astro'
+
+import NexMainproductCart from '@components/client/dashboard/headernav/NexCartMain'
 ---
 
 <div class="product-container">
-  <div class="container">
-    <div class="product-box">
-      <div class="blog-container has-scrollbar">
-        <NEXProductList />
-        <NEXProductShow />
-      </div>
+  <div class="container mx-auto">
+    <div class="blog-container mb-6 overflow-x-auto">
+      <!-- <NexMainproductCart client:only /> -->
+      <!-- <NEXProductList /> -->
+      <NEXProductShow />
     </div>
+
     <div class="sidebar has-scrollbar-cart" data-mobile-menu>
       <NEXUserSeller />
       <NEXCart />
       <NEXCategorylist />
       <NEXUserData />
     </div>
-    <NEXUserRegister />
-    <NEXProductEdit />
-    <NEXQr />
+    <div>
+      <NEXUserRegister />
+      <NEXProductEdit />
+      <NEXQr />
+    </div>
   </div>
-</div>
-<style>
-  .sidebar.has-scrollbar-cart[data-mobile-menu] {
-    position: absolute;
-    top: -20%;
-    left: 76%;
-    width: 25%;
-    height: 100%;
-  }
 
-  .has-scrollbar-cart {
-    padding-bottom: 2px;
-    overflow-y: auto;
-  }
-
-  .has-scrollbar-cart::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: var(--salmon-pink);
-  }
-
-  .has-scrollbar-cart::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: 3px solid var(--white);
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-  }
-
-  .has-scrollbar-cart:hover::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 90%);
-  }
-
-  .has-scrollbar-cart::-webkit-scrollbar-thumb:hover {
-    background: hsl(0, 0%, 80%);
-  }
-
-  /* Media query para dispositivos móviles */
-  @media screen and (max-width: 768px) {
+  <style>
     .sidebar.has-scrollbar-cart[data-mobile-menu] {
-      position: relative;
-      width: 100%;
-      left: auto;
-      top: auto;
-      height: auto;
-      max-height: none;
+      position: absolute;
+      top: -20%;
+      left: 76%;
+      width: 25%;
+      height: 100%;
     }
-  }
-</style>
+
+    .has-scrollbar-cart {
+      padding-bottom: 2px;
+      overflow-y: auto;
+    }
+
+    .has-scrollbar-cart::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: var(--salmon-pink);
+    }
+
+    .has-scrollbar-cart::-webkit-scrollbar-thumb {
+      background: transparent;
+      border: 3px solid var(--white);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    .has-scrollbar-cart:hover::-webkit-scrollbar-thumb {
+      background: hsl(0, 0%, 90%);
+    }
+
+    .has-scrollbar-cart::-webkit-scrollbar-thumb:hover {
+      background: hsl(0, 0%, 80%);
+    }
+
+    /* Media query para dispositivos móviles */
+    @media screen and (max-width: 768px) {
+      .sidebar.has-scrollbar-cart[data-mobile-menu] {
+        position: relative;
+        width: 100%;
+        left: auto;
+        top: auto;
+        height: auto;
+        max-height: none;
+      }
+    }
+  </style>
+</div>

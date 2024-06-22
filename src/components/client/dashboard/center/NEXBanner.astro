@@ -53,11 +53,13 @@ export { banners, errorLoadingData, error }
               data-carousel-item
             >
               {banner.img ? (
-                <img
-                  src={banner.img}
-                  alt={banner.title}
-                  class="absolute left-1/2 top-1/2 block h-auto w-full max-w-full -translate-x-1/2 -translate-y-1/2"
-                />
+                <div class="relative h-96 w-full">
+                  <img
+                    src={banner.img}
+                    alt={banner.title}
+                    class="absolute inset-0 h-full w-full -scale-x-100 transform object-cover"
+                  />
+                </div>
               ) : (
                 <p class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2">
                   No se encontró imagen para {banner.title}
