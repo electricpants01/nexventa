@@ -40,7 +40,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:4321/api/product.json');
+                const response = await fetch('http://192.168.0.18:4321/api/product.json');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

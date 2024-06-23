@@ -1,8 +1,8 @@
-import Cart from '@components/client/dashboard/headernav/NexCart'
+import Header from '@components/client/dashboard/headernav/NEXCartProductList.tsx'
 import {useCart} from '@hooks/usecart'
 
 
-export default function NexHeaderCart() {
+export default function NexHeaderProductList() {
   const {
     data,
     cart,
@@ -16,7 +16,7 @@ export default function NexHeaderCart() {
   } = useCart()
 
   return (
-    <Cart
+    <Header
       cart={cart}
       removeFromCart={removeFromCart}
       decreaseQuantity={decreaseQuantity}

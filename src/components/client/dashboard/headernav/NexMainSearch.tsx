@@ -1,12 +1,13 @@
-import NEXHeaderSearch from "@components/client/dashboard/headernav/NEXSearch.tsx";
-import React from "react";
-import NEXHeaderUser from "@components/client/dashboard/headernav/NEXUser.tsx";
-import NexHeaderCart from "@components/client/dashboard/headernav/NexHeaderCart.tsx";
-import NEXHeaderMobile from "@components/client/dashboard/headernav/NEXMobile.tsx";
-import {CartProvider} from "@hooks/usecart.tsx";
-import NexCartMain from "@components/client/dashboard/headernav/NexCartMain.tsx";
-
-
+// Importaciones organizadas con alias cortos
+import React from 'react';
+import NEXHeaderSearch from '@components/client/dashboard/headernav/NEXHeaderSearch';
+import NEXHeaderLogo from '@components/client/dashboard/headernav/NEXHeaderLogo.tsx';
+import NEXHeaderUser from '@components/client/dashboard/headernav/NEXUser.tsx';
+import NexHeaderCart from '@components/client/dashboard/headernav/NexHeaderCart.tsx';
+import NEXHeaderMobile from '@components/client/dashboard/headernav/NEXMobile.tsx';
+import { CartProvider } from '@hooks/usecart.tsx';
+import NexCartMain from '@components/client/dashboard/headernav/NexCartMain.tsx';
+import NexHeaderProductList from '@components/client/dashboard/headernav/NexHeaderProductList.tsx';
 
 
 export default function NexMainSearch() {
@@ -15,15 +16,16 @@ export default function NexMainSearch() {
       <header>
         <div className="header-main">
           <div className="container">
-            {/*<NEXHeaderLogo/>*/}
-            <NEXHeaderSearch/>
-            <NexHeaderCart/>
-            <NexCartMain/>
-            <NEXHeaderUser/>
+            <NEXHeaderLogo />
+            <NEXHeaderSearch />
+            <NexHeaderCart />
+            {/* <NexHeaderProductList />
+            <NexCartMain /> */}
+            <NEXHeaderUser />
           </div>
         </div>
-        <NEXHeaderMobile/>
+        <NEXHeaderMobile />
       </header>
     </CartProvider>
-  )
+  );
 }

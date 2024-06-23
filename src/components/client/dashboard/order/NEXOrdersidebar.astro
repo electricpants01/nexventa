@@ -9,20 +9,23 @@ import NEXUserRegister from './user/NEXUserRegister.astro'
 import NEXUserData from './user/NEXUserData.astro'
 import NEXUserSeller from './user/NEXUserSeller.astro'
 
-import NexMainproductCart from '@components/client/dashboard/headernav/NexCartMain'
+import NexHeaderProductList from '@components/client/dashboard/headernav/NexHeaderProductList.tsx'
+import NexMainproductCart from './NexMainProductCart'
+import NexMainOrderCartList from './NexMainOrderCartList'
 ---
 
 <div class="product-container">
   <div class="container mx-auto">
-    <div class="blog-container mb-6 overflow-x-auto">
-      <!-- <NexMainproductCart client:only /> -->
-      <!-- <NEXProductList /> -->
-      <NEXProductShow />
-    </div>
+    <!-- <div class="blog-container mb-6 overflow-x-auto"> -->
+    <NexMainproductCart client:only />
+    <!-- <NEXProductList /> -->
+    <NEXProductShow />
+    <!-- </div> -->
 
     <div class="sidebar has-scrollbar-cart" data-mobile-menu>
       <NEXUserSeller />
       <NEXCart />
+      <NexMainOrderCartList client:only />
       <NEXCategorylist />
       <NEXUserData />
     </div>

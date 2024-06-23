@@ -10,7 +10,7 @@ type HeaderProps = {
   cartTotal: number
 }
 
-export default function Cart({
+export default function NEXCartProductList({
   cart,
   removeFromCart,
   decreaseQuantity,
@@ -23,8 +23,12 @@ export default function Cart({
     <div>
       {cart.map((product) => (
         <div key={product.id} className="category-item">
-          <div className="sidebar-img-box">
-            <img src={product.img} alt={product.name} />
+          <div className="sidebar-img-box overflow-hidden">
+            <img
+              src={product.img}
+              alt={product.name}
+              className="h-14 w-14 rounded-full object-cover"
+            />
           </div>
           <div className="sidebar-content-box">
             <div className="category-content-flex">
@@ -51,21 +55,22 @@ export default function Cart({
             <div className="category-content-flex">
               <button
                 type="button"
-                className="category-item-amount-btn"
+                className="rounded-md border border-gray-300 bg-orange-600 px-4 py-2 text-sm text-white hover:bg-black focus:outline-none"
                 onClick={() => decreaseQuantity(product.id)}
               >
                 -
               </button>
               <input
-                className="category-sidebar-select"
+                className="mx-2 w-12 text-center text-sm text-gray-900"
                 type="number"
                 name="cantidad"
                 id="cantidad"
                 value={product.quantity}
+                readOnly
               />
               <button
                 type="button"
-                className="category-item-amount-btn"
+                className="rounded-md border border-gray-300 bg-orange-600 px-4 py-2 text-sm text-white hover:bg-black focus:outline-none"
                 onClick={() => increaseQuantity(product.id)}
               >
                 +
