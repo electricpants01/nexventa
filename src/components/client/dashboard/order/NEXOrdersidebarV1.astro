@@ -1,0 +1,89 @@
+---
+import NEXProductList from '../center/product/NEXProductList.astro'
+import NEXProductShow from '../center/product/NEXProductShow.astro'
+import NEXProductEdit from './product/NEXProductEdit.astro'
+import NEXQr from './qr/NEXQr.astro'
+import NEXCart from './cart/NEXCart.astro'
+import NEXCategorylist from './cart/NEXCategoryList.astro'
+import NEXUserRegister from './user/NEXUserRegister.astro'
+import NEXUserData from './user/NEXUserData.astro'
+import NEXUserSeller from './user/NEXUserSeller.astro'
+
+import NexHeaderProductList from '@components/client/dashboard/headernav/NexHeaderProductList.tsx'
+import NexMainProductCartList from './NexMainProductCartList'
+import NexMainOrderCartList from './NexMainOrderCartList'
+import NexMainSearch from '@components/client/dashboard/headernav/NexMainSearch'
+import NEXBanner from '@components/client/dashboard/center/NEXBanner.astro'
+import NEXCategory from '@components/client/dashboard/center/NEXCategory.astro'
+---
+
+<NexMainSearch client:load />
+<NEXBanner />
+<NEXCategory />
+<div class="product-container">
+  <!-- <div class="container mx-auto"> -->
+  <!-- <NEXProductList /> -->
+  <NexMainProductCartList client:only />
+  <NEXProductShow />
+  <!-- <div class="sidebar has-scrollbar-cart" data-mobile-menu>
+      <NEXUserSeller />
+      <NEXCart />
+      <NexMainOrderCartList client:only />
+      <NEXCategorylist />
+      <NEXUserData />
+    </div>
+    <!-- <div> -->
+  <NEXUserRegister />
+  <NEXProductEdit />
+  <NEXQr />
+  <!-- </div>-->
+  <!-- </div> -->
+
+  <style>
+    .sidebar.has-scrollbar-cart[data-mobile-menu] {
+      position: absolute;
+      top: -20%;
+      left: 76%;
+      width: 25%;
+      height: 100%;
+    }
+
+    .has-scrollbar-cart {
+      padding-bottom: 2px;
+      overflow-y: auto;
+    }
+
+    .has-scrollbar-cart::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: var(--salmon-pink);
+    }
+
+    .has-scrollbar-cart::-webkit-scrollbar-thumb {
+      background: transparent;
+      border: 3px solid var(--white);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    .has-scrollbar-cart:hover::-webkit-scrollbar-thumb {
+      background: hsl(0, 0%, 90%);
+    }
+
+    .has-scrollbar-cart::-webkit-scrollbar-thumb:hover {
+      background: hsl(0, 0%, 80%);
+    }
+
+    /* Media query para dispositivos móviles */
+    @media screen and (max-width: 768px) {
+      .sidebar.has-scrollbar-cart[data-mobile-menu] {
+        position: relative;
+        width: 100%;
+        left: auto;
+        top: auto;
+        height: auto;
+        max-height: none;
+      }
+    }
+  </style>
+</div>
