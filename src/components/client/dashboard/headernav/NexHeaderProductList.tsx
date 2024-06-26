@@ -1,6 +1,5 @@
 import Header from '@components/client/dashboard/headernav/NEXCartProductList.tsx'
-import {useCart} from '@hooks/usecart'
-
+import { useCart } from '@hooks/usecart'
 
 export default function NexHeaderProductList() {
   const {

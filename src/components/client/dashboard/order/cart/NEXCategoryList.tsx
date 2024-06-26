@@ -1,16 +1,11 @@
-
 const category = {
   name: 'category',
   title: 'Comida de fitness',
-  img:'@images/banner/banner.jpg',
+  img: '../../../../../../public/images/banner/banner.jpg',
 }
-
-
-
 
 const NEXCategoryList = () => {
   return (
-
 <div className="category-item">
   <ul className="sidebar-menu-category-list">
     <div className="menu-title-flex">
@@ -23,7 +18,6 @@ const NEXCategoryList = () => {
 
   )
 }
-
 export default NEXCategoryList
 
 

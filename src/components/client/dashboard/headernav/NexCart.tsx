@@ -1,6 +1,6 @@
 import type { CartItem, Product } from '@interfaces/Product'
 
-type NexCartProps = {
+type NexCartProps = Readonly<{
   cart: CartItem[]
   removeFromCart: (id: Product['id']) => void
   decreaseQuantity: (id: Product['id']) => void
@@ -8,7 +8,7 @@ type NexCartProps = {
   clearCart: () => void
   isEmpty: boolean
   cartTotal: number
-}
+}>
 
 export default function NexCart({
   cart,
@@ -35,7 +35,7 @@ export default function NexCart({
             {cart.length}
           </span>
         </button>
-        <div
+        {/* <div
           id="Cart"
           className="absolute z-10 hidden w-96 divide-y divide-gray-100 rounded-lg bg-white shadow-lg"
         >
@@ -117,7 +117,7 @@ export default function NexCart({
               </li>
             )}
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   )

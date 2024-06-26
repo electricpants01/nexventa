@@ -2,16 +2,11 @@
 import Layout from '@layouts/Layout.astro'
 import NEXFooter from '@components/footer/NEXFooter.astro'
 import NEXClientSidebar from '@components/client/sidebar/NEXSidebar.astro'
-import NEXCategory from '@components/client/dashboard/center/NEXCategory.astro'
-import NEXOrderSidebar from '@components/client/dashboard/order/NEXOrdersidebar.astro'
-import NEXBanner from '@components/client/dashboard/center/NEXBanner.astro'
-import NexMainSearch from '@components/client/dashboard/headernav/NexMainSearch'
+import NEXOrderSidebar from '@components/client/dashboard/order/NEXMainOrdersidebar.astro'
+
 ---
 
 <Layout>
-  <!-- <NexMainSearch client:load />
-  <NEXBanner />
-  <NEXCategory /> -->
   <NEXOrderSidebar />
   <NEXClientSidebar />
   <NEXFooter />

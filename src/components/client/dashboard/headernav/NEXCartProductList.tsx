@@ -1,6 +1,6 @@
 import type { CartItem, Product } from '@interfaces/Product'
 
-type HeaderProps = {
+type HeaderProps = Readonly<{
   cart: CartItem[]
   removeFromCart: (id: Product['id']) => void
   decreaseQuantity: (id: Product['id']) => void
@@ -8,7 +8,7 @@ type HeaderProps = {
   clearCart: () => void
   isEmpty: boolean
   cartTotal: number
-}
+}>
 
 export default function NEXCartProductList({
   cart,
