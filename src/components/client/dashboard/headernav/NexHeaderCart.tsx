@@ -4,9 +4,7 @@ import {useCart} from '@hooks/usecart'
 
 export default function NexHeaderCart() {
   const {
-    data,
     cart,
-    addCart,
     removeFromCart,
     decreaseQuantity,
     increaseQuantity,

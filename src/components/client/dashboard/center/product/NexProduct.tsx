@@ -1,12 +1,13 @@
 import { type Product } from '@interfaces/Product'
 
 type NexProductProps = {
-  product: Product
+  product: Readonly<Product>
   addCart: () => void
 }
 
-export default function NexProduct({ product, addCart }: NexProductProps) {
+const NexProduct: React.FC<NexProductProps> = ({ product, addCart }) => {
   const { name, img, short_description, long_description, price, discount } = product
+
   return (
     <div className="relative mx-auto w-full cursor-pointer rounded-md border duration-200 hover:shadow-xl sm:max-w-[200px]">
       <div className="relative overflow-hidden">
@@ -47,3 +48,5 @@ export default function NexProduct({ product, addCart }: NexProductProps) {
     </div>
   )
 }
+
+export default NexProduct
