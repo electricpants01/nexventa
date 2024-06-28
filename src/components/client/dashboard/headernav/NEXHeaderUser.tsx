@@ -24,13 +24,13 @@ const NEXHeaderUser = () => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <li className="dropdown-item">
-              <a href="#">
-                <i className="bx bxs-cog"></i> Configuración
+              <a href="/">
+                <i className="bx bxs-cog"></i> Setting
               </a>
             </li>
             <li className="dropdown-item">
               <a href="/login">
-                <i className="bx bx-log-out"></i> Cerrar sesión
+                <i className="bx bx-log-out"></i> Sign
               </a>
             </li>
           </ul>

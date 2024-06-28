@@ -11,15 +11,15 @@ const NEXBanner: React.FC = () => {
       try {
         const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/banner.json');
         if (!response.ok) {
-          throw new Error(`Error al cargar los datos. Estado: ${response.status} ${response.statusText}`);
+          throw new Error(`Error loading data. State: ${response.status} ${response.statusText}`);
         }
         const data: Banner[] | null = await response.json();
         if (!data) {
-          throw new Error('La respuesta está vacía');
+          throw new Error('The answer is empty');
         }
         setBanners(data);
       } catch (err: any) {
-        console.error('Error al obtener los datos de la API:', err.message);
+        console.error('Error getting data from API:', err.message);
         setError(err.message);
         setErrorLoadingData(true);
       }
@@ -38,7 +38,7 @@ const NEXBanner: React.FC = () => {
       >
         <div className="md:h-50 relative h-56 overflow-hidden rounded-lg">
           {errorLoadingData ? (
-            <p className="text-red-500">Error al cargar los datos: {error}</p>
+            <p className="text-red-500">Error loading data: {error}</p>
           ) : (
             banners.map((banner) => (
               <div
@@ -56,7 +56,7 @@ const NEXBanner: React.FC = () => {
                   </div>
                 ) : (
                   <p className="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2">
-                    No se encontró imagen para {banner.title}
+                    No image found for {banner.title}
                   </p>
                 )}
                 <div className="banner-content absolute bottom-0 start-0 bg-gradient-to-br from-orange-600 to-orange-700 p-4 text-gray-400">
@@ -73,7 +73,7 @@ const NEXBanner: React.FC = () => {
                         href="/"
                         className="ml-2 inline-block rounded-md border bg-black px-4 py-2 text-sm font-normal text-white hover:bg-orange-600"
                       >
-                        Ordenar
+                        Order
                       </a>
                     )}
                     <p className="text-left text-4xl font-bold">{banner.title}</p>

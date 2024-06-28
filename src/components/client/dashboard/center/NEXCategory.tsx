@@ -7,25 +7,25 @@ const NEXCategory = () => {
             <li className="menu-category">
               <i className="bx bx-map bx-xs"></i>
               <a href="/" className="menu-title">
-                Cerca
+                Near
               </a>
             </li>
             <li className="menu-category">
               <i className="bx bx-gift"></i>
               <a href="/" className="menu-title">
-                Promoción
+                Promotion
               </a>
             </li>
             <li className="menu-category">
               <i className="bx bx-chevrons-up"></i>
               <a href="/" className="menu-title">
-                Recién llegados
+                Newcomers
               </a>
             </li>
             <li className="menu-category">
               <i className="bx bx-chevrons-up"></i>
               <a href="/" className="menu-title">
-                Mejor vendedora
+              Newcomers
               </a>
             </li>
             <li className="menu-category">
@@ -37,20 +37,20 @@ const NEXCategory = () => {
             <li className="menu-category">
               <i className="bx bx-grid-alt"></i>
               <a href="/" className="menu-title">
-                Todo
+                All
               </a>
               <ul className="dropdown-list">
                 <li className="dropdown-item">
-                  <a href="/">Inicio 1</a>
+                  <a href="/">Start 1</a>
                 </li>
                 <li className="dropdown-item">
-                  <a href="/">Inicio 2</a>
+                  <a href="/">Start 2</a>
                 </li>
                 <li className="dropdown-item">
-                  <a href="/">Inicio 2</a>
+                  <a href="/">Start 2</a>
                 </li>
                 <li className="dropdown-item">
-                  <a href="/">Inicio 3</a>
+                  <a href="/">Start 3</a>
                 </li>
               </ul>
             </li>
