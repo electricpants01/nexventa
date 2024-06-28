@@ -3,9 +3,7 @@ import { useCart } from '@hooks/usecart'
 
 export default function NexHeaderProductList() {
   const {
-    data,
     cart,
-    addCart,
     removeFromCart,
     decreaseQuantity,
     increaseQuantity,

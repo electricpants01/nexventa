@@ -6,7 +6,7 @@ const NEXUserSeller = () => {
         <br />
         <div className="sidebar-top">
           <p className="sidebar-item-title">
-            <i className="bx bx-user-plus"></i>
+            <p className="bx bx-user-plus"></p>
             Cliente
           </p>
           <button
@@ -20,7 +20,7 @@ const NEXUserSeller = () => {
         </div>
         <div className="sidebar-top">
           <p className="sidebar-item-title">
-            <i className="bx bx-news"></i>
+            <p className="bx bx-news"></p>
             Ci:
           </p>
           <button
@@ -32,7 +32,7 @@ const NEXUserSeller = () => {
         </div>
         <div className="sidebar-top">
           <p className="sidebar-item-title">
-            <i className="bx bxs-calculator"></i>
+            <p className="bx bxs-calculator"></p>
             Es para :
           </p>
           <div className="block rounded-lg bg-orange-600 px-1 text-center text-sm text-white hover:bg-black focus:outline-none dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
@@ -57,7 +57,7 @@ const NEXUserSeller = () => {
         </div>
         <div className="sidebar-top">
           <p className="sidebar-item-title">
-            <i className="bx bx-money-withdraw"></i>
+            <p className="bx bx-money-withdraw"></p>
             Pagor por :
           </p>
           <div className="rounded-lg bg-orange-600 text-center text-sm text-white hover:bg-black focus:outline-none dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
@@ -93,15 +93,15 @@ const NEXUserSeller = () => {
         <div>
           <div className="sidebar-top">
             <p className="sidebar-item-title-f">
-              <i className="bx bx-badge-check"></i>
+              <p className="bx bx-badge-check"></p>
               ¿Con factura?:
             </p>
             <div className="sidebar-item-title-top">
               <p className="sidebar-item-title-p">Sin Factura</p>
-              <label className="switch">
+              <p className="switch">
                 <input type="checkbox" id="factura" />
                 <span className="slider"></span>
-              </label>
+              </p>
               <p className="sidebar-item-title-p">Sin Factura</p>
             </div>
           </div>
