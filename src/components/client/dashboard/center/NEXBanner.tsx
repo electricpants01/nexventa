@@ -1,34 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import Banner from '@interfaces/Banner.ts';
+import React, { useEffect, useState } from 'react'
+import Banner from '@interfaces/Banner.ts'
 
 const NEXBanner: React.FC = () => {
-  const [banners, setBanners] = useState<Banner[]>([]);
-  const [errorLoadingData, setErrorLoadingData] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [banners, setBanners] = useState<Banner[]>([])
+  const [errorLoadingData, setErrorLoadingData] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/banner.json');
+        const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/banner.json')
         if (response.ok) {
-          const data: Banner[] | null = await response.json();
+          const data: Banner[] | null = await response.json()
           if (data) {
-            setBanners(data);
+            setBanners(data)
           } else {
-            throw new Error('La respuesta está vacía');
+            throw new Error('La respuesta está vacía')
           }
         } else {
-          throw new Error(`Error al cargar los datos. Estado: ${response.status} ${response.statusText}`);
+          throw new Error(
+            `Error al cargar los datos. Estado: ${response.status} ${response.statusText}`
+          )
         }
       } catch (err: any) {
-        console.error('Error al obtener los datos de la API:', err.message);
-        setError(err.message);
-        setErrorLoadingData(true);
+        console.error('Error al obtener los datos de la API:', err.message)
+        setError(err.message)
+        setErrorLoadingData(true)
       }
-    };
+    }
 
-    fetchBanners();
-  }, []);
+    fetchBanners()
+  }, [])
 
   return (
     <div className="container">
@@ -43,9 +45,7 @@ const NEXBanner: React.FC = () => {
             <p className="text-red-500">Error al cargar los datos: {error}</p>
           ) : (
             banners.map((banner, index) => (
-              <div
-                className={`hidden duration-700 ease-in-out ${index === 0 ? 'block' : ''}`}
-                data-carousel-item
+              <div key={index} className={`hidden duration-700 ease-in-out ${index === 0 ? 'block' : ''}`} data-carousel-item
               >
                 {banner.img ? (
                   <div className="relative h-96 w-full">
@@ -71,7 +71,7 @@ const NEXBanner: React.FC = () => {
                     </h2>
                     {banner.img && (
                       <a
-                        href="#"
+                        href="/"
                         className="ml-2 inline-block rounded-md border bg-black px-4 py-2 text-sm font-normal text-white hover:bg-orange-600"
                       >
                         Ordenar
@@ -88,9 +88,7 @@ const NEXBanner: React.FC = () => {
         {/* Slider indicators */}
         <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse">
           {banners.map((_, index) => (
-            <button
-              type="button"
-              className={`h-3 w-3 rounded-full ${index === 0 ? 'bg-white' : 'bg-gray-400'}`}
+            <button key={index} type="button" className={`h-3 w-3 rounded-full ${index === 0 ? 'bg-white' : 'bg-gray-400'}`}
               aria-current={index === 0 ? 'true' : 'false'}
               aria-label={`Slide ${index + 1}`}
               data-carousel-slide-to={index}
@@ -103,7 +101,7 @@ const NEXBanner: React.FC = () => {
           data-carousel-prev
         >
           <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
-            <i className='bx bxs-chevrons-left'></i>
+            <i className="bx bxs-chevrons-left"></i>
             <span className="sr-only">Previous</span>
           </span>
         </button>
@@ -113,13 +111,13 @@ const NEXBanner: React.FC = () => {
           data-carousel-next
         >
           <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
-            <i className='bx bxs-chevrons-right'></i>
+            <i className="bx bxs-chevrons-right"></i>
             <span className="sr-only">Next</span>
           </span>
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NEXBanner;
+export default NEXBanner

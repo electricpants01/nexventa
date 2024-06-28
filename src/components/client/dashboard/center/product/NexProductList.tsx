@@ -1,9 +1,9 @@
-import product, { type Product } from '@interfaces/Product'
+import product, { type Product } from '@interfaces/Product.ts'
 import NexProduct from '@components/client/dashboard/center/product/NexProduct.tsx'
 
 type ProductProps = {
-  products: Product[]
-  addCart: (item: Product) => void
+  readonly products: readonly Product[];
+  readonly addCart: (item: Product) => void;
 }
 
 export default function NexProductList({ products, addCart }: ProductProps) {
