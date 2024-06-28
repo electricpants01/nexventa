@@ -6,7 +6,7 @@ let errorLoadingData = false
 let error: string | null = null
 
 try {
-  const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/banner.json')
+  const response = await fetch('http://localhost:4321/api/banner.json')
   if (response.ok) {
     const data: Banner[] | null = await response.json()
     if (data) {
@@ -53,28 +53,27 @@ export { banners, errorLoadingData, error }
               data-carousel-item
             >
               {banner.img ? (
-                <img
-                  src={banner.img}
-                  alt={banner.title}
-                  class="absolute left-1/2 top-1/2 block h-auto w-full max-w-full -translate-x-1/2 -translate-y-1/2"
-                />
+                <div class="relative h-96 w-full">
+                  <img
+                    src={banner.img}
+                    alt={banner.title}
+                    class="absolute inset-0 h-full w-full -scale-x-100 transform object-cover"
+                  />
+                </div>
               ) : (
                 <p class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2">
                   No se encontró imagen para {banner.title}
                 </p>
               )}
-
               <div class="banner-content absolute bottom-0 start-0 bg-gradient-to-br from-orange-600 to-orange-700 p-4 text-gray-400">
                 <div class="banner-content2 bg-gradient-to-br to-orange-600">
                   <div class="relative rounded-md bg-gray-200 p-4">
                     <div class="absolute right-0 top-0 h-0 w-0 border-b-8 border-r-8 border-gray-200" />
                     <p class="text-lg font-bold text-gray-600">{banner.title}</p>
                   </div>
-
                   <h2 class="banner-subtitle md:text-1xl lg:text-1xl text-lg font-semibold sm:text-xl">
                     {banner.subtitle}
                   </h2>
-
                   {banner.img && (
                     <a
                       href="#"

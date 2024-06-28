@@ -13,5 +13,4 @@ const NEXHeaderSearch = () => {
     </div>
   )
 }
-
 export default NEXHeaderSearch

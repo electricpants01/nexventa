@@ -1,100 +1,167 @@
 [
   {
-    "name": "Pollo",
-    "img": "../images/food/11.jpg",
-    "precio": "27 Bs",
-    "descuento": "30.00 Bs",
-    "detalle": "Pollo al horno"
+    "id": 1,
+    "name": "Baked Chicken",
+    "short_description": "Juicy baked chicken",
+    "long_description": "Delicious and juicy baked chicken with herbs and spices",
+    "stock": 100,
+    "price": 27,
+    "discount": 30.0,
+    "img": "../../images/food/10.jpg",
+    "status": "active"
   },
   {
-    "name": "Pizza Margarita",
-    "img": "../images/food/10.jpg",
-    "precio": "35 Bs",
-    "descuento": "25.00 Bs",
-    "detalle": "Pizza con salsa de tomate, mozzarella y albahaca fresca"
+    "id": 2,
+    "name": "Margherita Pizza",
+    "short_description": "Classic Margherita Pizza",
+    "long_description": "Pizza with tomato sauce, mozzarella cheese, and fresh basil",
+    "stock": 80,
+    "price": 35,
+    "discount": 25.0,
+    "img": "../../images/food/1.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Hamburguesa con queso",
-    "img": "../images/food/9.jpg",
-    "precio": "40 Bs",
-    "descuento": "35.00 Bs",
-    "detalle": "Hamburguesa con carne de res, queso cheddar, lechuga y tomate"
+    "id": 3,
+    "name": "Beef Burger",
+    "short_description": "Juicy beef burger",
+    "long_description": "Grilled beef burger with lettuce, tomato, and cheese",
+    "stock": 60,
+    "price": 15,
+    "discount": 20.0,
+    "img": "../../images/food/2.jpg",
+    "status": "active"
   },
   {
-    "name": "Ensalada César",
-    "img": "../images/food/4.jpg",
-    "precio": "20 Bs",
-    "descuento": "15.00 Bs",
-    "detalle": "Ensalada con lechuga, crutones, parmesano y aderezo César"
+    "id": 4,
+    "name": "Caesar Salad",
+    "short_description": "Classic Caesar Salad",
+    "long_description": "Fresh romaine lettuce with Caesar dressing, croutons, and Parmesan cheese",
+    "stock": 70,
+    "price": 10,
+    "discount": 10.0,
+    "img": "../../images/food/3.jpg",
+    "status": "active"
   },
   {
-    "name": "Sushi variado",
-    "img": "../images/food/5.jpg",
-    "precio": "50 Bs",
-    "descuento": "40.00 Bs",
-    "detalle": "Combinación de sushi variado: nigiri, maki, sashimi"
+    "id": 5,
+    "name": "Sushi Platter",
+    "short_description": "Assorted sushi platter",
+    "long_description": "Assorted sushi with salmon, tuna, and avocado",
+    "stock": 50,
+    "price": 25,
+    "discount": 15.0,
+    "img": "../../images/food/4.jpg",
+    "status": "inactive"
   },
   {
-    "name": "Tacos de carne asada",
-    "img": "../images/food/6.jpg",
-    "precio": "30 Bs",
-    "descuento": "25.00 Bs",
-    "detalle": "Tacos de carne asada con cebolla, cilantro y salsa"
-  },
-  {
+    "id": 6,
     "name": "Pasta Alfredo",
-    "img": "../images/food/7.jpg",
-    "precio": "25 Bs",
-    "descuento": "20.00 Bs",
-    "detalle": "Pasta con salsa Alfredo, pollo, champiñones y parmesano"
+    "short_description": "Creamy Pasta Alfredo",
+    "long_description": "Pasta with creamy Alfredo sauce and grilled chicken",
+    "stock": 90,
+    "price": 20,
+    "discount": 5.0,
+    "img": "../../images/food/5.jpg",
+    "status": "active"
   },
   {
-    "name": "Sopa de verduras",
-    "img": "../images/food/8.jpg",
-    "precio": "15 Bs",
-    "descuento": "10.00 Bs",
-    "detalle": "Sopa de verduras frescas con fideos"
+    "id": 7,
+    "name": "Carne Asada Taco",
+    "short_description": "Grilled Carne Asada Taco",
+    "long_description": "Grilled carne asada taco with cilantro and onions",
+    "stock": 80,
+    "price": 5,
+    "discount": 10.0,
+    "img": "../../images/food/6.jpg",
+    "status": "active"
   },
   {
-    "name": "Burrito de pollo",
-    "img": "../images/food/9.jpg",
-    "precio": "35 Bs",
-    "descuento": "30.00 Bs",
-    "detalle": "Burrito de pollo con arroz, frijoles, queso y salsa"
+    "id": 8,
+    "name": "Argentinian Empanada",
+    "short_description": "Beef empanada",
+    "long_description": "Traditional Argentinian empanada filled with beef, onions, and olives",
+    "stock": 75,
+    "price": 8,
+    "discount": 12.0,
+    "img": "../../images/food/7.jpg",
+    "status": "active"
   },
   {
-    "name": "Tarta de manzana",
-    "img": "../images/food/4.jpg",
-    "precio": "18 Bs",
-    "descuento": "15.00 Bs",
-    "detalle": "Tarta de manzana casera con helado de vainilla"
+    "id": 9,
+    "name": "Falafel",
+    "short_description": "Crispy Falafel",
+    "long_description": "Crispy fried balls of chickpeas with herbs and spices",
+    "stock": 100,
+    "price": 10,
+    "discount": 18.0,
+    "img": "../../images/food/8.jpg",
+    "status": "active"
   },
   {
-    "name": "Papas fritas",
-    "img": "../images/food/4.jpg",
-    "precio": "10 Bs",
-    "descuento": "8.00 Bs",
-    "detalle": "Papas fritas crujientes"
+    "id": 10,
+    "name": "Chicken Parmesan",
+    "short_description": "Classic Chicken Parmesan",
+    "long_description": "Breaded chicken breast topped with marinara sauce and melted cheese",
+    "stock": 65,
+    "price": 18,
+    "discount": 0,
+    "img": "../../images/food/9.jpg",
+    "status": "active"
   },
   {
-    "name": "Lasagna de carne",
-    "img": "../images/food/2.jpg",
-    "precio": "40 Bs",
-    "descuento": "35.00 Bs",
-    "detalle": "Lasagna de carne con salsa de tomate y queso mozzarella"
+    "id": 11,
+    "name": "Vegetarian Pad Thai",
+    "short_description": "Vegetarian Pad Thai",
+    "long_description": "Stir-fried rice noodles with tofu, bean sprouts, and peanuts",
+    "stock": 55,
+    "price": 12,
+    "discount": 10.0,
+    "img": "../../images/food/11.jpg",
+    "status": "active"
   },
   {
-    "name": "Sándwich de jamón y queso",
-    "img": "../images/food/2.jpg",
-    "precio": "22 Bs",
-    "descuento": "18.00 Bs",
-    "detalle": "Sándwich de jamón, queso, lechuga, tomate y mayonesa"
+    "id": 12,
+    "name": "Hawaiian Burger",
+    "short_description": "Hawaiian Burger",
+    "long_description": "Grilled burger with pineapple, teriyaki sauce, and Swiss cheese",
+    "stock": 70,
+    "price": 16,
+    "discount": 0,
+    "img": "../../images/food/2.jpg",
+    "status": "active"
   },
   {
-    "name": "Pescado a la plancha",
-    "img": "../images/food/3.jpg",
-    "precio": "45 Bs",
-    "descuento": "40.00 Bs",
-    "detalle": "Filete de pescado a la plancha con limón y perejil"
+    "id": 13,
+    "name": "Greek Gyro",
+    "short_description": "Greek Gyro",
+    "long_description": "Pita wrap with sliced lamb, tzatziki sauce, lettuce, and tomatoes",
+    "stock": 45,
+    "price": 14,
+    "discount": 20.0,
+    "img": "../../images/food/3.jpg",
+    "status": "active"
+  },
+  {
+    "id": 14,
+    "name": "Vegetarian Spring Rolls",
+    "short_description": "Vegetarian Spring Rolls",
+    "long_description": "Crispy rolls filled with mixed vegetables, served with sweet chili sauce",
+    "stock": 85,
+    "price": 8,
+    "discount": 15.0,
+    "img": "../../images/food/4.jpg",
+    "status": "active"
+  },
+  {
+    "id": 15,
+    "name": "Seafood Paella",
+    "short_description": "Seafood Paella",
+    "long_description": "Spanish rice dish with shrimp, mussels, squid, and chorizo",
+    "stock": 40,
+    "price": 30,
+    "discount": 0,
+    "img": "../../images/food/1.jpg",
+    "status": "active"
   }
 ]
