@@ -20,7 +20,7 @@ interface CartContextProps {
   cartTotal: number
 }
 
-// Create the Cart context
+// Crear el contexto del carrito
 const CartContext = createContext<CartContextProps | undefined>(undefined)
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -49,12 +49,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       try {
         const response = await fetch('http://localhost:4321/api/product.json')
         if (!response.ok) {
-          throw new Error('Failed to fetch data')
+          throw new Error('Error al obtener los datos')
         }
         const responseData = await response.json()
         setData(responseData)
       } catch (error) {
-        console.error('Error fetching data:', error)
+        console.error('Error al obtener los datos:', error)
       }
     }
 
@@ -108,20 +108,23 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     [cart]
   )
 
+  const contextValue = useMemo(
+    () => ({
+      data,
+      cart,
+      addCart,
+      removeFromCart,
+      decreaseQuantity,
+      increaseQuantity,
+      clearCart,
+      isEmpty,
+      cartTotal,
+    }),
+    [data, cart, isEmpty, cartTotal]
+  )
+
   return (
-    <CartContext.Provider
-      value={{
-        data,
-        cart,
-        addCart,
-        removeFromCart,
-        decreaseQuantity,
-        increaseQuantity,
-        clearCart,
-        isEmpty,
-        cartTotal
-      }}
-    >
+    <CartContext.Provider value={contextValue}>
       {children}
     </CartContext.Provider>
   )
@@ -130,7 +133,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 export const useCart = () => {
   const context = useContext(CartContext)
   if (!context) {
-    throw new Error('useCart must be used within a CartProvider')
+    throw new Error('useCart debe ser usado dentro de un CartProvider')
   }
   return context
 }
