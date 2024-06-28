@@ -1,0 +1,92 @@
+---
+import '@styles/client/NEXBranchBillingTable.css'
+import { Image } from 'astro:assets'
+import imgSideBarLogo from '@images/cliente/Logo-KFC.png'
+
+const data = {
+  id: 'Factura 001',
+  cajero: 'Juan Albare',
+  ci: '0000 sc',
+  idfactura: '001',
+  fecha: '01/01/2024',
+  monto: '100.00 Bs',
+  sucursal: 'KFC',
+  descuento: '5%',
+  impuesto: '90 Bs',
+  total: '95.00 Bs',
+  pago: 'qr',
+  direccion: 'Calle 123, Ciudad, País',
+  correo: 'cliente@example.com',
+  telefono: '+1234567890',
+  cliente: 'Pedro perez'
+}
+---
+
+<div class="sidebar has-scrollbar-billing" data-mobile-menu>
+  <div class="sidebar-category">
+    <div class="category-item flex items-center space-x-2 py-4">
+      <Image src={imgSideBarLogo} alt={data.id} width={30} height={30} />
+      <p class="text-sm font-medium text-gray-600">Factura</p>
+      <h2 class="text-sm font-medium">{data.fecha}</h2>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Cajero</p>
+      <p class="text-sm">{data.cajero}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">CI:</p>
+      <p class="text-sm">{data.ci}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Cliente</p>
+      <p class="text-sm">{data.cliente}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">
+        ID
+        <i class="bx bx-chevron-down"></i>
+      </p>
+      <p class="text-sm">{data.id}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Fecha emitida:</p>
+      <p class="text-sm">{data.fecha}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Monto total:</p>
+      <p class="text-sm">{data.monto}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Sucursal:</p>
+      <p class="text-sm">{data.sucursal}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Forma de pago:</p>
+      <p class="text-sm">{data.pago}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Descuento:</p>
+      <p class="text-sm">{data.descuento}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Impuestos:</p>
+      <p class="text-sm">{data.impuesto}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Total a pagar:</p>
+      <p class="text-sm">{data.total}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Dirección:</p>
+      <p class="text-sm">{data.direccion}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Correo:</p>
+      <p class="text-sm">{data.correo}</p>
+    </div>
+    <div class="sidebar-top">
+      <p class="text-sm font-medium text-gray-600">Teléfono:</p>
+      <p class="text-sm">{data.telefono}</p>
+    </div>
+  </div>
+</div>
