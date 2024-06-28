@@ -1,5 +1,6 @@
 [
   {
+    "id":1,
     "name": "banner",
     "img": "../images/banner/banner.jpg",
     "title": "30% Off",
@@ -9,6 +10,7 @@
     "subtitle4": "Bs"
   },
   {
+    "id": 2,
     "name": "banner",
     "img": "../images/banner/banner.jpg",
     "title": "40% Off",

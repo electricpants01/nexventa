@@ -1,36 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import Banner from '@interfaces/Banner.ts'
+import React, { useEffect, useState } from 'react';
+import Banner from '@interfaces/Banner.ts';
 
 const NEXBanner: React.FC = () => {
-  const [banners, setBanners] = useState<Banner[]>([])
-  const [errorLoadingData, setErrorLoadingData] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [banners, setBanners] = useState<Banner[]>([]);
+  const [errorLoadingData, setErrorLoadingData] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/banner.json')
-        if (response.ok) {
-          const data: Banner[] | null = await response.json()
-          if (data) {
-            setBanners(data)
-          } else {
-            throw new Error('La respuesta está vacía')
-          }
-        } else {
-          throw new Error(
-            `Error al cargar los datos. Estado: ${response.status} ${response.statusText}`
-          )
+        const response = await fetch('https://d1z4q162bb7vdj.cloudfront.net/api/banner.json');
+        if (!response.ok) {
+          throw new Error(`Error al cargar los datos. Estado: ${response.status} ${response.statusText}`);
         }
+        const data: Banner[] | null = await response.json();
+        if (!data) {
+          throw new Error('La respuesta está vacía');
+        }
+        setBanners(data);
       } catch (err: any) {
-        console.error('Error al obtener los datos de la API:', err.message)
-        setError(err.message)
-        setErrorLoadingData(true)
+        console.error('Error al obtener los datos de la API:', err.message);
+        setError(err.message);
+        setErrorLoadingData(true);
       }
-    }
+    };
 
-    fetchBanners()
-  }, [])
+    fetchBanners();
+  }, []);
 
   return (
     <div className="container">
@@ -44,8 +40,11 @@ const NEXBanner: React.FC = () => {
           {errorLoadingData ? (
             <p className="text-red-500">Error al cargar los datos: {error}</p>
           ) : (
-            banners.map((banner, index) => (
-              <div key={index} className={`hidden duration-700 ease-in-out ${index === 0 ? 'block' : ''}`} data-carousel-item
+            banners.map((banner) => (
+              <div
+                key={banner.id}
+                className={`hidden duration-700 ease-in-out ${banner === banners[0] ? 'block' : ''}`}
+                data-carousel-item
               >
                 {banner.img ? (
                   <div className="relative h-96 w-full">
@@ -87,11 +86,14 @@ const NEXBanner: React.FC = () => {
 
         {/* Slider indicators */}
         <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse">
-          {banners.map((_, index) => (
-            <button key={index} type="button" className={`h-3 w-3 rounded-full ${index === 0 ? 'bg-white' : 'bg-gray-400'}`}
-              aria-current={index === 0 ? 'true' : 'false'}
-              aria-label={`Slide ${index + 1}`}
-              data-carousel-slide-to={index}
+          {banners.map((banner) => (
+            <button
+              key={banner.id}
+              type="button"
+              className={`h-3 w-3 rounded-full ${banner === banners[0] ? 'bg-white' : 'bg-gray-400'}`}
+              aria-current={banner === banners[0] ? 'true' : 'false'}
+              aria-label={`Slide ${banners.indexOf(banner) + 1}`}
+              data-carousel-slide-to={banners.indexOf(banner)}
             />
           ))}
         </div>
@@ -117,7 +119,7 @@ const NEXBanner: React.FC = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NEXBanner
+export default NEXBanner;
