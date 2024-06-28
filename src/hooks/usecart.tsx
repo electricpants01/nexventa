@@ -127,7 +127,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   )
 }
 
-// Custom hook to use the Cart context
 export const useCart = () => {
   const context = useContext(CartContext)
   if (!context) {
