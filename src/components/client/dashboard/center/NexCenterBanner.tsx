@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '@interfaces/Banner.ts';
 
-const NexCenterBanner: React.FC = () => {
+const NexCenterBanner = () => {
   const [banners, setBanners] = useState<Banner[]>([]);
   const [errorLoadingData, setErrorLoadingData] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -15,7 +15,7 @@ const NexCenterBanner: React.FC = () => {
         }
         const data: Banner[] | null = await response.json();
         if (!data) {
-          throw new Error('The answer is empty');
+          throw new Error('The response is empty');
         }
         setBanners(data);
       } catch (err: any) {
@@ -123,3 +123,4 @@ const NexCenterBanner: React.FC = () => {
 };
 
 export default NexCenterBanner;
+
