@@ -1,4 +1,4 @@
-const NEXHeaderUser = () => {
+const NexHeadernavUser = () => {
   return (
     <div className="relative">
       <div className="flex items-center space-x-4">
@@ -40,4 +40,4 @@ const NEXHeaderUser = () => {
   )
 }
 
-export default NEXHeaderUser
+export default NexHeadernavUser

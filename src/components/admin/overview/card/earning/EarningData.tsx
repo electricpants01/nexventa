@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import type { EarningData } from '@interfaces/Earning';
-import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, type ChartData } from 'chart.js';
+import React, { useEffect, useState } from 'react'
+import type { EarningData } from '@interfaces/Earning'
+import { Line } from 'react-chartjs-2'
+import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, type ChartData } from 'chart.js'
 
 ChartJS.register(
   LineElement,

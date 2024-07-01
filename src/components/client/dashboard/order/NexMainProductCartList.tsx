@@ -1,7 +1,7 @@
 import NEXHeaderLogo from '@components/client/dashboard/headernav/NEXHeaderLogo.tsx'
 import NEXHeaderSearch from '@components/client/dashboard/headernav/NEXHeaderSearch'
 import NexHeaderCart from '@components/client/dashboard/headernav/NexHeaderCart.tsx'
-import NEXHeaderUser from '@components/client/dashboard/headernav/NEXHeaderUser.tsx'
+import NEXHeaderUser from '@components/client/dashboard/headernav/NexHeadernavUser.tsx'
 import NEXHeaderMobile from '@components/client/dashboard/headernav/NEXHeaderMobile.tsx'
 import { CartProvider } from '@hooks/usecart.tsx'
 import NexCartMain from '@components/client/dashboard/headernav/NexCartMain.tsx'
@@ -9,8 +9,8 @@ import NexHeaderProductList from '@components/client/dashboard/headernav/NexHead
 import NEXUserSeller from './user/NEXUserSeller.tsx'
 import NEXCategorylist from './cart/NEXCategoryList.tsx'
 import NEXUserData from '@components/client/dashboard/order/user/NEXUserData.tsx'
-import NEXCategory from '@components/client/dashboard/center/NEXCategory.tsx'
-import NEXBanner from '@components/client/dashboard/center/NEXBanner.tsx'
+import NEXCategory from '@components/client/dashboard/center/NexCenterCategory.tsx'
+import NEXBanner from '@components/client/dashboard/center/NexCenterBanner.tsx'
 import '@styles/client/NexMainProductCartList.css'
 
 export default function NexMainSearch() {

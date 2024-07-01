@@ -1,4 +1,4 @@
-const NEXHeadernavTheme = () => {
+const NexHeadernavTheme = () => {
   return (
     <div className="theme-toggler">
       <span className="material-icons-sharp active">
@@ -11,4 +11,4 @@ const NEXHeadernavTheme = () => {
   )
 }
 
-export default NEXHeadernavTheme
+export default NexHeadernavTheme

@@ -1,16 +1,16 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import NEXFooter from '@components/footer/NEXFooter.astro'
+import NEXFooter from '@components/footer/NexFooter.astro'
 import NEXClientSidebar from '@components/client/sidebar/NEXSidebar.astro'
-import NEXMainSearch from '@components/client/dashboard/headernav/NEXMain.astro';
-import NEXCategory from '@components/client/dashboard/center/NEXCategory.tsx'
+import NEXMainSearch from '@components/client/dashboard/headernav/NEXMain.astro'
+import NexCenterCategory from '@components/client/dashboard/center/NexCenterCategory'
 import NEXBillingNo from '@components/client/billing/NEXNoBilling.astro'
 ---
 
 <Layout>
   <NEXClientSidebar />
   <NEXMainSearch />
-  <NEXCategory />
+  <NexCenterCategory />
   <NEXBillingNo />
   <NEXFooter />
 </Layout>

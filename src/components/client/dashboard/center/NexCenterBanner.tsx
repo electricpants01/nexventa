@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '@interfaces/Banner.ts';
 
-const NEXBanner: React.FC = () => {
+const NexCenterBanner: React.FC = () => {
   const [banners, setBanners] = useState<Banner[]>([]);
   const [errorLoadingData, setErrorLoadingData] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -122,4 +122,4 @@ const NEXBanner: React.FC = () => {
   );
 };
 
-export default NEXBanner;
+export default NexCenterBanner;

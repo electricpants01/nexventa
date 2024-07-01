@@ -2,7 +2,7 @@
 import React from 'react';
 import NEXHeaderSearch from '@components/client/dashboard/headernav/NEXHeaderSearch';
 import NEXHeaderLogo from '@components/client/dashboard/headernav/NEXHeaderLogo.tsx';
-import NEXHeaderUser from '@components/client/dashboard/headernav/NEXHeaderUser';
+import NEXHeaderUser from '@components/client/dashboard/headernav/NexHeadernavUser';
 import NexHeaderCart from '@components/client/dashboard/headernav/NexHeaderCart.tsx';
 import NEXHeaderMobile from '@components/client/dashboard/headernav/NEXHeaderMobile';
 import { CartProvider } from '@hooks/usecart.tsx';
