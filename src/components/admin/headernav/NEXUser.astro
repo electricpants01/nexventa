@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import imgAvatar from '@images/caja/usuario.jpg'
+import userImg from '@images/caja/userImg.jpg'
 
 const Avatar = {
   name: 'Avatar'
@@ -15,7 +15,7 @@ const Avatar = {
 >
   <span class="sr-only">Open user menu</span>
   <a href="#" class="inline-block transform transition-transform hover:scale-110">
-    <Image src={imgAvatar} alt={Avatar.name} class="h-8 w-8 rounded-full" width={70} height={50} />
+    <Image src={userImg} alt={Avatar.name} class="h-8 w-8 rounded-full" width={70} height={50} />
   </a>
 </button>
 

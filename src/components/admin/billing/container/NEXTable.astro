@@ -43,21 +43,22 @@ const table = {
   </div>
   <div class="overflow-x-auto">
     <table class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-white">
-      <thead class="bg-orange-600 text-xs text-white  dark:text-white">
+      <thead class="bg-orange-600 text-xs text-white dark:text-white">
         <tr>
           <th scope="col" class="px-16 py-3">
             <span class="sr-only">Image</span>
           </th>
           <th scope="col" class="px-6 py-3"> Product </th>
-          <th scope="col" class="px-6 py-3"> Qty </th>
+          <th scope="col" class="px-6 py-3"> Quantity </th>
           <th scope="col" class="px-6 py-3"> Price </th>
           <th scope="col" class="px-6 py-3"> Action </th>
         </tr>
       </thead>
       <tbody>
         <tr
-          class="border-b text-white  dark:border-text-white dark:hover:bg-orange-600"
-        style="background-color:#181B3A">
+          class="dark:border-text-white border-b text-white dark:hover:bg-orange-600"
+          style="background-color:#181B3A"
+        >
           <td class="p-4">
             <img class="h-10 w-10 rounded-full" src={table.img} alt="Sucursal image" />
           </td>
@@ -110,7 +111,7 @@ const table = {
         <span class="mr-1">
           <i class="bx bx-down-arrow-alt"></i>
         </span>
-        <span>Ver mas ..</span>
+        <span>Show more...</span>
       </a>
     </div>
   </div>

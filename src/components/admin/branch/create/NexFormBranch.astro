@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import map from '@images/caja/mapa.png'
-import avatar from '@images/caja/usuario.jpg'
+import mapImg from '@images/caja/mapImg.png'
 ---
 
 <form class="space-y-6 p-1 py-1">
@@ -139,7 +138,7 @@ import avatar from '@images/caja/usuario.jpg'
         <div class="col-span-full">
           <label for="gps" class="block text-sm font-medium leading-6 text-white"></label>
           <div class="mt-2">
-            <Image id="map" src={map} alt="iniciar avatar" class="h-200 w-600" />
+            <Image id="map" src={mapImg} alt="mapImg" class="h-200 w-600" />
           </div>
         </div>
       </div>
@@ -151,10 +150,9 @@ import avatar from '@images/caja/usuario.jpg'
       Esta información se mostrará públicamente, así que tenga cuidado con lo que comparte.
     </p>
   </div>
-  <div class="border-b border-white/10 pb-12">
-    </div>
-  </div>
+  <div class="border-b border-white/10 pb-12"></div>
 </form>
+
 <div class="mt-6 flex items-center justify-end gap-x-6">
   <button
     type="button"

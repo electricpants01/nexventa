@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets'
-import imgAvatar from '@images/caja/usuario.jpg'
+import userImg from '@images/caja/userImg.jpg'
 
 const Avatar = {
   name: 'Avatar',
   title: 'Prueba',
-  description:'hola mundo',
-  date:'25/09/2024 - 20:00 pm'
+  description: 'hola mundo',
+  date: '25/09/2024 - 20:00 pm'
 }
 ---
 
@@ -30,7 +30,7 @@ const Avatar = {
     ></path>
   </svg>
   <div
-    class="absolute -right-1 -top-1 h-3 w-3 rounded-full 
+    class="absolute -right-1 -top-1 h-3 w-3 rounded-full
     border-2 border-white bg-red-500
      dark:border-orange-900"
   >
@@ -46,7 +46,7 @@ const Avatar = {
   aria-labelledby="dropdownNotificationButton"
 >
   <div
-    class="block rounded-t-lg bg-blue-950 px-4 py-2 
+    class="block rounded-t-lg bg-blue-950 px-4 py-2
     text-center font-medium text-white
      dark:bg-blue-950 dark:text-white"
   >
@@ -55,13 +55,9 @@ const Avatar = {
   <div class="divide-y divide-blue-100 dark:divide-blue-700">
     <a href="#" class="flex px-4 py-3 hover:bg-blue-100 dark:hover:bg-blue-900">
       <div class="flex-shrink-0">
-        <Image
-          src={imgAvatar}
-          alt={Avatar.name}
-          class="h-11 w-11 rounded-full"
-        />
+        <Image src={userImg} alt={Avatar.name} class="h-11 w-11 rounded-full" />
         <div
-          class="absolute -mt-5 ms-6 flex h-5 w-5 items-center 
+          class="absolute -mt-5 ms-6 flex h-5 w-5 items-center
           justify-center rounded-full border border-white bg-blue-950
            dark:border-blue-800"
         >
@@ -83,8 +79,9 @@ const Avatar = {
       </div>
       <div class="w-full ps-3">
         <div class="mb-1.5 text-sm text-blue-500 dark:text-blue-400">
-          {Avatar.title} <span class="font-semibold text-blue-900 dark:text-white">{Avatar.name}</span
-          > {Avatar.description}
+          {Avatar.title}
+          <span class="font-semibold text-blue-900 dark:text-white">{Avatar.name}</span>
+          {Avatar.description}
         </div>
         <div class="text-xs text-blue-600 dark:text-blue-500">{Avatar.date}</div>
       </div>
