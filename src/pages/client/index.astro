@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro'
+import NEXFooter from '@components/footer/NEXFooter.astro'
+import NEXClientSidebar from '@components/client/sidebar/NEXSidebar.astro'
+import NEXCategory from '@components/client/dashboard/center/NEXCategory.astro'
+// import NEXOrderSideBarUserRegister from '@components/client/dashboard/order/orderuser/NEXOrderSideBarUserRegister.astro'
+import NEXOrderSidebar from '@components/client/dashboard/order/NEXOrdersidebar.astro'
+import NEXBanner from '@components/client/dashboard/center/NEXBanner.astro'
+import NEXHeaderMainSearch from '@components/client/dashboard/headernav/NEXMainSearch.astro';
+---
+<Layout>
+  <!-- <NEXOrderSideBarUserRegister /> -->
+  <NEXHeaderMainSearch />
+  <NEXBanner />
+  <NEXCategory />
+  <NEXOrderSidebar />
+  <NEXClientSidebar />
+  <NEXFooter />
+</Layout>

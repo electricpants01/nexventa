@@ -1,0 +1,28 @@
+---
+import NexHeadernav from './headernav/NexHeadernav.astro'
+import NexBanner from './center/NexBanner.astro'
+import NexPromo from './center/NexPromo.astro'
+import NexAbout from './center/NexAbout.astro'
+import NexPuplar from './center/NexPopular.astro'
+import NexBannerCta from './center/NEXBannerCta.astro'
+import NexDelivery from './center/NexDelivery.astro'
+import NEXFooter from './footer/NEXFooter.astro'
+---
+
+<body id="top">
+  <NexHeadernav />
+  <main>
+    <article>
+      <NexBanner />
+      <NexPromo />
+      <NexAbout />
+      <NexPuplar />
+      <NexBannerCta />
+      <NexDelivery />
+    </article>
+  </main>
+  <NEXFooter />
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <i class='bx bx-search-alt-2' ></i>
+  </a>
+</body>

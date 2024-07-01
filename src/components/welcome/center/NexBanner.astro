@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets'
+import imgBannerbg from '@images/welcome/hero-banner-bg.png' 
+import imgBanner from '@images/welcome/hero-banner.png' 
+---
+<section class="hero" id="home" style="background-image: url('./images/welcome/hero-bg.jpg')">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-subtitle">Eat Sleep And</p>
+      <h2 class="h1 hero-title">Cena deliciosa hamburguesa en la ciudad!</h2>
+      <p class="hero-text">
+        Un alimento es cualquier sustancia que se consume para proporcionar soporte nutricional a un
+        organismo.
+      </p>
+      <button class="btn">Book A Table</button>
+    </div>
+    <figure class="hero-banner">
+      <Image
+        src={imgBannerbg}
+        alt=""
+        width="820"
+        height="716"
+        aria-hidden="true"
+        class="w-100 hero-img-bg"
+      />
+      <Image
+        src={imgBanner}
+        alt=""
+        width="500"
+        height="537"
+        loading="lazy"
+        alt="Burger"
+        class="w-100 hero-img"
+      />
+    </figure>
+  </div>
+</section>

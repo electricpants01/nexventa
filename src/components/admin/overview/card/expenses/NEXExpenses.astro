@@ -1,0 +1,26 @@
+---
+import ExpensesData from './ExpensesData.tsx'
+---
+
+<div class="rounded-md p-6 shadow-md shadow-black/5" style="background-color: #181B3A;">
+  <div class="mb-4 flex items-start justify-between">
+    <h3 class="text-base font-semibold text-white">Todos los gastos</h3>
+    <div class="dropdown">
+      <button type="button" class="dropdown-toggle text-gray-400 hover:text-orange-600">
+        <button type="button" class="dropdown-toggle text-white hover:text-orange-600">
+          <i class="bx bx-dots-vertical-rounded"></i>
+        </button></button
+      >
+    </div>
+  </div>
+  <div class="">
+    <table class="w-100">
+      <table class="w-100">
+        <tbody>
+          <ExpensesData client:only />
+          <div id="errorMessageExpenses" style="color: red;"></div>
+        </tbody>
+      </table>
+    </table>
+  </div>
+</div>

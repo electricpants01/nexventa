@@ -1,0 +1,17 @@
+---
+import NEXBillingTable from './container/NEXTable.astro'
+import NEXBillingPagination from './container/NEXPagination.astro'
+import NEXBillingSidebar from './container/NEXSidebar.astro'
+---
+
+<div class="product-container">
+  <div class="container">
+    <div class="product-box">
+      <div class="container-billing">
+        <NEXBillingTable />
+        <NEXBillingPagination />
+      </div>
+      <NEXBillingSidebar />
+    </div>
+  </div>
+</div>

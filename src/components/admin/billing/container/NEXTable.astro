@@ -1,0 +1,105 @@
+---
+const table = {
+  id: 'Factura 001',
+  fecha: '01/01/2024',
+  monto: '100.00 BS',
+  sucursal: 'KFC',
+  estado: 'Realizado',
+  cajero: 'Juan',
+  accion: '01/01/2024',
+  img: '../../../public/images/cliente/Logo-KFC.png'
+}
+---
+
+<div class="relative mb-8 w-full overflow-x-auto px-8 shadow-md sm:rounded-lg">
+  <div class="rounded pt-4 shadow" style="background-color: #181B3A;">
+    <div class="border-b border-blue-50 px-6 text-white">
+      <div class="mb-4 flex flex-wrap items-center">
+        <div>
+          <h3 class="text-xl font-bold">Lista de facturación</h3>
+          <p class="text-sm font-medium">Lista de facturación</p>
+        </div>
+        <a
+          class="ml-auto flex items-center rounded bg-orange-600 px-3 py-2 text-xs text-white"
+          href="#"
+        >
+          <i class="bx bx-filter-alt"></i>
+        </a>
+        <span> Reporte</span>
+      </div>
+    </div>
+    <div>
+      <a
+        class="inline-block border-b-2 border-orange-600 px-4 pb-2 text-sm font-medium text-orange-600"
+        href="#">Descagar</a
+      ><a
+        class="inline-block border-b-2 border-transparent px-4 pb-2 text-sm font-medium text-gray-300 hover:border-gray-300"
+        href="#">Descagar</a
+      ><a
+        class="inline-block border-b-2 border-transparent px-4 pb-2 text-sm font-medium text-gray-300 hover:border-gray-300"
+        href="#">Descagar</a
+      >
+    </div>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-white">
+      <thead class="bg-orange-600 text-xs text-white  dark:text-white">
+        <tr>
+          <th scope="col" class="px-16 py-3">
+            <span class="sr-only">Image</span>
+          </th>
+          <th scope="col" class="px-6 py-3"> Producto </th>
+          <th scope="col" class="px-6 py-3"> Cantidad </th>
+          <th scope="col" class="px-6 py-3"> Precio </th>
+          <th scope="col" class="px-6 py-3"> Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="border-b text-white  dark:border-text-white dark:hover:bg-orange-600"
+        style="background-color:#181B3A">
+          <td class="p-4">
+            <img class="h-10 w-10 rounded-full" src={table.img} alt="Sucursal image" />
+          </td>
+          <td class="px-6 py-4 font-semibold text-white dark:text-white">
+            {table.cajero}
+          </td>
+          <td class="px-6 py-4">
+            <div class="flex items-center">
+              <button
+                class="me-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600  "
+                type="button"
+              >
+                <span class="sr-only">Cantidad button</span>
+                <i class="bx bx-minus"></i>
+              </button>
+              <div>
+                <input
+                  type="number"
+                  id="first_product"
+                  class="block w-14 rounded-lg border border-gray-300 bg-gray-50 px-2.5 py-1 text-sm text-gray-900 "
+                  placeholder="1"
+                  required
+                />
+              </div>
+              <button
+                class="ms-3 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500"
+                type="button"
+              >
+                <span class="sr-only">Cantidad button</span>
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </td>
+          <td class="px-6 py-4 font-semibold text-white">
+            {table.monto}
+          </td>
+          <td class="px-6 py-4">
+            <a href="#" class="font-medium text-red-600 hover:underline ">Remove</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

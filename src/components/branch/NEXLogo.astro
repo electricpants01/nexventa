@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+import imgLogo from '@images/cliente/Logo-KFC.png'
+const login = {
+  name: 'KFC',
+  branch: 'Sucursal 4to anillo, av 4to anillo, 3 pasos al frente',
+  width: 600,
+  height: 500
+}
+---
+
+<h3>
+  <button class="back-btn"> <i class="bx bx-arrow-back"></i> Volver</button>
+  <p>{login.name}</p>
+</h3>
+<p>"Puntos de ventas"</p>
+<Image src={imgLogo} alt={login.name} class="image" width={login.width} height={login.height} />

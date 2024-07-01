@@ -1,0 +1,123 @@
+---
+import Branch from '@interfaces/Branch.ts'
+
+let branchs: Branch[] = []
+let errorLoadingData = false
+let error: string | null = null
+
+try {
+  const response = await fetch(
+    'https://d1z4q162bb7vdj.cloudfront.net/api/branch/branch_select.json'
+  )
+  if (response.ok) {
+    const data: Branch[] | null = await response.json()
+    if (data) {
+      branchs = data
+    } else {
+      throw new Error('La respuesta está vacía')
+    }
+  } else if (response.status === 400) {
+    throw new Error('Error: Solicitud incorrecta (400)')
+  } else if (response.status === 404) {
+    throw new Error('Error: Recurso no encontrado (404)')
+  } else if (response.status === 500) {
+    throw new Error('Error: Error interno del servidor (500)')
+  } else {
+    throw new Error(
+      'Error al cargar los datos. Estado: ' + response.status + ' ' + response.statusText
+    )
+  }
+} catch (err: any) {
+  console.error('Error al obtener los datos de la API:', err.message)
+  error = err.message
+  errorLoadingData = true
+}
+
+export { branchs, errorLoadingData, error }
+---
+
+<table class="w-full divide-y divide-gray-200 text-sm">
+  <thead
+    style="background: linear-gradient(135deg,#e53f52, #f05f22, #e53f52 );"
+    class="items-center text-xs text-white"
+  >
+    <tr>
+      <td class="px-4 py-1">
+        <a href="#" type="button" class="font-medium text-white hover:underline">Seleccionar </a>
+        <label for="checkbox-all-search" class="sr-only">Seleccionar todo</label>
+      </td>
+      <th scope="col" class="px-6 py-3"> Nombre </th>
+      <th scope="col" class="px-6 py-3"> Sucursal </th>
+      <th scope="col" class="px-6 py-3"> Descripción </th>
+      <th scope="col" class="px-6 py-3"> Dirección </th>
+      <th scope="col" class="px-6 py-3"> Localización </th>
+      <th scope="col" class="px-6 py-3"> Estado </th>
+    </tr>
+  </thead>
+  <tbody class="text-white" style="background-color: #181B3A;">
+    {
+      branchs.map((branch, index) => (
+        <tr class="border-b from-blue-950 from-blue-950 to-blue-900 to-blue-950 hover:bg-gradient-to-r ">
+          <td class="px-9">
+            <div class="flex items-center">
+              <input
+                id={`checkbox-table-search-${index}`}
+                type="checkbox"
+                class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600 "
+              />
+              <label
+                for={`checkbox-table-search-${index}`}
+                class="sr-only font-medium hover:text-orange-600"
+              >
+                Seleccionar usuario
+              </label>
+            </div>
+          </td>
+          <td class="p-1">
+            <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+              <li class="pb-1 sm:pb-1">
+                <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                  <div class="flex-shrink-0">
+                    <img class="h-10 w-10 rounded-full" src={branch.img} alt="avatar" />
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                      {branch.name}
+                    </p>
+                    <p class="truncate text-sm text-gray-500 dark:text-gray-400">{branch.phone}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </td>
+          <td scope="row" class="px-6 py-4 text-white dark:text-white">
+            {' '}
+            {branch.branch}{' '}
+          </td>
+          <td class="white px-6 py-4 text-white dark:text-white"> {branch.description} </td>
+          <td class="white y-4 px-6 text-white dark:text-white"> {branch.address} </td>
+          <td>
+            <div class="min-w-0 flex-1">
+              <p class="truncate text-sm text-gray-500 dark:text-gray-400">
+                latitud: {branch.latitude}
+              </p>
+              <p class="truncate text-sm text-gray-500 dark:text-gray-400">
+                Longitud: {branch.longitude}
+              </p>
+            </div>
+          </td>
+          <td class="px-6 py-4">
+            <span
+              class={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${branch.active ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'}`}
+            >
+              <span
+                class={`mr-1 h-2 w-2 rounded-full ${branch.active ? 'bg-green-500' : 'bg-red-500'}`}
+              />
+              {branch.active ? 'Active' : 'Inactive'}
+            </span>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

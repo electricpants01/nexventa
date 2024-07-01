@@ -1,0 +1,110 @@
+.sidebar.has-scrollbar-billing[data-mobile-menu] {
+  position: fixed;
+  top: 20%;
+  left: 75%;
+  height: auto;
+  max-height: calc(100vh - 5px);
+}
+.has-scrollbar-billing {
+  padding-bottom: 5px;
+}
+.has-scrollbar-billing::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+  background-color:var(--salmon-pink);
+}
+.has-scrollbar-billing::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 3px solid var(--white);
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.has-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 90%);
+}
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 80%);
+}
+@media only screen and (max-width: 768px) {
+  .sidebar.has-scrollbar-billing[data-mobile-menu] {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0%);
+    z-index: 999;
+  }
+}
+.billing-subtitle {
+  color: var(--eerie-black);
+  font-size: var(--fs-7);
+  font-weight: var(--weight-600);
+  text-align: center;
+}
+.card-billing {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilos del cuadro de búsqueda */
+.search-box-billing {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.search-box-billing input[type='text'] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+  margin-right: 10px;
+}
+.search-box-billing input[type='text']::placeholder {
+  color: #aaa;
+  /* Color del texto de marcador de posición */
+}
+.search-box-billing i {
+  color: #aaa;
+}
+/* Estilos de la paginación */
+.container-billing {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+h2 {
+  text-align: center;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+.table-container {
+  overflow-x: auto;
+}
+/* Estilos de botones */
+.btn-process,
+.btn-print {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: none;
+  background-color: #ff5c28;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.btn-process:hover,
+.btn-print:hover {
+  background-color: #ff5c28;
+}
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .container-billing {
+    padding: 10px;
+  }
+}
