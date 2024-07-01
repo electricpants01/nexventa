@@ -1,6 +1,6 @@
 ---
-import NEXBillingPagination from './NEXPagination.astro'
-import NEXTable from './NEXTable.astro'
+import NexPagination from './NexPagination.astro'
+import NexTable from './NexTable.astro'
 
 import User from '@interfaces/User.ts'
 let users: User[] = []
@@ -115,9 +115,9 @@ export { users, errorLoadingData, error }
                 </div>
               </div>
               <div class="overflow-x-auto">
-                <NEXTable />
+                <NexTable />
                 <div class="flex h-full items-center justify-center">
-                  <NEXBillingPagination />
+                  <NexPagination />
                 </div>
               </div>
             </div>

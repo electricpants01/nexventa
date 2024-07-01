@@ -11,6 +11,8 @@
       "@images/*": ["public/images/*"],
       "@assets/*": ["assets/*"],
       "@styles/*": ["public/styles/*"],
+      "@hooks/*": ["src/hooks/*"],
+      
     }
   }
 }

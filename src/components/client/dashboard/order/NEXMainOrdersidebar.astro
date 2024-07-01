@@ -1,0 +1,17 @@
+---
+import NexProductShow from '../center/product/NexProductShow.astro'
+import NexProductEdit from './product/NexProductEdit.astro'
+import NexQr from './qr/NexQr.astro'
+import NexUserRegister from './user/NexUserRegister.astro'
+import NexMainProductCartList from './NexMainProductCartList'
+---
+
+<div class="container mx-auto">
+  <NexMainProductCartList client:only />
+  <NexProductShow />
+  <div>
+    <NexUserRegister />
+    <NexProductEdit />
+    <NexQr />
+  </div>
+</div>

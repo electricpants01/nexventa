@@ -45,11 +45,11 @@ export { Billings, errorLoadingData, error }
         />
         <label for="checkbox-all-search" class="sr-only">Seleccionar todo</label>
       </th>
-      <th scope="col" class="px-4 py-2">Fecha emitido</th>
-      <th scope="col" class="px-4 py-2">Monto total</th>
-      <th scope="col" class="px-4 py-2">Sucursal</th>
-      <th scope="col" class="px-4 py-2">Cajero</th>
-      <th scope="col" class="px-4 py-2">Estado</th>
+      <th scope="col" class="px-4 py-2">Date issued</th>
+      <th scope="col" class="px-4 py-2">Total amount</th>
+      <th scope="col" class="px-4 py-2">Branch</th>
+      <th scope="col" class="px-4 py-2">Atm</th>
+      <th scope="col" class="px-4 py-2">State</th>
       <th scope="col" class="px-4 py-2"></th>
     </tr>
   </thead>
@@ -64,13 +64,13 @@ export { Billings, errorLoadingData, error }
               class="h-4 w-4 rounded border-orange-600 bg-white text-orange-600"
             />
             <label for={`checkbox-table-search-${Billing.id}`} class="sr-only">
-              Seleccionar usuario
+              Select user
             </label>
           </td>
           <td class="px-4 py-2">
             <div class="flex flex-col">
               <span class="font-medium">N.- {Billing.id}</span>
-              <span>Fecha: {Billing.fecha}</span>
+              <span>Date: {Billing.fecha}</span>
             </div>
           </td>
           <td class="px-4 py-2">{Billing.monto}</td>

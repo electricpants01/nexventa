@@ -1,19 +1,21 @@
 [
   {
+    "id": 1,
     "name": "banner",
     "img": "../images/banner/banner.jpg",
     "title": "30% Off",
-    "subtitle": "Comida de fitness",
-    "subtitle2": "a partir de",
+    "subtitle": "Fitness Food",
+    "subtitle2": "starting from",
     "subtitle3": "20.00",
     "subtitle4": "Bs"
   },
   {
+    "id": 2,
     "name": "banner",
     "img": "../images/banner/banner.jpg",
     "title": "40% Off",
-    "subtitle": "Comida saludable",
-    "subtitle2": "a partir de",
+    "subtitle": "Healthy Food",
+    "subtitle2": "starting from",
     "subtitle3": "25.00",
     "subtitle4": "Bs"
   }

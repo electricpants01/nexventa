@@ -1,9 +1,11 @@
+import React from 'react'
+
 const productqr = {
   client: 'Juan Pedro',
   amount: 200.0,
   currency: 'Bs'
 }
-const NEXOrderSideBarQRData = () => {
+const NexQRData = () => {
   return (
     <form id="cajaForm">
       <div className="newsletter-header">
@@ -20,4 +22,4 @@ const NEXOrderSideBarQRData = () => {
   )
 }
 
-export default NEXOrderSideBarQRData
+export default NexQRData

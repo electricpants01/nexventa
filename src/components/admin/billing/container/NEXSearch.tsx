@@ -1,4 +1,4 @@
-const NEXBillingSearch = () => {
+const NexSearch = () => {
   return (
     <div className="search-box-billing">
       <input type="text" placeholder="Buscar..." />
@@ -9,4 +9,4 @@ const NEXBillingSearch = () => {
   )
 }
 
-export default NEXBillingSearch
+export default NexSearch

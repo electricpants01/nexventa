@@ -1,0 +1,25 @@
+---
+import NEXHeadernavLogo from './NexHeadernavLogo.astro'
+import NEXHeadernavSearch from './NexHeadernavSearch.astro'
+import NEXHeadernavCalendar from './NexHeadernavCalendar.astro'
+import NEXHeadernavUser from './NexHeadernavUser.astro'
+import NexNotifications from './NexHeadernavNotifications.astro'
+import NEXHeadernavTheme from './NexHeadernavTheme.tsx'
+---
+
+<header>
+  <nav class="mx-auto px-4 py-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+      <NEXHeadernavLogo />
+      <div class="flex items-center space-x-1 md:order-2 md:space-x-2 rtl:space-x-reverse">
+        <NEXHeadernavCalendar />
+        <NEXHeadernavTheme />
+        <NexNotifications />
+        <NEXHeadernavUser />
+      </div>
+      <div class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto">
+        <NEXHeadernavSearch />
+      </div>
+    </div>
+  </nav>
+</header>

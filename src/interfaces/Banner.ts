@@ -1,4 +1,5 @@
 interface Banner {
+  id:number
   name: string
   img: string
   title: string
@@ -9,6 +10,7 @@ interface Banner {
 }
 
 const Banner: Banner = {
+  id:0,
   name: '',
   img: '',
   title: '',

@@ -1,9 +1,9 @@
 const productqr = {
-  title: 'Validado',
-  name: 'Validado',
+  title: 'Validated',
+  name: 'Validated',
   img: '../../../public/images/caja/check.png'
 }
-const NEXOrderSideBarQrAccept = () => {
+const NexQrAccept = () => {
   return (
     <div>
       <h3 className="newsletter-title-qr">{productqr.title}</h3>
@@ -12,4 +12,4 @@ const NEXOrderSideBarQrAccept = () => {
   )
 }
 
-export default NEXOrderSideBarQrAccept
+export default NexQrAccept
