@@ -1,16 +1,16 @@
-import NEXHeaderLogo from '@components/client/dashboard/headernav/NEXHeaderLogo.tsx'
-import NEXHeaderSearch from '@components/client/dashboard/headernav/NEXHeaderSearch'
+import NexHeadernavLogo from '@components/client/dashboard/headernav/NexHeadernavLogo.tsx'
+import NexHeadernavSearch from '@components/client/dashboard/headernav/NexHeadernavSearch.tsx'
 import NexHeaderCart from '@components/client/dashboard/headernav/NexHeaderCart.tsx'
-import NEXHeaderUser from '@components/client/dashboard/headernav/NexHeadernavUser.tsx'
-import NEXHeaderMobile from '@components/client/dashboard/headernav/NEXHeaderMobile.tsx'
+import NexHeadernavUser from '@components/client/dashboard/headernav/NexHeadernavUser.tsx'
+import NexHeadernavMobile from '@components/client/dashboard/headernav/NexHeadernavMobile.tsx'
 import { CartProvider } from '@hooks/usecart.tsx'
 import NexCartMain from '@components/client/dashboard/headernav/NexCartMain.tsx'
 import NexHeaderProductList from '@components/client/dashboard/headernav/NexHeaderProductList.tsx'
-import NEXUserSeller from './user/NEXUserSeller.tsx'
-import NEXCategorylist from './cart/NEXCategoryList.tsx'
-import NEXUserData from '@components/client/dashboard/order/user/NEXUserData.tsx'
-import NEXCategory from '@components/client/dashboard/center/NexCenterCategory.tsx'
-import NEXBanner from '@components/client/dashboard/center/NexCenterBanner.tsx'
+import NexUserSeller from './user/NexUserSeller.tsx'
+import NexCategoryList from './cart/NexCategoryList.tsx'
+import NexUserData from '@components/client/dashboard/order/user/NexUserData.tsx'
+import NexCenterCategory from '@components/client/dashboard/center/NexCenterCategory.tsx'
+import NexCenterBanner from '@components/client/dashboard/center/NexCenterBanner.tsx'
 import '@styles/client/NexMainProductCartList.css'
 
 export default function NexMainSearch() {
@@ -19,24 +19,24 @@ export default function NexMainSearch() {
       <header>
         <div className="header-main">
           <div className="container">
-            <NEXHeaderLogo />
-            <NEXHeaderSearch />
+            <NexHeadernavLogo />
+            <NexHeadernavSearch />
             <NexHeaderCart />
-            <NEXHeaderUser />
+            <NexHeadernavUser />
           </div>
         </div>
-        <NEXHeaderMobile />
+        <NexHeadernavMobile />
       </header>
       <div className="product-container">
-        <NEXBanner />
-        <NEXCategory />
+        <NexCenterBanner />
+        <NexCenterCategory />
         <div className="container mx-auto">
           <NexCartMain />
           <div className="sidebar has-scrollbar-cart" data-mobile-menu>
-            <NEXUserSeller />
+            <NexUserSeller />
             <NexHeaderProductList />
-            <NEXCategorylist />
-            <NEXUserData />
+            <NexCategoryList />
+            <NexUserData />
           </div>
         </div>
       </div>

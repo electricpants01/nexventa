@@ -1,4 +1,4 @@
-const NEXHeaderMobile = () => {
+const NexHeadernavMobile = () => {
   return (
     <div>
       <div className="mobile-bottom-navigation">
@@ -21,4 +21,4 @@ const NEXHeaderMobile = () => {
   )
 }
 
-export default NEXHeaderMobile
+export default NexHeadernavMobile

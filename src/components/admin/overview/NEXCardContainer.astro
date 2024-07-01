@@ -1,19 +1,19 @@
 ---
-import NEXOverviewCardList from './card/NEXList.astro'
-import NEXOverviewCardExpenses from './card/expenses/NEXExpenses.astro'
-import NEXOverviewCardErning from './card/earning/NEXEarning.astro'
-import NEXOverviewCardTransaction from './card/NEXTransaction.astro'
-import NEXOverviewCardInformation from './card/NEXInformation.astro'
+import NexList from './card/NexList.astro'
+import NexExpenses from './card/expenses/NexExpenses.astro'
+import NexEarning from './card/earning/NexEarning.astro'
+import NexTransaction from './card/NexTransaction.astro'
+import NexInformation from './card/NexInformation.astro'
 ---
 
 <main class="lg:grid-cols-4">
-  <NEXOverviewCardList />
+  <NexList />
   <div class="mb-3 grid grid-cols-1 gap-1 p-6 lg:grid-cols-2">
-    <NEXOverviewCardExpenses />
-    <NEXOverviewCardErning />
+    <NexExpenses />
+    <NexEarning />
   </div>
   <div class="mb-3 grid grid-cols-1 gap-6 p-6 lg:grid-cols-2">
-    <NEXOverviewCardTransaction />
-    <NEXOverviewCardInformation />
+    <NexTransaction />
+    <NexInformation />
   </div>
 </main>

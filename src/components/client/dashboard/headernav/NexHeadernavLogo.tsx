@@ -5,12 +5,12 @@ const logo = {
   imgLogo: '../../../../../public/images/cliente/Logo-KFC.png'
 }
 
-const NEXHeaderLogo: React.FC = () => {
+const NexHeadernavLogo: React.FC = () => {
   return (
-    <a href="/" className="header-logo">
+    <p className="header-logo">
       <img src={logo.imgLogo} alt={logo.name} className="hidden md:block" width="70" height="50" />
-    </a>
+    </p>
   )
 }
 
-export default NEXHeaderLogo
+export default NexHeadernavLogo

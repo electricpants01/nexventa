@@ -1,4 +1,4 @@
-const NEXUserSeller = () => {
+const NexUserData = () => {
   return (
     <div>
       <div className="relative start-0 rounded-lg border border-gray-300 bg-white p-4">
@@ -10,8 +10,8 @@ const NEXUserSeller = () => {
             Client
           </p>
           <button
-            data-modal-target="user-modal"
-            data-modal-toggle="user-modal"
+            data-modal-target="modañ-user"
+            data-modal-toggle="modañ-user"
             className="block rounded-lg bg-orange-600 px-8 py-1 text-center text-sm font-medium text-white hover:bg-black focus:outline-none dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
             type="button"
           >
@@ -58,7 +58,7 @@ const NEXUserSeller = () => {
         <div className="sidebar-top">
           <p className="sidebar-item-title">
             <p className="bx bx-money-withdraw"></p>
-            I pay for :
+            payment method
           </p>
           <div className="rounded-lg bg-orange-600 text-center text-sm text-white hover:bg-black focus:outline-none dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
             <div className="select-wrapper">
@@ -119,4 +119,4 @@ const NEXUserSeller = () => {
   )
 }
 
-export default NEXUserSeller
+export default NexUserData

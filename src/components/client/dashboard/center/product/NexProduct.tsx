@@ -20,8 +20,8 @@ const NexProduct: React.FC<NexProductProps> = ({ product, addCart }) => {
       <p>{discount} %</p>
     </span>
     <button
-      data-modal-target="modalshowproduct"
-      data-modal-toggle="modalshowproduct"
+      data-modal-target="modal-show-product"
+      data-modal-toggle="modal-show-product"
       className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full border-2  px-5 py-3 text-xs text-white transition duration-300 md:text-sm"
     >
        <i className="bx bxs-show ml-1" />

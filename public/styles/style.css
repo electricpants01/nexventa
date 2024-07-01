@@ -400,7 +400,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* QR */
-.qrmodal {
+.modal-qr {
   display: none;
   position: fixed;
   z-index: 1;

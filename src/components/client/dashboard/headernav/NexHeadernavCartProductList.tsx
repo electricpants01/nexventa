@@ -10,7 +10,7 @@ type HeaderProps = Readonly<{
   cartTotal: number
 }>
 
-export default function NEXCartProductList({
+export default function NexHeadernavCartProductList({
   cart,
   removeFromCart,
   decreaseQuantity,
@@ -36,8 +36,8 @@ export default function NEXCartProductList({
                 <h3 className="">{product.name}</h3>
               </a>
               <button
-                data-modal-target="edit-modal"
-                data-modal-toggle="edit-modal"
+                data-modal-target="modal-edit-product"
+                data-modal-toggle="modal-edit-product"
                 className="font-mediumtext-black block text-center text-sm hover:text-orange-600 focus:outline-none"
                 type="button"
               >

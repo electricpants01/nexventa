@@ -5,7 +5,7 @@ const productqr = {
   name: 'Error',
   img: '../../../public/images/caja/error.png'
 }
-const NEXOrderSideBarQrFault = () => {
+const NexQrFault = () => {
   return (
     <div>
       <h3 className="newsletter-title-qr">{productqr.title}</h3>
@@ -14,4 +14,4 @@ const NEXOrderSideBarQrFault = () => {
   )
 }
 
-export default NEXOrderSideBarQrFault
+export default NexQrFault

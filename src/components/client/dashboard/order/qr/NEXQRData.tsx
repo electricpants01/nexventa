@@ -5,7 +5,7 @@ const productqr = {
   amount: 200.0,
   currency: 'Bs'
 }
-const NEXOrderSideBarQRData = () => {
+const NexQRData = () => {
   return (
     <form id="cajaForm">
       <div className="newsletter-header">
@@ -22,4 +22,4 @@ const NEXOrderSideBarQRData = () => {
   )
 }
 
-export default NEXOrderSideBarQRData
+export default NexQRData

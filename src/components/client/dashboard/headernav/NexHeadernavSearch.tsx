@@ -5,7 +5,7 @@ const NEXHeaderSearch = () => {
         type="search"
         name="search"
         className="search-field"
-        placeholder="¿Qué te gustaría comer?.."
+        placeholder="What would you like to eat?.."
       />
       <button className="search-btn">
         <i className="bx bx-search-alt-2 bx-sm"></i>

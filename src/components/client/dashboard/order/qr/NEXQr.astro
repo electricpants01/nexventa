@@ -1,18 +1,18 @@
 ---
-import NEXOrderSideBarQrGenerate from './NEXQrGenerate.astro'
-import NEXOrderSideBarQRData from './NEXQRData'
+import NexQrGenerate from './NexQrGenerate.astro'
+import NexQRData from './NexQRData'
 ---
 
-<div id="qrModal" class="qrmodal">
+<div id="modal-qr" class="modal-qr">
   <div class="modal-content-qr">
     <button id="aperturarBtn" class="modal-close-btnQr" data-modal-close>
       <i class="bx bx-x"></i>
     </button>
     <div class="newsletter">
       <div class="newsletter-img">
-        <NEXOrderSideBarQrGenerate />
+        <NexQrGenerate />
       </div>
-      <NEXOrderSideBarQRData />
+      <NexQRData />
     </div>
   </div>
 </div>

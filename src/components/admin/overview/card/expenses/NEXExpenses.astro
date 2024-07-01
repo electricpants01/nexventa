@@ -1,5 +1,5 @@
 ---
-import ExpensesData from './ExpensesData.tsx'
+import NexExpensesData from './NexExpensesData.tsx'
 ---
 
 <div class="rounded-md p-6 shadow-md shadow-black/5" style="background-color: #181B3A;">
@@ -42,11 +42,10 @@ import ExpensesData from './ExpensesData.tsx'
     <table class="w-100">
       <table class="w-100">
         <tbody>
-          <ExpensesData client:only/>
+          <NexExpensesData client:only />
           <div id="errorMessageExpenses" style="color: red;"></div>
         </tbody>
       </table>
     </table>
   </div>
 </div>
-

@@ -1,5 +1,5 @@
 // Obtener elementos del DOM
-var modal = document.getElementById('qrModal')
+var modal = document.getElementById('modal-qr')
 var openModalBtnQR = document.getElementById('openModalBtnQR')
 var closeBtn = document.getElementsByClassName('modal-close-btnQr')[0]
 // Función para abrir el modal
