@@ -1,13 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import NEXFooter from '@components/footer/NexFooter.astro'
-import NEXClientSidebar from '@components/client/sidebar/NexSidebar.astro'
-import NEXOrderSidebar from '@components/client/dashboard/order/NexMainOrdersidebar.astro'
-
+import NexFooter from '@components/footer/NexFooter.astro'
+import NexSidebar from '@components/client/sidebar/NexSidebar.astro'
+import NexMainOrdersidebar from '@components/client/dashboard/order/NexMainOrdersidebar.astro'
 ---
 
 <Layout>
-  <NEXOrderSidebar />
-  <NEXClientSidebar />
-  <NEXFooter />
+  <NexMainOrdersidebar />
+  <NexSidebar />
+  <NexFooter />
 </Layout>
